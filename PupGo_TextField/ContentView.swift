@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @State private var showingImagePicker = false
-//    @State private var inputImage: UIImage?
-//    func loadImage() {
-//        guard let inputImage = inputImage else { return }
-//        image = Image(uiImage: inputImage)
-//    }
+    @State private var image: Image?
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
 
     
     @State var username: String = ""
@@ -23,15 +20,21 @@ struct ContentView: View {
     @State var limitOfDogs: Int = 5
     @State var limitOfHumans: Int = 4
     var photoview: some View {
-        Button(action: {
-          username = username
-        }, label: {
-        RoundedRectangle(cornerRadius: 25)
-        .stroke(Color.yellow, lineWidth: 2)
-        .frame(width: 200, height: 200)
-        .overlay(
-            Text("Upload a photo here").foregroundColor(.black)
-        )})
+        NavigationView {
+                ZStack {
+                    Rectangle()
+                        .fill(Color.secondary)
+                    .frame(width: 200, height: 200)
+                    if image != nil {
+                        image?.resizable().scaledToFit()
+                    } else {
+                        Text("Upload a photo here").foregroundColor(.white)
+                    }
+                }
+                .onTapGesture {
+                    self.showingImagePicker = true
+                }
+        }
     }
     
     var cancel: some View {
@@ -66,7 +69,7 @@ struct ContentView: View {
                 Spacer()
                 submit
             }
-            photoview.padding()
+            photoview
         HStack(alignment: .center) {
             Image(systemName: "pawprint.circle").font(.largeTitle)
             Text("Username:")
@@ -101,6 +104,15 @@ struct ContentView: View {
         }.padding()
             Spacer()
     }
+        .navigationTitle("image")
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: self.$inputImage)
+        }
+    }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
     }
 }
 
