@@ -14,7 +14,7 @@ struct ContentView: View {
 //        guard let inputImage = inputImage else { return }
 //        image = Image(uiImage: inputImage)
 //    }
-//
+
     
     @State var username: String = ""
     @State var starttime : String = ""
@@ -23,41 +23,52 @@ struct ContentView: View {
     @State var limitOfDogs: Int = 5
     @State var limitOfHumans: Int = 4
     var photoview: some View {
+        Button(action: {
+          username = username
+        }, label: {
         RoundedRectangle(cornerRadius: 25)
         .stroke(Color.yellow, lineWidth: 2)
         .frame(width: 200, height: 200)
         .overlay(
-            Text("Upload a photo here")
-        )
+            Text("Upload a photo here").foregroundColor(.black)
+        )})
     }
     
     var cancel: some View {
         Button(action: {
           username = username
         }, label: {
-            Text("Cancel").font(.system(size: 25)).bold().foregroundColor(.white)
+            Text("Cancel").font(.system(size: 18)).foregroundColor(.black)
                 .background(RoundedRectangle(cornerRadius: 15)
-                                        .fill(Color.yellow)
-                                        .frame(width: 100, height: 60))
+                                        .fill(Color.white)
+                                        .frame(width: 80, height: 40))
         })
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
     
     var submit: some View {
         Button(action: {
           username = username
         }, label: {
-            Text("Submit").font(.system(size: 25)).bold().foregroundColor(.white)
-                .background(RoundedRectangle(cornerRadius: 15)
+            Text("Submit").font(.system(size: 18)).bold().foregroundColor(.white)
+                .background(RoundedRectangle(cornerRadius: 12)
                                         .fill(Color.yellow)
-                                        .frame(width: 100, height: 60))
+                                        .frame(width: 80, height: 40))
         })
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         
     }
     var body: some View {
         VStack(alignment: .center) {
             Spacer()
+            HStack {
+                cancel
+                Spacer()
+                submit
+            }
             photoview.padding()
         HStack(alignment: .center) {
+            Image(systemName: "pawprint.circle").font(.largeTitle)
             Text("Username:")
                 .font(.callout)
                 .bold()
@@ -65,6 +76,7 @@ struct ContentView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }.padding()
         HStack(alignment: .center) {
+            Image(systemName: "clock").font(.largeTitle)
             Text("Start Time:")
                 .font(.callout)
                 .bold()
@@ -72,6 +84,7 @@ struct ContentView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }.padding()
         HStack(alignment: .center) {
+            Image(systemName: "clock.fill").font(.largeTitle)
             Text("End Time:  ")
                 .font(.callout)
                 .bold()
@@ -79,20 +92,14 @@ struct ContentView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }.padding()
         HStack(alignment: .center) {
-            Text("Location:    ")
+            Image(systemName: "location").font(.largeTitle)
+            Text("Location:   ")
                 .font(.callout)
                 .bold()
             TextField("Walking dog at ...", text: $location)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }.padding()
             Spacer()
-        HStack {
-            Spacer(minLength: 2)
-            cancel
-            Spacer()
-            submit
-            Spacer(minLength: 2)
-        }
     }
     }
 }
