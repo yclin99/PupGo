@@ -1,0 +1,99 @@
+type User {
+    id: ID!
+    cooldown: timestamp!
+    createdTime: timestamp!
+    email: String!
+    petOwner: PetOwner
+    userProfile: UserProfile!
+    notificationSetting: Notification_setting
+}
+type UserProfile{
+    Name: String
+    Gender: Int
+    Age: Int
+    Email: String
+}
+type PetOwner{
+    ownerID: String
+    petLists: [String]!
+}
+type Notification_setting{
+    Allow
+        B
+        C
+}
+type Pet{
+    id: String
+    Name: String
+    Image: String,url
+    Gender: PetGender
+    Breed_status: String
+    castration: bool
+    Birthday: timestamp
+}
+type PetConnection{
+    id: String
+    FriendList: UUID[]
+}
+type PetRecommned{
+    id: String
+    Recommend: [Recommendation]
+}
+type PetEvents{
+    id: UUID
+    event: [UUID]
+}
+type Event{
+    id: String
+    Start_time: Time
+    End_time: Time
+    Location: Location
+    owner: UUID
+    LimitOfDog:     int
+    LimitOfHuman:   int
+    Participants: [UUID]
+    Participants_human: [UUID]
+}
+type Location{
+    country: String
+    city: String
+    address: String
+    W: numbers
+    E: numbers
+}
+type Recommendation{
+    dogA: UUID
+    dogB: UUID
+    status: RecommendationStatus
+}
+type Notification{
+    title: String
+    description: String
+}
+type User_Notification{
+    ID: UUID
+    NotificationList: [Notification]
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+scalar Timestamp
+scalar UUID
+scalar URL
+
+enum PetGender {
+  MALE
+  FEMALE
+}
+enum RecommendationStatus{
+    NO_ONE_ANSWER
+    A_AGREE
+    B_AGREE
+    BOTH_AGREE
+    CANCEL_BY_A
+    CANCEL_BY_B
+    BOTH_CANCEL
+}
