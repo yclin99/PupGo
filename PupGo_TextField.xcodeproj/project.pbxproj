@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048FC9B72731F39300485342 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FC9B62731F39300485342 /* Event.swift */; };
+		048FC9B92731F93E00485342 /* EventExploreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FC9B82731F93E00485342 /* EventExploreContentView.swift */; };
 		04B38521272CC1F4003F3B7F /* PupGo_TextFieldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38520272CC1F4003F3B7F /* PupGo_TextFieldApp.swift */; };
 		04B38523272CC1F4003F3B7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38522272CC1F4003F3B7F /* ContentView.swift */; };
 		04B38525272CC1F7003F3B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B38524272CC1F7003F3B7F /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048FC9B62731F39300485342 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		048FC9B82731F93E00485342 /* EventExploreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExploreContentView.swift; sourceTree = "<group>"; };
 		04B3851D272CC1F4003F3B7F /* PupGo_TextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo_TextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B38520272CC1F4003F3B7F /* PupGo_TextFieldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGo_TextFieldApp.swift; sourceTree = "<group>"; };
 		04B38522272CC1F4003F3B7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				04B38520272CC1F4003F3B7F /* PupGo_TextFieldApp.swift */,
+				048FC9B62731F39300485342 /* Event.swift */,
+				048FC9B82731F93E00485342 /* EventExploreContentView.swift */,
 				04B38522272CC1F4003F3B7F /* ContentView.swift */,
 				04F6F0DB272CCAF500BED506 /* ImagePicker.swift */,
 				04B38524272CC1F7003F3B7F /* Assets.xcassets */,
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048FC9B72731F39300485342 /* Event.swift in Sources */,
 				04F6F0DC272CCAF500BED506 /* ImagePicker.swift in Sources */,
 				04B38523272CC1F4003F3B7F /* ContentView.swift in Sources */,
 				04B38521272CC1F4003F3B7F /* PupGo_TextFieldApp.swift in Sources */,
+				048FC9B92731F93E00485342 /* EventExploreContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

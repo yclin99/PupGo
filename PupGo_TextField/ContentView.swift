@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CreateEventContentView: View {
     @State private var image: Image?
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
@@ -69,7 +69,7 @@ struct ContentView: View {
                 Spacer()
                 submit
             }
-            photoview
+        photoview
         HStack(alignment: .center) {
             Image(systemName: "pawprint.circle").font(.largeTitle)
             Text("Username:")
@@ -119,6 +119,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CreateEventContentView()
     }
 }
