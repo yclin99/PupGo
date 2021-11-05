@@ -2,12 +2,13 @@
 //  ContentView.swift
 //  PupGo_TextField
 //
-//  Created by ace_ye on 10/29/21.
+//  Created by wenye on 10/29/21.
 //
 
 import SwiftUI
 
 struct CreateEventContentView: View {
+    
     @State private var image: Image?
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
@@ -21,6 +22,8 @@ struct CreateEventContentView: View {
     @State var limitOfHumans: Int = 4
     var photoview: some View {
         NavigationView {
+            ZStack{
+                Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
                 ZStack {
                     Rectangle()
                         .fill(Color.secondary)
@@ -34,6 +37,7 @@ struct CreateEventContentView: View {
                 .onTapGesture {
                     self.showingImagePicker = true
                 }
+            }
         }
     }
     
@@ -42,8 +46,7 @@ struct CreateEventContentView: View {
           username = username
         }, label: {
             Text("Cancel").font(.system(size: 18)).foregroundColor(.black)
-                .background(RoundedRectangle(cornerRadius: 15)
-                                        .fill(Color.white)
+                .background(RoundedRectangle(cornerRadius: 15).opacity(0)
                                         .frame(width: 80, height: 40))
         })
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -62,6 +65,8 @@ struct CreateEventContentView: View {
         
     }
     var body: some View {
+        ZStack {
+            Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
         VStack(alignment: .center) {
             Spacer()
             HStack {
@@ -70,6 +75,7 @@ struct CreateEventContentView: View {
                 submit
             }
         photoview
+        VStack {
         HStack(alignment: .center) {
             Image(systemName: "pawprint.circle").font(.largeTitle)
             Text("Username:")
@@ -102,8 +108,10 @@ struct CreateEventContentView: View {
             TextField("Walking dog at ...", text: $location)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }.padding()
-            Spacer()
+        }
+        BottomView()
     }
+        }
         .navigationTitle("image")
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: self.$inputImage)
