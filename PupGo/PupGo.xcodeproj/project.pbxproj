@@ -9,19 +9,34 @@
 /* Begin PBXBuildFile section */
 		0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
 		0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
-		0E0500392735F73500D7FFCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500282735F72E00D7FFCD /* ContentView.swift */; };
-		0E05003A2735F73500D7FFCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500282735F72E00D7FFCD /* ContentView.swift */; };
+		0E0500392735F73500D7FFCD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500282735F72E00D7FFCD /* MainView.swift */; };
+		0E05003A2735F73500D7FFCD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500282735F72E00D7FFCD /* MainView.swift */; };
 		0E05003B2735F73500D7FFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0500292735F73500D7FFCD /* Assets.xcassets */; };
 		0E05003C2735F73500D7FFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0500292735F73500D7FFCD /* Assets.xcassets */; };
+		0E050047273629CF00D7FFCD /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E050046273629CF00D7FFCD /* SettingView.swift */; };
+		0E050048273629CF00D7FFCD /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E050046273629CF00D7FFCD /* SettingView.swift */; };
+		0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05004B27362A0E00D7FFCD /* ExplorationView.swift */; };
+		0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05004B27362A0E00D7FFCD /* ExplorationView.swift */; };
+		0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05004F27362A2E00D7FFCD /* NotificationView.swift */; };
+		0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05004F27362A2E00D7FFCD /* NotificationView.swift */; };
+		0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005327362A6900D7FFCD /* MatchingView.swift */; };
+		0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005327362A6900D7FFCD /* MatchingView.swift */; };
+		0E05005827362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
+		0E05005927362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E0500272735F72E00D7FFCD /* PupGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoApp.swift; sourceTree = "<group>"; };
-		0E0500282735F72E00D7FFCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0E0500282735F72E00D7FFCD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0E0500292735F73500D7FFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E05002E2735F73500D7FFCD /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0500342735F73500D7FFCD /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0500362735F73500D7FFCD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		0E050046273629CF00D7FFCD /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		0E05004B27362A0E00D7FFCD /* ExplorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorationView.swift; sourceTree = "<group>"; };
+		0E05004F27362A2E00D7FFCD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		0E05005327362A6900D7FFCD /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
+		0E05005727362D5600D7FFCD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +69,9 @@
 		0E0500262735F72E00D7FFCD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0E050045273629A800D7FFCD /* Views */,
 				0E0500272735F72E00D7FFCD /* PupGoApp.swift */,
-				0E0500282735F72E00D7FFCD /* ContentView.swift */,
+				0E0500282735F72E00D7FFCD /* MainView.swift */,
 				0E0500292735F73500D7FFCD /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -76,6 +92,58 @@
 				0E0500362735F73500D7FFCD /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		0E050045273629A800D7FFCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E05005627362AF200D7FFCD /* LoginView */,
+				0E05005227362A4200D7FFCD /* MatchingView */,
+				0E05004E27362A1B00D7FFCD /* NotificationView */,
+				0E05004A273629F800D7FFCD /* ExplorationView */,
+				0E050049273629E400D7FFCD /* SettingView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E050049273629E400D7FFCD /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				0E050046273629CF00D7FFCD /* SettingView.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		0E05004A273629F800D7FFCD /* ExplorationView */ = {
+			isa = PBXGroup;
+			children = (
+				0E05004B27362A0E00D7FFCD /* ExplorationView.swift */,
+			);
+			path = ExplorationView;
+			sourceTree = "<group>";
+		};
+		0E05004E27362A1B00D7FFCD /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				0E05004F27362A2E00D7FFCD /* NotificationView.swift */,
+			);
+			path = NotificationView;
+			sourceTree = "<group>";
+		};
+		0E05005227362A4200D7FFCD /* MatchingView */ = {
+			isa = PBXGroup;
+			children = (
+				0E05005327362A6900D7FFCD /* MatchingView.swift */,
+			);
+			path = MatchingView;
+			sourceTree = "<group>";
+		};
+		0E05005627362AF200D7FFCD /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				0E05005727362D5600D7FFCD /* LoginView.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E0500392735F73500D7FFCD /* ContentView.swift in Sources */,
+				0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0E05005827362D5600D7FFCD /* LoginView.swift in Sources */,
+				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0E050047273629CF00D7FFCD /* SettingView.swift in Sources */,
+				0E0500392735F73500D7FFCD /* MainView.swift in Sources */,
 				0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */,
+				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E05003A2735F73500D7FFCD /* ContentView.swift in Sources */,
+				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0E05005927362D5600D7FFCD /* LoginView.swift in Sources */,
+				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0E050048273629CF00D7FFCD /* SettingView.swift in Sources */,
+				0E05003A2735F73500D7FFCD /* MainView.swift in Sources */,
 				0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */,
+				0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
