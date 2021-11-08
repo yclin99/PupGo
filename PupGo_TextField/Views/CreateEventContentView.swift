@@ -41,39 +41,24 @@ struct CreateEventContentView: View {
         }
     }
     
-    var cancel: some View {
-        Button(action: {
-          username = username
-        }, label: {
-            Text("Cancel").font(.system(size: 18)).foregroundColor(.black)
-                .background(RoundedRectangle(cornerRadius: 15).opacity(0)
-                                        .frame(width: 80, height: 40))
-        })
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-    }
+    @State private var showingAlert = false
     
     var submit: some View {
-        Button(action: {
-          username = username
-        }, label: {
+        Button(action: {showingAlert = true}, label: {
             Text("Submit").font(.system(size: 18)).bold().foregroundColor(.white)
-                .background(RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.yellow)
-                                        .frame(width: 80, height: 40))
-        })
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-        
+                .background(RoundedRectangle(cornerRadius: 12).fill(Color.yellow).frame(width: 80, height: 40))
+        }).alert(isPresented:$showingAlert) {
+            Alert(
+                title: Text("Successfully Created")
+                )
+            }
     }
+    
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
         VStack(alignment: .center) {
             Spacer()
-            HStack {
-                cancel
-                Spacer()
-                submit
-            }
         photoview
         VStack {
         HStack(alignment: .center) {
@@ -109,7 +94,11 @@ struct CreateEventContentView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }.padding()
         }
-        BottomView()
+        HStack {
+            Spacer()
+            submit
+            Spacer()
+        }
     }
         }
         .navigationTitle("image")

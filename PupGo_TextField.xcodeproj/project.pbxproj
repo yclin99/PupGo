@@ -13,7 +13,7 @@
 		048FC9B72731F39300485342 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FC9B62731F39300485342 /* Event.swift */; };
 		048FC9B92731F93E00485342 /* EventExploreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FC9B82731F93E00485342 /* EventExploreContentView.swift */; };
 		04B38521272CC1F4003F3B7F /* PupGo_TextFieldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38520272CC1F4003F3B7F /* PupGo_TextFieldApp.swift */; };
-		04B38523272CC1F4003F3B7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38522272CC1F4003F3B7F /* ContentView.swift */; };
+		04B38523272CC1F4003F3B7F /* CreateEventContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38522272CC1F4003F3B7F /* CreateEventContentView.swift */; };
 		04B38525272CC1F7003F3B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B38524272CC1F7003F3B7F /* Assets.xcassets */; };
 		04B38528272CC1F7003F3B7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B38527272CC1F7003F3B7F /* Preview Assets.xcassets */; };
 		04F6F0DC272CCAF500BED506 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6F0DB272CCAF500BED506 /* ImagePicker.swift */; };
@@ -27,7 +27,7 @@
 		048FC9B82731F93E00485342 /* EventExploreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExploreContentView.swift; sourceTree = "<group>"; };
 		04B3851D272CC1F4003F3B7F /* PupGo_TextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo_TextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B38520272CC1F4003F3B7F /* PupGo_TextFieldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGo_TextFieldApp.swift; sourceTree = "<group>"; };
-		04B38522272CC1F4003F3B7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04B38522272CC1F4003F3B7F /* CreateEventContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventContentView.swift; sourceTree = "<group>"; };
 		04B38524272CC1F7003F3B7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B38527272CC1F7003F3B7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04F6F0DB272CCAF500BED506 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 			children = (
 				0422176D2735D8B500BC85C2 /* BottomView.swift */,
 				045085A52738EA04006BC625 /* SingleEventView.swift */,
-				04B38522272CC1F4003F3B7F /* ContentView.swift */,
+				04B38522272CC1F4003F3B7F /* CreateEventContentView.swift */,
 				048FC9B82731F93E00485342 /* EventExploreContentView.swift */,
 			);
 			path = Views;
@@ -167,7 +167,7 @@
 				048FC9B72731F39300485342 /* Event.swift in Sources */,
 				045085A62738EA04006BC625 /* SingleEventView.swift in Sources */,
 				04F6F0DC272CCAF500BED506 /* ImagePicker.swift in Sources */,
-				04B38523272CC1F4003F3B7F /* ContentView.swift in Sources */,
+				04B38523272CC1F4003F3B7F /* CreateEventContentView.swift in Sources */,
 				0422176E2735D8B500BC85C2 /* BottomView.swift in Sources */,
 				04B38521272CC1F4003F3B7F /* PupGo_TextFieldApp.swift in Sources */,
 				048FC9B92731F93E00485342 /* EventExploreContentView.swift in Sources */,

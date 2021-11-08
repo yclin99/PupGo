@@ -23,16 +23,19 @@ struct SingleEventView: View {
     }
 
     
+    @State private var showingAlert = false
+
+    
     var join: some View {
-        Button(action: {
-          true
-        }, label: {
+        Button(action: {showingAlert = true}, label: {
             Text("Join").font(.system(size: 20)).bold().foregroundColor(.white)
                 .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
-        })
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-        
+        }).alert(isPresented:$showingAlert) {
+            Alert(
+                title: Text("Join Request Sent")
+            )}
     }
+    
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)

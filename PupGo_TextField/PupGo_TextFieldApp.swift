@@ -11,7 +11,7 @@ import SwiftUI
 struct PupGo_TextFieldApp: App {
     var body: some Scene {
         WindowGroup {
-            CreateEventContentView()
+            EventExploreContentView()
         }
     }
     
