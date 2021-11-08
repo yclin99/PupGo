@@ -14,17 +14,19 @@ struct EventExploreContentView: View {
     var eventsCount: Int = 3
     
     var body: some View {
-        ZStack {
-            Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
-            VStack {
-                ScrollView {
-                    VStack (alignment: .leading, spacing: 30){
-                        ForEach(events[0..<eventsCount], id: \.self, content: {event in
-                    EventView(content: event)
-                    })
+        NavigationView{
+            ZStack {
+                Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
+                VStack {
+                    ScrollView {
+                        VStack (alignment: .leading, spacing: 30){
+                            ForEach(events[0..<eventsCount], id: \.self, content: {event in
+                        EventView(content: event)
+                        })
+                    }
                 }
-            }
-            BottomView()
+                BottomView()
+                }
             }
         }
     }
@@ -33,19 +35,20 @@ struct EventExploreContentView: View {
 struct EventView: View {
     
     var content : Event
+    @State private var isPresented = false
     
     var body: some View {
         HStack (alignment: .center) {
-            content.image.resizable()
-                .scaledToFit()
-                .frame(width: 120, height: 120)
-            VStack (alignment: .leading, spacing: 10) {
-                HStack(alignment: .center) {
-                    Image(systemName: "pawprint.circle").font(.largeTitle)
-                    Text(content.username).font(.callout).foregroundColor(.black).bold()}
-                HStack(alignment: .center) {
-                    Image(systemName: "location").font(.largeTitle)
-                    Text(content.location).foregroundColor(.black)}
+            NavigationLink(destination: SingleEventView(content: content)) { content.image.resizable()
+            .scaledToFit()
+                .frame(width: 120, height: 120)}
+        VStack (alignment: .leading, spacing: 10) {
+            HStack(alignment: .center) {
+                Image(systemName: "pawprint.circle").font(.largeTitle)
+                Text(content.username).font(.callout).foregroundColor(.black).bold()}
+            HStack(alignment: .center) {
+                Image(systemName: "location").font(.largeTitle)
+                Text(content.location).foregroundColor(.black)}
             }.padding()
         }
     }
@@ -54,7 +57,9 @@ struct EventView: View {
 
 struct EventExploreContentView_Previews: PreviewProvider {
     static var previews: some View {
+//        var events = [Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "xx", endtime: "xx", image: Image("Dog1"))]
         EventExploreContentView()
+//        SingleEventView(content: events[0])
     }
 }
 
