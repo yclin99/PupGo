@@ -27,6 +27,10 @@
 		0EB96C2C2738ABA100C9A656 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB96C2B2738ABA100C9A656 /* GoogleSignIn */; };
 		0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */; };
 		0EB96C2F2738AD7200C9A656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */; };
+		0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* EmailLoginView.swift */; };
+		0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* EmailLoginView.swift */; };
+		0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
+		0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,8 @@
 		0E05005727362D5600D7FFCD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PupGo--iOS--Info.plist"; sourceTree = "<group>"; };
+		0EB96C312738BB6900C9A656 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
+		0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				0E05005727362D5600D7FFCD /* LoginView.swift */,
+				0EB96C312738BB6900C9A656 /* EmailLoginView.swift */,
+				0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -267,7 +275,9 @@
 				0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
 				0E05005827362D5600D7FFCD /* LoginView.swift in Sources */,
 				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */,
 				0E050047273629CF00D7FFCD /* SettingView.swift in Sources */,
+				0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
 				0E0500392735F73500D7FFCD /* MainView.swift in Sources */,
 				0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */,
 				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
@@ -281,7 +291,9 @@
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
 				0E05005927362D5600D7FFCD /* LoginView.swift in Sources */,
 				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */,
 				0E050048273629CF00D7FFCD /* SettingView.swift in Sources */,
+				0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
 				0E05003A2735F73500D7FFCD /* MainView.swift in Sources */,
 				0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */,
 				0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */,

@@ -8,31 +8,40 @@
 import SwiftUI
 
 struct MainView: View {
+    @AppStorage("log_Status") var log_Status = false
     var body: some View {
-        TabView {
-            MatchView()
-                .tabItem {
-                    Label("Match", systemImage: "house")
+        
+        if log_Status {
+            NavigationView {
+                TabView {
+                    MatchView()
+                        .tabItem {
+                            Label("Match", systemImage: "house")
+                        }
+                    
+                    ExploreView()
+                        .tabItem {
+                            Image(systemName: "map")
+                            Text("Explore")
+                        }
+                    
+                    NotifyView()
+                        .tabItem {
+                            Image(systemName: "message")
+                            Text("Notification")
+                        }
+                    
+                    SettingView()
+                        .tabItem {
+                            Image(systemName: "gear")
+                            Text("Setting")
+                        }
                 }
-            
-            ExploreView()
-                .tabItem {
-                    Image(systemName: "map")
-                    Text("Explore")
-                }
-            
-            NotifyView()
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("Notification")
-                }
-            
-            SettingView()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Setting")
-                }
+            }
+        } else {
+            LoginView()
         }
+        
     }
 }
 

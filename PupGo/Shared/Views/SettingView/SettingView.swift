@@ -12,6 +12,9 @@ struct SettingView: View {
         NavigationView {
             ZStack {
                 Color.yellow
+                VStack {
+                    GoogleLogOutButton()
+                }
             }
             .edgesIgnoringSafeArea(.top)
             .navigationTitle("Setting")
