@@ -16,7 +16,7 @@ struct PupGoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            LoginView()
         }
     }
 }
