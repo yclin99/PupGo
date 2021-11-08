@@ -8,6 +8,8 @@
 import SwiftUI
 import Firebase
 import GoogleSignIn
+import FBSDKCoreKit
+
 
 @main
 struct PupGoApp: App {
@@ -25,14 +27,24 @@ class AppDelegate: NSObject, UIApplicationDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         // Initializing Firebase
-        FirebaseApp.configure()
         
+        FBSDKCoreKit.ApplicationDelegate.shared.application(
+                    application,
+                    didFinishLaunchingWithOptions: launchOptions
+                )
+        FirebaseApp.configure()
         return true
     }
     
     func application(_ application: UIApplication, open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any])
       -> Bool {
+          ApplicationDelegate.shared.application(
+                      application,
+                      open: url,
+                      sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                      annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+                  )
       return GIDSignIn.sharedInstance.handle(url)
     }
 }

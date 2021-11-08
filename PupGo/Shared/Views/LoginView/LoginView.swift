@@ -27,6 +27,7 @@ struct LoginView: View {
                 Divider()
                 
                 GoogleLoginView()
+                FBLoginView()
             }
             .padding()
         }
