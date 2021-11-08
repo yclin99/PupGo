@@ -7,8 +7,8 @@
 
 import Foundation
 import SwiftUI
-import Firebase
-import GoogleSignIn
+
+
 
 let lightYellowColor = Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255))
 
