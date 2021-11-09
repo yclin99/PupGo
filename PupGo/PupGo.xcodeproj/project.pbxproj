@@ -7,21 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E04F2E72738EB6E00C29649 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E04F2E62738EB6E00C29649 /* FirebaseAuth */; };
 		0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
 		0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
-		0E0500392735F73500D7FFCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500282735F72E00D7FFCD /* ContentView.swift */; };
-		0E05003A2735F73500D7FFCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500282735F72E00D7FFCD /* ContentView.swift */; };
+		0E0500392735F73500D7FFCD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500282735F72E00D7FFCD /* MainView.swift */; };
+		0E05003A2735F73500D7FFCD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500282735F72E00D7FFCD /* MainView.swift */; };
 		0E05003B2735F73500D7FFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0500292735F73500D7FFCD /* Assets.xcassets */; };
 		0E05003C2735F73500D7FFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0500292735F73500D7FFCD /* Assets.xcassets */; };
+		0E050047273629CF00D7FFCD /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E050046273629CF00D7FFCD /* SettingView.swift */; };
+		0E050048273629CF00D7FFCD /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E050046273629CF00D7FFCD /* SettingView.swift */; };
+		0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05004B27362A0E00D7FFCD /* ExplorationView.swift */; };
+		0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05004B27362A0E00D7FFCD /* ExplorationView.swift */; };
+		0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05004F27362A2E00D7FFCD /* NotificationView.swift */; };
+		0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05004F27362A2E00D7FFCD /* NotificationView.swift */; };
+		0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005327362A6900D7FFCD /* MatchingView.swift */; };
+		0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005327362A6900D7FFCD /* MatchingView.swift */; };
+		0E05005827362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
+		0E05005927362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
+		0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */; };
+		0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
+		0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
+		0EB96C2C2738ABA100C9A656 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB96C2B2738ABA100C9A656 /* GoogleSignIn */; };
+		0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */; };
+		0EB96C2F2738AD7200C9A656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */; };
+		0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* EmailLoginView.swift */; };
+		0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* EmailLoginView.swift */; };
+		0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
+		0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E04F2E82738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E04F2E92738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0500272735F72E00D7FFCD /* PupGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoApp.swift; sourceTree = "<group>"; };
-		0E0500282735F72E00D7FFCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0E0500282735F72E00D7FFCD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0E0500292735F73500D7FFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0E05002E2735F73500D7FFCD /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E0500342735F73500D7FFCD /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0500362735F73500D7FFCD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		0E050046273629CF00D7FFCD /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		0E05004B27362A0E00D7FFCD /* ExplorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorationView.swift; sourceTree = "<group>"; };
+		0E05004F27362A2E00D7FFCD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		0E05005327362A6900D7FFCD /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
+		0E05005727362D5600D7FFCD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginView.swift; sourceTree = "<group>"; };
+		0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PupGo--iOS--Info.plist"; sourceTree = "<group>"; };
+		0EB96C312738BB6900C9A656 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
+		0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginView.swift; sourceTree = "<group>"; };
+		1AD73CD0E47A073D8D3C0106 /* Pods-PupGo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		63C69A8021C997FD4485DD25 /* Pods-PupGo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		660D37C5ED365D69D2E41300 /* Pods-PupGo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		D3CB355DB2BE7E26722BBDD3 /* Pods-PupGo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB96C2C2738ABA100C9A656 /* GoogleSignIn in Frameworks */,
+				0E04F2E72738EB6E00C29649 /* FirebaseAuth in Frameworks */,
+				0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,29 +83,25 @@
 		0E0500212735F72E00D7FFCD = {
 			isa = PBXGroup;
 			children = (
+				0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */,
 				0E0500262735F72E00D7FFCD /* Shared */,
 				0E0500352735F73500D7FFCD /* macOS */,
-				0E05002F2735F73500D7FFCD /* Products */,
+				0E04F2E82738EC7900C29649 /* PupGo.app */,
+				0E04F2E92738EC7900C29649 /* PupGo.app */,
+				2E5239CBE5B267B34BC8BDDA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		0E0500262735F72E00D7FFCD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */,
+				0E050045273629A800D7FFCD /* Views */,
 				0E0500272735F72E00D7FFCD /* PupGoApp.swift */,
-				0E0500282735F72E00D7FFCD /* ContentView.swift */,
+				0E0500282735F72E00D7FFCD /* MainView.swift */,
 				0E0500292735F73500D7FFCD /* Assets.xcassets */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		0E05002F2735F73500D7FFCD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0E05002E2735F73500D7FFCD /* PupGo.app */,
-				0E0500342735F73500D7FFCD /* PupGo.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0E0500352735F73500D7FFCD /* macOS */ = {
@@ -78,6 +112,72 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		0E050045273629A800D7FFCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E05005627362AF200D7FFCD /* LoginView */,
+				0E05005227362A4200D7FFCD /* MatchingView */,
+				0E05004E27362A1B00D7FFCD /* NotificationView */,
+				0E05004A273629F800D7FFCD /* ExplorationView */,
+				0E050049273629E400D7FFCD /* SettingView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E050049273629E400D7FFCD /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				0E050046273629CF00D7FFCD /* SettingView.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		0E05004A273629F800D7FFCD /* ExplorationView */ = {
+			isa = PBXGroup;
+			children = (
+				0E05004B27362A0E00D7FFCD /* ExplorationView.swift */,
+			);
+			path = ExplorationView;
+			sourceTree = "<group>";
+		};
+		0E05004E27362A1B00D7FFCD /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				0E05004F27362A2E00D7FFCD /* NotificationView.swift */,
+			);
+			path = NotificationView;
+			sourceTree = "<group>";
+		};
+		0E05005227362A4200D7FFCD /* MatchingView */ = {
+			isa = PBXGroup;
+			children = (
+				0E05005327362A6900D7FFCD /* MatchingView.swift */,
+			);
+			path = MatchingView;
+			sourceTree = "<group>";
+		};
+		0E05005627362AF200D7FFCD /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				0E05005727362D5600D7FFCD /* LoginView.swift */,
+				0EB96C312738BB6900C9A656 /* EmailLoginView.swift */,
+				0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */,
+				0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		2E5239CBE5B267B34BC8BDDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3CB355DB2BE7E26722BBDD3 /* Pods-PupGo (iOS).debug.xcconfig */,
+				63C69A8021C997FD4485DD25 /* Pods-PupGo (iOS).release.xcconfig */,
+				1AD73CD0E47A073D8D3C0106 /* Pods-PupGo (macOS).debug.xcconfig */,
+				660D37C5ED365D69D2E41300 /* Pods-PupGo (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E05003F2735F73500D7FFCD /* Build configuration list for PBXNativeTarget "PupGo (iOS)" */;
 			buildPhases = (
+				6510B40BC95E98A368FB5DE2 /* [CP] Check Pods Manifest.lock */,
 				0E05002A2735F73500D7FFCD /* Sources */,
 				0E05002B2735F73500D7FFCD /* Frameworks */,
 				0E05002C2735F73500D7FFCD /* Resources */,
@@ -94,14 +195,20 @@
 			dependencies = (
 			);
 			name = "PupGo (iOS)";
+			packageProductDependencies = (
+				0EB96C2B2738ABA100C9A656 /* GoogleSignIn */,
+				0E04F2E62738EB6E00C29649 /* FirebaseAuth */,
+				0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */,
+			);
 			productName = "PupGo (iOS)";
-			productReference = 0E05002E2735F73500D7FFCD /* PupGo.app */;
+			productReference = 0E04F2E92738EC7900C29649 /* PupGo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0E0500332735F73500D7FFCD /* PupGo (macOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E0500422735F73500D7FFCD /* Build configuration list for PBXNativeTarget "PupGo (macOS)" */;
 			buildPhases = (
+				865600829A6222454A48AC7F /* [CP] Check Pods Manifest.lock */,
 				0E0500302735F73500D7FFCD /* Sources */,
 				0E0500312735F73500D7FFCD /* Frameworks */,
 				0E0500322735F73500D7FFCD /* Resources */,
@@ -112,7 +219,7 @@
 			);
 			name = "PupGo (macOS)";
 			productName = "PupGo (macOS)";
-			productReference = 0E0500342735F73500D7FFCD /* PupGo.app */;
+			productReference = 0E04F2E82738EC7900C29649 /* PupGo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +249,12 @@
 				Base,
 			);
 			mainGroup = 0E0500212735F72E00D7FFCD;
-			productRefGroup = 0E05002F2735F73500D7FFCD /* Products */;
+			packageReferences = (
+				0EB96C272738AB1B00C9A656 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0EB96C2A2738ABA000C9A656 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				0E7D2F4A2738F9EC0056DE92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
+			productRefGroup = 0E0500212735F72E00D7FFCD;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -158,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E05003B2735F73500D7FFCD /* Assets.xcassets in Resources */,
+				0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,18 +279,74 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E05003C2735F73500D7FFCD /* Assets.xcassets in Resources */,
+				0EB96C2F2738AD7200C9A656 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6510B40BC95E98A368FB5DE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PupGo (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		865600829A6222454A48AC7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PupGo (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E05002A2735F73500D7FFCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E0500392735F73500D7FFCD /* ContentView.swift in Sources */,
+				0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0E05005827362D5600D7FFCD /* LoginView.swift in Sources */,
+				0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */,
+				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */,
+				0E050047273629CF00D7FFCD /* SettingView.swift in Sources */,
+				0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
+				0E0500392735F73500D7FFCD /* MainView.swift in Sources */,
 				0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */,
+				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +354,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E05003A2735F73500D7FFCD /* ContentView.swift in Sources */,
+				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0E05005927362D5600D7FFCD /* LoginView.swift in Sources */,
+				0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */,
+				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */,
+				0E050048273629CF00D7FFCD /* SettingView.swift in Sources */,
+				0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
+				0E05003A2735F73500D7FFCD /* MainView.swift in Sources */,
 				0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */,
+				0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +483,16 @@
 		};
 		0E0500402735F73500D7FFCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3CB355DB2BE7E26722BBDD3 /* Pods-PupGo (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK3PHYDBZL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PupGo--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,13 +515,16 @@
 		};
 		0E0500412735F73500D7FFCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C69A8021C997FD4485DD25 /* Pods-PupGo (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK3PHYDBZL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PupGo--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -365,6 +548,7 @@
 		};
 		0E0500432735F73500D7FFCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AD73CD0E47A073D8D3C0106 /* Pods-PupGo (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -391,6 +575,7 @@
 		};
 		0E0500442735F73500D7FFCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 660D37C5ED365D69D2E41300 /* Pods-PupGo (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,6 +631,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E7D2F4A2738F9EC0056DE92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		0EB96C272738AB1B00C9A656 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		0EB96C2A2738ABA000C9A656 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E04F2E62738EB6E00C29649 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EB96C272738AB1B00C9A656 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E7D2F4A2738F9EC0056DE92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		0EB96C2B2738ABA100C9A656 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EB96C2A2738ABA000C9A656 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E0500222735F72E00D7FFCD /* Project object */;
 }
