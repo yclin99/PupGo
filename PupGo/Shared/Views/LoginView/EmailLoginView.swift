@@ -43,7 +43,7 @@ struct ImageText: View {
             .clipped()
             .cornerRadius(150)
                 .overlay(RoundedRectangle(cornerRadius: 150)
-                        .stroke(Color.yellow, lineWidth: 6))
+                        .stroke(.yellow, lineWidth: 6))
             .padding(.bottom, 75)
     }
 }

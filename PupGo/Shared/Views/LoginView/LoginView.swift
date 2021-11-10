@@ -5,12 +5,9 @@
 //  Created by Hsin-Wei Yu on 11/5/21.
 //
 
-import Foundation
 import SwiftUI
 
-
-
-let lightYellowColor = Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255))
+public var lightYellowColor = Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255))
 
 struct LoginView: View {
     

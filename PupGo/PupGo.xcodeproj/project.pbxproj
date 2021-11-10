@@ -24,6 +24,8 @@
 		0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005327362A6900D7FFCD /* MatchingView.swift */; };
 		0E05005827362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
 		0E05005927362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
+		0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
+		0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
 		0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */; };
 		0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
 		0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
@@ -48,6 +50,7 @@
 		0E05004F27362A2E00D7FFCD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		0E05005327362A6900D7FFCD /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		0E05005727362D5600D7FFCD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0E558457273B47A400BCFFB0 /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
 		0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginView.swift; sourceTree = "<group>"; };
 		0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PupGo--iOS--Info.plist"; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				0E05005327362A6900D7FFCD /* MatchingView.swift */,
+				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 			);
 			path = MatchingView;
 			sourceTree = "<group>";
@@ -341,6 +345,7 @@
 				0E05005827362D5600D7FFCD /* LoginView.swift in Sources */,
 				0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */,
 				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */,
 				0E050047273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
@@ -358,6 +363,7 @@
 				0E05005927362D5600D7FFCD /* LoginView.swift in Sources */,
 				0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */,
 				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */,
 				0E050048273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
