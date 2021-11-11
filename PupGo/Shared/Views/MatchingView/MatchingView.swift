@@ -104,7 +104,7 @@ struct DecisionButtons: View {
             }
             Spacer()
             Button(action: {}) {
-                Image(systemName: "info")
+                Image(systemName: "info.circle.fill")
                     .resizable()
                     .foregroundColor(.brown)
                     .frame(width: 40, height: 40)

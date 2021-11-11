@@ -11,8 +11,8 @@ public var lightYellowColor = Color(#colorLiteral(red: 1, green: 1, blue: 0.88, 
 
 struct LoginView: View {
     
-    @State var username: String = ""
-    @State var password: String = ""
+    @State var username: String = "Evelynyu"
+    @State var password: String = "GreenField2@4"
     
     var body: some View {
         ZStack {
