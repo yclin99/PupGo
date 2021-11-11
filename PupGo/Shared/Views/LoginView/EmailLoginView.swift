@@ -10,8 +10,6 @@ import SwiftUI
 struct EmailLoginView: View {
     @Binding var username: String
     @Binding var password: String
-    //@State var username: String = ""
-    //@State var password: String = ""
     @AppStorage("log_Status") var log_Status = false
     var body: some View {
         VStack {

@@ -27,6 +27,8 @@
 		0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
 		0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
 		0E558461273D8B3100BCFFB0 /* PupGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558460273D8B3100BCFFB0 /* PupGoTests.swift */; };
+		0E55846E273DB3E900BCFFB0 /* PupGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E55846D273DB3E900BCFFB0 /* PupGoUITests.swift */; };
+		0E558470273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E55846F273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift */; };
 		0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */; };
 		0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
 		0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
@@ -41,6 +43,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		0E558462273D8B3100BCFFB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E0500222735F72E00D7FFCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E05002D2735F73500D7FFCD;
+			remoteInfo = "PupGo (iOS)";
+		};
+		0E558471273DB3E900BCFFB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0E0500222735F72E00D7FFCD /* Project object */;
 			proxyType = 1;
@@ -64,6 +73,9 @@
 		0E558457273B47A400BCFFB0 /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
 		0E55845E273D8B3000BCFFB0 /* PupGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E558460273D8B3100BCFFB0 /* PupGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoTests.swift; sourceTree = "<group>"; };
+		0E55846B273DB3E900BCFFB0 /* PupGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E55846D273DB3E900BCFFB0 /* PupGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoUITests.swift; sourceTree = "<group>"; };
+		0E55846F273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginView.swift; sourceTree = "<group>"; };
 		0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PupGo--iOS--Info.plist"; sourceTree = "<group>"; };
@@ -100,6 +112,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E558468273DB3E900BCFFB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -114,6 +133,8 @@
 				2E5239CBE5B267B34BC8BDDA /* Pods */,
 				0E55845E273D8B3000BCFFB0 /* PupGoTests.xctest */,
 				0E55845F273D8B3100BCFFB0 /* PupGoTests */,
+				0E55846B273DB3E900BCFFB0 /* PupGoUITests.xctest */,
+				0E55846C273DB3E900BCFFB0 /* PupGoUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +222,15 @@
 			path = PupGoTests;
 			sourceTree = "<group>";
 		};
+		0E55846C273DB3E900BCFFB0 /* PupGoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0E55846D273DB3E900BCFFB0 /* PupGoUITests.swift */,
+				0E55846F273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift */,
+			);
+			path = PupGoUITests;
+			sourceTree = "<group>";
+		};
 		2E5239CBE5B267B34BC8BDDA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +304,24 @@
 			productReference = 0E55845E273D8B3000BCFFB0 /* PupGoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0E55846A273DB3E900BCFFB0 /* PupGoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E558475273DB3E900BCFFB0 /* Build configuration list for PBXNativeTarget "PupGoUITests" */;
+			buildPhases = (
+				0E558467273DB3E900BCFFB0 /* Sources */,
+				0E558468273DB3E900BCFFB0 /* Frameworks */,
+				0E558469273DB3E900BCFFB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E558472273DB3E900BCFFB0 /* PBXTargetDependency */,
+			);
+			name = PupGoUITests;
+			productName = PupGoUITests;
+			productReference = 0E55846B273DB3E900BCFFB0 /* PupGoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -291,6 +339,10 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					0E55845D273D8B3000BCFFB0 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 0E05002D2735F73500D7FFCD;
+					};
+					0E55846A273DB3E900BCFFB0 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = 0E05002D2735F73500D7FFCD;
 					};
@@ -317,6 +369,7 @@
 				0E05002D2735F73500D7FFCD /* PupGo (iOS) */,
 				0E0500332735F73500D7FFCD /* PupGo (macOS) */,
 				0E55845D273D8B3000BCFFB0 /* PupGoTests */,
+				0E55846A273DB3E900BCFFB0 /* PupGoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -341,6 +394,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0E55845C273D8B3000BCFFB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E558469273DB3E900BCFFB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -441,6 +501,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0E558467273DB3E900BCFFB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E558470273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift in Sources */,
+				0E55846E273DB3E900BCFFB0 /* PupGoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -448,6 +517,11 @@
 			isa = PBXTargetDependency;
 			target = 0E05002D2735F73500D7FFCD /* PupGo (iOS) */;
 			targetProxy = 0E558462273D8B3100BCFFB0 /* PBXContainerItemProxy */;
+		};
+		0E558472273DB3E900BCFFB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E05002D2735F73500D7FFCD /* PupGo (iOS) */;
+			targetProxy = 0E558471273DB3E900BCFFB0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -733,6 +807,55 @@
 			};
 			name = Release;
 		};
+		0E558473273DB3E900BCFFB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK3PHYDBZL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CS130.PupGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PupGo (iOS)";
+			};
+			name = Debug;
+		};
+		0E558474273DB3E900BCFFB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK3PHYDBZL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CS130.PupGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PupGo (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -768,6 +891,15 @@
 			buildConfigurations = (
 				0E558464273D8B3100BCFFB0 /* Debug */,
 				0E558465273D8B3100BCFFB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E558475273DB3E900BCFFB0 /* Build configuration list for PBXNativeTarget "PupGoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E558473273DB3E900BCFFB0 /* Debug */,
+				0E558474273DB3E900BCFFB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
