@@ -22,7 +22,7 @@ struct MainView: View {
                     
                     EventExploreContentView()
                         .tabItem {
-                            Label("Eplore", systemImage: "magnifyingglass.circle.fill")
+                            Label("Explore", systemImage: "magnifyingglass.circle.fill")
                                 .foregroundColor(.yellow)
                             //Image(systemName: "map")
                             //Text("Explore")
