@@ -16,25 +16,32 @@ struct MainView: View {
                 TabView {
                     MatchView()
                         .tabItem {
-                            Label("Match", systemImage: "house")
+                            Label("Match", systemImage: "heart.circle.fill")
+                                .foregroundColor(.yellow)
                         }
                     
                     EventExploreContentView()
                         .tabItem {
-                            Image(systemName: "map")
-                            Text("Explore")
+                            Label("Eplore", systemImage: "magnifyingglass.circle.fill")
+                                .foregroundColor(.yellow)
+                            //Image(systemName: "map")
+                            //Text("Explore")
                         }
                     
                     NotificationView()
                         .tabItem {
-                            Image(systemName: "message")
-                            Text("Notification")
+                            Label("Notification", systemImage: "message.circle.fill")
+                                .foregroundColor(.yellow)
+                            //Image(systemName: "message")
+                            //Text("Notification")
                         }
                     
                     SettingView()
                         .tabItem {
-                            Image(systemName: "gear")
-                            Text("Setting")
+                            Label("Setting", systemImage: "pawprint.circle.fill")
+                                .foregroundColor(.yellow)
+                            //Image(systemName: "gear")
+                            //Text("Setting")
                         }
                 }
             }

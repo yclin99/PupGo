@@ -30,10 +30,11 @@ struct EventExploreContentView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
+                //Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
+                lightYellowColor.edgesIgnoringSafeArea(.all)
                 VStack {
                     HStack {
-                        Text("EXPLORE NEARBY").font(.system(size: 27)).foregroundColor(.black).bold().padding()
+                        Text("EXPLORE NEARBY").font(.system(size: 27)).foregroundColor(.black).bold()//.padding()
                         AddEventView.foregroundColor(.black)
                     }
                     ScrollView {
@@ -43,8 +44,8 @@ struct EventExploreContentView: View {
                         })
                     }
                 }
-                Spacer()
-                BottomView()
+                //Spacer()
+                //BottomView()
                 }
             }
         }
