@@ -25,7 +25,7 @@ struct MainView: View {
                             Text("Explore")
                         }
                     
-                    NotifyView()
+                    NotificationView()
                         .tabItem {
                             Image(systemName: "message")
                             Text("Notification")

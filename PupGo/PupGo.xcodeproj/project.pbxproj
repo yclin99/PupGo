@@ -26,12 +26,31 @@
 		0E05005927362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
 		0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
 		0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
-		0E558461273D8B3100BCFFB0 /* PupGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558460273D8B3100BCFFB0 /* PupGoTests.swift */; };
-		0E55846E273DB3E900BCFFB0 /* PupGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E55846D273DB3E900BCFFB0 /* PupGoUITests.swift */; };
-		0E558470273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E55846F273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift */; };
 		0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */; };
 		0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
 		0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
+		0E8A2E1C2741F18500081719 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1B2741F18500081719 /* Event.swift */; };
+		0E8A2E1D2741F18500081719 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1B2741F18500081719 /* Event.swift */; };
+		0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1E2741F1A800081719 /* ImagePicker.swift */; };
+		0E8A2E202741F1A800081719 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1E2741F1A800081719 /* ImagePicker.swift */; };
+		0E8A2E222741F1E000081719 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E212741F1E000081719 /* BottomView.swift */; };
+		0E8A2E232741F1E000081719 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E212741F1E000081719 /* BottomView.swift */; };
+		0E8A2E252741F20400081719 /* CreateEventContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E242741F20400081719 /* CreateEventContentView.swift */; };
+		0E8A2E262741F20400081719 /* CreateEventContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E242741F20400081719 /* CreateEventContentView.swift */; };
+		0E8A2E282741F24C00081719 /* EventExploreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E272741F24C00081719 /* EventExploreContentView.swift */; };
+		0E8A2E292741F24C00081719 /* EventExploreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E272741F24C00081719 /* EventExploreContentView.swift */; };
+		0E8A2E2B2741F26E00081719 /* SingleEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2A2741F26E00081719 /* SingleEventView.swift */; };
+		0E8A2E2C2741F26E00081719 /* SingleEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2A2741F26E00081719 /* SingleEventView.swift */; };
+		0E8A2E2E2741F8A100081719 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2D2741F8A100081719 /* Card.swift */; };
+		0E8A2E2F2741F8A100081719 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2D2741F8A100081719 /* Card.swift */; };
+		0E8A2E312741F99B00081719 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E302741F99B00081719 /* CardView.swift */; };
+		0E8A2E322741F99B00081719 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E302741F99B00081719 /* CardView.swift */; };
+		0E8A2E342741FA4800081719 /* FriendsEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E332741FA4800081719 /* FriendsEventView.swift */; };
+		0E8A2E352741FA4800081719 /* FriendsEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E332741FA4800081719 /* FriendsEventView.swift */; };
+		0E8A2E372741FA6200081719 /* JoinRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E362741FA6200081719 /* JoinRequestView.swift */; };
+		0E8A2E382741FA6200081719 /* JoinRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E362741FA6200081719 /* JoinRequestView.swift */; };
+		0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E3C2741FA8E00081719 /* UserEventView.swift */; };
+		0E8A2E3E2741FA8E00081719 /* UserEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E3C2741FA8E00081719 /* UserEventView.swift */; };
 		0EB96C2C2738ABA100C9A656 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB96C2B2738ABA100C9A656 /* GoogleSignIn */; };
 		0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */; };
 		0EB96C2F2738AD7200C9A656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */; };
@@ -40,23 +59,6 @@
 		0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
 		0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0E558462273D8B3100BCFFB0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0E0500222735F72E00D7FFCD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E05002D2735F73500D7FFCD;
-			remoteInfo = "PupGo (iOS)";
-		};
-		0E558471273DB3E900BCFFB0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0E0500222735F72E00D7FFCD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E05002D2735F73500D7FFCD;
-			remoteInfo = "PupGo (iOS)";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0E04F2E82738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,12 +73,18 @@
 		0E05005327362A6900D7FFCD /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		0E05005727362D5600D7FFCD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0E558457273B47A400BCFFB0 /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
-		0E55845E273D8B3000BCFFB0 /* PupGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E558460273D8B3100BCFFB0 /* PupGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoTests.swift; sourceTree = "<group>"; };
-		0E55846B273DB3E900BCFFB0 /* PupGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E55846D273DB3E900BCFFB0 /* PupGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoUITests.swift; sourceTree = "<group>"; };
-		0E55846F273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginView.swift; sourceTree = "<group>"; };
+		0E8A2E1B2741F18500081719 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0E8A2E1E2741F1A800081719 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		0E8A2E212741F1E000081719 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		0E8A2E242741F20400081719 /* CreateEventContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventContentView.swift; sourceTree = "<group>"; };
+		0E8A2E272741F24C00081719 /* EventExploreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExploreContentView.swift; sourceTree = "<group>"; };
+		0E8A2E2A2741F26E00081719 /* SingleEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventView.swift; sourceTree = "<group>"; };
+		0E8A2E2D2741F8A100081719 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		0E8A2E302741F99B00081719 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0E8A2E332741FA4800081719 /* FriendsEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsEventView.swift; sourceTree = "<group>"; };
+		0E8A2E362741FA6200081719 /* JoinRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestView.swift; sourceTree = "<group>"; };
+		0E8A2E3C2741FA8E00081719 /* UserEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventView.swift; sourceTree = "<group>"; };
 		0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PupGo--iOS--Info.plist"; sourceTree = "<group>"; };
 		0EB96C312738BB6900C9A656 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
@@ -105,20 +113,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E55845B273D8B3000BCFFB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E558468273DB3E900BCFFB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,16 +125,13 @@
 				0E04F2E82738EC7900C29649 /* PupGo.app */,
 				0E04F2E92738EC7900C29649 /* PupGo.app */,
 				2E5239CBE5B267B34BC8BDDA /* Pods */,
-				0E55845E273D8B3000BCFFB0 /* PupGoTests.xctest */,
-				0E55845F273D8B3100BCFFB0 /* PupGoTests */,
-				0E55846B273DB3E900BCFFB0 /* PupGoUITests.xctest */,
-				0E55846C273DB3E900BCFFB0 /* PupGoUITests */,
 			);
 			sourceTree = "<group>";
 		};
 		0E0500262735F72E00D7FFCD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0E68D17A2741E6D40030AE76 /* Utilities */,
 				0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */,
 				0E050045273629A800D7FFCD /* Views */,
 				0E0500272735F72E00D7FFCD /* PupGoApp.swift */,
@@ -182,6 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				0E05004B27362A0E00D7FFCD /* ExplorationView.swift */,
+				0E8A2E212741F1E000081719 /* BottomView.swift */,
+				0E8A2E242741F20400081719 /* CreateEventContentView.swift */,
+				0E8A2E272741F24C00081719 /* EventExploreContentView.swift */,
+				0E8A2E2A2741F26E00081719 /* SingleEventView.swift */,
 			);
 			path = ExplorationView;
 			sourceTree = "<group>";
@@ -190,6 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				0E05004F27362A2E00D7FFCD /* NotificationView.swift */,
+				0E8A2E302741F99B00081719 /* CardView.swift */,
+				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
+				0E8A2E362741FA6200081719 /* JoinRequestView.swift */,
+				0E8A2E3C2741FA8E00081719 /* UserEventView.swift */,
 			);
 			path = NotificationView;
 			sourceTree = "<group>";
@@ -214,21 +213,14 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
-		0E55845F273D8B3100BCFFB0 /* PupGoTests */ = {
+		0E68D17A2741E6D40030AE76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				0E558460273D8B3100BCFFB0 /* PupGoTests.swift */,
+				0E8A2E2D2741F8A100081719 /* Card.swift */,
+				0E8A2E1B2741F18500081719 /* Event.swift */,
+				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
 			);
-			path = PupGoTests;
-			sourceTree = "<group>";
-		};
-		0E55846C273DB3E900BCFFB0 /* PupGoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0E55846D273DB3E900BCFFB0 /* PupGoUITests.swift */,
-				0E55846F273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift */,
-			);
-			path = PupGoUITests;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		2E5239CBE5B267B34BC8BDDA /* Pods */ = {
@@ -286,42 +278,6 @@
 			productReference = 0E04F2E82738EC7900C29649 /* PupGo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0E55845D273D8B3000BCFFB0 /* PupGoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0E558466273D8B3100BCFFB0 /* Build configuration list for PBXNativeTarget "PupGoTests" */;
-			buildPhases = (
-				0E55845A273D8B3000BCFFB0 /* Sources */,
-				0E55845B273D8B3000BCFFB0 /* Frameworks */,
-				0E55845C273D8B3000BCFFB0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0E558463273D8B3100BCFFB0 /* PBXTargetDependency */,
-			);
-			name = PupGoTests;
-			productName = PupGoTests;
-			productReference = 0E55845E273D8B3000BCFFB0 /* PupGoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0E55846A273DB3E900BCFFB0 /* PupGoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0E558475273DB3E900BCFFB0 /* Build configuration list for PBXNativeTarget "PupGoUITests" */;
-			buildPhases = (
-				0E558467273DB3E900BCFFB0 /* Sources */,
-				0E558468273DB3E900BCFFB0 /* Frameworks */,
-				0E558469273DB3E900BCFFB0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0E558472273DB3E900BCFFB0 /* PBXTargetDependency */,
-			);
-			name = PupGoUITests;
-			productName = PupGoUITests;
-			productReference = 0E55846B273DB3E900BCFFB0 /* PupGoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -337,14 +293,6 @@
 					};
 					0E0500332735F73500D7FFCD = {
 						CreatedOnToolsVersion = 13.1;
-					};
-					0E55845D273D8B3000BCFFB0 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 0E05002D2735F73500D7FFCD;
-					};
-					0E55846A273DB3E900BCFFB0 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 0E05002D2735F73500D7FFCD;
 					};
 				};
 			};
@@ -368,8 +316,6 @@
 			targets = (
 				0E05002D2735F73500D7FFCD /* PupGo (iOS) */,
 				0E0500332735F73500D7FFCD /* PupGo (macOS) */,
-				0E55845D273D8B3000BCFFB0 /* PupGoTests */,
-				0E55846A273DB3E900BCFFB0 /* PupGoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -390,20 +336,6 @@
 			files = (
 				0E05003C2735F73500D7FFCD /* Assets.xcassets in Resources */,
 				0EB96C2F2738AD7200C9A656 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E55845C273D8B3000BCFFB0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E558469273DB3E900BCFFB0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,17 +393,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */,
+				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
+				0E8A2E2E2741F8A100081719 /* Card.swift in Sources */,
 				0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0E8A2E252741F20400081719 /* CreateEventContentView.swift in Sources */,
 				0E05005827362D5600D7FFCD /* LoginView.swift in Sources */,
+				0E8A2E372741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */,
 				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0E8A2E312741F99B00081719 /* CardView.swift in Sources */,
+				0E8A2E1C2741F18500081719 /* Event.swift in Sources */,
 				0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
+				0E8A2E2B2741F26E00081719 /* SingleEventView.swift in Sources */,
 				0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */,
 				0E050047273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
 				0E0500392735F73500D7FFCD /* MainView.swift in Sources */,
+				0E8A2E222741F1E000081719 /* BottomView.swift in Sources */,
 				0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */,
+				0E8A2E342741FA4800081719 /* FriendsEventView.swift in Sources */,
 				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
+				0E8A2E282741F24C00081719 /* EventExploreContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,51 +422,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8A2E202741F1A800081719 /* ImagePicker.swift in Sources */,
+				0E8A2E3E2741FA8E00081719 /* UserEventView.swift in Sources */,
+				0E8A2E2F2741F8A100081719 /* Card.swift in Sources */,
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0E8A2E262741F20400081719 /* CreateEventContentView.swift in Sources */,
 				0E05005927362D5600D7FFCD /* LoginView.swift in Sources */,
+				0E8A2E382741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */,
 				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
+				0E8A2E322741F99B00081719 /* CardView.swift in Sources */,
+				0E8A2E1D2741F18500081719 /* Event.swift in Sources */,
 				0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
+				0E8A2E2C2741F26E00081719 /* SingleEventView.swift in Sources */,
 				0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */,
 				0E050048273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
 				0E05003A2735F73500D7FFCD /* MainView.swift in Sources */,
+				0E8A2E232741F1E000081719 /* BottomView.swift in Sources */,
 				0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */,
+				0E8A2E352741FA4800081719 /* FriendsEventView.swift in Sources */,
 				0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E55845A273D8B3000BCFFB0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E558461273D8B3100BCFFB0 /* PupGoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E558467273DB3E900BCFFB0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E558470273DB3E900BCFFB0 /* PupGoUITestsLaunchTests.swift in Sources */,
-				0E55846E273DB3E900BCFFB0 /* PupGoUITests.swift in Sources */,
+				0E8A2E292741F24C00081719 /* EventExploreContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0E558463273D8B3100BCFFB0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0E05002D2735F73500D7FFCD /* PupGo (iOS) */;
-			targetProxy = 0E558462273D8B3100BCFFB0 /* PBXContainerItemProxy */;
-		};
-		0E558472273DB3E900BCFFB0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0E05002D2735F73500D7FFCD /* PupGo (iOS) */;
-			targetProxy = 0E558471273DB3E900BCFFB0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0E05003D2735F73500D7FFCD /* Debug */ = {
@@ -756,106 +680,6 @@
 			};
 			name = Release;
 		};
-		0E558464273D8B3100BCFFB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PK3PHYDBZL;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CS130.PupGoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PupGo.app/PupGo";
-			};
-			name = Debug;
-		};
-		0E558465273D8B3100BCFFB0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PK3PHYDBZL;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CS130.PupGoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PupGo.app/PupGo";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		0E558473273DB3E900BCFFB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PK3PHYDBZL;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CS130.PupGoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "PupGo (iOS)";
-			};
-			name = Debug;
-		};
-		0E558474273DB3E900BCFFB0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PK3PHYDBZL;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CS130.PupGoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "PupGo (iOS)";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -882,24 +706,6 @@
 			buildConfigurations = (
 				0E0500432735F73500D7FFCD /* Debug */,
 				0E0500442735F73500D7FFCD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0E558466273D8B3100BCFFB0 /* Build configuration list for PBXNativeTarget "PupGoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E558464273D8B3100BCFFB0 /* Debug */,
-				0E558465273D8B3100BCFFB0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0E558475273DB3E900BCFFB0 /* Build configuration list for PBXNativeTarget "PupGoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E558473273DB3E900BCFFB0 /* Debug */,
-				0E558474273DB3E900BCFFB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

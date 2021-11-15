@@ -19,7 +19,7 @@ class PupGoTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testGoogleLoginIsPressed() {
+    func testEmailLoginIsPressed() {
         // given
         sut.username = "Evelynyu"
         sut.password = "GreenField2@4"
