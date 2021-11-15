@@ -12,7 +12,7 @@ struct NotificationView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                lightYellowColor
+                lightYellowColor.ignoresSafeArea()
                 VStack(alignment: .leading) {
                     Join()
                                     
@@ -28,7 +28,9 @@ struct NotificationView: View {
                 Spacer()
 
             }
+            .padding(.vertical, 70.0)
             .edgesIgnoringSafeArea(.top)
+            .frame(width: 360, height: 680)
         }
     }
 }
