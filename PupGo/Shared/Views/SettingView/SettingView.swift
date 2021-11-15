@@ -11,13 +11,13 @@ struct SettingView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.yellow
+                lightYellowColor
                 VStack {
                     GoogleLogOutButton()
                 }
             }
             .edgesIgnoringSafeArea(.top)
-            .navigationTitle("Setting")
+            //.navigationTitle("Setting")
         }
     }
 }

@@ -19,7 +19,7 @@ struct MainView: View {
                             Label("Match", systemImage: "house")
                         }
                     
-                    ExploreView()
+                    EventExploreContentView()
                         .tabItem {
                             Image(systemName: "map")
                             Text("Explore")
