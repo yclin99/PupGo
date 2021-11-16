@@ -58,6 +58,10 @@
 		0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* EmailLoginView.swift */; };
 		0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
 		0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
+		0EBD8A1E2743851D008EBBDC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A1D2743851D008EBBDC /* SignInView.swift */; };
+		0EBD8A1F2743851D008EBBDC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A1D2743851D008EBBDC /* SignInView.swift */; };
+		0EBD8A21274393CA008EBBDC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A20274393CA008EBBDC /* SignUpView.swift */; };
+		0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A20274393CA008EBBDC /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +93,8 @@
 		0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PupGo--iOS--Info.plist"; sourceTree = "<group>"; };
 		0EB96C312738BB6900C9A656 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
 		0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginView.swift; sourceTree = "<group>"; };
+		0EBD8A1D2743851D008EBBDC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		0EBD8A20274393CA008EBBDC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		1AD73CD0E47A073D8D3C0106 /* Pods-PupGo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		63C69A8021C997FD4485DD25 /* Pods-PupGo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		660D37C5ED365D69D2E41300 /* Pods-PupGo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 				0EB96C312738BB6900C9A656 /* EmailLoginView.swift */,
 				0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */,
 				0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */,
+				0EBD8A1D2743851D008EBBDC /* SignInView.swift */,
+				0EBD8A20274393CA008EBBDC /* SignUpView.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -397,7 +405,9 @@
 				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
 				0E8A2E2E2741F8A100081719 /* Card.swift in Sources */,
 				0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0EBD8A21274393CA008EBBDC /* SignUpView.swift in Sources */,
 				0E8A2E252741F20400081719 /* CreateEventContentView.swift in Sources */,
+				0EBD8A1E2743851D008EBBDC /* SignInView.swift in Sources */,
 				0E05005827362D5600D7FFCD /* LoginView.swift in Sources */,
 				0E8A2E372741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */,
@@ -426,7 +436,9 @@
 				0E8A2E3E2741FA8E00081719 /* UserEventView.swift in Sources */,
 				0E8A2E2F2741F8A100081719 /* Card.swift in Sources */,
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */,
 				0E8A2E262741F20400081719 /* CreateEventContentView.swift in Sources */,
+				0EBD8A1F2743851D008EBBDC /* SignInView.swift in Sources */,
 				0E05005927362D5600D7FFCD /* LoginView.swift in Sources */,
 				0E8A2E382741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */,
