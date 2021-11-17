@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventExploreContentView: View {
-    
+        
     var events = [
         Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1")),
         Event(userid: 2, username: "Pluto", location: "DisneyLand Park", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog2")),
@@ -28,26 +28,29 @@ struct EventExploreContentView: View {
     }
     
     var body: some View {
-        NavigationView{
-            ZStack {
-                //Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
-                lightYellowColor.edgesIgnoringSafeArea(.all)
-                VStack {
-                    HStack {
-                        Text("EXPLORE NEARBY").font(.system(size: 27)).foregroundColor(.black).bold()//.padding()
-                        AddEventView.foregroundColor(.black)
-                    }
-                    ScrollView {
-                        VStack (alignment: .leading, spacing: 30){
-                            ForEach(events[0..<eventsCount], id: \.self, content: {event in
+//        NavigationView{
+         ZStack {
+            lightYellowColor
+                 .edgesIgnoringSafeArea(.all)
+             VStack {
+                HStack {
+                Text("EXPLORE NEARBY").font(.system(size: 27)).foregroundColor(.black).bold()//.padding()
+                    AddEventView.foregroundColor(.black)
+                }
+                ScrollView {
+                        LazyVStack (alignment: .leading, spacing: 30) {
+                        ForEach(events[0..<eventsCount], id: \.self, content: {event in
                         EventView(content: event)
                         })
+                        }
                     }
                 }
+         
+                .padding(.vertical, 70.0)
+//                .edgesIgnoringSafeArea(.all)
+                .frame(width: 360, height: 680)
                 //Spacer()
                 //BottomView()
-                }
-            }
         }
     }
 }
