@@ -203,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				0E05005327362A6900D7FFCD /* MatchingView.swift */,
-				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 			);
 			path = MatchingView;
 			sourceTree = "<group>";
@@ -224,6 +223,7 @@
 		0E68D17A2741E6D40030AE76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 				0E8A2E2D2741F8A100081719 /* Card.swift */,
 				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,

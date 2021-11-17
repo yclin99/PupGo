@@ -10,31 +10,14 @@ import SwiftUI
 struct SignInView: View {
     @State var email: String = ""
     @State var pass: String = ""
+    @Binding var index: Int
+    //@State var email: String = ""
+    //@State var pass: String = ""
     var body: some View {
-        ZStack {
-            lightYellowColor.edgesIgnoringSafeArea(.all)
-            VStack {
-                ImageText()
-                SignIn(email: $email, pass: $pass)
-            }
-        }
-    }
-}
 
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView()
-    }
-}
-
-struct SignIn: View {
-    @Binding var email: String
-    @Binding var pass: String
-    var body: some View {
-        
         ZStack(alignment: .bottom) {
             VStack {
-                LoginTextView()
+                LoginTextView(index: self.$index)
                 
                 EmailTextView(email: $email)
                 
@@ -56,24 +39,50 @@ struct SignIn: View {
             .padding(.bottom, 65)
             .background(.brown)
             .clipShape(CShape())
+            .onTapGesture {
+                self.index = 0
+            }
+            .contentShape(CShape())
+            .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: -5)
             .cornerRadius(35)
             .padding(.horizontal, 20)
             
-            LoginButtonView()
+            LoginButtonView(index: self.$index)
         }
+        
     }
 }
 
+/*
+struct SignInView_Previews: PreviewProvider {
+    @State var user: String = ""
+    @State var password: String = ""
+    @State var index: Int = 0
+    static var previews: some View {
+        Text("Hey!")
+        //SignInView(email: self.$user, pass: self.$password)
+    }
+}*/
+
+
 struct LoginTextView: View {
+    @Binding var index: Int
     var body: some View {
         HStack {
-            Text("Login")
-                .foregroundColor(.white)
-                .font(.title)
-                .fontWeight(.bold)
+            VStack(spacing: 10) {
+                Text("Login")
+                    .foregroundColor(self.index == 0 ? .white : .brown)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                
+                Capsule()
+                    .fill(self.index == 0 ? .blue : Color.clear)
+                    .frame(width: 100, height: 5)
+            }
+            
             Spacer(minLength: 0)
         }
-        .padding(.top, 40)
+        .padding(.top, 30)
     }
 }
 
@@ -122,6 +131,7 @@ struct CShape: Shape {
 }
 
 struct LoginButtonView: View {
+    @Binding var index: Int
     var body: some View {
         // Button
         Button(action: {}) {
@@ -136,5 +146,6 @@ struct LoginButtonView: View {
                 .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: 5)
         }
         .offset(y: 25)
+        .opacity(self.index == 0 ? 1 : 0)
     }
 }

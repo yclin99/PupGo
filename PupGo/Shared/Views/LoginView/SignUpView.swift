@@ -12,62 +12,68 @@ struct SignUpView: View {
     @State var email: String = ""
     @State var pass: String = ""
     @State var repass: String = ""
+    @Binding var index: Int
     var body: some View {
-        ZStack {
-            lightYellowColor.edgesIgnoringSafeArea(.all)
-            VStack {
-                ImageText()
-                SignUp(email: $email, pass: $pass, repass: $repass)
-            }
-        }
-    }
-}
-
-struct SignUp: View {
-    @Binding var email: String
-    @Binding var pass: String
-    @Binding var repass: String
-    var body: some View {
-        
-        ZStack(alignment: .bottom) {
-            VStack {
-                SignUpTextView()
-                
-                EmailTextView(email: $email)
-                
-                PasswordTextView(pass: $pass)
-                // replace with re-enter password
-                ReEnterPasswordVieW(repass: $repass)
-            }
-            .padding()
-            // bottom padding
-            .padding(.bottom, 65)
-            .background(.brown)
-            .clipShape(PShape())
-            .cornerRadius(35)
-            .padding(.horizontal, 20)
+        VStack {
             
-            SignUpButtonView()
+            ZStack(alignment: .bottom) {
+                VStack {
+                    SignUpTextView(index: $index)
+                        
+                    EmailTextView(email: $email)
+                        
+                    PasswordTextView(pass: $pass)
+                        // replace with re-enter password
+                    ReEnterPasswordVieW(repass: $repass)
+                }
+                .padding()
+                // bottom padding
+                .padding(.bottom, 65)
+                .background(.brown)
+                .clipShape(ReCShape())
+                // clipping the contecnt shape also for tap gesture
+                .contentShape(ReCShape())
+                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: -5)
+                .onTapGesture {
+                    self.index = 1
+                }
+                .cornerRadius(35)
+                .padding(.horizontal, 20)
+                
+                SignUpButtonView(index: $index)
+            }
         }
     }
 }
 
 struct SignUpTextView: View {
+    @Binding var index: Int
     var body: some View {
         HStack {
             Spacer(minLength: 0)
-            Text("Sign Up")
-                .foregroundColor(.white)
-                .font(.title)
-                .fontWeight(.bold)
+            VStack (spacing: 10) {
+                Text("Sign Up")
+                    .foregroundColor(self.index == 1 ? .white : .gray)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Capsule()
+                    .fill(self.index == 1 ? .blue : Color.clear)
+                    .frame(width: 100, height: 5)
+            }
+            
         }
-        .padding(.top, 40)
+        .padding(.top, 30)
     }
 }
 
 struct SignUpView_Previews: PreviewProvider {
+    @State var email: String = ""
+    @State var pass: String = ""
+    @State var index: Int = 0
+    @State var repass: String = ""
+    
     static var previews: some View {
-        SignUpView()
+        Text("hey!")
     }
 }
 
@@ -88,6 +94,7 @@ struct ReEnterPasswordVieW: View {
 }
 
 struct SignUpButtonView: View {
+    @Binding var index: Int
     var body: some View {
         // Button
         Button(action: {}) {
@@ -102,10 +109,12 @@ struct SignUpButtonView: View {
                 .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: 5)
         }
         .offset(y: 25)
+        // hiding view when its in background
+        .opacity(self.index == 1 ? 1 : 0)
     }
 }
 
-struct PShape: Shape {
+struct ReCShape: Shape {
     func path(in rect: CGRect) -> Path {
         return Path{path in
             

@@ -15,7 +15,8 @@ struct GoogleLoginView: View {
     
     var body: some View {
         Button(action: {handleLogin()}) {
-            GoogleButtonContent()
+            //GoogleButtonContent()
+            GoogleButton()
         }
     }
     
@@ -68,13 +69,24 @@ struct GoogleLoginView: View {
 
 struct GoogleButtonContent: View {
     var body: some View {
-        Text("\(Image(systemName: "g.circle")) Google Login")
+        Text("\(Image("google")) Google Login")
             .font(.headline)
             .foregroundColor(.blue)
             .padding()
             .frame(width: 220, height: 60)
             .background(.white)
             .cornerRadius(35.0)
+    }
+}
+
+struct GoogleButton: View {
+    var body: some View {
+        Image("google")
+            .resizable()
+            .frame(width: 45, height: 45)
+            //.clipped()
+            //.cornerRadius(60)
+            //.background(.black)
     }
 }
 

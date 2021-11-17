@@ -11,26 +11,50 @@ public var lightYellowColor = Color(#colorLiteral(red: 1, green: 1, blue: 0.88, 
 
 struct LoginView: View {
     
-    @State var username: String = "Evelynyu"
+    @State var email: String = "Evelynyu"
     @State var password: String = "GreenField2@4"
+    @State var repass: String = ""
+    @State var index: Int = 0
     
     var body: some View {
         ZStack {
             lightYellowColor.ignoresSafeArea()
             
             VStack {
-                EmailLoginView(username: $username, password: $password)
+                //EmailLoginView(username: $username, password: $password)
+                Spacer()
+                ImageText()
+                ZStack {
+                    SignUpView(index: $index)
+                        .zIndex(Double(self.index))
+                    SignInView(index: $index)
+                }
                 
-                Divider()
+                HStack (spacing: 15) {
+                    Rectangle()
+                        .fill(.gray)
+                        .frame(height: 1)
+                    Text("OR")
+                    Rectangle()
+                        .fill(.gray)
+                        .frame(height: 1)
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 50)
                 
-                GoogleLoginView()
-                FBLoginView()
+                HStack(spacing: 25) {
+                    GoogleLoginView()
+                        .frame(width: 50, height: 50)
+                    FBLoginView()
+                        .frame(width: 50, height: 50)
+                }
+                
             }
             .padding()
         }
     }
 }
-
+/**/
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
