@@ -11,17 +11,16 @@ struct SignInView: View {
     @State var email: String = ""
     @State var pass: String = ""
     @Binding var index: Int
-    //@State var email: String = ""
-    //@State var pass: String = ""
+    @Binding var animationIndex: Int
     var body: some View {
 
         ZStack(alignment: .bottom) {
             VStack {
                 LoginTextView(index: self.$index)
                 
-                EmailTextView(email: $email)
+                EmailTextView(email: $email, index: self.$animationIndex)
                 
-                PasswordTextView(pass: $pass)
+                PasswordTextView(pass: $pass, index: self.$animationIndex)
                 
                 HStack {
                     Spacer(minLength: 0)
@@ -88,12 +87,27 @@ struct LoginTextView: View {
 
 struct EmailTextView: View {
     @Binding var email: String
+    @Binding var index: Int
     var body: some View {
         VStack {
             HStack(spacing: 15) {
                 Image(systemName: "envelope.fill")
                     .foregroundColor(.yellow)
                 TextField("Email Address", text: self.$email)
+                    .onChange(of: email) { newValue in
+                        switch email.count {
+                        case 3...6:
+                            index = 1
+                        case 7...10:
+                            index = 2
+                        case 11...14:
+                            index = 3
+                        case 15...25:
+                            index = 4
+                        default:
+                            index = 0
+                        }
+                    }
             }
             Divider().background(.white.opacity(0.5))
         }
@@ -104,12 +118,16 @@ struct EmailTextView: View {
 
 struct PasswordTextView: View {
     @Binding var pass: String
+    @Binding var index: Int
     var body: some View {
         VStack {
             HStack(spacing: 15) {
                 Image(systemName: "eye.slash.fill")
                     .foregroundColor(.yellow)
                 SecureField("Password", text: self.$pass)
+                    .onChange(of: pass) { newValue in
+                        index = 5
+                    }
             }
             Divider().background(.white.opacity(0.5))
         }

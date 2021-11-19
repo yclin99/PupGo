@@ -13,6 +13,7 @@ struct SignUpView: View {
     @State var pass: String = ""
     @State var repass: String = ""
     @Binding var index: Int
+    @Binding var animationIndex: Int
     var body: some View {
         VStack {
             
@@ -20,9 +21,9 @@ struct SignUpView: View {
                 VStack {
                     SignUpTextView(index: $index)
                         
-                    EmailTextView(email: $email)
+                    EmailTextView(email: $email, index: $animationIndex)
                         
-                    PasswordTextView(pass: $pass)
+                    PasswordTextView(pass: $pass, index: $animationIndex)
                         // replace with re-enter password
                     ReEnterPasswordVieW(repass: $repass)
                 }
