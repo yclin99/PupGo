@@ -74,6 +74,9 @@
 		0EFC29CE27473E04000D6D17 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC29CC27473E04000D6D17 /* UserProfileView.swift */; };
 		0EFC2A1B274765CE000D6D17 /* AnimationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A1A274765CE000D6D17 /* AnimationTestView.swift */; };
 		0EFC2A1C274765CE000D6D17 /* AnimationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A1A274765CE000D6D17 /* AnimationTestView.swift */; };
+		0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A1E2748CEEA000D6D17 /* CurvedTabView.swift */; };
+		0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A202748D275000D6D17 /* TabEffect.swift */; };
+		0EFC2A232748D683000D6D17 /* ButtonCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A222748D683000D6D17 /* ButtonCurve.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +116,9 @@
 		0EFC29C927473DEF000D6D17 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		0EFC29CC27473E04000D6D17 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		0EFC2A1A274765CE000D6D17 /* AnimationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestView.swift; sourceTree = "<group>"; };
+		0EFC2A1E2748CEEA000D6D17 /* CurvedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedTabView.swift; sourceTree = "<group>"; };
+		0EFC2A202748D275000D6D17 /* TabEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEffect.swift; sourceTree = "<group>"; };
+		0EFC2A222748D683000D6D17 /* ButtonCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCurve.swift; sourceTree = "<group>"; };
 		1AD73CD0E47A073D8D3C0106 /* Pods-PupGo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		63C69A8021C997FD4485DD25 /* Pods-PupGo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		660D37C5ED365D69D2E41300 /* Pods-PupGo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +182,7 @@
 		0E050045273629A800D7FFCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0EFC2A1D2748CED3000D6D17 /* TabView */,
 				0E05005627362AF200D7FFCD /* LoginView */,
 				0E05005227362A4200D7FFCD /* MatchingView */,
 				0E05004E27362A1B00D7FFCD /* NotificationView */,
@@ -253,6 +260,16 @@
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0EFC2A1D2748CED3000D6D17 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				0EFC2A1E2748CEEA000D6D17 /* CurvedTabView.swift */,
+				0EFC2A202748D275000D6D17 /* TabEffect.swift */,
+				0EFC2A222748D683000D6D17 /* ButtonCurve.swift */,
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 		2E5239CBE5B267B34BC8BDDA /* Pods */ = {
@@ -428,6 +445,7 @@
 				0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */,
 				0EFC29C727473DC8000D6D17 /* EditUserProfileView.swift in Sources */,
 				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
+				0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */,
 				0E8A2E2E2741F8A100081719 /* Card.swift in Sources */,
 				0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
 				0EBD8A21274393CA008EBBDC /* SignUpView.swift in Sources */,
@@ -438,6 +456,7 @@
 				0E05005827362D5600D7FFCD /* LoginView.swift in Sources */,
 				0E8A2E372741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */,
+				0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */,
 				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
 				0E8A2E312741F99B00081719 /* CardView.swift in Sources */,
 				0E8A2E1C2741F18500081719 /* Event.swift in Sources */,
@@ -455,6 +474,7 @@
 				0EFC2A1B274765CE000D6D17 /* AnimationTestView.swift in Sources */,
 				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
 				0E8A2E282741F24C00081719 /* EventExploreContentView.swift in Sources */,
+				0EFC2A232748D683000D6D17 /* ButtonCurve.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
