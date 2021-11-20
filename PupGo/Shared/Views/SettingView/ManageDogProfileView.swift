@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct ManageDogProfileView: View {
-    var contentDogs : [DogProfile]
+    @State var content : UserProfile
+//    var contentDogs : [DogProfile]?
+//    lazy var contentDogs = content.mydogs
     
     var AddDogIcon: some View {
         HStack (alignment: .center){
-            NavigationLink(destination: AddDogProfileView()) { Image(systemName: "plus.app").font(.system(size: 60)).foregroundColor(.black)
+            NavigationLink(destination: AddDogProfileView(content: content)) { Image(systemName: "plus.app").font(.system(size: 60)).foregroundColor(.black)
         }
         }
     }
     
     var body: some View {
-//        NavigationView {
             ZStack {
                 lightYellowColor
                 VStack(alignment: .center, spacing: 50) {
@@ -26,13 +27,12 @@ struct ManageDogProfileView: View {
                     .font(.system(size: 35))
                     .bold().foregroundColor(.black)
                 VStack (alignment: .center, spacing: 30) {
-                    ForEach(contentDogs[0..<contentDogs.count], id: \.self, content: {dogview in DogView(content: dogview)})
+                    ForEach(content.mydogs![0..<content.mydogs!.count], id: \.self, content: {dogview in DogView(content: dogview)})
                     AddDogIcon
                     }
                 }
             }
             .edgesIgnoringSafeArea(.top)
-//        }
     }
 }
 
@@ -43,10 +43,10 @@ struct DogView: View {
     
     var body: some View {
         HStack (alignment: .center) {
-            NavigationLink(destination: DogProfileView(content: content)) { content.image.resizable().frame(width: 300, height: 200)
+            NavigationLink(destination: DogProfileView(content: content)) { content.image.resizable().frame(width: 200, height: 150)
                     .clipShape(Circle())
                                 .shadow(radius: 10)
-                                .overlay(Circle().stroke(Color.black, lineWidth: 5))
+                                .overlay(Circle().stroke(Color.black, lineWidth: 3))
                 
             }
         }

@@ -27,6 +27,9 @@ struct UserProfileView: View {
             lightYellowColor
                  .edgesIgnoringSafeArea(.all)
             VStack (alignment: .center) {
+            Text("My Profile")
+                    .font(.system(size: 35))
+                    .bold().foregroundColor(.black)
             List {
                 HStack(alignment: .center) {
                     Text("User ID: ")

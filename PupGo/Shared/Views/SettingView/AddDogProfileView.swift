@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddDogProfileView: View {
     
+    @State var content: UserProfile
+    
     @State private var image: Image?
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
@@ -17,7 +19,7 @@ struct AddDogProfileView: View {
     @State var petname: String = ""
     @State var gender: String?
     @State var breed: String?
-    @State var isCastration: Bool = false
+    @State var isCastration: String = ""
     @State var birthday: String?
     @State var location: String?
     
@@ -44,16 +46,37 @@ struct AddDogProfileView: View {
     
     @State private var showingAlert = false
     
+//    var submit: some View {
+//        Button(action: {showingAlert = true}, label: {
+//            Text("Submit").font(.system(size: 20)).bold().foregroundColor(.white)
+//                .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
+//        }).alert(isPresented:$showingAlert) {
+//            Alert(
+//                title: Text("You have registered a new Pup!")
+//                )
+//            }
+//    }
+    
     var submit: some View {
-        Button(action: {showingAlert = true}, label: {
-            Text("Submit").font(.system(size: 20)).bold().foregroundColor(.white)
-                .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
-        }).alert(isPresented:$showingAlert) {
-            Alert(
-                title: Text("You have registered a new Pup!")
-                )
+        Button(action: {
+            showingAlert = true
+            if image != nil {
+                var newdog = DogProfile(petid: petid, petname: petname, image: image!)
+                content.createPet(newdog: newdog)
+                 
             }
+        }, label: {
+            Text("Submit").font(.system(size: 20)).bold().foregroundColor(.white)
+                .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 40))
+        })
     }
+    
+//    var back: some View {
+//        NavigationLink(destination: SettingView()) {
+//            Text("Back to Setting").font(.system(size: 20)).bold().foregroundColor(.white)
+//                .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 40))
+//        }
+//    }
     
     var body: some View {
         ZStack {
@@ -69,7 +92,7 @@ struct AddDogProfileView: View {
                 HStack(alignment: .center) {
                     Text("isCastrated: ")
                         .bold()
-                    TextField("Yes/No", text: $petname)}
+                    TextField("Yes/No", text: $isCastration)}
                 HStack(alignment: .center) {
                     Text("Pet Breed is: ")
                         .bold()
@@ -90,9 +113,8 @@ struct AddDogProfileView: View {
                 .font(.callout)
                 .environment(\.defaultMinListRowHeight, 50)
         HStack {
-            Spacer()
             submit
-            Spacer()
+//            back
         }
     }
         }
@@ -100,7 +122,7 @@ struct AddDogProfileView: View {
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: self.$inputImage)
         }
-    }
+}
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
@@ -108,8 +130,9 @@ struct AddDogProfileView: View {
     }
 }
 
-struct AddDogProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddDogProfileView()
-    }
-}
+//struct AddDogProfileView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddDogProfileView()
+//    }
+//}
+

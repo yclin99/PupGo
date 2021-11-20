@@ -31,6 +31,9 @@ struct EditUserProfileView: View {
             lightYellowColor
                  .edgesIgnoringSafeArea(.all)
             VStack (alignment: .center) {
+            Text("Edit My Profile")
+                        .font(.system(size: 35))
+                        .bold().foregroundColor(.black)
             List {
                 HStack(alignment: .center) {
                     Text("User ID: ")
@@ -88,3 +91,4 @@ extension Optional where Wrapped == String {
         }
     }
 }
+

@@ -28,13 +28,16 @@ struct EventExploreContentView: View {
     }
     
     var body: some View {
-//        NavigationView{
+        NavigationView {
          ZStack {
             lightYellowColor
                  .edgesIgnoringSafeArea(.all)
-             VStack {
+             VStack(alignment: .center, spacing: 30) {
+//                Spacer(minLength: 30)
                 HStack {
-                Text("EXPLORE NEARBY").font(.system(size: 27)).foregroundColor(.black).bold()//.padding()
+                    Text("Nearby Event")
+                        .font(.system(size: 35))
+                        .bold().foregroundColor(.black)
                     AddEventView.foregroundColor(.black)
                 }
                 ScrollView {
@@ -45,12 +48,10 @@ struct EventExploreContentView: View {
                         }
                     }
                 }
-         
-                .padding(.vertical, 70.0)
-//                .edgesIgnoringSafeArea(.all)
+//             .edgesIgnoringSafeArea(.all)
+                .padding(.bottom, 70.0)
                 .frame(width: 360, height: 680)
-                //Spacer()
-                //BottomView()
+          }
         }
     }
 }
@@ -83,6 +84,7 @@ struct EventExploreContentView_Previews: PreviewProvider {
     static var previews: some View {
 //        var events = [Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "xx", endtime: "xx", image: Image("Dog1"))]
         EventExploreContentView()
+.previewInterfaceOrientation(.portrait)
 //        SingleEventView(content: events[0])
     }
 }

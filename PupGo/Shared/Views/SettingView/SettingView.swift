@@ -13,11 +13,14 @@ struct SettingView: View {
     static let gradientEnd = Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)
     
     var userprofile = UserProfile(userid: 1, username: "This owner")
-    var dogprofile = DogProfile(petid: 1001, petname: "UglyDog", image: Image("Dog1"))
-    var Dogprofiles =
-    [DogProfile(petid: 1001, petname: "UglyDog", image: Image("Dog1")),
-     DogProfile(petid: 1003, petname: "Goofy", image: Image("Dog3"))]
+    var dog1 = DogProfile(petid: 1001, petname: "UglyDog", image: Image("Dog1"))
+    var dog2 = DogProfile(petid: 1003, petname: "Goofy", image: Image("Dog3"))
     
+    init(){
+        userprofile.createPet(newdog: dog1)
+        userprofile.createPet(newdog: dog2)
+    }
+
     var userView : some View {
         NavigationLink(destination: UserProfileView(content: userprofile)) {
             ZStack(){
@@ -39,7 +42,7 @@ struct SettingView: View {
     }
     
     var dogView : some View {
-        NavigationLink(destination: ManageDogProfileView(contentDogs: Dogprofiles)) {
+        NavigationLink(destination: ManageDogProfileView(content: userprofile)) {
             ZStack(){
                 Rectangle()
                     .fill(.linearGradient(

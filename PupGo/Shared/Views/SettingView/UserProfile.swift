@@ -24,6 +24,7 @@ class UserProfile: Hashable {
     var birthday: String?
     var location: String?
     var petOwner: Bool
+    var mydogs: [DogProfile]?
 
   
     init(userid: Int, username: String) {
@@ -35,8 +36,11 @@ class UserProfile: Hashable {
         self.petOwner = false
   }
     
-    func createPet () {
+    func createPet (newdog: DogProfile) {
         self.petOwner = true
+        if (mydogs?.append(newdog)) == nil {
+            mydogs = [newdog]
+        }
     }
     
     func addGender(gender: String) {
