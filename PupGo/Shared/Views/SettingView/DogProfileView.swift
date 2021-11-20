@@ -25,7 +25,7 @@ struct DogProfileView: View {
             lightYellowColor
                  .edgesIgnoringSafeArea(.all)
             VStack (alignment: .center) {
-                content.image.resizable().scaledToFit().frame(width: 180, height: 180)
+                content.image.resizable().scaledToFit().frame(width: 250, height: 250)
             List {
                 HStack(alignment: .center) {
                     Text("Pet ID: ")
@@ -62,6 +62,7 @@ struct DogProfileView: View {
                 }.listStyle(PlainListStyle())
                 .font(.callout)
                 .environment(\.defaultMinListRowHeight, 50)
+                Spacer(minLength: 10)
                 edit
                 Spacer(minLength: 30)
             }

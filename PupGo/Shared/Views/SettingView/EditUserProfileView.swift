@@ -31,7 +31,6 @@ struct EditUserProfileView: View {
             lightYellowColor
                  .edgesIgnoringSafeArea(.all)
             VStack (alignment: .center) {
-            Spacer()
             List {
                 HStack(alignment: .center) {
                     Text("User ID: ")

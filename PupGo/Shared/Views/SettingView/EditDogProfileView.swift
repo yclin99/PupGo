@@ -78,6 +78,7 @@ struct EditDogProfileView: View {
                 }.listStyle(PlainListStyle())
                 .font(.callout)
                 .environment(\.defaultMinListRowHeight, 50)
+                Spacer(minLength: 10)
                 SaveProfile
                 Spacer(minLength: 30)
             }
