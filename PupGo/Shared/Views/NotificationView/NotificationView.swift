@@ -44,10 +44,14 @@ struct Join: View {
     
     var body: some View{
         VStack{
+            Text("Someone wants to Join your event!")
+                .font(.system(size: 20))
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+                .opacity(joins.count > 0 ? 1 : 0)
+            
             if joins.count > 0 {
-                Text("Someone wants to Join your event!")
-                    .font(.system(size: 20))
-                    .fontWeight(.bold)
+                
                 ZStack {
                     VStack {
                         ZStack {
@@ -64,6 +68,7 @@ struct Join: View {
                 
             Spacer(minLength: 5)
         }
+        .foregroundColor(.blue)
     }
 
 }
