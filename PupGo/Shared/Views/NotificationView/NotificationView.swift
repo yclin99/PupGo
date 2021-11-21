@@ -21,7 +21,7 @@ struct NotificationView: View {
                     UEvent()
                     FEvent()
                 }
-                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 200)
+                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 240)
                 .padding(.bottom, 200)
                 Spacer()
             }
@@ -51,7 +51,7 @@ struct Join: View {
                 .opacity(joins.count > 0 ? 1 : 0)
             
             if joins.count > 0 {
-                
+
                 ZStack {
                     VStack {
                         ZStack {
