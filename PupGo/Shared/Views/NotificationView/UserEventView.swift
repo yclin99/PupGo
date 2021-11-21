@@ -12,36 +12,68 @@ struct UserEventView: View {
     @State private var isShowingAnswer = false
 
     var body: some View {
-        ZStack {
-            
-            Image("request2join")
+        let pic = Image(card.pic)
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea()
                 .cornerRadius(20)
                 .frame(width: 330.0, height: 120.0)
-                .shadow(color: Color.blue, radius: 10.0, x: 10, y: 1)
+                .shadow(color: Color.green,  radius: 5.0, x: 10, y: -10)
+        let back = RoundedRectangle(cornerRadius: 20, style: .circular)
+            .shadow(color: Color.black, radius: 5.0 )
+            .foregroundColor(.black.opacity(0.4))
+            .frame(width: 330.0, height: 150.0)
+        ZStack {
+            pic
             
-            VStack (alignment: .leading) {
-
-                Text("Start time: " + card.when)
-                    .font(.title)
-                    .foregroundColor(.black)
-                Text("Participants: " + card.who)
-                    .font(.title)
-                    .foregroundColor(.orange)
-                Text("Launched: " + card.launched)
-                    .font(.title)
-                    .foregroundColor(.red)
+            if isShowingAnswer {
+                back
+                HStack(alignment: .center) {
+                    
+                    
+                VStack (alignment: .leading) {
+                    if isShowingAnswer {
+                    Text("Start time: " + card.when)
+                            .font(.body)
+                        .foregroundColor(.white)
+                    Text("Participants: " + card.who)
+                        .font(.body)
+                        .foregroundColor(.white)
+                    Text("Scheduled at: " + card.launched)
+                        .font(.body)
+                        .foregroundColor(.white)
+                        
+                    }
+                }
+                .padding(20)
+                .multilineTextAlignment(.center)
+                    
+                Button(action: {
+                        print("check event")}
+                        , label: {
+                        Circle()
+                            .fill(Color.yellow)
+                            .frame(width: 75, height: 75)
+                            .shadow(radius: 10)
+                            .overlay(
+                                Image(systemName: "eyes")
+                                    .font(.largeTitle)
+                                    .foregroundColor(Color.black)
+                            )
+                        
+                        
+                    })
+                    
+                }
+                
             }
-            .padding(20)
-            .multilineTextAlignment(.center)
+            
         }
         .frame(width: 330.0, height: 120.0)
-    
+        .onTapGesture {
+            self.isShowingAnswer.toggle()
     }
 }
-
+}
 struct UserEventView_Previews: PreviewProvider {
     static var previews: some View {
         UserEventView(card: Card.uevent)

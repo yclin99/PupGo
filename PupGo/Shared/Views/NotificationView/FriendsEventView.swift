@@ -11,30 +11,81 @@ struct FriendsEventView: View {
 
     let card: Card
     @State private var isShowingAnswer = false
-
+    
     var body: some View {
-        ZStack {
-            Image("notiback")
+        let pic = Image(card.pic)
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea()
                 .cornerRadius(20)
                 .frame(width: 330.0, height: 120.0)
-                .shadow(color: Color.green,  radius: 10.0, x: -10, y: 10)
-            
-            VStack (alignment: .leading) {
-
-                Text(card.who + " is going to walk " + "at " + card.when)
-                    .font(.title)
-                    .foregroundColor(.blue)
-                Text("Planned on: " + card.launched)
-                    .font(.title)
-                    .foregroundColor(.red)
-            }
-            .padding(20)
-            .multilineTextAlignment(.center)
-        }
+                .shadow(color: Color.blue,  radius: 10.0, x: -10, y: 10)
+        let back = RoundedRectangle(cornerRadius: 20, style: .circular)
+            .shadow(color: Color.black, radius: 10.0 )
+            .foregroundColor(.black.opacity(0.4))
+            .frame(width: 330.0, height: 150.0)
         
+        ZStack {
+            pic
+            
+            if isShowingAnswer {
+                back
+                HStack (alignment: .center) {
+                    Button(action: {
+                        print("accept")}
+                        , label: {
+                        Circle()
+                            .fill(Color.white)
+                            .frame(width: 75, height: 75)
+                            .shadow(radius: 10)
+                            .overlay(
+                                Image(systemName: "heart")
+                                    .font(.largeTitle)
+                                    .foregroundColor(Color.red)
+                            )
+                        
+                        
+                    })
+                    
+                    VStack (alignment: .leading) {
+                        Text(card.who)
+                            .font(.body)
+                            .foregroundColor(.white)
+                        
+                        Text(card.when)
+                                .font(.body)
+                                .foregroundColor(.white)
+                        
+                        Text(card.launched)
+                            .font(.body)
+                            .foregroundColor(.white)
+                        }
+                    .padding(20)
+                    .multilineTextAlignment(.center)
+                    
+                    Button(action: {
+                        print("decline invitation")}
+                        , label: {
+                        Circle()
+                            .fill(Color.black)
+                            .frame(width: 75, height: 75)
+                            .shadow(radius: 10)
+                            .overlay(
+                                Image(systemName: "hand.thumbsdown")
+                                    .font(.largeTitle)
+                                    .foregroundColor(Color.green)
+                            )
+                        
+                        
+                    })
+                }
+                
+            }
+                
+        }
+        .frame(width: 330.0, height: 120.0)
+        .onTapGesture {
+            self.isShowingAnswer.toggle()
+}
 }
 }
 

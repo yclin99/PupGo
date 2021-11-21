@@ -13,24 +13,24 @@ struct NotificationView: View {
         NavigationView {
             ZStack {
                 lightYellowColor.ignoresSafeArea()
+                
                 VStack(alignment: .leading) {
+                    Spacer()
                     Join()
-                                    
                     Spacer()
                     UEvent()
-
                     Spacer()
                     FEvent()
                     Spacer()
-
                 }
-                                    
-                Spacer()
+                .padding(.vertical, 100)
 
             }
-            .padding(.vertical, 70.0)
             .edgesIgnoringSafeArea(.top)
-            .frame(width: 360, height: 680)
+            .frame(width: 420, height: 720)
+            .padding(.vertical, 70)
+            
+
         }
     }
 }
@@ -43,48 +43,32 @@ extension View {
 }
 
 struct Join: View {
-    @State private var joins = [Card](repeating: Card.join, count: 3)
+    @State private var joins = [Card](repeating: Card.join, count: 1)
     
     var body: some View{
         VStack{
-                
-            HStack( alignment: .top, spacing: 12) {
-                    Button(action:{
-                        print("pass request")
-                        joins.removeFirst(1)
-                    }){
-                        Text("No")
-                    }
-                        
-                    Text("Wanna Join")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
-                        .foregroundColor(.red)
-                    
-                Button(action:{
-                    print("pass request")
-                    joins.removeFirst(1)
-                }){
-                    Text("Ok")
-                }
-            }
-                
-            
+            if joins.count > 0 {
+                Text("Someone wants to Join your event!")
+                    .font(.system(size: 20))
+                    .fontWeight(.bold)
                 ZStack {
                     VStack {
                         ZStack {
-                            ForEach(0..<joins.count, id: \.self) { index in
+                            ForEach(0..<joins.count, id: \.self){ index in
                                 JoinRequestView(card: self.joins[index])
                                     .stacked(at: index, in: self.joins.count)
+                                
+                                }
+                            
                             }
                         }
                     }
-                    
                 }
                 
             Spacer(minLength: 5)
         }
     }
+
 }
 
 struct UEvent: View {
@@ -92,7 +76,8 @@ struct UEvent: View {
     @State private var uevents = [Card](repeating: Card.uevent, count: 1)
     
     var body: some View{
-        VStack{
+        if uevents.count > 0 {
+            VStack{
                 
                 
             HStack( alignment: .top, spacing: 12) {
@@ -124,6 +109,8 @@ struct UEvent: View {
                 
             Spacer(minLength: 5)
         }
+        }
+        
     }
 }
 
@@ -131,42 +118,50 @@ struct FEvent: View {
     @State private var fevents = [Card](repeating: Card.fevent, count: 5)
     
     var body: some View{
-        VStack{
-                
-            HStack( alignment: .top, spacing: 12) {
+        if fevents.count > 0 {
+            VStack{
                     
-                    Button(action:{
-                        print("Don't join friend's event")
-                        fevents.removeFirst(1)
-                    }){
-                        Text("Refuse")}
+                HStack( alignment: .top, spacing: 12) {
                         
-                    Text("Your Are Invited")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
-                        .foregroundColor(.green)
-                    
-                    Button(action:{
-                        print("Join friend's event")
-                        fevents.removeFirst(1)
-                    }){
-                        Text("Accept")
-                    }
-                }
-            
-                ZStack {
-                    VStack {
-                         ZStack {
-                            ForEach(0..<fevents.count, id: \.self) { index in
-                                FriendsEventView(card: self.fevents[index])
-                                    .stacked(at: index, in: self.fevents.count)
-                            }
+                        Button(action:{
+                            print("Don't join friend's event")
+                            fevents.removeFirst(1)
+                        }){
+                            Text("Refuse")}
+                            
+                        Text("Your Are Invited")
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                        
+                        Button(action:{
+                            print("Join friend's event")
+                            fevents.removeFirst(1)
+                        }){
+                            Text("Accept")
                         }
                     }
-                    
-                }
                 
-            Spacer(minLength: 5)
-        }
+                    ZStack {
+                        VStack {
+                             ZStack {
+                                ForEach(0..<fevents.count, id: \.self) { index in
+                                    FriendsEventView(card: self.fevents[index])
+                                        .stacked(at: index, in: self.fevents.count)
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                Spacer(minLength: 5)
+            }
+    }
+    }
+}
+
+struct NotificationView_Previews: PreviewProvider {
+    static var previews: some View {
+        NotificationView()
     }
 }
