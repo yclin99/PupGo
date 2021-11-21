@@ -12,39 +12,7 @@ struct MainView: View {
     var body: some View {
         
         if log_Status {
-            NavigationView {
-                TabView {
-                    MatchView()
-                        .tabItem {
-                            Label("Match", systemImage: "heart.circle.fill")
-                                .foregroundColor(.yellow)
-                        }
-                    
-                    EventExploreContentView()
-                        .tabItem {
-                            Label("Explore", systemImage: "magnifyingglass.circle.fill")
-                                .foregroundColor(.yellow)
-                            //Image(systemName: "map")
-                            //Text("Explore")
-                        }
-                    
-                    NotificationView()
-                        .tabItem {
-                            Label("Notification", systemImage: "message.circle.fill")
-                                .foregroundColor(.yellow)
-                            //Image(systemName: "message")
-                            //Text("Notification")
-                        }
-                    
-                    SettingView()
-                        .tabItem {
-                            Label("Setting", systemImage: "pawprint.circle.fill")
-                                .foregroundColor(.yellow)
-                            //Image(systemName: "gear")
-                            //Text("Setting")
-                        }
-                }
-            }
+            CurvedTabView()
         } else {
             LoginView()
         }

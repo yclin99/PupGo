@@ -9,16 +9,25 @@ import Foundation
 import SwiftUI
 
 struct NotificationView: View {
+    
     var body: some View {
         NavigationView {
             ZStack {
+<<<<<<< HEAD
                 lightYellowColor.ignoresSafeArea()
                 
                 VStack(alignment: .leading) {
                     Spacer()
                     Join()
+=======
+                lightYellowColor.edgesIgnoringSafeArea(.all)
+                
+                VStack(alignment: .leading) {
+>>>>>>> c6cc5f945ec8a66f098937d76afea910d617dfa4
                     Spacer()
+                    Join()
                     UEvent()
+<<<<<<< HEAD
                     Spacer()
                     FEvent()
                     Spacer()
@@ -31,6 +40,15 @@ struct NotificationView: View {
             .padding(.vertical, 70)
             
 
+=======
+                    FEvent()
+                }
+                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 200)
+                .padding(.bottom, 200)
+                Spacer()
+            }
+            
+>>>>>>> c6cc5f945ec8a66f098937d76afea910d617dfa4
         }
     }
 }
@@ -47,10 +65,35 @@ struct Join: View {
     
     var body: some View{
         VStack{
+<<<<<<< HEAD
             if joins.count > 0 {
                 Text("Someone wants to Join your event!")
                     .font(.system(size: 20))
                     .fontWeight(.bold)
+=======
+                
+            HStack( alignment: .top, spacing: 12) {
+                Button(action:{
+                        print("pass request")
+                        joins.removeFirst(1)
+                    }) {
+                        Text("No")
+                }
+                    Text("Wanna Join")
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
+                        .foregroundColor(.red)
+                    
+                Button(action:{
+                    print("pass request")
+                    joins.removeFirst(1)
+                }){
+                    Text("Ok")
+                }
+            }
+                
+            
+>>>>>>> c6cc5f945ec8a66f098937d76afea910d617dfa4
                 ZStack {
                     VStack {
                         ZStack {

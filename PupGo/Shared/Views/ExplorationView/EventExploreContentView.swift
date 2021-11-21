@@ -28,27 +28,36 @@ struct EventExploreContentView: View {
     }
     
     var body: some View {
-        NavigationView{
+        NavigationView {
+
             ZStack {
-                //Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255)).edgesIgnoringSafeArea(.all)
                 lightYellowColor.edgesIgnoringSafeArea(.all)
                 VStack {
-                    HStack {
-                        Text("EXPLORE NEARBY").font(.system(size: 27)).foregroundColor(.black).bold()//.padding()
-                        AddEventView.foregroundColor(.black)
-                    }
                     ScrollView {
-                        VStack (alignment: .leading, spacing: 30){
+                        LazyVStack (alignment: .leading, spacing: 30) {
+                            Spacer()
                             ForEach(events[0..<eventsCount], id: \.self, content: {event in
-                        EventView(content: event)
-                        })
+                                EventView(content: event)
+                            })
+                        }
+                        .padding(.bottom, 60)
+                        .padding(.bottom, getSafeArea().bottom == 0 ? 15 : getSafeArea().bottom)
                     }
                 }
-                //Spacer()
-                //BottomView()
+
+                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height)
+                Spacer(minLength: 60)
+                HStack {
+                    Spacer()
+                    AddEventView.foregroundColor(.black)
                 }
+                
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitle("EXPLORE NEARBY")
+
         }
+        .foregroundColor(.black)
     }
 }
 
@@ -80,6 +89,7 @@ struct EventExploreContentView_Previews: PreviewProvider {
     static var previews: some View {
 //        var events = [Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "xx", endtime: "xx", image: Image("Dog1"))]
         EventExploreContentView()
+.previewInterfaceOrientation(.portrait)
 //        SingleEventView(content: events[0])
     }
 }

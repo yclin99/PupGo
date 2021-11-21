@@ -50,7 +50,7 @@ struct ImageText: View {
             .cornerRadius(150)
                 .overlay(RoundedRectangle(cornerRadius: 150)
                         .stroke(.yellow, lineWidth: 6))
-            .padding(.bottom, 75)
+            .padding(.bottom, 15)
     }
 }
 

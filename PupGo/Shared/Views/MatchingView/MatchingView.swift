@@ -26,6 +26,8 @@ struct MatchView: View {
                     Spacer()
                 }
             }
+            //.padding(.bottom, 60)
+            //.padding(.bottom, getSafeArea().bottom == 0 ? 15 : getSafeArea().bottom)
             .edgesIgnoringSafeArea(.top)
             //.navigationTitle("Matching")
         }
