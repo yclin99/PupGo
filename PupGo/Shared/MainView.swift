@@ -12,32 +12,7 @@ struct MainView: View {
     var body: some View {
         
         if log_Status {
-            NavigationView {
-                TabView {
-                    MatchView()
-                        .tabItem {
-                            Label("Match", systemImage: "house")
-                        }
-                    
-                    ExploreView()
-                        .tabItem {
-                            Image(systemName: "map")
-                            Text("Explore")
-                        }
-                    
-                    NotifyView()
-                        .tabItem {
-                            Image(systemName: "message")
-                            Text("Notification")
-                        }
-                    
-                    SettingView()
-                        .tabItem {
-                            Image(systemName: "gear")
-                            Text("Setting")
-                        }
-                }
-            }
+            CurvedTabView()
         } else {
             LoginView()
         }

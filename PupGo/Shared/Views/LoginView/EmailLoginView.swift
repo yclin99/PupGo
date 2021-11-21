@@ -10,17 +10,23 @@ import SwiftUI
 struct EmailLoginView: View {
     @Binding var username: String
     @Binding var password: String
+    @AppStorage("log_Status") var log_Status = false
     var body: some View {
         VStack {
             LogoText()
             ImageText()
             UserNameText(username: $username)
             PasswordText(password: $password)
-            Button (action: {print("Button tapped")}) {
+            Button (action: {print("Button tapped"); handleLogin()}) {
                 LoginButtonContent()
             }
         }
-        
+    }
+    func handleLogin() {
+        if (username == "Evelynyu") && (password == "GreenField2@4") {
+            log_Status = true
+            print("Success!")
+        }
     }
 }
 
@@ -43,8 +49,8 @@ struct ImageText: View {
             .clipped()
             .cornerRadius(150)
                 .overlay(RoundedRectangle(cornerRadius: 150)
-                        .stroke(Color.yellow, lineWidth: 6))
-            .padding(.bottom, 75)
+                        .stroke(.yellow, lineWidth: 6))
+            .padding(.bottom, 15)
     }
 }
 
