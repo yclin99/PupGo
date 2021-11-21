@@ -112,10 +112,12 @@ struct AddDogProfileView: View {
                 }.listStyle(PlainListStyle())
                 .font(.callout)
                 .environment(\.defaultMinListRowHeight, 50)
+            Spacer(minLength: 30)
         HStack {
             submit
 //            back
         }
+            Spacer(minLength: 80)
     }
         }
         .navigationTitle("image")

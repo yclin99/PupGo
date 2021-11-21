@@ -46,7 +46,7 @@ struct CreateEventContentView: View {
     var submit: some View {
         Button(action: {showingAlert = true}, label: {
             Text("Submit").font(.system(size: 18)).bold().foregroundColor(.white)
-                .background(RoundedRectangle(cornerRadius: 12).fill(Color.yellow).frame(width: 80, height: 40))
+                .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
         }).alert(isPresented:$showingAlert) {
             Alert(
                 title: Text("Successfully Created")
@@ -99,6 +99,7 @@ struct CreateEventContentView: View {
             submit
             Spacer()
         }
+        Spacer(minLength: 80)
     }
         }
         .navigationTitle("image")

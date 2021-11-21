@@ -61,10 +61,10 @@ struct DogProfileView: View {
                     Text(content.location ?? "<no_name>")}
                 }.listStyle(PlainListStyle())
                 .font(.callout)
-                .environment(\.defaultMinListRowHeight, 50)
-                Spacer(minLength: 10)
-                edit
+                .environment(\.defaultMinListRowHeight, 45)
                 Spacer(minLength: 30)
+                edit
+                Spacer(minLength: 80)
             }
         }
     }

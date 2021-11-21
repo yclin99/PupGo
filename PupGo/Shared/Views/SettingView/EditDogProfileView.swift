@@ -77,10 +77,10 @@ struct EditDogProfileView: View {
                     TextField("No 111 Earth...", text: $content.location.bound)}
                 }.listStyle(PlainListStyle())
                 .font(.callout)
-                .environment(\.defaultMinListRowHeight, 50)
-                Spacer(minLength: 10)
-                SaveProfile
+                .environment(\.defaultMinListRowHeight, 45)
                 Spacer(minLength: 30)
+                SaveProfile
+                Spacer(minLength: 80)
             }
         }
         .navigationTitle("image")

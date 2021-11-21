@@ -70,12 +70,13 @@ struct SingleEventView: View {
                 .bold()
             Text(content.location).font(.callout).foregroundColor(.black).bold()}
         .padding()
-        Spacer()
-            HStack {
-                Spacer()
-                join
-                Spacer()
-            }
+//        Spacer()
+        HStack {
+            Spacer()
+            join
+            Spacer()
+        }
+        Spacer(minLength: 80)
         }
         
     }

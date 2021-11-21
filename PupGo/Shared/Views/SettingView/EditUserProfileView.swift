@@ -67,7 +67,7 @@ struct EditUserProfileView: View {
                 .font(.callout)
                 .environment(\.defaultMinListRowHeight, 70)
                 SaveProfile
-                Spacer(minLength: 30)
+                Spacer(minLength: 80)
             }
         }
     }

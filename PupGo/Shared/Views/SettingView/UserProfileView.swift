@@ -63,7 +63,7 @@ struct UserProfileView: View {
                 .font(.callout)
                 .environment(\.defaultMinListRowHeight, 70)
                 edit
-                Spacer(minLength: 30)
+                Spacer(minLength: 80)
             }
         }
     }
