@@ -12,25 +12,24 @@ struct NotificationView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                lightYellowColor.ignoresSafeArea()
+                lightYellowColor.edgesIgnoringSafeArea(.all)
                 VStack(alignment: .leading) {
+                    Button(action:{
+                            print("pass request")
+                            //joins.removeFirst(1)
+                        }){
+                            Text("No")
+                    }
                     Join()
-                                    
                     Spacer()
                     UEvent()
-
                     Spacer()
                     FEvent()
                     Spacer()
-
                 }
-                                    
                 Spacer()
-
             }
-            .padding(.vertical, 70.0)
-            .edgesIgnoringSafeArea(.top)
-            .frame(width: 360, height: 680)
+            .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 100)
         }
     }
 }
@@ -49,12 +48,12 @@ struct Join: View {
         VStack{
                 
             HStack( alignment: .top, spacing: 12) {
-                    Button(action:{
+                Button(action:{
                         print("pass request")
                         joins.removeFirst(1)
                     }){
                         Text("No")
-                    }
+                }
                         
                     Text("Wanna Join")
                         .font(.system(size: 20))
