@@ -43,12 +43,6 @@ struct EventExploreContentView: View {
                         .padding(.bottom, 60)
                         .padding(.bottom, getSafeArea().bottom == 0 ? 15 : getSafeArea().bottom)
                     }
-                    
-                    Spacer(minLength: 60)
-                    HStack {
-                        Spacer()
-                        AddEventView.foregroundColor(.black)
-                    }
                 }
 
                 .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height)
