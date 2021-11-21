@@ -9,27 +9,26 @@ import Foundation
 import SwiftUI
 
 struct NotificationView: View {
+    
     var body: some View {
         NavigationView {
             ZStack {
                 lightYellowColor.edgesIgnoringSafeArea(.all)
+                
                 VStack(alignment: .leading) {
-                    Button(action:{
-                            print("pass request")
-                            //joins.removeFirst(1)
-                        }){
-                            Text("No")
-                    }
+                    Spacer()
                     Join()
-                    Spacer()
+                    //Spacer()
                     UEvent()
-                    Spacer()
+                    //Spacer()
                     FEvent()
-                    Spacer()
+                    //Spacer()
                 }
+                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 200)
+                .padding(.bottom, 200)
                 Spacer()
             }
-            .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 100)
+            
         }
     }
 }
@@ -51,10 +50,9 @@ struct Join: View {
                 Button(action:{
                         print("pass request")
                         joins.removeFirst(1)
-                    }){
+                    }) {
                         Text("No")
                 }
-                        
                     Text("Wanna Join")
                         .font(.system(size: 20))
                         .fontWeight(.bold)

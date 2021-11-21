@@ -33,12 +33,6 @@ struct EventExploreContentView: View {
             ZStack {
                 lightYellowColor.edgesIgnoringSafeArea(.all)
                 VStack {
-                /*
-                HStack {
-                    Text("EXPLORE NEARBY").font(.system(size: 27)).foregroundColor(.black).bold()//.padding()
-
-                    AddEventView.foregroundColor(.black)
-                }*/
                     ScrollView {
                         LazyVStack (alignment: .leading, spacing: 30) {
                             Spacer()
