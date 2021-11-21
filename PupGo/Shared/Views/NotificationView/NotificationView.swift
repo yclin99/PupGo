@@ -21,7 +21,7 @@ struct NotificationView: View {
                     UEvent()
                     FEvent()
                 }
-                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 200)
+                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 240)
                 .padding(.bottom, 200)
                 Spacer()
             }
@@ -45,6 +45,7 @@ struct Join: View {
     var body: some View{
         VStack{
             if joins.count > 0 {
+                Spacer()
                 Text("Someone wants to Join your event!")
                     .font(.system(size: 20))
                     .fontWeight(.bold)
