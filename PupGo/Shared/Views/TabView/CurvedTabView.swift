@@ -25,7 +25,6 @@ struct CurvedTabView: View {
                 .tag(Tab.Matching)
             EventExploreContentView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(lightYellowColor).ignoresSafeArea()
                 .tag(Tab.Exploration)
             NotificationView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -49,8 +48,8 @@ struct CurvedTabView: View {
                 )
             , alignment: .bottom
         )
-            .ignoresSafeArea(.all, edges: .bottom)
-            .preferredColorScheme(.dark)
+        .ignoresSafeArea(.all, edges: .bottom)
+        .preferredColorScheme(.dark)
     }
     
     @ViewBuilder
@@ -118,3 +117,4 @@ extension View {
         return safeArea
     }
 }
+

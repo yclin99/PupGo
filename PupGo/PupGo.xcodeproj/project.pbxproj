@@ -60,6 +60,10 @@
 		0EBD8A1F2743851D008EBBDC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A1D2743851D008EBBDC /* SignInView.swift */; };
 		0EBD8A21274393CA008EBBDC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A20274393CA008EBBDC /* SignUpView.swift */; };
 		0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A20274393CA008EBBDC /* SignUpView.swift */; };
+		0EDC6C69274985B100E74119 /* ManageDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */; };
+		0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */; };
+		0EDC6C6C2749860600E74119 /* AddDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */; };
+		0EDC6C6D2749860600E74119 /* AddDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */; };
 		0EFC29BE27473D7C000D6D17 /* DogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC29BD27473D7C000D6D17 /* DogProfile.swift */; };
 		0EFC29BF27473D7C000D6D17 /* DogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC29BD27473D7C000D6D17 /* DogProfile.swift */; };
 		0EFC29C127473D92000D6D17 /* DogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC29C027473D92000D6D17 /* DogProfileView.swift */; };
@@ -109,6 +113,8 @@
 		0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginView.swift; sourceTree = "<group>"; };
 		0EBD8A1D2743851D008EBBDC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		0EBD8A20274393CA008EBBDC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDogProfileView.swift; sourceTree = "<group>"; };
+		0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDogProfileView.swift; sourceTree = "<group>"; };
 		0EFC29BD27473D7C000D6D17 /* DogProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfile.swift; sourceTree = "<group>"; };
 		0EFC29C027473D92000D6D17 /* DogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileView.swift; sourceTree = "<group>"; };
 		0EFC29C327473DB2000D6D17 /* EditDogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDogProfileView.swift; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 				0EFC29C627473DC8000D6D17 /* EditUserProfileView.swift */,
 				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				0EFC29CC27473E04000D6D17 /* UserProfileView.swift */,
+				0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */,
+				0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -450,6 +458,7 @@
 				0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
 				0EBD8A21274393CA008EBBDC /* SignUpView.swift in Sources */,
 				0EFC29BE27473D7C000D6D17 /* DogProfile.swift in Sources */,
+				0EDC6C69274985B100E74119 /* ManageDogProfileView.swift in Sources */,
 				0E8A2E252741F20400081719 /* CreateEventContentView.swift in Sources */,
 				0EFC29CA27473DEF000D6D17 /* UserProfile.swift in Sources */,
 				0EBD8A1E2743851D008EBBDC /* SignInView.swift in Sources */,
@@ -462,6 +471,7 @@
 				0E8A2E1C2741F18500081719 /* Event.swift in Sources */,
 				0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0E8A2E2B2741F26E00081719 /* SingleEventView.swift in Sources */,
+				0EDC6C6C2749860600E74119 /* AddDogProfileView.swift in Sources */,
 				0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */,
 				0E050047273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
@@ -483,8 +493,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8A2E202741F1A800081719 /* ImagePicker.swift in Sources */,
+				0EDC6C6D2749860600E74119 /* AddDogProfileView.swift in Sources */,
 				0EFC29C827473DC8000D6D17 /* EditUserProfileView.swift in Sources */,
 				0E8A2E3E2741FA8E00081719 /* UserEventView.swift in Sources */,
+				0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */,
 				0E8A2E2F2741F8A100081719 /* Card.swift in Sources */,
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
 				0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */,

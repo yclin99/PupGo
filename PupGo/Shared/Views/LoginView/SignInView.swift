@@ -22,20 +22,11 @@ struct SignInView: View {
                 
                 PasswordTextView(pass: $pass, index: self.$animationIndex)
                 
-                HStack {
-                    Spacer(minLength: 0)
-                    Button(action: {}) {
-                        Text("Forget Password?")
-                            .foregroundColor(.white.opacity(0.6))
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.top, 30)
-                
+                ForgetPasswordButton()
             }
             .padding()
             // bottom padding
-            .padding(.bottom, 65)
+            .padding(.bottom, 35)
             .background(.brown)
             .clipShape(CShape())
             .onTapGesture {
@@ -48,21 +39,8 @@ struct SignInView: View {
             
             LoginButtonView(index: self.$index)
         }
-        
     }
 }
-
-/*
-struct SignInView_Previews: PreviewProvider {
-    @State var user: String = ""
-    @State var password: String = ""
-    @State var index: Int = 0
-    static var previews: some View {
-        Text("Hey!")
-        //SignInView(email: self.$user, pass: self.$password)
-    }
-}*/
-
 
 struct LoginTextView: View {
     @Binding var index: Int
@@ -108,27 +86,48 @@ struct EmailTextView: View {
                             index = 0
                         }
                     }
+                    .textInputAutocapitalization(.never)
             }
             Divider().background(.white.opacity(0.5))
         }
         .padding(.horizontal)
-        .padding(.top, 40)
+        .padding(.top, 20)
     }
 }
 
 struct PasswordTextView: View {
     @Binding var pass: String
     @Binding var index: Int
+    @State private var isSecured: Bool = true
     var body: some View {
         VStack {
-            HStack(spacing: 15) {
-                Image(systemName: "eye.slash.fill")
-                    .foregroundColor(.yellow)
-                SecureField("Password", text: self.$pass)
-                    .onChange(of: pass) { newValue in
-                        index = 5
+            //ZStack {
+                HStack(spacing: 15) {
+                    Button(action: {
+                        if isSecured {
+                            index = 6
+                        } else {
+                            index = 5
+                        }
+                        isSecured.toggle()
+                    }) {
+                        Image(systemName: self.isSecured ? "eye.slash.fill" : "eye.fill")
+                            .foregroundColor(.yellow)
                     }
-            }
+                    if isSecured {
+                        SecureField("Password", text: self.$pass)
+                            .onChange(of: pass) { newValue in
+                                index = 5
+                            }
+                            .padding(.top, 0.5)
+                            .textInputAutocapitalization(.never)
+                    } else {
+                        TextField("Password", text: self.$pass)
+                            .textInputAutocapitalization(.never)
+                    }
+                }
+            //}
+            
             Divider().background(.white.opacity(0.5))
         }
         .padding(.horizontal)
@@ -165,5 +164,19 @@ struct LoginButtonView: View {
         }
         .offset(y: 25)
         .opacity(self.index == 0 ? 1 : 0)
+    }
+}
+
+struct ForgetPasswordButton: View {
+    var body: some View {
+        HStack {
+            Spacer(minLength: 0)
+            Button(action: {}) {
+                Text("Forget Password?")
+                    .foregroundColor(.white.opacity(0.6))
+            }
+        }
+        .padding(.horizontal)
+        .padding(.top, 30)
     }
 }

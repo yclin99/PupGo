@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventExploreContentView: View {
-        
+    
     var events = [
         Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1")),
         Event(userid: 2, username: "Pluto", location: "DisneyLand Park", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog2")),
@@ -29,30 +29,39 @@ struct EventExploreContentView: View {
     
     var body: some View {
         NavigationView {
-         ZStack {
-            lightYellowColor
-                 .edgesIgnoringSafeArea(.all)
-             VStack(alignment: .center, spacing: 30) {
-//                Spacer(minLength: 30)
+
+            ZStack (alignment: .bottom) {
+                lightYellowColor.edgesIgnoringSafeArea(.all)
+                VStack {
+                /*
                 HStack {
-                    Text("Nearby Event")
-                        .font(.system(size: 35))
-                        .bold().foregroundColor(.black)
+                    Text("EXPLORE NEARBY").font(.system(size: 27)).foregroundColor(.black).bold()//.padding()
+
                     AddEventView.foregroundColor(.black)
-                }
-                ScrollView {
+                }*/
+                    ScrollView {
                         LazyVStack (alignment: .leading, spacing: 30) {
-                        ForEach(events[0..<eventsCount], id: \.self, content: {event in
-                        EventView(content: event)
-                        })
+                            Spacer()
+                            ForEach(events[0..<eventsCount], id: \.self, content: {event in
+                                EventView(content: event)
+                            })
                         }
+                        .padding(.bottom, 60)
+                        .padding(.bottom, getSafeArea().bottom == 0 ? 15 : getSafeArea().bottom)
                     }
                 }
-//             .edgesIgnoringSafeArea(.all)
-                .padding(.bottom, 70.0)
-                .frame(width: 360, height: 680)
-          }
+
+                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height)
+                HStack {
+                    AddEventView.foregroundColor(.black)
+                }
+                
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitle("EXPLORE NEARBY")
+
         }
+        .foregroundColor(.black)
     }
 }
 

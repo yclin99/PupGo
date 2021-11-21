@@ -29,7 +29,7 @@ struct SignUpView: View {
                 }
                 .padding()
                 // bottom padding
-                .padding(.bottom, 65)
+                .padding(.bottom, 35)
                 .background(.brown)
                 .clipShape(ReCShape())
                 // clipping the contecnt shape also for tap gesture
