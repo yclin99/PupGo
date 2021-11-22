@@ -13,8 +13,6 @@ struct NotificationView: View {
         NavigationView {
             ZStack {
                 lightYellowColor.ignoresSafeArea()
-                
-
                 VStack(alignment: .leading) {
                     Spacer()
                     Join()
@@ -40,7 +38,7 @@ extension View {
 }
 
 struct Join: View {
-    @State private var joins = [Card](repeating: Card.join, count: 1)
+    @State var joins = [Card](repeating: Card.join, count: 1)
     
     var body: some View{
         VStack{
@@ -56,7 +54,7 @@ struct Join: View {
                     VStack {
                         ZStack {
                             ForEach(0..<joins.count, id: \.self){ index in
-                                JoinRequestView(card: self.joins[index])
+                                JoinRequestView(card: self.joins[index], onActivate: getApi)
                                     .stacked(at: index, in: self.joins.count)
                                 
                                 }
@@ -70,12 +68,18 @@ struct Join: View {
         }
         .foregroundColor(.blue)
     }
-
+    func getApi() {
+        print("getApi called")
+        if self.joins.count > 0 {
+            joins.removeFirst(1)
+        }
+        
+    }
 }
 
 struct UEvent: View {
     
-    @State private var uevents = [Card](repeating: Card.uevent, count: 1)
+    @State var uevents = [Card](repeating: Card.uevent, count: 1)
     
     var body: some View{
         if uevents.count > 0 {
@@ -101,7 +105,7 @@ struct UEvent: View {
                     VStack {
                         ZStack {
                             ForEach(0..<uevents.count, id: \.self) { index in
-                                UserEventView(card: self.uevents[index])
+                                UserEventView(card: self.uevents[index], onActivate: getApi)
                                     .stacked(at: index, in: self.uevents.count)
                             }
                         }
@@ -114,42 +118,36 @@ struct UEvent: View {
         }
         
     }
+    func getApi() {
+        print("getApi called")
+        if self.uevents.count > 0 {
+            uevents.removeFirst(1)
+        }
+        
+    }
 }
 
 struct FEvent: View {
-    @State private var fevents = [Card](repeating: Card.fevent, count: 5)
+    @State var fevents = [Card](repeating: Card.fevent, count: 5)
     
     var body: some View{
         if fevents.count > 0 {
             VStack{
                     
-                HStack( alignment: .top, spacing: 12) {
+
+                    Text("Your Friend Invited You!")
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
+                        .foregroundColor(.blue)
                         
-                        Button(action:{
-                            print("Don't join friend's event")
-                            fevents.removeFirst(1)
-                        }){
-                            Text("Refuse")}
-                            
-                        Text("Your Are Invited")
-                            .font(.system(size: 20))
-                            .fontWeight(.bold)
-                            .foregroundColor(.green)
-                        
-                        Button(action:{
-                            print("Join friend's event")
-                            fevents.removeFirst(1)
-                        }){
-                            Text("Accept")
-                        }
-                    }
+
                 
                     ZStack {
                         VStack {
                              ZStack {
-                                ForEach(0..<fevents.count, id: \.self) { index in
-                                    FriendsEventView(card: self.fevents[index])
-                                        .stacked(at: index, in: self.fevents.count)
+                                 ForEach(0..<fevents.count, id: \.self) { index in
+                                    FriendsEventView(card: fevents[index], onActivate: getApi)
+                                        .stacked(at: index, in: fevents.count)
                                 }
                             }
                         }
@@ -159,6 +157,14 @@ struct FEvent: View {
                 Spacer(minLength: 5)
             }
     }
+    }
+    
+    func getApi() {
+        print("getApi called")
+        if self.fevents.count > 0 {
+            fevents.removeFirst(1)
+        }
+        
     }
 }
 

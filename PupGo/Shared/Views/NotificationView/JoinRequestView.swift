@@ -10,7 +10,8 @@ struct JoinRequestView: View {
     
     let card: Card
     @State private var isShowingAnswer = false
-
+    let onActivate: () -> ()
+    
     var body: some View {
         let pic = Image(card.pic)
                 .resizable()
@@ -30,7 +31,10 @@ struct JoinRequestView: View {
                 HStack(alignment: .center) {
                     
                     Button(action: {
-                        print("accept")}
+                        print("accept")
+                        
+                        self.onActivate()
+                    }
                         , label: {
                         Circle()
                             .fill(Color.white)
@@ -55,7 +59,10 @@ struct JoinRequestView: View {
                     .multilineTextAlignment(.center)
                     
                     Button(action: {
-                        print("deny")}
+                        print("deny")
+                        self.onActivate()
+                        
+                    }
                         , label: {
                         Circle()
                             .fill(Color.black)
@@ -79,8 +86,3 @@ struct JoinRequestView: View {
             self.isShowingAnswer.toggle()
         }
     }}
-struct JoinRequestView_Previews: PreviewProvider {
-    static var previews: some View {
-        JoinRequestView(card: Card.join)
-    }
-}

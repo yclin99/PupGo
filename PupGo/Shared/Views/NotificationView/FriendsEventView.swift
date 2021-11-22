@@ -11,6 +11,7 @@ struct FriendsEventView: View {
 
     let card: Card
     @State private var isShowingAnswer = false
+    let onActivate: () -> ()
     
     var body: some View {
         let pic = Image(card.pic)
@@ -31,7 +32,9 @@ struct FriendsEventView: View {
                 back
                 HStack (alignment: .center) {
                     Button(action: {
-                        print("accept")}
+                        print("accept")
+                        self.onActivate()
+                    }
                         , label: {
                         Circle()
                             .fill(Color.white)
@@ -63,7 +66,9 @@ struct FriendsEventView: View {
                     .multilineTextAlignment(.center)
                     
                     Button(action: {
-                        print("decline invitation")}
+                        print("decline invitation")
+                        self.onActivate()
+                    }
                         , label: {
                         Circle()
                             .fill(Color.black)
@@ -87,10 +92,6 @@ struct FriendsEventView: View {
             self.isShowingAnswer.toggle()
 }
 }
-}
+    
 
-struct FriendsEventView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendsEventView(card: Card.fevent)
-    }
 }
