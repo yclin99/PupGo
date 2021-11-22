@@ -37,6 +37,7 @@
 		0E804025274B69E60086DA03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E804024274B69E60086DA03 /* API.swift */; };
 		0E804027274B6A8B0086DA03 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 0E804026274B6A8B0086DA03 /* Apollo */; };
 		0E804029274B7C8C0086DA03 /* ApolloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E804028274B7C8C0086DA03 /* ApolloView.swift */; };
+		0E80402B274B85420086DA03 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0E80402A274B85420086DA03 /* FirebaseMessaging */; };
 		0E8A2E1C2741F18500081719 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1B2741F18500081719 /* Event.swift */; };
 		0E8A2E1D2741F18500081719 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1B2741F18500081719 /* Event.swift */; };
 		0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1E2741F1A800081719 /* ImagePicker.swift */; };
@@ -169,6 +170,7 @@
 			files = (
 				0EB96C2C2738ABA100C9A656 /* GoogleSignIn in Frameworks */,
 				0E804027274B6A8B0086DA03 /* Apollo in Frameworks */,
+				0E80402B274B85420086DA03 /* FirebaseMessaging in Frameworks */,
 				0E04F2E72738EB6E00C29649 /* FirebaseAuth in Frameworks */,
 				0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */,
 			);
@@ -373,6 +375,7 @@
 				0E04F2E62738EB6E00C29649 /* FirebaseAuth */,
 				0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */,
 				0E804026274B6A8B0086DA03 /* Apollo */,
+				0E80402A274B85420086DA03 /* FirebaseMessaging */,
 			);
 			productName = "PupGo (iOS)";
 			productReference = 0E04F2E92738EC7900C29649 /* PupGo.app */;
@@ -937,6 +940,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E5233E1274B2351008B1CB0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		0E80402A274B85420086DA03 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EB96C272738AB1B00C9A656 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 		0EB96C2B2738ABA100C9A656 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
