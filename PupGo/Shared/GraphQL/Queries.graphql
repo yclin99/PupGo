@@ -1,0 +1,13 @@
+query Testing1 {
+    recommendationGet(recommendationGetInput:{pid:"0eb440de-cf57-404b-ada3-bebc21ee19c4"}){
+        result  {
+            pet {
+                name
+                image
+                gender
+                breed
+                birthday
+            }
+        }
+    }
+}

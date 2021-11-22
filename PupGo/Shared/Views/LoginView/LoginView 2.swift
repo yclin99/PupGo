@@ -54,8 +54,8 @@ struct LoginView: View {
                         .frame(width: 50, height: 50)
                     FBLoginView()
                         .frame(width: 50, height: 50)
-                    AppleLoginView()
                 }
+                
             }
             .padding()
         }

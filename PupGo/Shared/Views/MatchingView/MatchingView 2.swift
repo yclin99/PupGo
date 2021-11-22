@@ -24,11 +24,12 @@ struct MatchView: View {
                     Spacer()
                     DecisionButtons()
                     Spacer()
-                    
+                    LocationView()
+                    Spacer()
                 }
+                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 100)
             }
-            //.padding(.bottom, 60)
-            //.padding(.bottom, getSafeArea().bottom == 0 ? 15 : getSafeArea().bottom)
+            
             .edgesIgnoringSafeArea(.top)
             //.navigationTitle("Matching")
         }
