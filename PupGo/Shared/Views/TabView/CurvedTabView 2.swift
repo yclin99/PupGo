@@ -20,7 +20,6 @@ struct CurvedTabView: View {
     var body: some View {
         TabView (selection: $currentTab) {
             MatchView()
-            //ApolloView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(lightYellowColor).ignoresSafeArea()
                 .tag(Tab.Matching)

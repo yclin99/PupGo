@@ -84,6 +84,9 @@ struct GoogleButton: View {
         Image("google")
             .resizable()
             .frame(width: 45, height: 45)
+            //.clipped()
+            //.cornerRadius(60)
+            //.background(.black)
     }
 }
 
