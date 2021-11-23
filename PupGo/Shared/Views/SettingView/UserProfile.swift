@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserProfile: Hashable {
+class UserProfile: Hashable, ObservableObject {
     
     static func == (lhs: UserProfile, rhs: UserProfile) -> Bool {
         return lhs.userid == rhs.userid
@@ -20,11 +20,11 @@ class UserProfile: Hashable {
     
     var userid: Int
     var username: String
-    var gender: String?
-    var birthday: String?
-    var location: String?
-    var petOwner: Bool
-    var mydogs: [DogProfile]?
+    @Published var gender: String?
+    @Published var birthday: String?
+    @Published var location: String?
+    @Published var petOwner: Bool
+    @Published var mydogs: [DogProfile]?
 
   
     init(userid: Int, username: String) {

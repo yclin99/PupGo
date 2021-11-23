@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class DogProfile: Hashable {
+class DogProfile: Hashable, ObservableObject {
     
     static func == (lhs: DogProfile, rhs: DogProfile) -> Bool {
         return lhs.petid == rhs.petid
@@ -21,12 +21,12 @@ class DogProfile: Hashable {
     
     var petid: Int
     var petname: String
-    var image: Image
-    var gender: String?
-    var breed: String?
-    var isCastration: Bool
-    var birthday: String?
-    var location: String?
+    @Published var image: Image
+    @Published var gender: String?
+    @Published var breed: String?
+    @Published var isCastration: Bool
+    @Published var birthday: String?
+    @Published var location: String?
 
   
     init(petid: Int, petname: String, image: Image) {
