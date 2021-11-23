@@ -24,11 +24,20 @@
 		0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005327362A6900D7FFCD /* MatchingView.swift */; };
 		0E05005827362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
 		0E05005927362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
+		0E5233F2274B25FB008B1CB0 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0E5233F1274B25FB008B1CB0 /* Queries.graphql */; };
+		0E5233F4274B260C008B1CB0 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5233F3274B260C008B1CB0 /* Apollo.swift */; };
 		0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
 		0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
+		0E5D1576274B40E500983ACC /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D1575274B40E500983ACC /* AppleLogin.swift */; };
+		0E5D1577274B40E500983ACC /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D1575274B40E500983ACC /* AppleLogin.swift */; };
 		0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */; };
 		0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
 		0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */; };
+		0E804023274B676A0086DA03 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E804022274B676A0086DA03 /* schema.json */; };
+		0E804025274B69E60086DA03 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E804024274B69E60086DA03 /* API.swift */; };
+		0E804027274B6A8B0086DA03 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 0E804026274B6A8B0086DA03 /* Apollo */; };
+		0E804029274B7C8C0086DA03 /* ApolloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E804028274B7C8C0086DA03 /* ApolloView.swift */; };
+		0E80402B274B85420086DA03 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0E80402A274B85420086DA03 /* FirebaseMessaging */; };
 		0E8A2E1C2741F18500081719 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1B2741F18500081719 /* Event.swift */; };
 		0E8A2E1D2741F18500081719 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1B2741F18500081719 /* Event.swift */; };
 		0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E1E2741F1A800081719 /* ImagePicker.swift */; };
@@ -52,8 +61,8 @@
 		0EB96C2C2738ABA100C9A656 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB96C2B2738ABA100C9A656 /* GoogleSignIn */; };
 		0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */; };
 		0EB96C2F2738AD7200C9A656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */; };
-		0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* EmailLoginView.swift */; };
-		0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* EmailLoginView.swift */; };
+		0EB96C322738BB6900C9A656 /* AppleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* AppleLoginView.swift */; };
+		0EB96C332738BB6900C9A656 /* AppleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C312738BB6900C9A656 /* AppleLoginView.swift */; };
 		0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
 		0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */; };
 		0EBD8A1E2743851D008EBBDC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A1D2743851D008EBBDC /* SignInView.swift */; };
@@ -81,7 +90,21 @@
 		0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A1E2748CEEA000D6D17 /* CurvedTabView.swift */; };
 		0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A202748D275000D6D17 /* TabEffect.swift */; };
 		0EFC2A232748D683000D6D17 /* ButtonCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A222748D683000D6D17 /* ButtonCurve.swift */; };
+		F53B93F7BA145C11C653F177 /* Pods_PupGo__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151C9617017F59926968EC58 /* Pods_PupGo__macOS_.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E5D1573274B315A00983ACC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E04F2E82738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,8 +118,15 @@
 		0E05004F27362A2E00D7FFCD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		0E05005327362A6900D7FFCD /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		0E05005727362D5600D7FFCD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0E5233F1274B25FB008B1CB0 /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		0E5233F3274B260C008B1CB0 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		0E558457273B47A400BCFFB0 /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
+		0E5D1574274B3D1C00983ACC /* PupGo (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PupGo (iOS).entitlements"; sourceTree = "<group>"; };
+		0E5D1575274B40E500983ACC /* AppleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogin.swift; sourceTree = "<group>"; };
 		0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginView.swift; sourceTree = "<group>"; };
+		0E804022274B676A0086DA03 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		0E804024274B69E60086DA03 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		0E804028274B7C8C0086DA03 /* ApolloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloView.swift; sourceTree = "<group>"; };
 		0E8A2E1B2741F18500081719 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0E8A2E1E2741F1A800081719 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0E8A2E242741F20400081719 /* CreateEventContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventContentView.swift; sourceTree = "<group>"; };
@@ -109,7 +139,7 @@
 		0E8A2E3C2741FA8E00081719 /* UserEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventView.swift; sourceTree = "<group>"; };
 		0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PupGo--iOS--Info.plist"; sourceTree = "<group>"; };
-		0EB96C312738BB6900C9A656 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
+		0EB96C312738BB6900C9A656 /* AppleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginView.swift; sourceTree = "<group>"; };
 		0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginView.swift; sourceTree = "<group>"; };
 		0EBD8A1D2743851D008EBBDC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		0EBD8A20274393CA008EBBDC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -125,7 +155,9 @@
 		0EFC2A1E2748CEEA000D6D17 /* CurvedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedTabView.swift; sourceTree = "<group>"; };
 		0EFC2A202748D275000D6D17 /* TabEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEffect.swift; sourceTree = "<group>"; };
 		0EFC2A222748D683000D6D17 /* ButtonCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCurve.swift; sourceTree = "<group>"; };
+		151C9617017F59926968EC58 /* Pods_PupGo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PupGo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD73CD0E47A073D8D3C0106 /* Pods-PupGo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		3C0FDBD8C1F7865CD293E035 /* Pods_PupGo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PupGo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C69A8021C997FD4485DD25 /* Pods-PupGo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		660D37C5ED365D69D2E41300 /* Pods-PupGo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		D3CB355DB2BE7E26722BBDD3 /* Pods-PupGo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB96C2C2738ABA100C9A656 /* GoogleSignIn in Frameworks */,
+				0E804027274B6A8B0086DA03 /* Apollo in Frameworks */,
+				0E80402B274B85420086DA03 /* FirebaseMessaging in Frameworks */,
 				0E04F2E72738EB6E00C29649 /* FirebaseAuth in Frameworks */,
 				0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */,
 			);
@@ -146,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53B93F7BA145C11C653F177 /* Pods_PupGo__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,18 +190,22 @@
 		0E0500212735F72E00D7FFCD = {
 			isa = PBXGroup;
 			children = (
+				0E5D1574274B3D1C00983ACC /* PupGo (iOS).entitlements */,
 				0EB96C302738ADB800C9A656 /* PupGo--iOS--Info.plist */,
+				0E804022274B676A0086DA03 /* schema.json */,
 				0E0500262735F72E00D7FFCD /* Shared */,
 				0E0500352735F73500D7FFCD /* macOS */,
 				0E04F2E82738EC7900C29649 /* PupGo.app */,
 				0E04F2E92738EC7900C29649 /* PupGo.app */,
 				2E5239CBE5B267B34BC8BDDA /* Pods */,
+				2E71018558889F0835388837 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		0E0500262735F72E00D7FFCD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0E5233F0274B25CF008B1CB0 /* GraphQL */,
 				0E68D17A2741E6D40030AE76 /* Utilities */,
 				0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */,
 				0E050045273629A800D7FFCD /* Views */,
@@ -249,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				0E05005727362D5600D7FFCD /* LoginView.swift */,
-				0EB96C312738BB6900C9A656 /* EmailLoginView.swift */,
+				0EB96C312738BB6900C9A656 /* AppleLoginView.swift */,
 				0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */,
 				0E7D2F4D2738FA120056DE92 /* FBLoginView.swift */,
 				0EBD8A1D2743851D008EBBDC /* SignInView.swift */,
@@ -259,6 +298,17 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
+		0E5233F0274B25CF008B1CB0 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				0E804024274B69E60086DA03 /* API.swift */,
+				0E5233F1274B25FB008B1CB0 /* Queries.graphql */,
+				0E5233F3274B260C008B1CB0 /* Apollo.swift */,
+				0E804028274B7C8C0086DA03 /* ApolloView.swift */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 		0E68D17A2741E6D40030AE76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +316,7 @@
 				0E8A2E2D2741F8A100081719 /* Card.swift */,
 				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
+				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -291,6 +342,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2E71018558889F0835388837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C0FDBD8C1F7865CD293E035 /* Pods_PupGo__iOS_.framework */,
+				151C9617017F59926968EC58 /* Pods_PupGo__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,10 +358,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E05003F2735F73500D7FFCD /* Build configuration list for PBXNativeTarget "PupGo (iOS)" */;
 			buildPhases = (
+				0E5233F7274B2908008B1CB0 /* Generate Apollo GraphQL API */,
 				6510B40BC95E98A368FB5DE2 /* [CP] Check Pods Manifest.lock */,
 				0E05002A2735F73500D7FFCD /* Sources */,
 				0E05002B2735F73500D7FFCD /* Frameworks */,
 				0E05002C2735F73500D7FFCD /* Resources */,
+				0E5D1573274B315A00983ACC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -312,6 +374,8 @@
 				0EB96C2B2738ABA100C9A656 /* GoogleSignIn */,
 				0E04F2E62738EB6E00C29649 /* FirebaseAuth */,
 				0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */,
+				0E804026274B6A8B0086DA03 /* Apollo */,
+				0E80402A274B85420086DA03 /* FirebaseMessaging */,
 			);
 			productName = "PupGo (iOS)";
 			productReference = 0E04F2E92738EC7900C29649 /* PupGo.app */;
@@ -366,6 +430,7 @@
 				0EB96C272738AB1B00C9A656 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				0EB96C2A2738ABA000C9A656 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				0E7D2F4A2738F9EC0056DE92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				0E5233E1274B2351008B1CB0 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 0E0500212735F72E00D7FFCD;
 			projectDirPath = "";
@@ -382,6 +447,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E804023274B676A0086DA03 /* schema.json in Resources */,
+				0E5233F2274B25FB008B1CB0 /* Queries.graphql in Resources */,
 				0E05003B2735F73500D7FFCD /* Assets.xcassets in Resources */,
 				0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */,
 			);
@@ -399,6 +466,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E5233F7274B2908008B1CB0 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+		};
 		6510B40BC95E98A368FB5DE2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -470,9 +555,12 @@
 				0E8A2E312741F99B00081719 /* CardView.swift in Sources */,
 				0E8A2E1C2741F18500081719 /* Event.swift in Sources */,
 				0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
+				0E804025274B69E60086DA03 /* API.swift in Sources */,
 				0E8A2E2B2741F26E00081719 /* SingleEventView.swift in Sources */,
 				0EDC6C6C2749860600E74119 /* AddDogProfileView.swift in Sources */,
-				0EB96C322738BB6900C9A656 /* EmailLoginView.swift in Sources */,
+				0E804029274B7C8C0086DA03 /* ApolloView.swift in Sources */,
+				0E5233F4274B260C008B1CB0 /* Apollo.swift in Sources */,
+				0EB96C322738BB6900C9A656 /* AppleLoginView.swift in Sources */,
 				0E050047273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
 				0E0500392735F73500D7FFCD /* MainView.swift in Sources */,
@@ -485,6 +573,7 @@
 				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
 				0E8A2E282741F24C00081719 /* EventExploreContentView.swift in Sources */,
 				0EFC2A232748D683000D6D17 /* ButtonCurve.swift in Sources */,
+				0E5D1576274B40E500983ACC /* AppleLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +601,7 @@
 				0E8A2E1D2741F18500081719 /* Event.swift in Sources */,
 				0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0E8A2E2C2741F26E00081719 /* SingleEventView.swift in Sources */,
-				0EB96C332738BB6900C9A656 /* EmailLoginView.swift in Sources */,
+				0EB96C332738BB6900C9A656 /* AppleLoginView.swift in Sources */,
 				0E050048273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
 				0E05003A2735F73500D7FFCD /* MainView.swift in Sources */,
@@ -523,6 +612,7 @@
 				0E8A2E352741FA4800081719 /* FriendsEventView.swift in Sources */,
 				0EFC2A1C274765CE000D6D17 /* AnimationTestView.swift in Sources */,
 				0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */,
+				0E5D1577274B40E500983ACC /* AppleLogin.swift in Sources */,
 				0E8A2E292741F24C00081719 /* EventExploreContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,12 +737,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PupGo (iOS).entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PK3PHYDBZL;
+				DEVELOPMENT_TEAM = N3J44JZ9JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PupGo--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PupGo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -667,6 +760,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CS130.PupGo;
 				PRODUCT_NAME = PupGo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -680,12 +774,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PupGo (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PK3PHYDBZL;
+				DEVELOPMENT_TEAM = N3J44JZ9JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PupGo--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PupGo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -718,6 +814,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK3PHYDBZL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -745,6 +842,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK3PHYDBZL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -795,6 +893,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0E5233E1274B2351008B1CB0 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.49.0;
+			};
+		};
 		0E7D2F4A2738F9EC0056DE92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
@@ -831,6 +937,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E7D2F4A2738F9EC0056DE92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
+		};
+		0E804026274B6A8B0086DA03 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E5233E1274B2351008B1CB0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		0E80402A274B85420086DA03 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EB96C272738AB1B00C9A656 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 		0EB96C2B2738ABA100C9A656 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;

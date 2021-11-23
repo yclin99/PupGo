@@ -24,6 +24,7 @@ struct MatchView: View {
                     Spacer()
                     DecisionButtons()
                     Spacer()
+                    
                 }
             }
             //.padding(.bottom, 60)

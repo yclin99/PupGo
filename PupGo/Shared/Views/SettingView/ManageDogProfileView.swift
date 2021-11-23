@@ -30,6 +30,9 @@ struct ManageDogProfileView: View {
                     ForEach(content.mydogs![0..<content.mydogs!.count], id: \.self, content: {dogview in DogView(content: dogview)})
                     AddDogIcon
                     }
+                .onAppear {
+                    print("Back")
+                }
                 }
             }
             .edgesIgnoringSafeArea(.top)
