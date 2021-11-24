@@ -43,31 +43,31 @@ struct SingleEventView: View {
         photoview
         VStack(alignment: .leading){
         HStack(alignment: .center) {
-            Image(systemName: "pawprint.circle").font(.largeTitle)
+            Image(systemName: "pawprint.circle").font(.largeTitle).foregroundColor(.black)
             Text("Username:")
                 .font(.callout)
-                .bold()
+                .bold().foregroundColor(.black)
             Text(content.username).font(.callout).foregroundColor(.black).bold()}
         }.padding()
         HStack(alignment: .center) {
-            Image(systemName: "clock").font(.largeTitle)
+            Image(systemName: "clock").font(.largeTitle).foregroundColor(.black)
             Text("Start Time:")
                 .font(.callout)
-                .bold()
+                .bold().foregroundColor(.black)
             Text(content.starttime).font(.callout).foregroundColor(.black).bold()}
         .padding()
         HStack(alignment: .center) {
-            Image(systemName: "clock.fill").font(.largeTitle)
+            Image(systemName: "clock.fill").font(.largeTitle).foregroundColor(.black)
             Text("End Time:  ")
                 .font(.callout)
-                .bold()
+                .bold().foregroundColor(.black)
             Text(content.endtime).font(.callout).foregroundColor(.black).bold()}
         .padding()
         HStack(alignment: .center) {
-            Image(systemName: "location").font(.largeTitle)
+            Image(systemName: "location").font(.largeTitle).foregroundColor(.black)
             Text("Location:   ")
                 .font(.callout)
-                .bold()
+                .bold().foregroundColor(.black)
             Text(content.location).font(.callout).foregroundColor(.black).bold()}
         .padding()
 //        Spacer()
