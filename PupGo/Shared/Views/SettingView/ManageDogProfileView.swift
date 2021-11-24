@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ManageDogProfileView: View {
-    @State var content : UserProfile
+    @ObservedObject var content : UserProfile
 //    var contentDogs : [DogProfile]?
 //    lazy var contentDogs = content.mydogs
     

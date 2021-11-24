@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DogProfileView: View {
-    var content : DogProfile
+    @ObservedObject var content : DogProfile
     
     @State private var showingAlert = false
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    var content : UserProfile
+    @ObservedObject var content : UserProfile
 
 //    var content = UserProfile(userid: 1, username: "Thisowner")
     

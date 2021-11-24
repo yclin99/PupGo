@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddDogProfileView: View {
     
-    @State var content: UserProfile
+    @ObservedObject var content: UserProfile
     
     @State private var image: Image?
     @State private var showingImagePicker = false
@@ -61,7 +61,7 @@ struct AddDogProfileView: View {
         Button(action: {
             showingAlert = true
             if image != nil {
-                var newdog = DogProfile(petid: petid, petname: petname, image: image!)
+                @ObservedObject var newdog = DogProfile(petid: petid, petname: petname, image: image!)
                 content.createPet(newdog: newdog)
                  
             }
