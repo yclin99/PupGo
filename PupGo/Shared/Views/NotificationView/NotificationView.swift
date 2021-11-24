@@ -22,9 +22,11 @@ struct NotificationView: View {
                     UEvent()
                     FEvent()
                 }
+
                 .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 240)
                 .padding(.bottom, 200)
                 Spacer()
+
             }
             
             
@@ -43,8 +45,3 @@ extension View {
     
 
 
-struct NotificationView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotificationView()
-    }
-}

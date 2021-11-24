@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Join: View {
-    @State var joins = [Card](repeating: Card.join, count: 7)
+    @State var joins = [Card](repeating: Card.join, count: 3)
     
     var body: some View{
         VStack{
