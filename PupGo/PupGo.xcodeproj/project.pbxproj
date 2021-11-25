@@ -90,6 +90,12 @@
 		0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A1E2748CEEA000D6D17 /* CurvedTabView.swift */; };
 		0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A202748D275000D6D17 /* TabEffect.swift */; };
 		0EFC2A232748D683000D6D17 /* ButtonCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A222748D683000D6D17 /* ButtonCurve.swift */; };
+		DD196421274C7C2900A0B56C /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196420274C7C2900A0B56C /* Join.swift */; };
+		DD196422274C7C2900A0B56C /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196420274C7C2900A0B56C /* Join.swift */; };
+		DD196424274C7C8900A0B56C /* UEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196423274C7C8900A0B56C /* UEvent.swift */; };
+		DD196425274C7C8900A0B56C /* UEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196423274C7C8900A0B56C /* UEvent.swift */; };
+		DD196427274C7CA800A0B56C /* FEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196426274C7CA800A0B56C /* FEvent.swift */; };
+		DD196428274C7CA800A0B56C /* FEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196426274C7CA800A0B56C /* FEvent.swift */; };
 		F53B93F7BA145C11C653F177 /* Pods_PupGo__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151C9617017F59926968EC58 /* Pods_PupGo__macOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +167,9 @@
 		63C69A8021C997FD4485DD25 /* Pods-PupGo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		660D37C5ED365D69D2E41300 /* Pods-PupGo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		D3CB355DB2BE7E26722BBDD3 /* Pods-PupGo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		DD196420274C7C2900A0B56C /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
+		DD196423274C7C8900A0B56C /* UEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEvent.swift; sourceTree = "<group>"; };
+		DD196426274C7CA800A0B56C /* FEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +281,9 @@
 				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
 				0E8A2E362741FA6200081719 /* JoinRequestView.swift */,
 				0E8A2E3C2741FA8E00081719 /* UserEventView.swift */,
+				DD196420274C7C2900A0B56C /* Join.swift */,
+				DD196423274C7C8900A0B56C /* UEvent.swift */,
+				DD196426274C7CA800A0B56C /* FEvent.swift */,
 			);
 			path = NotificationView;
 			sourceTree = "<group>";
@@ -536,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */,
+				DD196427274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EFC29C727473DC8000D6D17 /* EditUserProfileView.swift in Sources */,
 				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
 				0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */,
@@ -551,11 +564,13 @@
 				0E8A2E372741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */,
 				0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */,
+				DD196424274C7C8900A0B56C /* UEvent.swift in Sources */,
 				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
 				0E8A2E312741F99B00081719 /* CardView.swift in Sources */,
 				0E8A2E1C2741F18500081719 /* Event.swift in Sources */,
 				0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0E804025274B69E60086DA03 /* API.swift in Sources */,
+				DD196421274C7C2900A0B56C /* Join.swift in Sources */,
 				0E8A2E2B2741F26E00081719 /* SingleEventView.swift in Sources */,
 				0EDC6C6C2749860600E74119 /* AddDogProfileView.swift in Sources */,
 				0E804029274B7C8C0086DA03 /* ApolloView.swift in Sources */,
@@ -588,6 +603,7 @@
 				0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */,
 				0E8A2E2F2741F8A100081719 /* Card.swift in Sources */,
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				DD196428274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */,
 				0EFC29BF27473D7C000D6D17 /* DogProfile.swift in Sources */,
 				0E8A2E262741F20400081719 /* CreateEventContentView.swift in Sources */,
@@ -599,6 +615,7 @@
 				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
 				0E8A2E322741F99B00081719 /* CardView.swift in Sources */,
 				0E8A2E1D2741F18500081719 /* Event.swift in Sources */,
+				DD196425274C7C8900A0B56C /* UEvent.swift in Sources */,
 				0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0E8A2E2C2741F26E00081719 /* SingleEventView.swift in Sources */,
 				0EB96C332738BB6900C9A656 /* AppleLoginView.swift in Sources */,
@@ -608,6 +625,7 @@
 				0EFC29C227473D92000D6D17 /* DogProfileView.swift in Sources */,
 				0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */,
 				0EFC29CE27473E04000D6D17 /* UserProfileView.swift in Sources */,
+				DD196422274C7C2900A0B56C /* Join.swift in Sources */,
 				0EFC29C527473DB2000D6D17 /* EditDogProfileView.swift in Sources */,
 				0E8A2E352741FA4800081719 /* FriendsEventView.swift in Sources */,
 				0EFC2A1C274765CE000D6D17 /* AnimationTestView.swift in Sources */,
@@ -745,6 +763,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PupGo--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PupGo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -780,6 +799,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PupGo--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PupGo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -12,9 +12,9 @@ struct SettingView: View {
     static let gradientStart = Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255)
     static let gradientEnd = Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)
     
-    var userprofile = UserProfile(userid: 1, username: "This owner")
-    var dog1 = DogProfile(petid: 1001, petname: "UglyDog", image: Image("Dog1"))
-    var dog2 = DogProfile(petid: 1003, petname: "Goofy", image: Image("Dog3"))
+    @ObservedObject var userprofile = UserProfile(userid: 1, username: "This owner")
+    @ObservedObject var dog1 = DogProfile(petid: 1001, petname: "UglyDog", image: Image("Dog1"))
+    @ObservedObject var dog2 = DogProfile(petid: 1003, petname: "Goofy", image: Image("Dog3"))
     
     init(){
         userprofile.createPet(newdog: dog1)

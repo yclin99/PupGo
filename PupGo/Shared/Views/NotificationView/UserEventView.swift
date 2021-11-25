@@ -10,7 +10,11 @@ import SwiftUI
 struct UserEventView: View {
     let card: Card
     @State private var isShowingAnswer = false
+    @State private var isShowingDetailView = false
     let onActivate: () -> ()
+    var content : Event =
+        Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
+    
     
     var body: some View {
         let pic = Image(card.pic)
@@ -29,44 +33,48 @@ struct UserEventView: View {
             if isShowingAnswer {
                 back
                 HStack(alignment: .center) {
+
                     
-                    
-                VStack (alignment: .leading) {
-                    if isShowingAnswer {
-                    Text("Start time: " + card.when)
+                    VStack (alignment: .leading) {
+                        if isShowingAnswer {
+                        Text("Start time: " + card.when)
+                                .font(.body)
+                            .foregroundColor(.white)
+                        Text("Participants: " + card.who)
                             .font(.body)
-                        .foregroundColor(.white)
-                    Text("Participants: " + card.who)
-                        .font(.body)
-                        .foregroundColor(.white)
-                    Text("Scheduled at: " + card.launched)
-                        .font(.body)
-                        .foregroundColor(.white)
-                        
+                            .foregroundColor(.white)
+                        Text("Scheduled at: " + card.launched)
+                            .font(.body)
+                            .foregroundColor(.white)
+                            
+                        }
                     }
-                }
-                .padding(20)
-                .multilineTextAlignment(.center)
+                    .padding(20)
+                    .multilineTextAlignment(.center)
                     
-                Button(action: {
-                        print("check event")
-                        self.onActivate()
+                    NavigationLink(destination: SingleEventView(content: content), isActive: $isShowingDetailView) {EmptyView()}
                     
-                }
-                        , label: {
-                        Circle()
-                            .fill(Color.yellow)
-                            .frame(width: 75, height: 75)
-                            .shadow(radius: 10)
-                            .overlay(
-                                Image(systemName: "eyes")
-                                    .font(.largeTitle)
-                                    .foregroundColor(Color.black)
-                            )
-                        
-                        
-                    })
-                    
+                    Button(action: {
+                                print("check event")
+                                isShowingDetailView = true
+                                self.onActivate()
+                            
+                        }
+                                , label: {
+                                Circle()
+                                    .fill(Color.yellow)
+                                    .frame(width: 75, height: 75)
+                                    .shadow(radius: 10)
+                                    .overlay(
+                                        Image(systemName: "eyes")
+                                            .font(.largeTitle)
+                                            .foregroundColor(Color.black)
+                                    )
+                                
+                                
+                            }
+                    )
+                
                 }
                 
             }
@@ -74,7 +82,7 @@ struct UserEventView: View {
         }
         .frame(width: 330.0, height: 120.0)
         .onTapGesture {
-            self.isShowingAnswer.toggle()
+        self.isShowingAnswer.toggle()
     }
 }
 }
