@@ -30,8 +30,9 @@ struct AppleLoginView: View {
                 print(error.localizedDescription)
             }
         }
-
-        AppleButtonView()
+        .signInWithAppleButtonStyle(.white)
+        .frame(width: 45, height: 45)
+        .opacity(0.02)
     }
 }
 
@@ -39,6 +40,7 @@ struct AppleButtonView: View {
     var body: some View {
         Image("apple")
             .resizable()
-            .frame(width: 45, height: 45)
+            .frame(width: 40, height: 40)
     }
 }
+

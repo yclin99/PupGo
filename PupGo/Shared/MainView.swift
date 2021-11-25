@@ -13,6 +13,7 @@ struct MainView: View {
         
         if log_Status {
             CurvedTabView()
+            // ApolloView()
         } else {
             LoginView()
         }

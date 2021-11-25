@@ -14,6 +14,8 @@ struct MatchView: View {
         NavigationView {
             ZStack {
                 lightYellowColor
+                SwipeView()
+                /*
                 VStack {
                     Spacer()
                     ZStack {
@@ -25,7 +27,7 @@ struct MatchView: View {
                     DecisionButtons()
                     Spacer()
                     
-                }
+                }*/
             }
             //.padding(.bottom, 60)
             //.padding(.bottom, getSafeArea().bottom == 0 ? 15 : getSafeArea().bottom)

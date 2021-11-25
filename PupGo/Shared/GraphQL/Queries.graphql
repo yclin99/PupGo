@@ -1,12 +1,15 @@
 query Testing1 {
-    recommendationGet(recommendationGetInput:{pid:"0eb440de-cf57-404b-ada3-bebc21ee19c4"}){
+    recommendationGet(recommendationGetInput:{pid:"d26d7d6b-4b29-4c50-ba13-0eeaff957923"}){
         result  {
             pet {
+                id
                 name
                 image
                 gender
                 breed
+                isCastration
                 birthday
+                
             }
         }
     }

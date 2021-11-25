@@ -20,7 +20,25 @@ struct ApolloView: View {
             }
         }
         .onAppear {
+            print("Start Apollo View")
+            
             Network.shared.apollo.fetch(query: Testing1Query()) { result in
+                /*
+                guard let data = try? result.get().data else {
+                    print("Error: Fetching Data Error")
+                    return
+                }
+                data.recommendationGet.result.forEach { networkUser in
+                    let id = networkUser.pet?.id as! String
+                    let name = networkUser.pet?.name as! String
+                    let breed = networkUser.pet?.breed as! String
+                    let image = networkUser.pet?.image as! String
+                    let age = networkUser.pet?.birthday as! String
+                    let gender = networkUser.pet?.gender?.rawValue as! String
+                    let isCastration = networkUser.pet?.isCastration as! Bool
+                    
+                    print("ID: ", id)
+                }*/
                 switch result {
                 case .success(let graphqlResult):
                     DispatchQueue.main.async {
@@ -28,6 +46,7 @@ struct ApolloView: View {
                             self.ApolloString = myString
                             print (self.ApolloString)
                             print ("Query Success!")
+                            
                         } else {
                             print ("Found not thing")
                         }
@@ -37,6 +56,7 @@ struct ApolloView: View {
                     print("Error: \(error)")
                 }
             }
+            print(self.ApolloString)
         }
     }
 }
