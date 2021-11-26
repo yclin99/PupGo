@@ -10,4 +10,26 @@ query Testing1 {
             }
         }
     }
+    userProfileListGet(userProfileListGetInput:{uid: ["74c479bd-4076-40e1-84dd-228ab8c183fb"]}){
+        result  {
+            id
+            name
+            gender
+            birthday
+            email
+        }
+    }
+    petProfileListGet(petProfileListGetInput:{pid: ["0ede6c06-18b7-44c1-b5fe-4c01de57c770"]}){
+        result  {
+            id
+            name
+            image
+            gender
+            breed
+            isCastration
+            birthday
+        }
+    }
 }
+
+
