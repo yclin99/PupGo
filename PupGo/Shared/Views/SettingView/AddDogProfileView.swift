@@ -15,7 +15,7 @@ struct AddDogProfileView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
 
-    @State var petid: Int = 103
+    @State var petid: String = ""
     @State var petname: String = ""
     @State var gender: String?
     @State var breed: String?
@@ -61,7 +61,7 @@ struct AddDogProfileView: View {
         Button(action: {
             showingAlert = true
             if image != nil {
-                @ObservedObject var newdog = DogProfile(petid: petid, petname: petname, image: image!)
+                @ObservedObject var newdog = DogProfile(petname: petname, image: image!)
                 content.createPet(newdog: newdog)
                  
             }
