@@ -14,3 +14,17 @@ query Testing1 {
         }
     }
 }
+
+mutation SetStatus($pid:ID! ,$recommendID:ID!, $result:Boolean!){
+    recommendationResponse(recommendationResponseInput:{
+        pid:$pid,
+        recommendID:$recommendID,
+        result:$result,
+    }){
+        result{
+            id
+            image
+            gender
+        }
+    }
+}

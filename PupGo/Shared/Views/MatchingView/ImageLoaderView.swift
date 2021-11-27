@@ -28,7 +28,6 @@ struct ImageLoaderView: View {
         .onAppear {
             imageLoader.fetch()
         }
-        
     }
 }
 
