@@ -24,15 +24,15 @@ class observer: ObservableObject {
             
             data.recommendationGet.result.forEach { networkUser in
                 
-                let id = networkUser.pet?.id as! String
-                let name = networkUser.pet?.name as! String
-                let breed = networkUser.pet?.breed as! String
-                let image = networkUser.pet?.image as! String
-                let age = networkUser.pet?.birthday as! String
-                let gender = networkUser.pet?.gender?.rawValue as! String
-                let isCastration = networkUser.pet?.isCastration as! Bool
+                let id = networkUser.pet?.id
+                let name = networkUser.pet?.name
+                let breed = networkUser.pet?.breed
+                let image = networkUser.pet?.image
+                let age = networkUser.pet?.birthday
+                let gender = networkUser.pet?.gender?.rawValue
+                let isCastration = networkUser.pet?.isCastration
                 
-                self.users.append(datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration))
+                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age ?? "", isCastration: isCastration ?? true))
             //}
             }
             self.users.removeLast()
@@ -70,19 +70,6 @@ class observer: ObservableObject {
         return 0.0
     }
     
-    func update(id: String, x: CGFloat, y: CGFloat, degree: Double) {
-        for i in 0..<self.users.count {
-            // print("Matches::::::")
-            if self.users[i].id == id {
-                self.users[i].x = x
-                self.users[i].y = y
-                self.users[i].degree = degree
-                //self.last = i
-            }
-        }
-        //id.update(x: x, y: y, d: degree)
-    }
-    
     func update(id: String) {
         for i in 0..<self.users.count {
             if self.users[i].id == id {
@@ -90,6 +77,37 @@ class observer: ObservableObject {
             }
         }
     }
+    func update(id: String, x: CGFloat, y: CGFloat) {
+        for i in 0..<self.users.count {
+            if self.users[i].id == id {
+                self.users[i].x = x
+                self.users[i].y = y
+            }
+        }
+    }
+    
+    func update(id: String, x: CGFloat, degree: Double) {
+        for i in 0..<self.users.count {
+            if self.users[i].id == id {
+                self.users[i].x = x
+                self.users[i].degree = degree
+            }
+        }
+    }
+    
+    func update(id: String, x: CGFloat, y: CGFloat, degree: Double) {
+        for i in 0..<self.users.count {
+            // print("Matches::::::")
+            if self.users[i].id == id {
+                self.users[i].x = x
+                self.users[i].y = y
+                self.users[i].degree = degree
+            }
+        }
+    }
+    
+    
+    
     
     func goBack(index: Int) {
         self.users[index].x = 0
@@ -107,6 +125,29 @@ class observer: ObservableObject {
     
     func calculateAge() {
         
+    }
+    
+    func getNewUsers() {
+        Network.shared.apollo.fetch(query: Testing1Query()) { result in
+            guard let data = try? result.get().data else {
+                print("Error: Fetching Data Error")
+                return
+            }
+            
+            data.recommendationGet.result.forEach { networkUser in
+                
+                let id = networkUser.pet?.id
+                let name = networkUser.pet?.name
+                let breed = networkUser.pet?.breed
+                let image = networkUser.pet?.image
+                let age = networkUser.pet?.birthday
+                let gender = networkUser.pet?.gender?.rawValue
+                let isCastration = networkUser.pet?.isCastration
+                
+                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age ?? "", isCastration: isCastration ?? true))
+    
+            }
+        }
     }
 }
 
