@@ -7,28 +7,33 @@
 
 import Foundation
 import SwiftUI
+import zlib
 
 struct MatchView: View {
     @StateObject var obser = observer()
+    @State var index = 0
     var body: some View {
         NavigationView {
             ZStack {
                 lightYellowColor
                 VStack {
                     
-                    Image("dog1")
+                    /* Image("dog1")
                         .resizable()
-                        .frame(width: 360, height: 480)
-                     
-                    if obser.users.isEmpty{
-                        ProgressView()
-                    }
-                    /*
-                    ForEach(self.obser.users) {i in
-                        Group {
-                            DogCard(dogCard: i)
+                        .frame(width: 360, height: 480) */
+                    ZStack (alignment: .topLeading) {
+                        if obser.users.isEmpty{
+                            ProgressView()
                         }
-                    }*/
+                        
+                        ForEach(self.obser.users) {i in
+                            Group {
+                                DogCard(dogCard: i)
+                                    
+                            }
+                        }
+                    }
+                    
                     DecisionButtons()
                 }
                 
@@ -38,12 +43,16 @@ struct MatchView: View {
         }
         .environmentObject(obser)
     }
+    func indexUpdate() {
+        self.index += 1
+    }
 }
 
 struct DogCard: View {
     @State var dogCard: datatype
-    //@EnvironmentObject var obser: observer
+    @EnvironmentObject var obser: observer
     let cardGradient = Gradient(colors: [Color.black.opacity(0), Color.black.opacity(0.5)])
+    
     var body: some View {
         ZStack (alignment: .leading) {
             AsyncImage(url: URL(string: dogCard.image)) { ima in
@@ -51,10 +60,10 @@ struct DogCard: View {
             } placeholder: {
                 ProgressView()
             }
-            /*
             Rectangle()
                 .foregroundColor(.clear)
-                .background(LinearGradient(gradient: cardGradient, startPoint: .top, endPoint: .bottom))*/
+                .background(LinearGradient(gradient: cardGradient, startPoint: .top, endPoint: .bottom))
+            /*
             VStack {
                 Spacer()
                 VStack(alignment: .leading) {
@@ -66,7 +75,7 @@ struct DogCard: View {
                 }
             }
             .padding()
-            .foregroundColor(.white)
+            .foregroundColor(.white)*/
         }
         .frame(width: 360, height: 480)
         .cornerRadius(20)
@@ -78,24 +87,31 @@ struct DogCard: View {
             DragGesture()
                 .onChanged { value in
                     withAnimation(.default) {
-                        
+                        self.obser.update(id: dogCard, x: value.translation.width, y: value.translation.height, degree: 7 * (value.translation.width > 0 ? 1: -1))
+                        /*
                         dogCard.x = value.translation.width
                         dogCard.y = value.translation.height
                         dogCard.degree = 7 * (value.translation.width > 0 ? 1: -1)
+                        */
                     }
                 }
                 .onEnded { value in
                     withAnimation(.interpolatingSpring(mass: 1.0, stiffness: 50, damping: 8, initialVelocity: 0)) {
                         switch value.translation.width {
                         case 0...100:
+                            //self.obser.update(id: dogCard, x: 0, y: 0, degree: 0)
                             dogCard.x = 0; dogCard.degree = 0; dogCard.y = 0
                         case let x where x > 100:
+                            //self.obser.update(id: dogCard, x: 500, y: dogCard.y, degree: 12)
                             dogCard.x = 500; dogCard.degree = 12
                         case (-100)...(-1):
+                            //self.obser.update(id: dogCard, x: 0, y: 12, degree: 0)
                             dogCard.x = 0; dogCard.degree = 0; dogCard.y = 12
                         case let x where x < -100:
+                            //self.obser.update(id: dogCard, x: -500, y: dogCard.y, degree: -12)
                             dogCard.x = -500; dogCard.degree = -12
-                        default: dogCard.x = 0; dogCard.y = 0
+                        default: //self.obser.update(id: dogCard, x: 0, y: 0, degree: dogCard.degree)
+                            dogCard.x = 0; dogCard.y = 0
                         }
                     }
                 }
@@ -108,7 +124,11 @@ struct DecisionButtons: View {
     var body: some View {
         HStack {
             Spacer()
-            Button(action: {}) {
+            Button(action: {
+                if self.obser.last != -1 {
+                    self.obser.goBack(index: self.obser.last)
+                }
+            }) {
                 Image(systemName: "x.circle.fill")
                     .resizable()
                     .foregroundColor(.brown)

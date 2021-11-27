@@ -1,5 +1,5 @@
 query Testing1 {
-    recommendationGet(recommendationGetInput:{pid:"d26d7d6b-4b29-4c50-ba13-0eeaff957923"}){
+    recommendationGet(recommendationGetInput:{pid:"caefd1f0-a4fc-4ba3-81d8-1d0b0fbec730"}){
         result  {
             pet {
                 id

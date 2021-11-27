@@ -7,31 +7,6 @@
 
 import Foundation
 import SwiftUI
-/*
-struct SwipeView: View {
-    @StateObject var obser = observer()
-    var body: some View {
-        GeometryReader {geo in
-            ZStack {
-                ForEach(self.obser.users) {i in
-                    Group {
-                        AsyncImage(url: URL(string: i.image)) { ima in
-                            ima.resizable()
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        .frame(width: 200, height: 200)
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(20)
-                            //.frame(height: geo.size.height - 10)
-                            
-                    }
-                    //.frame(width: geo.size.height - 10 , height: geo.size.height - 10)
-                }
-            }
-        }
-    }
-}*/
 
 
 class observer: ObservableObject {
@@ -39,16 +14,16 @@ class observer: ObservableObject {
     @Published var last = -1
     
     init() {
-        let apolloNetwork = Network.shared.apollo
+        //let apolloNetwork = Network.shared.apollo
         //DispatchQueue.main.async {
-        apolloNetwork.fetch(query: Testing1Query()) { result in
-            
+        Network.shared.apollo.fetch(query: Testing1Query()) { result in
             guard let data = try? result.get().data else {
                 print("Error: Fetching Data Error")
                 return
             }
             
             data.recommendationGet.result.forEach { networkUser in
+                
                 let id = networkUser.pet?.id as! String
                 let name = networkUser.pet?.name as! String
                 let breed = networkUser.pet?.breed as! String
@@ -60,22 +35,47 @@ class observer: ObservableObject {
                 self.users.append(datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration))
             //}
             }
-            
             //print("Users-temp", self.users)
-            
         }
     }
     
-    func update(id: datatype) {
+    func update(id: datatype, x: CGFloat, y: CGFloat, degree: Double) {
         for i in 0..<self.users.count {
+            // print("Matches::::::")
             if self.users[i].id == id.id {
+                self.users[i].x = x
+                self.users[i].y = y
+                self.users[i].degree = degree
                 self.last = i
             }
         }
     }
     
     func goBack(index: Int) {
-        
+        self.users[index].x = 0
+        self.users[index].y = 0
+    }
+    
+    func updateDB() {
+        Network.shared.apollo.fetch(query: Testing1Query()) { result in
+            guard let data = try? result.get().data else {
+                print("Error: Fetching Data Error")
+                return
+            }
+            
+            data.recommendationGet.result.forEach { networkUser in
+                let id = networkUser.pet?.id
+                let name = networkUser.pet?.name
+                let breed = networkUser.pet?.breed
+                let image = networkUser.pet?.image
+                let age = networkUser.pet?.birthday
+                let gender = networkUser.pet?.gender?.rawValue
+                let isCastration = networkUser.pet?.isCastration
+                
+                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age ?? "", isCastration: isCastration ?? true))
+            //}
+            }
+        }
     }
     
 }
