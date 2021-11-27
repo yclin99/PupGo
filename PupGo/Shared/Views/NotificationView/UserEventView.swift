@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct UserEventView: View {
-    let card: Card
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        return formatter
+    }
     @State private var isShowingAnswer = false
     @State private var isShowingDetailView = false
-    let onActivate: () -> ()
+    @State var currentDate = Date()
+    @State var timeRemaining: String = ""
+    let futureDate: Date = Calendar.current.date(byAdding: .hour, value: 1, to: Date()) ?? Date()
+    
+    func updateTimeRemaining(){
+        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate)
+        let hour = remaining.hour ?? 0
+        let minute = remaining.minute ?? 0
+        let second = remaining.second ?? 0
+        if hour > 0 {
+            timeRemaining = "\(hour)h \(minute)m \(second)s"
+        }
+        else{
+            timeRemaining = "\(minute)m \(second)s"
+        }
+    }
+    
     var content : Event =
         Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
     
+    let card: Card
+    let onActivate: () -> ()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         let pic = Image(card.pic)
@@ -37,9 +60,14 @@ struct UserEventView: View {
                     
                     VStack (alignment: .leading) {
                         if isShowingAnswer {
-                        Text("Start time: " + card.when)
+                            
+                        Text("Count down: " + timeRemaining)
                                 .font(.body)
                             .foregroundColor(.white)
+                            .onReceive(timer, perform: {_ in
+                                updateTimeRemaining()
+                            })
+                            
                         Text("Participants: " + card.who)
                             .font(.body)
                             .foregroundColor(.white)
@@ -85,4 +113,30 @@ struct UserEventView: View {
         self.isShowingAnswer.toggle()
     }
 }
+}
+
+extension DateFormatter {
+    convenience init(format: String) {
+            self.init()
+        self.dateFormat = format
+    }
+}
+
+struct DateHandler {
+   let formatter: DateFormatter
+   init(format: String) {
+       formatter = DateFormatter(format: format)
+   }
+}
+
+extension Date {
+    func toString(_ type: DateHandler) -> String {
+        type.formatter.string(from: self)
+    }
+}
+
+extension String {
+    func toDate(_ type: DateHandler) -> Date? {
+        type.formatter.date(from: self)
+    }
 }
