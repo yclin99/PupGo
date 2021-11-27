@@ -51,17 +51,19 @@ public final class Testing1Query: GraphQLQuery {
     """
     query Testing1 {
       recommendationGet(
-        recommendationGetInput: {pid: "0eb440de-cf57-404b-ada3-bebc21ee19c4"}
+        recommendationGetInput: {pid: "d26d7d6b-4b29-4c50-ba13-0eeaff957923"}
       ) {
         __typename
         result {
           __typename
           pet {
             __typename
+            id
             name
             image
             gender
             breed
+            isCastration
             birthday
           }
         }
@@ -79,7 +81,7 @@ public final class Testing1Query: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("recommendationGet", arguments: ["recommendationGetInput": ["pid": "0eb440de-cf57-404b-ada3-bebc21ee19c4"]], type: .nonNull(.object(RecommendationGet.selections))),
+        GraphQLField("recommendationGet", arguments: ["recommendationGetInput": ["pid": "d26d7d6b-4b29-4c50-ba13-0eeaff957923"]], type: .nonNull(.object(RecommendationGet.selections))),
       ]
     }
 
@@ -184,10 +186,12 @@ public final class Testing1Query: GraphQLQuery {
           public static var selections: [GraphQLSelection] {
             return [
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("id", type: .scalar(GraphQLID.self)),
               GraphQLField("name", type: .scalar(String.self)),
               GraphQLField("image", type: .scalar(String.self)),
               GraphQLField("gender", type: .scalar(PetGender.self)),
               GraphQLField("breed", type: .scalar(String.self)),
+              GraphQLField("isCastration", type: .nonNull(.scalar(Bool.self))),
               GraphQLField("birthday", type: .scalar(String.self)),
             ]
           }
@@ -198,8 +202,8 @@ public final class Testing1Query: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(name: String? = nil, image: String? = nil, gender: PetGender? = nil, breed: String? = nil, birthday: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "PetProfile", "name": name, "image": image, "gender": gender, "breed": breed, "birthday": birthday])
+          public init(id: GraphQLID? = nil, name: String? = nil, image: String? = nil, gender: PetGender? = nil, breed: String? = nil, isCastration: Bool, birthday: String? = nil) {
+            self.init(unsafeResultMap: ["__typename": "PetProfile", "id": id, "name": name, "image": image, "gender": gender, "breed": breed, "isCastration": isCastration, "birthday": birthday])
           }
 
           public var __typename: String {
@@ -208,6 +212,15 @@ public final class Testing1Query: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          public var id: GraphQLID? {
+            get {
+              return resultMap["id"] as? GraphQLID
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "id")
             }
           }
 
@@ -246,6 +259,16 @@ public final class Testing1Query: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue, forKey: "breed")
+            }
+          }
+
+          /// is castration or not: true for castration
+          public var isCastration: Bool {
+            get {
+              return resultMap["isCastration"]! as! Bool
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "isCastration")
             }
           }
 

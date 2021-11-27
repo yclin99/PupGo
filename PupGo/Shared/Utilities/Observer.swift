@@ -7,9 +7,10 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 struct SwipeView: View {
-    @ObservedObject var obser = observer()
+    @StateObject var obser = observer
     var body: some View {
         GeometryReader {geo in
             ZStack {
@@ -30,8 +31,14 @@ struct SwipeView: View {
     }
 }
 
-class observer: ObservableObject {
-    @Published var users = [datatype]()
+final class observer: ObservableObject {
+    var willChange = PassthroughSubject<Void, Never>()
+    @Published var users :[datatype] = []{
+        willSet{
+        print("will set")
+            willChange.send()
+        }
+    }
     init() {
         let apolloNetwork = Network.shared.apollo
         //DispatchQueue.main.async {
@@ -51,10 +58,11 @@ class observer: ObservableObject {
                 let gender = networkUser.pet?.gender?.rawValue as! String
                 let isCastration = networkUser.pet?.isCastration as! Bool
                 
-                self.users.append(datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration, swipe: 0))
+//                self.users.append(datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration, swipe: 0))
                 var testData = datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration, swipe: 0)
-            //}
-                SwipeView().handleUpdate()
+                self.users.append(testData)
+                //}
+//                SwipeView().handleUpdate()
             }
             print("Users-temp", self.users)
             
@@ -75,3 +83,4 @@ struct datatype: Identifiable {
     var isCastration: Bool
     var swipe: CGFloat
 }
+

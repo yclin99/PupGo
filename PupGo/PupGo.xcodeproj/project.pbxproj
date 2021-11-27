@@ -90,6 +90,8 @@
 		0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A1E2748CEEA000D6D17 /* CurvedTabView.swift */; };
 		0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A202748D275000D6D17 /* TabEffect.swift */; };
 		0EFC2A232748D683000D6D17 /* ButtonCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC2A222748D683000D6D17 /* ButtonCurve.swift */; };
+		727973AF27504EFC00F896DF /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727973AE27504EFC00F896DF /* Observer.swift */; };
+		727973B027504EFC00F896DF /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727973AE27504EFC00F896DF /* Observer.swift */; };
 		F53B93F7BA145C11C653F177 /* Pods_PupGo__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151C9617017F59926968EC58 /* Pods_PupGo__macOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +162,7 @@
 		3C0FDBD8C1F7865CD293E035 /* Pods_PupGo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PupGo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C69A8021C997FD4485DD25 /* Pods-PupGo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		660D37C5ED365D69D2E41300 /* Pods-PupGo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (macOS).release.xcconfig"; path = "Target Support Files/Pods-PupGo (macOS)/Pods-PupGo (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		727973AE27504EFC00F896DF /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		D3CB355DB2BE7E26722BBDD3 /* Pods-PupGo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PupGo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-PupGo (iOS)/Pods-PupGo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -317,6 +320,7 @@
 				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
+				727973AE27504EFC00F896DF /* Observer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -536,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */,
+				727973AF27504EFC00F896DF /* Observer.swift in Sources */,
 				0EFC29C727473DC8000D6D17 /* EditUserProfileView.swift in Sources */,
 				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
 				0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */,
@@ -604,6 +609,7 @@
 				0EB96C332738BB6900C9A656 /* AppleLoginView.swift in Sources */,
 				0E050048273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C362738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
+				727973B027504EFC00F896DF /* Observer.swift in Sources */,
 				0E05003A2735F73500D7FFCD /* MainView.swift in Sources */,
 				0EFC29C227473D92000D6D17 /* DogProfileView.swift in Sources */,
 				0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */,
