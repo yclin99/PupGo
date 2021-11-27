@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct FEvent: View {
-    @State var fevents = [Card](repeating: Card.fevent, count: 5)
+    @State var fevents = Card.fevent
     
     var body: some View{
         if fevents.count > 0 {
@@ -44,7 +44,7 @@ struct FEvent: View {
     func getApi() {
         print("getApi called")
         if self.fevents.count > 0 {
-            fevents.removeFirst(1)
+            fevents.removeLast(1)
         }
         
     }

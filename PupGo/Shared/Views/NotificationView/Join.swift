@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Join: View {
-    @State var joins = [Card](repeating: Card.join, count: 3)
+    @State var joins = Card.join
     
     var body: some View{
         VStack{
@@ -43,7 +43,7 @@ struct Join: View {
     func getApi() {
         print("getApi called")
         if self.joins.count > 0 {
-            joins.removeFirst(1)
+            joins.removeLast(1)
         }
         
     }

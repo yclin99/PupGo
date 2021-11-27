@@ -94,6 +94,8 @@
 		DD196425274C7C8900A0B56C /* UEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196423274C7C8900A0B56C /* UEvent.swift */; };
 		DD196427274C7CA800A0B56C /* FEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196426274C7CA800A0B56C /* FEvent.swift */; };
 		DD196428274C7CA800A0B56C /* FEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196426274C7CA800A0B56C /* FEvent.swift */; };
+		DDBEFF73275201E100EEC6B7 /* dateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */; };
+		DDBEFF74275201E100EEC6B7 /* dateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */; };
 		F53B93F7BA145C11C653F177 /* Pods_PupGo__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151C9617017F59926968EC58 /* Pods_PupGo__macOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +169,7 @@
 		DD196420274C7C2900A0B56C /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
 		DD196423274C7C8900A0B56C /* UEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEvent.swift; sourceTree = "<group>"; };
 		DD196426274C7CA800A0B56C /* FEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEvent.swift; sourceTree = "<group>"; };
+		DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,11 +323,12 @@
 		0E68D17A2741E6D40030AE76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 				0E8A2E2D2741F8A100081719 /* Card.swift */,
-				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
+				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -581,6 +585,7 @@
 				0E8A2E342741FA4800081719 /* FriendsEventView.swift in Sources */,
 				0EFC2A1B274765CE000D6D17 /* AnimationTestView.swift in Sources */,
 				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
+				DDBEFF73275201E100EEC6B7 /* dateFormatter.swift in Sources */,
 				0E8A2E282741F24C00081719 /* EventExploreContentView.swift in Sources */,
 				0EFC2A232748D683000D6D17 /* ButtonCurve.swift in Sources */,
 				0E5D1576274B40E500983ACC /* AppleLogin.swift in Sources */,
@@ -623,6 +628,7 @@
 				0EFC29C527473DB2000D6D17 /* EditDogProfileView.swift in Sources */,
 				0E8A2E352741FA4800081719 /* FriendsEventView.swift in Sources */,
 				0EFC2A1C274765CE000D6D17 /* AnimationTestView.swift in Sources */,
+				DDBEFF74275201E100EEC6B7 /* dateFormatter.swift in Sources */,
 				0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */,
 				0E5D1577274B40E500983ACC /* AppleLogin.swift in Sources */,
 				0E8A2E292741F24C00081719 /* EventExploreContentView.swift in Sources */,
