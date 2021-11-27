@@ -25,7 +25,7 @@ struct DogProfileView: View {
             lightYellowColor
                  .edgesIgnoringSafeArea(.all)
             VStack (alignment: .center) {
-                content.image.resizable().scaledToFit().frame(width: 250, height: 250)
+                content.image!.resizable().frame(width: 210, height: 250).aspectRatio(3/4, contentMode: .fill)
             List {
                 HStack(alignment: .center) {
                     Text("Pet ID: ")

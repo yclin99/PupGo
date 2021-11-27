@@ -114,7 +114,7 @@ public final class Testing1Query: GraphQLQuery {
         }
       }
       userProfileListGet(
-        userProfileListGetInput: {uid: ["74c479bd-4076-40e1-84dd-228ab8c183fb"]}
+        userProfileListGetInput: {uid: ["982a33ee-2792-4ede-b307-f38d187a2015"]}
       ) {
         __typename
         result {
@@ -127,7 +127,7 @@ public final class Testing1Query: GraphQLQuery {
         }
       }
       petProfileListGet(
-        petProfileListGetInput: {pid: ["0ede6c06-18b7-44c1-b5fe-4c01de57c770"]}
+        petProfileListGetInput: {pid: ["149464c2-f8ee-4e6f-a551-260b6467fa95", "5d76c3ad-d286-4c82-9ff0-6e043389f00d"]}
       ) {
         __typename
         result {
@@ -155,8 +155,8 @@ public final class Testing1Query: GraphQLQuery {
     public static var selections: [GraphQLSelection] {
       return [
         GraphQLField("recommendationGet", arguments: ["recommendationGetInput": ["pid": "0eb440de-cf57-404b-ada3-bebc21ee19c4"]], type: .nonNull(.object(RecommendationGet.selections))),
-        GraphQLField("userProfileListGet", arguments: ["userProfileListGetInput": ["uid": ["74c479bd-4076-40e1-84dd-228ab8c183fb"]]], type: .nonNull(.object(UserProfileListGet.selections))),
-        GraphQLField("petProfileListGet", arguments: ["petProfileListGetInput": ["pid": ["0ede6c06-18b7-44c1-b5fe-4c01de57c770"]]], type: .nonNull(.object(PetProfileListGet.selections))),
+        GraphQLField("userProfileListGet", arguments: ["userProfileListGetInput": ["uid": ["982a33ee-2792-4ede-b307-f38d187a2015"]]], type: .nonNull(.object(UserProfileListGet.selections))),
+        GraphQLField("petProfileListGet", arguments: ["petProfileListGetInput": ["pid": ["149464c2-f8ee-4e6f-a551-260b6467fa95", "5d76c3ad-d286-4c82-9ff0-6e043389f00d"]]], type: .nonNull(.object(PetProfileListGet.selections))),
       ]
     }
 

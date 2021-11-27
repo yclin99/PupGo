@@ -21,7 +21,7 @@ class DogProfile: Hashable, ObservableObject {
     
     var petid: String
     var petname: String
-    @Published var image: Image
+    @Published var image: Image?
     @Published var gender: String?
     @Published var breed: String?
     @Published var isCastration: Bool
@@ -29,8 +29,17 @@ class DogProfile: Hashable, ObservableObject {
     @Published var location: String?
     
 
+    init() {
+        self.petid = ""
+        self.petname = ""
+        self.gender = nil
+        self.breed = nil
+        self.birthday = nil
+        self.location = nil
+        self.isCastration = false
+  }
   
-    init(petname: String, image: Image) {
+    func manuaset (petname: String, image: Image) {
         self.petid = ""
         self.petname = petname
         self.image = image
@@ -41,22 +50,17 @@ class DogProfile: Hashable, ObservableObject {
         self.isCastration = false
   }
     
-    func setParametersfirst() {
+    
+    func setParameters(i: Int) {
         Network.shared.apollo.fetch(query: Testing1Query()) { [self] result in
-         self.petid = try!(result.get().data!.petProfileListGet.result.first?.id)! as String
-         self.petname = try!(result.get().data!.petProfileListGet.result.first?.name)! as String
-//         self.gender = try!(result.get().data!.petProfileListGet.result.first?.gender)! as String
-         let imageString = try!(result.get().data!.petProfileListGet.result.first?.image)! as String
-//            let imageString = "https://cdn.pixabay.com/photo/2017/09/25/13/12/cocker-spaniel-2785074__340.jpg"
-         self.breed = try!(result.get().data!.petProfileListGet.result.first?.breed)! as String
-         self.birthday = try!(result.get().data!.petProfileListGet.result.first?.birthday)! as String
+         self.petid = try!(result.get().data!.petProfileListGet.result[i].id)! as String
+         self.petname = try!(result.get().data!.petProfileListGet.result[i].name)! as String
+         let imageString = try!(result.get().data!.petProfileListGet.result[i].image)! as String
+         self.breed = try!(result.get().data!.petProfileListGet.result[i].breed)! as String
+         self.birthday = try!(result.get().data!.petProfileListGet.result[i].birthday)! as String
          let url = URL(string: imageString)
-         print(url as Any)
          let data = try? Data(contentsOf: url!)
-         print("1234")
-         print(data)
          let thisuiimage = UIImage(data: data!)
-         print(thisuiimage)
          self.image = Image(uiImage: thisuiimage!).renderingMode(.original)
         }
     }
