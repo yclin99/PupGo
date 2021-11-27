@@ -14,29 +14,35 @@ struct MatchView: View {
         NavigationView {
             ZStack {
                 lightYellowColor
-                ForEach(self.obser.users) {i in
-                    Group {
-                        DogCard(dogCard: i)
-                        /*
-                        AsyncImage(url: URL(string: i.image)) { ima in
-                            ima.resizable().scaledToFit()
-                        } placeholder: {
-                            ProgressView()
-                        }
+                VStack {
+                    
+                    Image("dog1")
+                        .resizable()
                         .frame(width: 360, height: 480)
-                        .cornerRadius(20)
-                         */
+                     
+                    if obser.users.isEmpty{
+                        ProgressView()
                     }
+                    /*
+                    ForEach(self.obser.users) {i in
+                        Group {
+                            DogCard(dogCard: i)
+                        }
+                    }*/
+                    DecisionButtons()
                 }
+                
+                
             }
             .edgesIgnoringSafeArea(.top)
-            
         }
+        .environmentObject(obser)
     }
 }
 
 struct DogCard: View {
     @State var dogCard: datatype
+    //@EnvironmentObject var obser: observer
     let cardGradient = Gradient(colors: [Color.black.opacity(0), Color.black.opacity(0.5)])
     var body: some View {
         ZStack (alignment: .leading) {
@@ -67,12 +73,12 @@ struct DogCard: View {
         // Dealing with swiping
         .offset(x: dogCard.x, y: dogCard.y)
         .rotationEffect(.init(degrees: dogCard.degree))
-        
         // Gesture Recogniser update
         .gesture(
             DragGesture()
                 .onChanged { value in
                     withAnimation(.default) {
+                        
                         dogCard.x = value.translation.width
                         dogCard.y = value.translation.height
                         dogCard.degree = 7 * (value.translation.width > 0 ? 1: -1)
@@ -98,6 +104,7 @@ struct DogCard: View {
 }
 
 struct DecisionButtons: View {
+    @EnvironmentObject var obser: observer
     var body: some View {
         HStack {
             Spacer()
@@ -125,6 +132,7 @@ struct DecisionButtons: View {
         }
     }
 }
+
 
 struct MatchView_Previews: PreviewProvider {
     static var previews: some View {

@@ -36,6 +36,7 @@ struct SwipeView: View {
 
 class observer: ObservableObject {
     @Published var users = [datatype]()
+    @Published var last = -1
     
     init() {
         let apolloNetwork = Network.shared.apollo
@@ -57,13 +58,24 @@ class observer: ObservableObject {
                 let isCastration = networkUser.pet?.isCastration as! Bool
                 
                 self.users.append(datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration))
-                var testData = datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration)
             //}
             }
             
-            print("Users-temp", self.users)
+            //print("Users-temp", self.users)
             
         }
+    }
+    
+    func update(id: datatype) {
+        for i in 0..<self.users.count {
+            if self.users[i].id == id.id {
+                self.last = i
+            }
+        }
+    }
+    
+    func goBack(index: Int) {
+        
     }
     
 }
