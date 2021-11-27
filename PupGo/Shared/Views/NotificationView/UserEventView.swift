@@ -9,13 +9,13 @@ import SwiftUI
 
 struct UserEventView: View {
     let card: Card
-    
     @State private var isShowingAnswer = false
     @State private var isShowingDetailView = false
     @State var timeRemaining: String = ""
     
     func updateTimeRemaining(){
         let futureDate = dateFormatter.date(from: card.when)
+        
         let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate!)
         let hour = remaining.hour ?? 0
         let minute = remaining.minute ?? 0
@@ -66,7 +66,8 @@ struct UserEventView: View {
                         Text("Participants: " + card.who)
                             .font(.body)
                             .foregroundColor(.white)
-                        Text("Scheduled at: " + card.launched)
+                            //Text("Scheduled at: " + dateFormatter.string(from: launchedDate))
+                        Text("Launched at: " + card.launched.prefix(10))
                             .font(.body)
                             .foregroundColor(.white)
                             
