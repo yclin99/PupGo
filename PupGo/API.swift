@@ -51,17 +51,19 @@ public final class Testing1Query: GraphQLQuery {
     """
     query Testing1 {
       recommendationGet(
-        recommendationGetInput: {pid: "0eb440de-cf57-404b-ada3-bebc21ee19c4"}
+        recommendationGetInput: {pid: "caefd1f0-a4fc-4ba3-81d8-1d0b0fbec730"}
       ) {
         __typename
         result {
           __typename
           pet {
             __typename
+            id
             name
             image
             gender
             breed
+            isCastration
             birthday
           }
         }
@@ -79,7 +81,7 @@ public final class Testing1Query: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("recommendationGet", arguments: ["recommendationGetInput": ["pid": "0eb440de-cf57-404b-ada3-bebc21ee19c4"]], type: .nonNull(.object(RecommendationGet.selections))),
+        GraphQLField("recommendationGet", arguments: ["recommendationGetInput": ["pid": "caefd1f0-a4fc-4ba3-81d8-1d0b0fbec730"]], type: .nonNull(.object(RecommendationGet.selections))),
       ]
     }
 
@@ -184,10 +186,12 @@ public final class Testing1Query: GraphQLQuery {
           public static var selections: [GraphQLSelection] {
             return [
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("id", type: .scalar(GraphQLID.self)),
               GraphQLField("name", type: .scalar(String.self)),
               GraphQLField("image", type: .scalar(String.self)),
               GraphQLField("gender", type: .scalar(PetGender.self)),
               GraphQLField("breed", type: .scalar(String.self)),
+              GraphQLField("isCastration", type: .nonNull(.scalar(Bool.self))),
               GraphQLField("birthday", type: .scalar(String.self)),
             ]
           }
@@ -198,8 +202,8 @@ public final class Testing1Query: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(name: String? = nil, image: String? = nil, gender: PetGender? = nil, breed: String? = nil, birthday: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "PetProfile", "name": name, "image": image, "gender": gender, "breed": breed, "birthday": birthday])
+          public init(id: GraphQLID? = nil, name: String? = nil, image: String? = nil, gender: PetGender? = nil, breed: String? = nil, isCastration: Bool, birthday: String? = nil) {
+            self.init(unsafeResultMap: ["__typename": "PetProfile", "id": id, "name": name, "image": image, "gender": gender, "breed": breed, "isCastration": isCastration, "birthday": birthday])
           }
 
           public var __typename: String {
@@ -208,6 +212,15 @@ public final class Testing1Query: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          public var id: GraphQLID? {
+            get {
+              return resultMap["id"] as? GraphQLID
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "id")
             }
           }
 
@@ -249,6 +262,16 @@ public final class Testing1Query: GraphQLQuery {
             }
           }
 
+          /// is castration or not: true for castration
+          public var isCastration: Bool {
+            get {
+              return resultMap["isCastration"]! as! Bool
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "isCastration")
+            }
+          }
+
           public var birthday: String? {
             get {
               return resultMap["birthday"] as? String
@@ -256,6 +279,171 @@ public final class Testing1Query: GraphQLQuery {
             set {
               resultMap.updateValue(newValue, forKey: "birthday")
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+public final class SetStatusMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation SetStatus($pid: ID!, $recommendID: ID!, $result: Boolean!) {
+      recommendationResponse(
+        recommendationResponseInput: {pid: $pid, recommendID: $recommendID, result: $result}
+      ) {
+        __typename
+        result {
+          __typename
+          id
+          image
+          gender
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "SetStatus"
+
+  public var pid: GraphQLID
+  public var recommendID: GraphQLID
+  public var result: Bool
+
+  public init(pid: GraphQLID, recommendID: GraphQLID, result: Bool) {
+    self.pid = pid
+    self.recommendID = recommendID
+    self.result = result
+  }
+
+  public var variables: GraphQLMap? {
+    return ["pid": pid, "recommendID": recommendID, "result": result]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("recommendationResponse", arguments: ["recommendationResponseInput": ["pid": GraphQLVariable("pid"), "recommendID": GraphQLVariable("recommendID"), "result": GraphQLVariable("result")]], type: .nonNull(.object(RecommendationResponse.selections))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(recommendationResponse: RecommendationResponse) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "recommendationResponse": recommendationResponse.resultMap])
+    }
+
+    public var recommendationResponse: RecommendationResponse {
+      get {
+        return RecommendationResponse(unsafeResultMap: resultMap["recommendationResponse"]! as! ResultMap)
+      }
+      set {
+        resultMap.updateValue(newValue.resultMap, forKey: "recommendationResponse")
+      }
+    }
+
+    public struct RecommendationResponse: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["RecommendationResponsePayload"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("result", type: .object(Result.selections)),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(result: Result? = nil) {
+        self.init(unsafeResultMap: ["__typename": "RecommendationResponsePayload", "result": result.flatMap { (value: Result) -> ResultMap in value.resultMap }])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      /// If the other already accepts, return petprofile otherwise return null
+      public var result: Result? {
+        get {
+          return (resultMap["result"] as? ResultMap).flatMap { Result(unsafeResultMap: $0) }
+        }
+        set {
+          resultMap.updateValue(newValue?.resultMap, forKey: "result")
+        }
+      }
+
+      public struct Result: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["PetProfile"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .scalar(GraphQLID.self)),
+            GraphQLField("image", type: .scalar(String.self)),
+            GraphQLField("gender", type: .scalar(PetGender.self)),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(id: GraphQLID? = nil, image: String? = nil, gender: PetGender? = nil) {
+          self.init(unsafeResultMap: ["__typename": "PetProfile", "id": id, "image": image, "gender": gender])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: GraphQLID? {
+          get {
+            return resultMap["id"] as? GraphQLID
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
+          }
+        }
+
+        public var image: String? {
+          get {
+            return resultMap["image"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "image")
+          }
+        }
+
+        /// only two
+        public var gender: PetGender? {
+          get {
+            return resultMap["gender"] as? PetGender
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "gender")
           }
         }
       }
