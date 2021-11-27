@@ -9,46 +9,46 @@ import Foundation
 import SwiftUI
 
 struct MatchView: View {
-    
+    @StateObject var obser = observer()
     var body: some View {
         NavigationView {
             ZStack {
                 lightYellowColor
-                SwipeView()
-                /*
-                VStack {
-                    Spacer()
-                    ZStack {
-                        ForEach(SwipeCard.data.reversed()) { card in
-                            DogCard(dogCard: card)
+                ForEach(self.obser.users) {i in
+                    Group {
+                        DogCard(dogCard: i)
+                        /*
+                        AsyncImage(url: URL(string: i.image)) { ima in
+                            ima.resizable().scaledToFit()
+                        } placeholder: {
+                            ProgressView()
                         }
+                        .frame(width: 360, height: 480)
+                        .cornerRadius(20)
+                         */
                     }
-                    Spacer()
-                    DecisionButtons()
-                    Spacer()
-                    
-                }*/
+                }
             }
-            //.padding(.bottom, 60)
-            //.padding(.bottom, getSafeArea().bottom == 0 ? 15 : getSafeArea().bottom)
             .edgesIgnoringSafeArea(.top)
-            //.navigationTitle("Matching")
+            
         }
     }
 }
 
 struct DogCard: View {
-    @State var dogCard: SwipeCard
+    @State var dogCard: datatype
     let cardGradient = Gradient(colors: [Color.black.opacity(0), Color.black.opacity(0.5)])
     var body: some View {
         ZStack (alignment: .leading) {
-            Image(dogCard.imageName)
-                //.resizable()
-                .scaledToFit()
-                //.aspectRatio(contentMode: .fit)
+            AsyncImage(url: URL(string: dogCard.image)) { ima in
+                ima.resizable().scaledToFit()
+            } placeholder: {
+                ProgressView()
+            }
+            /*
             Rectangle()
                 .foregroundColor(.clear)
-                .background(LinearGradient(gradient: cardGradient, startPoint: .top, endPoint: .bottom))
+                .background(LinearGradient(gradient: cardGradient, startPoint: .top, endPoint: .bottom))*/
             VStack {
                 Spacer()
                 VStack(alignment: .leading) {
@@ -56,7 +56,7 @@ struct DogCard: View {
                         Text(dogCard.name).font(.largeTitle).fontWeight(.bold)
                         Text(String(dogCard.age)).font(.title)
                     }
-                    Text(dogCard.bio)
+                    // Text(dogCard.bio)
                 }
             }
             .padding()

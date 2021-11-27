@@ -7,31 +7,36 @@
 
 import Foundation
 import SwiftUI
-
+/*
 struct SwipeView: View {
-    @ObservedObject var obser = observer()
+    @StateObject var obser = observer()
     var body: some View {
         GeometryReader {geo in
             ZStack {
-                // AsyncImage(url: URL(string: "https://mymodernmet.com/wp/wp-content/uploads/2020/10/cooper-baby-corgi-dogs-8.jpg"))
-                
                 ForEach(self.obser.users) {i in
-                    AsyncImage(url: URL(string: i.image))
-                        //.resizable()
-                        .frame(height: geo.size.height - 100)
-                        //.padding(.vertical, 15)
+                    Group {
+                        AsyncImage(url: URL(string: i.image)) { ima in
+                            ima.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 200, height: 200)
+                        .aspectRatio(contentMode: .fill)
                         .cornerRadius(20)
+                            //.frame(height: geo.size.height - 10)
+                            
+                    }
+                    //.frame(width: geo.size.height - 10 , height: geo.size.height - 10)
                 }
             }
         }
     }
-    
-    func handleUpdate() {
-    }
-}
+}*/
+
 
 class observer: ObservableObject {
     @Published var users = [datatype]()
+    
     init() {
         let apolloNetwork = Network.shared.apollo
         //DispatchQueue.main.async {
@@ -51,16 +56,14 @@ class observer: ObservableObject {
                 let gender = networkUser.pet?.gender?.rawValue as! String
                 let isCastration = networkUser.pet?.isCastration as! Bool
                 
-                self.users.append(datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration, swipe: 0))
-                var testData = datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration, swipe: 0)
+                self.users.append(datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration))
+                var testData = datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration)
             //}
-                SwipeView().handleUpdate()
             }
+            
             print("Users-temp", self.users)
             
         }
-        print("Init: ", self.users)
-        
     }
     
 }
@@ -73,5 +76,7 @@ struct datatype: Identifiable {
     var breed: String
     var age: String
     var isCastration: Bool
-    var swipe: CGFloat
+    var x: CGFloat = 0.0
+    var y: CGFloat = 0.0
+    var degree: Double = 0.0
 }

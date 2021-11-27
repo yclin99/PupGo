@@ -63,7 +63,7 @@ struct GoogleLoginView: View {
                 
                 withAnimation {
                     log_Status = true
-                    // print ("idToken: ", idToken)
+                    //print ("idToken: ", idToken)
                 }
             }
         }
