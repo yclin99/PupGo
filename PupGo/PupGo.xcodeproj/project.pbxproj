@@ -50,8 +50,6 @@
 		0E8A2E2C2741F26E00081719 /* SingleEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2A2741F26E00081719 /* SingleEventView.swift */; };
 		0E8A2E2E2741F8A100081719 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2D2741F8A100081719 /* Card.swift */; };
 		0E8A2E2F2741F8A100081719 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2D2741F8A100081719 /* Card.swift */; };
-		0E8A2E312741F99B00081719 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E302741F99B00081719 /* CardView.swift */; };
-		0E8A2E322741F99B00081719 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E302741F99B00081719 /* CardView.swift */; };
 		0E8A2E342741FA4800081719 /* FriendsEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E332741FA4800081719 /* FriendsEventView.swift */; };
 		0E8A2E352741FA4800081719 /* FriendsEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E332741FA4800081719 /* FriendsEventView.swift */; };
 		0E8A2E372741FA6200081719 /* JoinRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E362741FA6200081719 /* JoinRequestView.swift */; };
@@ -139,7 +137,6 @@
 		0E8A2E272741F24C00081719 /* EventExploreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExploreContentView.swift; sourceTree = "<group>"; };
 		0E8A2E2A2741F26E00081719 /* SingleEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventView.swift; sourceTree = "<group>"; };
 		0E8A2E2D2741F8A100081719 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		0E8A2E302741F99B00081719 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0E8A2E332741FA4800081719 /* FriendsEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsEventView.swift; sourceTree = "<group>"; };
 		0E8A2E362741FA6200081719 /* JoinRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestView.swift; sourceTree = "<group>"; };
 		0E8A2E3C2741FA8E00081719 /* UserEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventView.swift; sourceTree = "<group>"; };
@@ -277,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				0E05004F27362A2E00D7FFCD /* NotificationView.swift */,
-				0E8A2E302741F99B00081719 /* CardView.swift */,
 				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
 				0E8A2E362741FA6200081719 /* JoinRequestView.swift */,
 				0E8A2E3C2741FA8E00081719 /* UserEventView.swift */,
@@ -566,7 +562,6 @@
 				0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */,
 				DD196424274C7C8900A0B56C /* UEvent.swift in Sources */,
 				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
-				0E8A2E312741F99B00081719 /* CardView.swift in Sources */,
 				0E8A2E1C2741F18500081719 /* Event.swift in Sources */,
 				0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0E804025274B69E60086DA03 /* API.swift in Sources */,
@@ -613,7 +608,6 @@
 				0E8A2E382741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */,
 				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
-				0E8A2E322741F99B00081719 /* CardView.swift in Sources */,
 				0E8A2E1D2741F18500081719 /* Event.swift in Sources */,
 				DD196425274C7C8900A0B56C /* UEvent.swift in Sources */,
 				0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
