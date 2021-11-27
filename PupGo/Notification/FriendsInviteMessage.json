@@ -1,0 +1,12 @@
+{
+    "Simulator Target Bundle":"CS130.PupGo",
+    "aps": {
+        "alert": {
+            "title": "New Friends Invitation",
+            "body": "A new freinds is sending invitation to you!\n Click to open PetProfile!\n"
+        }
+    },
+    "recommend_id": "123",
+    "pet_id":"234",
+    "notification_type": "FriendsInvite"
+}

@@ -11,7 +11,7 @@ struct EventExploreContentView: View {
     
     var events = [
         Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1")),
-        Event(userid: 2, username: "Pluto", location: "DisneyLand Park", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog2")),
+        Event(userid: 2, username: "Pluto", location: "DisneyLand Park", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Pluto")),
         Event(userid: 3, username: "Goofy", location: "Mickey's home",starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog3")),
         Event(userid: 4, username: "Jiff", location: "Santa Monica", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Jiff")),
         Event(userid: 5, username: "Boo", location: "Big Sur", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Boo")),

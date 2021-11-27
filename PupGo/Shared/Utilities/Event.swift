@@ -18,6 +18,7 @@ class Event: Hashable {
         
     }
     
+    
     var userid: Int
     var username: String
     var location: String

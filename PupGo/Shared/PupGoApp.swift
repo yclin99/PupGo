@@ -41,7 +41,19 @@ class AppDelegate: NSObject, UIApplicationDelegate{
         // Setting up Cloud Messaging
         
         Messaging.messaging().delegate = self
-        
+        let snoozeAction = UNNotificationAction(identifier: "Go_ACTION",
+                                                  title: "Go",
+                                                  options: UNNotificationActionOptions(rawValue: 0))
+        let stopAction = UNNotificationAction(identifier: "STOP_ACTION",
+                                                title: "Stop",
+                                                options: [.foreground])
+        let generalCategory = UNNotificationCategory(identifier: "NewFriend",
+                                                         actions: [snoozeAction,stopAction],
+                                                         intentIdentifiers: [],
+                                                         options: .customDismissAction)
+
+        UNUserNotificationCenter.current().setNotificationCategories([generalCategory])
+
         // Setting up Notifications
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
@@ -125,6 +137,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                               withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions)
                                 -> Void) {
     let userInfo = notification.request.content.userInfo
+      
 
     // With swizzling disabled you must let Messaging know about the message, for Analytics
     // Messaging.messaging().appDidReceiveMessage(userInfo)
