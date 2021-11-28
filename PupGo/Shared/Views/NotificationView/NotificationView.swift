@@ -25,7 +25,6 @@ struct NotificationView: View {
 
                 .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 240)
                 .padding(.bottom, 200)
-                Spacer()
 
             }
             

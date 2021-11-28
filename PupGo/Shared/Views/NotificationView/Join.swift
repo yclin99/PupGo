@@ -9,17 +9,13 @@ import Foundation
 import SwiftUI
 
 struct Join: View {
-    @State var joins = [Card](repeating: Card.join, count: 3)
+    @State var joins = Card.join
     
     var body: some View{
         VStack{
-            Text("Someone wants to Join your event!")
-                .font(.system(size: 20))
-                .fontWeight(.bold)
-                .foregroundColor(.black)
-                .opacity(joins.count > 0 ? 1 : 0)
             
             if joins.count > 0 {
+                
 
                 ZStack {
                     VStack {
@@ -27,6 +23,7 @@ struct Join: View {
                             ForEach(0..<joins.count, id: \.self){ index in
                                 JoinRequestView(card: self.joins[index], onActivate: getApi)
                                     .stacked(at: index, in: self.joins.count)
+                                    
                                 
                                 }
                             
@@ -36,14 +33,14 @@ struct Join: View {
                     }
                 }
                 
-            Spacer(minLength: 1)
+            Spacer(minLength: 5)
         }
         .foregroundColor(.blue)
     }
     func getApi() {
         print("getApi called")
         if self.joins.count > 0 {
-            joins.removeFirst(1)
+            joins.removeLast(1)
         }
         
     }

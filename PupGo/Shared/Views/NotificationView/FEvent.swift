@@ -10,25 +10,16 @@ import SwiftUI
 
 
 struct FEvent: View {
-    @State var fevents = [Card](repeating: Card.fevent, count: 5)
+    @State var fevents = Card.fevent
     
     var body: some View{
         if fevents.count > 0 {
-            VStack{
-                    
 
-                    Text("You Are Invited")
-                        .font(.system(size: 30))
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                        
-
-                
                     ZStack {
                         VStack {
                              ZStack {
                                  ForEach(0..<fevents.count, id: \.self) { index in
-                                    FriendsEventView(card: fevents[index], onActivate: getApi)
+                                     FriendsEventView(card: fevents[index], onActivate: getApi)
                                         .stacked(at: index, in: fevents.count)
                                 }
                             }
@@ -36,16 +27,16 @@ struct FEvent: View {
                         
                     }
                     
-                Spacer(minLength: 5)
-            }
+                Spacer()
+            
     }
     }
     
     func getApi() {
         print("getApi called")
         if self.fevents.count > 0 {
-            fevents.removeFirst(1)
+            fevents.removeLast(1)
         }
-        
+    
     }
 }

@@ -7,16 +7,20 @@
 import Foundation
 import SwiftUI
 
+
 struct SettingView: View {
     static let OrangeColor = Color(red: 240.0 / 255, green: 165.0 / 255, blue: 25.0 / 255)
     static let gradientStart = Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255)
     static let gradientEnd = Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)
-    
-    @ObservedObject var userprofile = UserProfile(userid: 1, username: "This owner")
-    @ObservedObject var dog1 = DogProfile(petid: 1001, petname: "UglyDog", image: Image("Dog1"))
-    @ObservedObject var dog2 = DogProfile(petid: 1003, petname: "Goofy", image: Image("Dog3"))
+     
+    @ObservedObject var userprofile = UserProfile()
+    @ObservedObject var dog1 = DogProfile()
+    @ObservedObject var dog2 = DogProfile()
     
     init(){
+        userprofile.setParameters()
+        dog1.setParameters(i: 0)
+        dog2.setParameters(i: 1)
         userprofile.createPet(newdog: dog1)
         userprofile.createPet(newdog: dog2)
     }

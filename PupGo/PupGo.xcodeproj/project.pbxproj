@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04F03BCF2753061300339EE7 /* Mutation.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 04F03BCE2753061300339EE7 /* Mutation.graphql */; };
 		0E04F2E72738EB6E00C29649 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E04F2E62738EB6E00C29649 /* FirebaseAuth */; };
 		0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
 		0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
@@ -50,8 +51,6 @@
 		0E8A2E2C2741F26E00081719 /* SingleEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2A2741F26E00081719 /* SingleEventView.swift */; };
 		0E8A2E2E2741F8A100081719 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2D2741F8A100081719 /* Card.swift */; };
 		0E8A2E2F2741F8A100081719 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E2D2741F8A100081719 /* Card.swift */; };
-		0E8A2E312741F99B00081719 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E302741F99B00081719 /* CardView.swift */; };
-		0E8A2E322741F99B00081719 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E302741F99B00081719 /* CardView.swift */; };
 		0E8A2E342741FA4800081719 /* FriendsEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E332741FA4800081719 /* FriendsEventView.swift */; };
 		0E8A2E352741FA4800081719 /* FriendsEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E332741FA4800081719 /* FriendsEventView.swift */; };
 		0E8A2E372741FA6200081719 /* JoinRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A2E362741FA6200081719 /* JoinRequestView.swift */; };
@@ -96,6 +95,8 @@
 		DD196425274C7C8900A0B56C /* UEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196423274C7C8900A0B56C /* UEvent.swift */; };
 		DD196427274C7CA800A0B56C /* FEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196426274C7CA800A0B56C /* FEvent.swift */; };
 		DD196428274C7CA800A0B56C /* FEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD196426274C7CA800A0B56C /* FEvent.swift */; };
+		DDBEFF73275201E100EEC6B7 /* dateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */; };
+		DDBEFF74275201E100EEC6B7 /* dateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */; };
 		F53B93F7BA145C11C653F177 /* Pods_PupGo__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151C9617017F59926968EC58 /* Pods_PupGo__macOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04F03BCE2753061300339EE7 /* Mutation.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mutation.graphql; sourceTree = "<group>"; };
 		0E04F2E82738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E04F2E92738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0500272735F72E00D7FFCD /* PupGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoApp.swift; sourceTree = "<group>"; };
@@ -139,7 +141,6 @@
 		0E8A2E272741F24C00081719 /* EventExploreContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExploreContentView.swift; sourceTree = "<group>"; };
 		0E8A2E2A2741F26E00081719 /* SingleEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventView.swift; sourceTree = "<group>"; };
 		0E8A2E2D2741F8A100081719 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		0E8A2E302741F99B00081719 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0E8A2E332741FA4800081719 /* FriendsEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsEventView.swift; sourceTree = "<group>"; };
 		0E8A2E362741FA6200081719 /* JoinRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestView.swift; sourceTree = "<group>"; };
 		0E8A2E3C2741FA8E00081719 /* UserEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventView.swift; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 		DD196420274C7C2900A0B56C /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
 		DD196423274C7C8900A0B56C /* UEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEvent.swift; sourceTree = "<group>"; };
 		DD196426274C7CA800A0B56C /* FEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEvent.swift; sourceTree = "<group>"; };
+		DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +220,6 @@
 				0E68D17A2741E6D40030AE76 /* Utilities */,
 				0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */,
 				0E050045273629A800D7FFCD /* Views */,
-				0E0500272735F72E00D7FFCD /* PupGoApp.swift */,
 				0E0500282735F72E00D7FFCD /* MainView.swift */,
 				0E0500292735F73500D7FFCD /* Assets.xcassets */,
 			);
@@ -241,6 +242,7 @@
 				0E05005227362A4200D7FFCD /* MatchingView */,
 				0E05004E27362A1B00D7FFCD /* NotificationView */,
 				0E05004A273629F800D7FFCD /* ExplorationView */,
+				0E0500272735F72E00D7FFCD /* PupGoApp.swift */,
 				0E050049273629E400D7FFCD /* SettingView */,
 			);
 			path = Views;
@@ -250,11 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				0E050046273629CF00D7FFCD /* SettingView.swift */,
-				0EFC29BD27473D7C000D6D17 /* DogProfile.swift */,
 				0EFC29C027473D92000D6D17 /* DogProfileView.swift */,
 				0EFC29C327473DB2000D6D17 /* EditDogProfileView.swift */,
 				0EFC29C627473DC8000D6D17 /* EditUserProfileView.swift */,
-				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				0EFC29CC27473E04000D6D17 /* UserProfileView.swift */,
 				0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */,
 				0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */,
@@ -277,10 +277,9 @@
 			isa = PBXGroup;
 			children = (
 				0E05004F27362A2E00D7FFCD /* NotificationView.swift */,
-				0E8A2E302741F99B00081719 /* CardView.swift */,
-				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
 				0E8A2E362741FA6200081719 /* JoinRequestView.swift */,
 				0E8A2E3C2741FA8E00081719 /* UserEventView.swift */,
+				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
 				DD196420274C7C2900A0B56C /* Join.swift */,
 				DD196423274C7C8900A0B56C /* UEvent.swift */,
 				DD196426274C7CA800A0B56C /* FEvent.swift */,
@@ -315,6 +314,7 @@
 			children = (
 				0E804024274B69E60086DA03 /* API.swift */,
 				0E5233F1274B25FB008B1CB0 /* Queries.graphql */,
+				04F03BCE2753061300339EE7 /* Mutation.graphql */,
 				0E5233F3274B260C008B1CB0 /* Apollo.swift */,
 				0E804028274B7C8C0086DA03 /* ApolloView.swift */,
 			);
@@ -324,11 +324,14 @@
 		0E68D17A2741E6D40030AE76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0EFC29BD27473D7C000D6D17 /* DogProfile.swift */,
+				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 				0E8A2E2D2741F8A100081719 /* Card.swift */,
-				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
+				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
+				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E804023274B676A0086DA03 /* schema.json in Resources */,
+				04F03BCF2753061300339EE7 /* Mutation.graphql in Resources */,
 				0E5233F2274B25FB008B1CB0 /* Queries.graphql in Resources */,
 				0E05003B2735F73500D7FFCD /* Assets.xcassets in Resources */,
 				0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */,
@@ -566,7 +570,6 @@
 				0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */,
 				DD196424274C7C8900A0B56C /* UEvent.swift in Sources */,
 				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
-				0E8A2E312741F99B00081719 /* CardView.swift in Sources */,
 				0E8A2E1C2741F18500081719 /* Event.swift in Sources */,
 				0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0E804025274B69E60086DA03 /* API.swift in Sources */,
@@ -586,6 +589,7 @@
 				0E8A2E342741FA4800081719 /* FriendsEventView.swift in Sources */,
 				0EFC2A1B274765CE000D6D17 /* AnimationTestView.swift in Sources */,
 				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
+				DDBEFF73275201E100EEC6B7 /* dateFormatter.swift in Sources */,
 				0E8A2E282741F24C00081719 /* EventExploreContentView.swift in Sources */,
 				0EFC2A232748D683000D6D17 /* ButtonCurve.swift in Sources */,
 				0E5D1576274B40E500983ACC /* AppleLogin.swift in Sources */,
@@ -613,7 +617,6 @@
 				0E8A2E382741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */,
 				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
-				0E8A2E322741F99B00081719 /* CardView.swift in Sources */,
 				0E8A2E1D2741F18500081719 /* Event.swift in Sources */,
 				DD196425274C7C8900A0B56C /* UEvent.swift in Sources */,
 				0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
@@ -629,6 +632,7 @@
 				0EFC29C527473DB2000D6D17 /* EditDogProfileView.swift in Sources */,
 				0E8A2E352741FA4800081719 /* FriendsEventView.swift in Sources */,
 				0EFC2A1C274765CE000D6D17 /* AnimationTestView.swift in Sources */,
+				DDBEFF74275201E100EEC6B7 /* dateFormatter.swift in Sources */,
 				0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */,
 				0E5D1577274B40E500983ACC /* AppleLogin.swift in Sources */,
 				0E8A2E292741F24C00081719 /* EventExploreContentView.swift in Sources */,

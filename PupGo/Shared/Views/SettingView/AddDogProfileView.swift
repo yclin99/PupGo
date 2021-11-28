@@ -15,7 +15,7 @@ struct AddDogProfileView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
 
-    @State var petid: Int = 103
+    @State var petid: String = ""
     @State var petname: String = ""
     @State var gender: String?
     @State var breed: String?
@@ -61,9 +61,18 @@ struct AddDogProfileView: View {
         Button(action: {
             showingAlert = true
             if image != nil {
-                @ObservedObject var newdog = DogProfile(petid: petid, petname: petname, image: image!)
+                @ObservedObject var newdog = DogProfile()
+                let uiImag = image!.asUIImage()
+                let modifiedImage = uiImag.resize(150, 200)
+                let final = Image(uiImage: modifiedImage!)
+                newdog.manuaset(petname: petname, image: final)
                 content.createPet(newdog: newdog)
-                 
+                var isCastrationFinal = false
+                if isCastration == "Yes" {
+                    isCastrationFinal = true
+                }
+                let newPetInput = PetCreateInput(name: petname, image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/cocker-spaniel-2785074_1280.jpg", gender: PetGender(rawValue: gender!), breed: breed, isCastration: isCastrationFinal, birthday: birthday, location: LocationInput(country: "US", city: "LA", address: location, coordinate: nil), uid: content.userid)
+                Network.shared.apollo.perform(mutation: Testing2Mutation(input: newPetInput))
             }
         }, label: {
             Text("Submit").font(.system(size: 20)).bold().foregroundColor(.white)
@@ -100,7 +109,7 @@ struct AddDogProfileView: View {
                 HStack(alignment: .center) {
                     Text("Pet Gender is: ")
                         .bold()
-                    TextField("He/She", text: $gender.bound)}
+                    TextField("MALE/FEMALE", text: $gender.bound)}
                 HStack(alignment: .center) {
                     Text("Pet Birthday is: ")
                         .bold()
@@ -138,3 +147,47 @@ struct AddDogProfileView: View {
 //    }
 //}
 
+extension View {
+// This function changes our View to UIView, then calls another function
+// to convert the newly-made UIView to a UIImage.
+    public func asUIImage() -> UIImage {
+        let controller = UIHostingController(rootView: self)
+        
+        controller.view.frame = CGRect(x: 0, y: CGFloat(Int.max), width: 1, height: 1)
+        UIApplication.shared.windows.first!.rootViewController?.view.addSubview(controller.view)
+        
+        let size = controller.sizeThatFits(in: UIScreen.main.bounds.size)
+        controller.view.bounds = CGRect(origin: .zero, size: size)
+        controller.view.sizeToFit()
+        
+// here is the call to the function that converts UIView to UIImage: `.asUIImage()`
+        let image = controller.view.asUIImage()
+        controller.view.removeFromSuperview()
+        return image
+    }
+}
+
+extension UIView {
+// This is the function to convert UIView to UIImage
+    public func asUIImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
+    }
+}
+
+extension UIImage {
+    func resize(_ width: CGFloat, _ height:CGFloat) -> UIImage? {
+        let widthRatio  = width / size.width
+        let heightRatio = height / size.height
+        let ratio = widthRatio > heightRatio ? heightRatio : widthRatio
+        let newSize = CGSize(width: size.width * ratio, height: size.height * ratio)
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        self.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+}

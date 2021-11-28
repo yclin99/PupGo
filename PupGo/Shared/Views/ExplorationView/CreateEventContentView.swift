@@ -44,7 +44,9 @@ struct CreateEventContentView: View {
     @State private var showingAlert = false
     
     var submit: some View {
-        Button(action: {showingAlert = true}, label: {
+        Button(action: {showingAlert = true
+            @ObservedObject var newevent = Event(username: username, location: location, starttime: starttime, endtime: starttime, image: image!)
+        }, label: {
             Text("Submit").font(.system(size: 18)).bold().foregroundColor(.white)
                 .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
         }).alert(isPresented:$showingAlert) {
@@ -67,7 +69,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("Enter username...", text: $username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "clock").font(.largeTitle)
@@ -75,7 +77,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("DD/MM/YYYY HH:mm", text: $starttime)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "clock.fill").font(.largeTitle)
@@ -83,7 +85,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("DD/MM/YYYY HH:mm", text: $endtime)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "location").font(.largeTitle)
@@ -91,7 +93,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("Walking dog at ...", text: $location)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         }
         HStack {
