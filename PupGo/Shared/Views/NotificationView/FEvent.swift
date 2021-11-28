@@ -15,8 +15,6 @@ struct FEvent: View {
     var body: some View{
         if fevents.count > 0 {
 
-
-                
                     ZStack {
                         VStack {
                              ZStack {
@@ -29,7 +27,7 @@ struct FEvent: View {
                         
                     }
                     
-                Spacer(minLength: 5)
+                Spacer()
             
     }
     }

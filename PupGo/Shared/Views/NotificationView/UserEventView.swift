@@ -35,12 +35,16 @@ struct UserEventView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        let pic = Image(card.pic)
+        let pic = card.pic
                 .resizable()
-                .scaledToFill()
+//                .scaledToFill()
+                .frame(width: 330.0, height: 150.0)
+                .clipped()
                 .cornerRadius(20)
-                .frame(width: 330.0, height: 120.0)
-                .shadow(color: Color.green,  radius: 5.0, x: 10, y: -10)
+                .shadow(color: Color.green, radius: 5.0,
+                        x: -5,
+                        y: 0)
+
         let back = RoundedRectangle(cornerRadius: 20, style: .circular)
             .shadow(color: Color.black, radius: 5.0 )
             .foregroundColor(.black.opacity(0.4))
@@ -56,6 +60,12 @@ struct UserEventView: View {
                     VStack (alignment: .leading) {
                         if isShowingAnswer {
                             
+                        Text("Next Event Coming Up")
+                                .font(.system(size: 20))
+                                .fontWeight(.bold)
+                                .foregroundColor(.green)
+                            
+                        
                         Text("Count down: " + timeRemaining)
                                 .font(.body)
                             .foregroundColor(.white)
@@ -104,10 +114,9 @@ struct UserEventView: View {
             }
             
         }
-        .frame(width: 330.0, height: 120.0)
+        .frame(width: 350.0, height: 180.0)
         .onTapGesture {
-        self.isShowingAnswer.toggle()
-    }
+                self.isShowingAnswer.toggle()}
 }
 }
 

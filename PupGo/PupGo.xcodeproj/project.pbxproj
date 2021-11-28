@@ -277,9 +277,9 @@
 			isa = PBXGroup;
 			children = (
 				0E05004F27362A2E00D7FFCD /* NotificationView.swift */,
-				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
 				0E8A2E362741FA6200081719 /* JoinRequestView.swift */,
 				0E8A2E3C2741FA8E00081719 /* UserEventView.swift */,
+				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
 				DD196420274C7C2900A0B56C /* Join.swift */,
 				DD196423274C7C8900A0B56C /* UEvent.swift */,
 				DD196426274C7CA800A0B56C /* FEvent.swift */,

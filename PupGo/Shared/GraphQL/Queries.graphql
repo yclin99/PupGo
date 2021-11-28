@@ -30,6 +30,9 @@ query Testing1 {
             birthday
         }
     }
+    
+    
+    
 }
 
 
