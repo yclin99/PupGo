@@ -78,7 +78,11 @@
         "repositoryURL": "https://github.com/google/GoogleSignIn-iOS",
         "state": {
           "branch": "main",
+<<<<<<< HEAD
           "revision": "bf4583510d487ebc4a22d2a96f9fdc229aa8e8d6",
+=======
+          "revision": "c88adbd4df47f166b9af85a98240a86ff8cfadbf",
+>>>>>>> Nov-25-21
           "version": null
         }
       },
