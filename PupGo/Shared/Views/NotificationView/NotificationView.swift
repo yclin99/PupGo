@@ -17,15 +17,13 @@ struct NotificationView: View {
             ZStack {
                 lightYellowColor.ignoresSafeArea()
                 VStack(alignment: .leading) {
-                    Spacer()
                     Join()
                     UEvent()
                     FEvent()
                 }
 
-                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 240)
-                .padding(.bottom, 200)
-
+                .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 200)
+                .padding(.bottom,100)
             }
             
             

@@ -15,8 +15,10 @@ struct JoinRequestView: View {
     var body: some View {
         let pic = card.pic
                 .resizable()
-//                .scaledToFill()
-                .frame(width: 330.0, height: 150.0)
+                //.frame(width: 210, height: 250)
+                //.aspectRatio(3/4, contentMode: .fill)
+                //.scaledToFill()
+                .frame(width: 330.0, height: 150.0,alignment: .center)
                 .clipped()
                 .cornerRadius(20)
                 .shadow(color: Color.red,  radius: 5.0, x: 10, y: -10)

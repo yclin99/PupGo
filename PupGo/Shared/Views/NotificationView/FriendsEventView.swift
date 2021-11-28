@@ -19,7 +19,7 @@ struct FriendsEventView: View {
     var body: some View {
         let pic = card.pic
                 .resizable()
- //               .scaledToFill()
+//                .scaledToFill()
                 .frame(width: 330.0, height: 150.0)
                 .clipped()
                 .cornerRadius(20)
