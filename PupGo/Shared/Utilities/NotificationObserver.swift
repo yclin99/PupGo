@@ -11,6 +11,7 @@ import SwiftUI
 class NotificationObserver: ObservableObject {
     @Published var notifications = [notification]()
     @Published var url: String = ""
+    @Published var name: String = ""
     init() {
         Network.shared.apollo.fetch(query: Testing1Query()) { result in
             guard let data = try? result.get().data else {
@@ -27,18 +28,19 @@ class NotificationObserver: ObservableObject {
                 let eventID = networkUser.eventId
                 let petID = networkUser.petId
                 
+                
                 var petList: [String] = []
 
                 petList.append(petID ?? "")
                 print(petList)
                 
-                self.getURL(pid: petList)
+                self.getInfo(pid: petList)
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     print(self.url)
                 
                 
-                    self.notifications.append(notification(id: id, notificationType: type ?? 1, userID: userID ?? "", createTime: time ?? "", eventID: eventID ?? "", petID: petID ?? "", image: self.url))
+                    self.notifications.append(notification(id: id, notificationType: type ?? 1, userID: userID ?? "", createTime: time ?? "", eventID: eventID ?? "", petID: petID ?? "",petName: self.name, image: self.url))
                 }
             }
             //self.notifications.removeLast()
@@ -46,7 +48,7 @@ class NotificationObserver: ObservableObject {
         }
     }
     
-    func getURL(pid: [String]) {
+    func getInfo(pid: [String]) {
         Network.shared.apollo.fetch(query: Testing2Query(pid: pid)) { result in
             guard let data = try? result.get().data else {
                 print("Error: Fetching Data Error")
@@ -54,6 +56,7 @@ class NotificationObserver: ObservableObject {
             }
             // print(data.petProfileListGet.result.first?.image ?? "")
             self.url = data.petProfileListGet.result.first?.image ?? ""
+            self.name = data.petProfileListGet.result.first?.name ?? ""
             //print(self.url)
         }
     }
@@ -66,6 +69,7 @@ struct notification: Identifiable {
     var createTime: String
     var eventID: String
     var petID: String
+    var petName: String
     var image: String
     var y: CGFloat = 0.0
     var degree: Double = 0.0

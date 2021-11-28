@@ -83,6 +83,9 @@
 		0EC04DD327540C7200D44A7A /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DD127540C7200D44A7A /* NotificationObserver.swift */; };
 		0EC04DD527540DB400D44A7A /* NotificationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DD427540DB400D44A7A /* NotificationCardView.swift */; };
 		0EC04DD627540DB400D44A7A /* NotificationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DD427540DB400D44A7A /* NotificationCardView.swift */; };
+		0EC04DD92754391D00D44A7A /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC04DD82754391D00D44A7A /* AWSAPIPlugin */; };
+		0EC04DDB2754391D00D44A7A /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC04DDA2754391D00D44A7A /* AWSDataStorePlugin */; };
+		0EC04DDD2754391D00D44A7A /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC04DDC2754391D00D44A7A /* Amplify */; };
 		0EC444A8275319B100A3356B /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC444A7275319B100A3356B /* schema.json */; };
 		0EC444AA275321AC00A3356B /* DogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC444A9275321AC00A3356B /* DogInfoView.swift */; };
 		0EDC6C69274985B100E74119 /* ManageDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */; };
@@ -204,11 +207,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC04DD92754391D00D44A7A /* AWSAPIPlugin in Frameworks */,
+				0EC04DDD2754391D00D44A7A /* Amplify in Frameworks */,
 				0EB96C2C2738ABA100C9A656 /* GoogleSignIn in Frameworks */,
 				0E804027274B6A8B0086DA03 /* Apollo in Frameworks */,
 				0E80402B274B85420086DA03 /* FirebaseMessaging in Frameworks */,
 				0E04F2E72738EB6E00C29649 /* FirebaseAuth in Frameworks */,
 				0E7D2F4C2738F9EC0056DE92 /* FacebookLogin in Frameworks */,
+				0EC04DDB2754391D00D44A7A /* AWSDataStorePlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +430,9 @@
 				0E7D2F4B2738F9EC0056DE92 /* FacebookLogin */,
 				0E804026274B6A8B0086DA03 /* Apollo */,
 				0E80402A274B85420086DA03 /* FirebaseMessaging */,
+				0EC04DD82754391D00D44A7A /* AWSAPIPlugin */,
+				0EC04DDA2754391D00D44A7A /* AWSDataStorePlugin */,
+				0EC04DDC2754391D00D44A7A /* Amplify */,
 			);
 			productName = "PupGo (iOS)";
 			productReference = 0E04F2E92738EC7900C29649 /* PupGo.app */;
@@ -479,6 +488,7 @@
 				0EB96C2A2738ABA000C9A656 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				0E7D2F4A2738F9EC0056DE92 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				0E5233E1274B2351008B1CB0 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				0EC04DD72754391D00D44A7A /* XCRemoteSwiftPackageReference "amplify-ios" */,
 			);
 			productRefGroup = 0E0500212735F72E00D7FFCD;
 			projectDirPath = "";
@@ -998,6 +1008,14 @@
 				kind = branch;
 			};
 		};
+		0EC04DD72754391D00D44A7A /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1025,6 +1043,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0EB96C2A2738ABA000C9A656 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		0EC04DD82754391D00D44A7A /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EC04DD72754391D00D44A7A /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSAPIPlugin;
+		};
+		0EC04DDA2754391D00D44A7A /* AWSDataStorePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EC04DD72754391D00D44A7A /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSDataStorePlugin;
+		};
+		0EC04DDC2754391D00D44A7A /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EC04DD72754391D00D44A7A /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = Amplify;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -15,32 +15,35 @@ struct MyNotificationView: View {
     
     var body: some View {
         NavigationView {
-            CustomScrollView(offset: $offset, showIndicators: true, axis: .vertical, content: {
-                VStack(spacing: 15) {
-                    
-                    if notificationObserver.notifications.isEmpty {
-                        ProgressView()
-                    }
-                    else if notificationObserver.notifications.count == 1 {
-                        ProgressView()
-                            .onAppear {
-                                print("Waiting for new notifications")
-                                //self.obser.getNewUsers()
-                            }
-                    } else {
+            
+            ZStack {
+                lightYellowColor.ignoresSafeArea()
+                ScrollView(.vertical, showsIndicators: false, content: {
+                    VStack(alignment: .leading, spacing: 15) {
+                        
+                        if notificationObserver.notifications.isEmpty {
+                            ProgressView()
+                        }
+                        else if notificationObserver.notifications.count == 1 {
+                            ProgressView()
+                                .onAppear {
+                                    print("Waiting for new notifications")
+                                    //self.obser.getNewUsers()
+                                }
+                        } else {
 
-                        ForEach(self.notificationObserver.notifications) {i in
-                            Group {
-                                NotificationCardView(id: i.id, image: i.image)
-                                    .environmentObject(notificationObserver)
+                            ForEach(self.notificationObserver.notifications) {i in
+                                Group {
+                                    NotificationCardView(id: i.id, name: i.petName, image: i.image)
+                                        .environmentObject(notificationObserver)
+                                }
                             }
                         }
                     }
-                }
-                .padding(.top)
-            })
+                    .padding(.top)
+                })
+            }
         }
-        .background(lightYellowColor).ignoresSafeArea()
     }
 }
 
