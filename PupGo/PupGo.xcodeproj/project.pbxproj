@@ -324,21 +324,15 @@
 		0E68D17A2741E6D40030AE76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				0EFC29BD27473D7C000D6D17 /* DogProfile.swift */,
-=======
 				0E5AB08D2751F23600AE65BA /* ImageLoader.swift */,
->>>>>>> Nov-25-21
 				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 				0E8A2E2D2741F8A100081719 /* Card.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
 				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
-<<<<<<< HEAD
-=======
 				0E5AB08A274F6F7300AE65BA /* Observer.swift */,
->>>>>>> Nov-25-21
 				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
 			);
 			path = Utilities;
@@ -561,10 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */,
-<<<<<<< HEAD
-=======
 				0E5AB08B274F6F7300AE65BA /* Observer.swift in Sources */,
->>>>>>> Nov-25-21
 				DD196427274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EFC29C727473DC8000D6D17 /* EditUserProfileView.swift in Sources */,
 				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
@@ -620,10 +611,7 @@
 				0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */,
 				0E8A2E2F2741F8A100081719 /* Card.swift in Sources */,
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
-<<<<<<< HEAD
-=======
 				0E5AB08F2751F23600AE65BA /* ImageLoader.swift in Sources */,
->>>>>>> Nov-25-21
 				DD196428274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */,
 				0EFC29BF27473D7C000D6D17 /* DogProfile.swift in Sources */,
