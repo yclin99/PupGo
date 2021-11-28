@@ -9,7 +9,7 @@ import SwiftUI
 import CoreLocation
 
 
-class Event: Hashable {
+class Event: Hashable, ObservableObject {
     
     static func == (lhs: Event, rhs: Event) -> Bool {
         return lhs.userid == rhs.userid
@@ -43,10 +43,8 @@ class Event: Hashable {
             let placemark = placemarks?.first
             let lat = placemark?.location?.coordinate.latitude
             let lon = placemark?.location?.coordinate.longitude
-            print("Lat: \(lat), Lon: \(lon)")
             if (lat != nil && lon != nil) {
                 self.clocation = CLLocation(latitude: lat!, longitude: lon!)
-                print(self.clocation)
             }
         }
         

@@ -4,6 +4,99 @@
 import Apollo
 import Foundation
 
+public struct PetCreateInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  /// - Parameters:
+  ///   - name
+  ///   - image
+  ///   - gender: only two
+  ///   - breed: breed of dog, cat etc
+  ///   - isCastration: is castration or not: true for castration
+  ///   - birthday
+  ///   - location
+  ///   - uid: tmp value, should also proof by JWT later
+  public init(name: Swift.Optional<String?> = nil, image: Swift.Optional<String?> = nil, gender: Swift.Optional<PetGender?> = nil, breed: Swift.Optional<String?> = nil, isCastration: Bool, birthday: Swift.Optional<String?> = nil, location: Swift.Optional<LocationInput?> = nil, uid: GraphQLID) {
+    graphQLMap = ["name": name, "image": image, "gender": gender, "breed": breed, "isCastration": isCastration, "birthday": birthday, "location": location, "uid": uid]
+  }
+
+  public var name: Swift.Optional<String?> {
+    get {
+      return graphQLMap["name"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "name")
+    }
+  }
+
+  public var image: Swift.Optional<String?> {
+    get {
+      return graphQLMap["image"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "image")
+    }
+  }
+
+  /// only two
+  public var gender: Swift.Optional<PetGender?> {
+    get {
+      return graphQLMap["gender"] as? Swift.Optional<PetGender?> ?? Swift.Optional<PetGender?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "gender")
+    }
+  }
+
+  /// breed of dog, cat etc
+  public var breed: Swift.Optional<String?> {
+    get {
+      return graphQLMap["breed"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "breed")
+    }
+  }
+
+  /// is castration or not: true for castration
+  public var isCastration: Bool {
+    get {
+      return graphQLMap["isCastration"] as! Bool
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "isCastration")
+    }
+  }
+
+  public var birthday: Swift.Optional<String?> {
+    get {
+      return graphQLMap["birthday"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "birthday")
+    }
+  }
+
+  public var location: Swift.Optional<LocationInput?> {
+    get {
+      return graphQLMap["location"] as? Swift.Optional<LocationInput?> ?? Swift.Optional<LocationInput?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "location")
+    }
+  }
+
+  /// tmp value, should also proof by JWT later
+  public var uid: GraphQLID {
+    get {
+      return graphQLMap["uid"] as! GraphQLID
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "uid")
+    }
+  }
+}
+
 /// Pet have no not to declared
 public enum PetGender: RawRepresentable, Equatable, Hashable, CaseIterable, Apollo.JSONDecodable, Apollo.JSONEncodable {
   public typealias RawValue = String
@@ -42,6 +135,95 @@ public enum PetGender: RawRepresentable, Equatable, Hashable, CaseIterable, Apol
       .male,
       .female,
     ]
+  }
+}
+
+public struct LocationInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  /// - Parameters:
+  ///   - country
+  ///   - city
+  ///   - address
+  ///   - coordinate
+  public init(country: Swift.Optional<String?> = nil, city: Swift.Optional<String?> = nil, address: Swift.Optional<String?> = nil, coordinate: Swift.Optional<CoordinateInput?> = nil) {
+    graphQLMap = ["country": country, "city": city, "address": address, "Coordinate": coordinate]
+  }
+
+  public var country: Swift.Optional<String?> {
+    get {
+      return graphQLMap["country"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "country")
+    }
+  }
+
+  public var city: Swift.Optional<String?> {
+    get {
+      return graphQLMap["city"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "city")
+    }
+  }
+
+  public var address: Swift.Optional<String?> {
+    get {
+      return graphQLMap["address"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "address")
+    }
+  }
+
+  public var coordinate: Swift.Optional<CoordinateInput?> {
+    get {
+      return graphQLMap["Coordinate"] as? Swift.Optional<CoordinateInput?> ?? Swift.Optional<CoordinateInput?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "Coordinate")
+    }
+  }
+}
+
+public struct CoordinateInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  /// - Parameters:
+  ///   - isBlur: when blur is setting that means the latitude and longitude is not the precise.
+  ///   - latitude
+  ///   - longitude
+  public init(isBlur: Bool, latitude: Swift.Optional<String?> = nil, longitude: Swift.Optional<String?> = nil) {
+    graphQLMap = ["isBlur": isBlur, "latitude": latitude, "longitude": longitude]
+  }
+
+  /// when blur is setting that means the latitude and longitude is not the precise.
+  public var isBlur: Bool {
+    get {
+      return graphQLMap["isBlur"] as! Bool
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "isBlur")
+    }
+  }
+
+  public var latitude: Swift.Optional<String?> {
+    get {
+      return graphQLMap["latitude"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "latitude")
+    }
+  }
+
+  public var longitude: Swift.Optional<String?> {
+    get {
+      return graphQLMap["longitude"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "longitude")
+    }
   }
 }
 
@@ -89,6 +271,199 @@ public enum UserGender: RawRepresentable, Equatable, Hashable, CaseIterable, Apo
       .female,
       .notToDeclared,
     ]
+  }
+}
+
+public final class Testing2Mutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation Testing2($input: PetCreateInput!) {
+      petCreate(petCreateInput: $input) {
+        __typename
+        result {
+          __typename
+          id
+          image
+          gender
+          breed
+          birthday
+          isCastration
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "Testing2"
+
+  public var input: PetCreateInput
+
+  public init(input: PetCreateInput) {
+    self.input = input
+  }
+
+  public var variables: GraphQLMap? {
+    return ["input": input]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("petCreate", arguments: ["petCreateInput": GraphQLVariable("input")], type: .nonNull(.object(PetCreate.selections))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(petCreate: PetCreate) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "petCreate": petCreate.resultMap])
+    }
+
+    public var petCreate: PetCreate {
+      get {
+        return PetCreate(unsafeResultMap: resultMap["petCreate"]! as! ResultMap)
+      }
+      set {
+        resultMap.updateValue(newValue.resultMap, forKey: "petCreate")
+      }
+    }
+
+    public struct PetCreate: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["PetCreatePayload"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("result", type: .object(Result.selections)),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(result: Result? = nil) {
+        self.init(unsafeResultMap: ["__typename": "PetCreatePayload", "result": result.flatMap { (value: Result) -> ResultMap in value.resultMap }])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var result: Result? {
+        get {
+          return (resultMap["result"] as? ResultMap).flatMap { Result(unsafeResultMap: $0) }
+        }
+        set {
+          resultMap.updateValue(newValue?.resultMap, forKey: "result")
+        }
+      }
+
+      public struct Result: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["PetProfile"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .scalar(GraphQLID.self)),
+            GraphQLField("image", type: .scalar(String.self)),
+            GraphQLField("gender", type: .scalar(PetGender.self)),
+            GraphQLField("breed", type: .scalar(String.self)),
+            GraphQLField("birthday", type: .scalar(String.self)),
+            GraphQLField("isCastration", type: .nonNull(.scalar(Bool.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(id: GraphQLID? = nil, image: String? = nil, gender: PetGender? = nil, breed: String? = nil, birthday: String? = nil, isCastration: Bool) {
+          self.init(unsafeResultMap: ["__typename": "PetProfile", "id": id, "image": image, "gender": gender, "breed": breed, "birthday": birthday, "isCastration": isCastration])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: GraphQLID? {
+          get {
+            return resultMap["id"] as? GraphQLID
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
+          }
+        }
+
+        public var image: String? {
+          get {
+            return resultMap["image"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "image")
+          }
+        }
+
+        /// only two
+        public var gender: PetGender? {
+          get {
+            return resultMap["gender"] as? PetGender
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "gender")
+          }
+        }
+
+        /// breed of dog, cat etc
+        public var breed: String? {
+          get {
+            return resultMap["breed"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "breed")
+          }
+        }
+
+        public var birthday: String? {
+          get {
+            return resultMap["birthday"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "birthday")
+          }
+        }
+
+        /// is castration or not: true for castration
+        public var isCastration: Bool {
+          get {
+            return resultMap["isCastration"]! as! Bool
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "isCastration")
+          }
+        }
+      }
+    }
   }
 }
 
