@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04F03BCF2753061300339EE7 /* Mutation.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 04F03BCE2753061300339EE7 /* Mutation.graphql */; };
 		0E04F2E72738EB6E00C29649 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E04F2E62738EB6E00C29649 /* FirebaseAuth */; };
 		0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
 		0E0500382735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
@@ -113,6 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04F03BCE2753061300339EE7 /* Mutation.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mutation.graphql; sourceTree = "<group>"; };
 		0E04F2E82738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E04F2E92738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0500272735F72E00D7FFCD /* PupGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupGoApp.swift; sourceTree = "<group>"; };
@@ -218,7 +220,6 @@
 				0E68D17A2741E6D40030AE76 /* Utilities */,
 				0EB96C2D2738AD7200C9A656 /* GoogleService-Info.plist */,
 				0E050045273629A800D7FFCD /* Views */,
-				0E0500272735F72E00D7FFCD /* PupGoApp.swift */,
 				0E0500282735F72E00D7FFCD /* MainView.swift */,
 				0E0500292735F73500D7FFCD /* Assets.xcassets */,
 			);
@@ -241,6 +242,7 @@
 				0E05005227362A4200D7FFCD /* MatchingView */,
 				0E05004E27362A1B00D7FFCD /* NotificationView */,
 				0E05004A273629F800D7FFCD /* ExplorationView */,
+				0E0500272735F72E00D7FFCD /* PupGoApp.swift */,
 				0E050049273629E400D7FFCD /* SettingView */,
 			);
 			path = Views;
@@ -250,11 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				0E050046273629CF00D7FFCD /* SettingView.swift */,
-				0EFC29BD27473D7C000D6D17 /* DogProfile.swift */,
 				0EFC29C027473D92000D6D17 /* DogProfileView.swift */,
 				0EFC29C327473DB2000D6D17 /* EditDogProfileView.swift */,
 				0EFC29C627473DC8000D6D17 /* EditUserProfileView.swift */,
-				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				0EFC29CC27473E04000D6D17 /* UserProfileView.swift */,
 				0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */,
 				0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */,
@@ -314,6 +314,7 @@
 			children = (
 				0E804024274B69E60086DA03 /* API.swift */,
 				0E5233F1274B25FB008B1CB0 /* Queries.graphql */,
+				04F03BCE2753061300339EE7 /* Mutation.graphql */,
 				0E5233F3274B260C008B1CB0 /* Apollo.swift */,
 				0E804028274B7C8C0086DA03 /* ApolloView.swift */,
 			);
@@ -323,10 +324,12 @@
 		0E68D17A2741E6D40030AE76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0EFC29BD27473D7C000D6D17 /* DogProfile.swift */,
 				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 				0E8A2E2D2741F8A100081719 /* Card.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
+				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
 				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
 			);
@@ -460,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E804023274B676A0086DA03 /* schema.json in Resources */,
+				04F03BCF2753061300339EE7 /* Mutation.graphql in Resources */,
 				0E5233F2274B25FB008B1CB0 /* Queries.graphql in Resources */,
 				0E05003B2735F73500D7FFCD /* Assets.xcassets in Resources */,
 				0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */,

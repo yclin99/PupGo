@@ -13,7 +13,7 @@ struct UEvent: View {
     @State var uevents = Card.uevent
 
     var content : Event =
-        Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
+        Event(username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
     
     var body: some View{
             VStack{

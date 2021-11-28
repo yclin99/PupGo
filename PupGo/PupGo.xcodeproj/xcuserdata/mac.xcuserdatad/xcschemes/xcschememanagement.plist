@@ -28,12 +28,12 @@
 		<key>PupGo (iOS).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>2</integer>
 		</dict>
 		<key>PupGo (macOS).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </dict>

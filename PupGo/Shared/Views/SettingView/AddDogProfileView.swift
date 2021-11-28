@@ -67,7 +67,12 @@ struct AddDogProfileView: View {
                 let final = Image(uiImage: modifiedImage!)
                 newdog.manuaset(petname: petname, image: final)
                 content.createPet(newdog: newdog)
-                 
+                var isCastrationFinal = false
+                if isCastration == "Yes" {
+                    isCastrationFinal = true
+                }
+                let newPetInput = PetCreateInput(name: petname, image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/cocker-spaniel-2785074_1280.jpg", gender: PetGender(rawValue: gender!), breed: breed, isCastration: isCastrationFinal, birthday: birthday, location: LocationInput(country: "US", city: "LA", address: location, coordinate: nil), uid: content.userid)
+                Network.shared.apollo.perform(mutation: Testing2Mutation(input: newPetInput))
             }
         }, label: {
             Text("Submit").font(.system(size: 20)).bold().foregroundColor(.white)
@@ -104,7 +109,7 @@ struct AddDogProfileView: View {
                 HStack(alignment: .center) {
                     Text("Pet Gender is: ")
                         .bold()
-                    TextField("He/She", text: $gender.bound)}
+                    TextField("MALE/FEMALE", text: $gender.bound)}
                 HStack(alignment: .center) {
                     Text("Pet Birthday is: ")
                         .bold()

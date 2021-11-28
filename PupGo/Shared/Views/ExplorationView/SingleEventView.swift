@@ -70,6 +70,20 @@ struct SingleEventView: View {
                 .bold().foregroundColor(.black)
             Text(content.location).font(.callout).foregroundColor(.black).bold()}
         .padding()
+        HStack(alignment: .center) {
+            Image(systemName: "location").font(.largeTitle).foregroundColor(.black)
+            Text("Coordinates:   ")
+                .font(.callout)
+                .bold().foregroundColor(.black)
+            if (content.clocation == nil) {
+                Text("<no_name>").font(.callout).foregroundColor(.black).bold()
+            } else {
+                let str1 = String(content.clocation!.coordinate.latitude)
+                let str2 = String(content.clocation!.coordinate.longitude)
+                let str = "\(str1), \(str2)"
+                Text(str).font(.callout).foregroundColor(.black).bold()
+            }}
+        .padding()
 //        Spacer()
         HStack {
             Spacer()
