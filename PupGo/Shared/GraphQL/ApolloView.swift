@@ -9,6 +9,13 @@ import SwiftUI
 
 
 struct ApolloView: View {
+    
+//    var test2 = DogProfile()
+//    init() {
+//        test2.manuaset(petname: "", image: Image("Dog1"))
+//        Network.shared.apollo.perform(mutation: Testing2Mutation())
+//    }
+    
     @State var ApolloString = ""
     var body: some View {
         ZStack {
