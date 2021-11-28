@@ -1,0 +1,21 @@
+mutation eventsCreate{
+  eventsCreate(eventsCreateInput:{
+    pid:"166203e8-dc19-4de1-9e6e-b5c58661f8bf",
+    location:{
+      address:"123 road"
+    },
+    timeRange:{
+      startTime :""
+    },
+    limit:{
+      limitOfDog: 5,
+      limitOfHuman: 5,
+    }
+    image:"apple.jpg",
+  }){
+    result{
+      id
+    	image
+    }
+  }
+}
