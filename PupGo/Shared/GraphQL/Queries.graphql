@@ -33,6 +33,7 @@ query Testing1 {
             birthday
         }
     }
+    
 }
 
 mutation SetStatus($pid:ID! ,$recommendID:ID!, $result:Boolean!){
@@ -48,3 +49,4 @@ mutation SetStatus($pid:ID! ,$recommendID:ID!, $result:Boolean!){
         }
     }
 }
+

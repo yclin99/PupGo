@@ -12,8 +12,7 @@ import zlib
 struct MatchView: View {
     @StateObject var obser = observer()
     @State var index: String = ""
-    
-    
+    @State var showModal = false
     var body: some View {
         NavigationView {
             ZStack {
@@ -22,12 +21,13 @@ struct MatchView: View {
                 Loader()
                 VStack {
                     ZStack (alignment: .topLeading) {
-                        if obser.users.isEmpty {
+                        if obser.users.count == 1 {
                             ProgressView()
                                 .onAppear {
                                     self.obser.getNewUsers()
                                 }
                         } else {
+
                             ForEach(self.obser.users) {i in
                                 Group {
                                     DogCardView(id: i.id, name: i.name, image: i.image, age: i.age)
@@ -36,8 +36,9 @@ struct MatchView: View {
                             }
                         }
                     }
-                    DecisionButtons(index: self.$index).environmentObject(obser)
+                    DecisionButtons(index: self.$index, infoModal: self.$showModal).environmentObject(obser)
                 }
+                DogInfoView(isShowing: $showModal)
             }
             .edgesIgnoringSafeArea(.top)
         }
@@ -63,15 +64,16 @@ struct Loader: UIViewRepresentable{
 
 struct DecisionButtons: View {
     @Binding var index: String
+    @Binding var infoModal: Bool
     @EnvironmentObject var obser: observer
     var body: some View {
-        Text(" ")
         
         HStack {
             Spacer()
             Button(action: {
                 self.obser.update(id: self.index, x: 500, y: 0, degree: 12)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.obser.updateDB(recommendID: self.index, result: false)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     self.obser.users.removeLast()
                 }
             }) {
@@ -81,7 +83,9 @@ struct DecisionButtons: View {
                     .frame(width: 40, height: 40)
             }
             Spacer()
-            Button(action: {}) {
+            Button(action: {
+                infoModal = true
+            }) {
                 Image(systemName: "info.circle.fill")
                     .resizable()
                     .foregroundColor(.brown)
@@ -91,8 +95,8 @@ struct DecisionButtons: View {
             
             Spacer()
             Button(action: {
-                self.obser.updateDB(recommendID: obser.users.first!.id, result: true)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.obser.updateDB(recommendID: self.index, result: true)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     self.obser.users.removeLast()
                 }
             }) {
@@ -106,9 +110,9 @@ struct DecisionButtons: View {
     }
 }
 
-
+/*
 struct MatchView_Previews: PreviewProvider {
     static var previews: some View {
         MatchView()
     }
-}
+}*/
