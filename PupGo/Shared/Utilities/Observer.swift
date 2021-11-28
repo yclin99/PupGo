@@ -7,70 +7,148 @@
 
 import Foundation
 import SwiftUI
-import Combine
 
-struct SwipeView: View {
-    @StateObject var obser = observer
-    var body: some View {
-        GeometryReader {geo in
-            ZStack {
-                // AsyncImage(url: URL(string: "https://mymodernmet.com/wp/wp-content/uploads/2020/10/cooper-baby-corgi-dogs-8.jpg"))
-                
-                ForEach(self.obser.users) {i in
-                    AsyncImage(url: URL(string: i.image))
-                        //.resizable()
-                        .frame(height: geo.size.height - 100)
-                        //.padding(.vertical, 15)
-                        .cornerRadius(20)
-                }
-            }
-        }
-    }
+
+class observer: ObservableObject {
+    @Published var users = [datatype]()
+    @Published var last = -1
     
-    func handleUpdate() {
-    }
-}
-
-final class observer: ObservableObject {
-    var willChange = PassthroughSubject<Void, Never>()
-    @Published var users :[datatype] = []{
-        willSet{
-        print("will set")
-            willChange.send()
-        }
-    }
     init() {
-        let apolloNetwork = Network.shared.apollo
+        //let apolloNetwork = Network.shared.apollo
         //DispatchQueue.main.async {
-        apolloNetwork.fetch(query: Testing1Query()) { result in
-            
+        Network.shared.apollo.fetch(query: Testing1Query()) { result in
             guard let data = try? result.get().data else {
                 print("Error: Fetching Data Error")
                 return
             }
             
             data.recommendationGet.result.forEach { networkUser in
-                let id = networkUser.pet?.id as! String
-                let name = networkUser.pet?.name as! String
-                let breed = networkUser.pet?.breed as! String
-                let image = networkUser.pet?.image as! String
-                let age = networkUser.pet?.birthday as! String
-                let gender = networkUser.pet?.gender?.rawValue as! String
-                let isCastration = networkUser.pet?.isCastration as! Bool
                 
-//                self.users.append(datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration, swipe: 0))
-                var testData = datatype(id: id, name: name, image: image, gender: gender, breed: breed, age: age, isCastration: isCastration, swipe: 0)
-                self.users.append(testData)
-                //}
-//                SwipeView().handleUpdate()
+                let id = networkUser.pet?.id
+                let name = networkUser.pet?.name
+                let breed = networkUser.pet?.breed
+                let image = networkUser.pet?.image
+                let age = networkUser.pet?.birthday
+                let gender = networkUser.pet?.gender?.rawValue
+                let isCastration = networkUser.pet?.isCastration
+                
+                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age ?? "", isCastration: isCastration ?? true))
+            //}
             }
-            print("Users-temp", self.users)
-            
+            self.users.removeLast()
+            //print("Users-temp", self.users)
         }
-        print("Init: ", self.users)
+    }
+    
+    func getX(id: String) -> CGFloat {
+        for i in 0..<self.users.count {
+            // print("Matches::::::")
+            if self.users[i].id == id {
+                return self.users[i].x
+            }
+        }
+        return 0.0
+    }
+    
+    func getY(id: String) -> CGFloat {
+        for i in 0..<self.users.count {
+            // print("Matches::::::")
+            if self.users[i].id == id {
+                return self.users[i].y
+            }
+        }
+        return 0.0
+    }
+    
+    func getD(id: String) -> Double {
+        for i in 0..<self.users.count {
+            // print("Matches::::::")
+            if self.users[i].id == id {
+                return self.users[i].degree
+            }
+        }
+        return 0.0
+    }
+    
+    func update(id: String) {
+        for i in 0..<self.users.count {
+            if self.users[i].id == id {
+                self.last = i
+            }
+        }
+    }
+    func update(id: String, x: CGFloat, y: CGFloat) {
+        for i in 0..<self.users.count {
+            if self.users[i].id == id {
+                self.users[i].x = x
+                self.users[i].y = y
+            }
+        }
+    }
+    
+    func update(id: String, x: CGFloat, degree: Double) {
+        for i in 0..<self.users.count {
+            if self.users[i].id == id {
+                self.users[i].x = x
+                self.users[i].degree = degree
+            }
+        }
+    }
+    
+    func update(id: String, x: CGFloat, y: CGFloat, degree: Double) {
+        for i in 0..<self.users.count {
+            // print("Matches::::::")
+            if self.users[i].id == id {
+                self.users[i].x = x
+                self.users[i].y = y
+                self.users[i].degree = degree
+            }
+        }
+    }
+    
+    
+    
+    
+    func goBack(index: Int) {
+        self.users[index].x = 0
+        self.users[index].y = 0
+    }
+    
+    func updateDB(recommendID: String, result: Bool) {
+        if result {
+            print("Liked!")
+        } else {
+            print("Disliked QQQQ!")
+        }
+        Network.shared.apollo.perform(mutation: SetStatusMutation(pid: myPID, recommendID: recommendID, result: result))
+    }
+    
+    func calculateAge() {
         
     }
     
+    func getNewUsers() {
+        Network.shared.apollo.fetch(query: Testing1Query()) { result in
+            guard let data = try? result.get().data else {
+                print("Error: Fetching Data Error")
+                return
+            }
+            
+            data.recommendationGet.result.forEach { networkUser in
+                
+                let id = networkUser.pet?.id
+                let name = networkUser.pet?.name
+                let breed = networkUser.pet?.breed
+                let image = networkUser.pet?.image
+                let age = networkUser.pet?.birthday
+                let gender = networkUser.pet?.gender?.rawValue
+                let isCastration = networkUser.pet?.isCastration
+                
+                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age ?? "", isCastration: isCastration ?? true))
+    
+            }
+        }
+    }
 }
 
 struct datatype: Identifiable {
@@ -81,6 +159,7 @@ struct datatype: Identifiable {
     var breed: String
     var age: String
     var isCastration: Bool
-    var swipe: CGFloat
+    var x: CGFloat = 0.0
+    var y: CGFloat = 0.0
+    var degree: Double = 0.0
 }
-

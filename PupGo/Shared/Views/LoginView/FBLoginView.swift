@@ -54,6 +54,7 @@ struct FBLoginView: View {
                 }
                 withAnimation {
                     log_Status = true
+                    // print("Token String: ", AccessToken.current!.tokenString)
                 }
                 return
                 

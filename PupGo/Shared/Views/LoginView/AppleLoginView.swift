@@ -26,6 +26,10 @@ struct AppleLoginView: View {
                     return
                 }
                 loginData.authenticate(credential: credential )
+                withAnimation {
+                    log_Status = true
+                    print("Token String: ")
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }

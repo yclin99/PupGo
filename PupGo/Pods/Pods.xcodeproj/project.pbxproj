@@ -29,8 +29,8 @@
 		5A54C97DEB1A3977AC3A62AFF00971BF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		6596FC14336632A3F1265BFE0FEC40E9 /* Pods-PupGo (iOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PupGo (iOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6EE913770D902C3A7AAB69101020186B /* Pods-PupGo (iOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PupGo (iOS)-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D31015040FEBAE0C8ACC42591C59A1F /* Pods-PupGo (macOS) */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PupGo (macOS)"; path = Pods_PupGo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D31015040FEBAE0C8ACC42591C59A1F /* Pods_PupGo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PupGo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A7F9A64C37054F95A3DA3A531750979B /* Pods-PupGo (macOS)-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PupGo (macOS)-Info.plist"; sourceTree = "<group>"; };
 		ABBC9A6DD2A2BCBE339B6940219B6D78 /* Pods-PupGo (macOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PupGo (macOS)-acknowledgements.plist"; sourceTree = "<group>"; };
 		C5C01E59EB8FA84F4CF6032F64B43F97 /* Pods-PupGo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PupGo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				D58894A1CFC5771FC864DDA744848421 /* Pods-PupGo (iOS) */,
-				9D31015040FEBAE0C8ACC42591C59A1F /* Pods-PupGo (macOS) */,
+				9D31015040FEBAE0C8ACC42591C59A1F /* Pods_PupGo__macOS_.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			);
 			name = "Pods-PupGo (macOS)";
 			productName = Pods_PupGo__macOS_;
-			productReference = 9D31015040FEBAE0C8ACC42591C59A1F /* Pods-PupGo (macOS) */;
+			productReference = 9D31015040FEBAE0C8ACC42591C59A1F /* Pods_PupGo__macOS_.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1310;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -272,7 +272,6 @@
 			baseConfigurationReference = 57C2E6432331D40A2FB043C5FB7120B6 /* Pods-PupGo (macOS).release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -410,7 +409,6 @@
 			baseConfigurationReference = 569CE5F1E4606C297A4257054F74010E /* Pods-PupGo (macOS).debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";

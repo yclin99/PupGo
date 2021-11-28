@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class DogProfile: Hashable {
+class DogProfile: Hashable, ObservableObject {
     
     static func == (lhs: DogProfile, rhs: DogProfile) -> Bool {
         return lhs.petid == rhs.petid
@@ -19,18 +19,28 @@ class DogProfile: Hashable {
         
     }
     
-    var petid: Int
+    var petid: String
     var petname: String
-    var image: Image
-    var gender: String?
-    var breed: String?
-    var isCastration: Bool
-    var birthday: String?
-    var location: String?
+    @Published var image: Image?
+    @Published var gender: String?
+    @Published var breed: String?
+    @Published var isCastration: Bool
+    @Published var birthday: String?
+    @Published var location: String?
+    
 
+    init() {
+        self.petid = ""
+        self.petname = ""
+        self.gender = nil
+        self.breed = nil
+        self.birthday = nil
+        self.location = nil
+        self.isCastration = false
+  }
   
-    init(petid: Int, petname: String, image: Image) {
-        self.petid = petid
+    func manuaset (petname: String, image: Image) {
+        self.petid = ""
         self.petname = petname
         self.image = image
         self.gender = nil
@@ -39,6 +49,21 @@ class DogProfile: Hashable {
         self.location = nil
         self.isCastration = false
   }
+    
+    
+    func setParameters(i: Int) {
+        Network.shared.apollo.fetch(query: Testing1Query()) { [self] result in
+         self.petid = try!(result.get().data!.petProfileListGet.result[i].id)! as String
+         self.petname = try!(result.get().data!.petProfileListGet.result[i].name)! as String
+         let imageString = try!(result.get().data!.petProfileListGet.result[i].image)! as String
+         self.breed = try!(result.get().data!.petProfileListGet.result[i].breed)! as String
+         self.birthday = try!(result.get().data!.petProfileListGet.result[i].birthday)! as String
+         let url = URL(string: imageString)
+         let data = try? Data(contentsOf: url!)
+         let thisuiimage = UIImage(data: data!)
+         self.image = Image(uiImage: thisuiimage!).renderingMode(.original)
+        }
+    }
     
     func Castrated () {
         self.isCastration = true
