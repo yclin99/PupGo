@@ -43,6 +43,7 @@ class Event: Hashable, ObservableObject {
             let placemark = placemarks?.first
             let lat = placemark?.location?.coordinate.latitude
             let lon = placemark?.location?.coordinate.longitude
+            print(lat)
             if (lat != nil && lon != nil) {
                 self.clocation = CLLocation(latitude: lat!, longitude: lon!)
             }

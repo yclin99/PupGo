@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>CS130.PupGo</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -27,6 +31,8 @@
 	<string>ebe6becb1c8fd4e6f70bd0be49d9dccb</string>
 	<key>FacebookDisplayName</key>
 	<string>PupGo</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -53,12 +59,6 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDarkContent</string>
-	<key>BGTaskSchedulerPermittedIdentifiers</key>
-	<array>
-		<string>CS130.PupGo</string>
-	</array>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

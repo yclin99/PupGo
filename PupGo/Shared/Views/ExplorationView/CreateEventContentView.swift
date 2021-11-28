@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct CreateEventContentView: View {
     
@@ -46,6 +47,24 @@ struct CreateEventContentView: View {
     var submit: some View {
         Button(action: {showingAlert = true
             @ObservedObject var newevent = Event(username: username, location: location, starttime: starttime, endtime: starttime, image: image!)
+            print(newevent.clocation)
+            var str1: String?
+            var str2: String?
+            var geocoder = CLGeocoder()
+            geocoder.geocodeAddressString(newevent.location) {
+                placemarks, error in
+                let placemark = placemarks?.first
+                let lat = placemark?.location?.coordinate.latitude
+                let lon = placemark?.location?.coordinate.longitude
+                if (lat != nil && lon != nil) {
+                    let clocation = CLLocation(latitude: lat!, longitude: lon!)
+                    str1 = String(clocation.coordinate.latitude)
+                    str2 = String(clocation.coordinate.longitude)
+                }
+            }
+            
+            let newEventInput = EventsCreateInput(pid: "5d76c3ad-d286-4c82-9ff0-6e043389f00d", location: LocationInput(country: nil, city: nil, address: location, state: nil, coordinate: CoordinateInput(isBlur: false, latitude: str1, longitude: str2)), timeRange: TimeRangeInput(startTime: starttime, endTime: endtime), limit: EventsLimitsInput(limitOfDog: limitOfDogs, limitOfHuman: limitOfHumans), image: "https://cdn.pixabay.com/photo/2017/09/25/13/12/cocker-spaniel-2785074_1280.jpg", description: nil)
+            Network.shared.apollo.perform(mutation: Testing3Mutation(input: newEventInput))
         }, label: {
             Text("Submit").font(.system(size: 18)).bold().foregroundColor(.white)
                 .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
