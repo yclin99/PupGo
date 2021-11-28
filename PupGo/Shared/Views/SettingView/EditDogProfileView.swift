@@ -28,7 +28,7 @@ struct EditDogProfileView: View {
     
     var photoview: some View {
         NavigationView {
-            content.image.resizable().scaledToFit().frame(width: 250, height: 250)
+            content.image!.resizable().scaledToFit().frame(width: 250, height: 250)
                 .onTapGesture {
                     self.showingImagePicker = true
                 }
@@ -41,7 +41,7 @@ struct EditDogProfileView: View {
             lightYellowColor
                  .edgesIgnoringSafeArea(.all)
             VStack (alignment: .center) {
-            content.image.resizable().scaledToFit().frame(width: 180, height: 180)
+                content.image!.resizable().scaledToFit().frame(width: 180, height: 180)
             List {
                 HStack(alignment: .center) {
                     Text("Pet ID: ")
@@ -77,10 +77,10 @@ struct EditDogProfileView: View {
                     TextField("No 111 Earth...", text: $content.location.bound)}
                 }.listStyle(PlainListStyle())
                 .font(.callout)
-                .environment(\.defaultMinListRowHeight, 50)
-                Spacer(minLength: 10)
-                SaveProfile
+                .environment(\.defaultMinListRowHeight, 45)
                 Spacer(minLength: 30)
+                SaveProfile
+                Spacer(minLength: 80)
             }
         }
         .navigationTitle("image")
@@ -91,5 +91,6 @@ struct EditDogProfileView: View {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
     }
+
 }
 

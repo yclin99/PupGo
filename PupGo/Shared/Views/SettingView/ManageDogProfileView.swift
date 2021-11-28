@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ManageDogProfileView: View {
-    @State var content : UserProfile
+    @ObservedObject var content : UserProfile
 //    var contentDogs : [DogProfile]?
 //    lazy var contentDogs = content.mydogs
     
@@ -30,6 +30,9 @@ struct ManageDogProfileView: View {
                     ForEach(content.mydogs![0..<content.mydogs!.count], id: \.self, content: {dogview in DogView(content: dogview)})
                     AddDogIcon
                     }
+                .onAppear {
+                    print("Back")
+                }
                 }
             }
             .edgesIgnoringSafeArea(.top)
@@ -43,7 +46,7 @@ struct DogView: View {
     
     var body: some View {
         HStack (alignment: .center) {
-            NavigationLink(destination: DogProfileView(content: content)) { content.image.resizable().frame(width: 200, height: 150)
+            NavigationLink(destination: DogProfileView(content: content)) { content.image!.resizable().frame(width: 200, height: 150)
                     .clipShape(Circle())
                                 .shadow(radius: 10)
                                 .overlay(Circle().stroke(Color.black, lineWidth: 3))

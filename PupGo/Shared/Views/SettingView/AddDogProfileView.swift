@@ -9,13 +9,13 @@ import SwiftUI
 
 struct AddDogProfileView: View {
     
-    @State var content: UserProfile
+    @ObservedObject var content: UserProfile
     
     @State private var image: Image?
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
 
-    @State var petid: Int = 103
+    @State var petid: String = ""
     @State var petname: String = ""
     @State var gender: String?
     @State var breed: String?
@@ -61,7 +61,11 @@ struct AddDogProfileView: View {
         Button(action: {
             showingAlert = true
             if image != nil {
-                var newdog = DogProfile(petid: petid, petname: petname, image: image!)
+                @ObservedObject var newdog = DogProfile()
+                let uiImag = image!.asUIImage()
+                let modifiedImage = uiImag.resize(150, 200)
+                let final = Image(uiImage: modifiedImage!)
+                newdog.manuaset(petname: petname, image: final)
                 content.createPet(newdog: newdog)
                  
             }
@@ -112,10 +116,12 @@ struct AddDogProfileView: View {
                 }.listStyle(PlainListStyle())
                 .font(.callout)
                 .environment(\.defaultMinListRowHeight, 50)
+            Spacer(minLength: 30)
         HStack {
             submit
 //            back
         }
+            Spacer(minLength: 80)
     }
         }
         .navigationTitle("image")
@@ -136,3 +142,47 @@ struct AddDogProfileView: View {
 //    }
 //}
 
+extension View {
+// This function changes our View to UIView, then calls another function
+// to convert the newly-made UIView to a UIImage.
+    public func asUIImage() -> UIImage {
+        let controller = UIHostingController(rootView: self)
+        
+        controller.view.frame = CGRect(x: 0, y: CGFloat(Int.max), width: 1, height: 1)
+        UIApplication.shared.windows.first!.rootViewController?.view.addSubview(controller.view)
+        
+        let size = controller.sizeThatFits(in: UIScreen.main.bounds.size)
+        controller.view.bounds = CGRect(origin: .zero, size: size)
+        controller.view.sizeToFit()
+        
+// here is the call to the function that converts UIView to UIImage: `.asUIImage()`
+        let image = controller.view.asUIImage()
+        controller.view.removeFromSuperview()
+        return image
+    }
+}
+
+extension UIView {
+// This is the function to convert UIView to UIImage
+    public func asUIImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
+    }
+}
+
+extension UIImage {
+    func resize(_ width: CGFloat, _ height:CGFloat) -> UIImage? {
+        let widthRatio  = width / size.width
+        let heightRatio = height / size.height
+        let ratio = widthRatio > heightRatio ? heightRatio : widthRatio
+        let newSize = CGSize(width: size.width * ratio, height: size.height * ratio)
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        self.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+}

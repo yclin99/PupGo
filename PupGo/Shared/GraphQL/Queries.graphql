@@ -1,0 +1,51 @@
+query Testing1 {
+    recommendationGet(recommendationGetInput:{pid:"caefd1f0-a4fc-4ba3-81d8-1d0b0fbec730"}){
+        result  {
+            pet {
+                id
+                name
+                image
+                gender
+                breed
+                isCastration
+                birthday
+                
+            }
+        }
+    }
+    userProfileListGet(userProfileListGetInput:{uid: ["982a33ee-2792-4ede-b307-f38d187a2015"]}){
+        result  {
+            id
+            name
+            gender
+            birthday
+            email
+        }
+    }
+    petProfileListGet(petProfileListGetInput:{pid: ["149464c2-f8ee-4e6f-a551-260b6467fa95", "5d76c3ad-d286-4c82-9ff0-6e043389f00d"]}){
+        result  {
+            id
+            name
+            image
+            gender
+            breed
+            isCastration
+            birthday
+        }
+    }
+}
+
+mutation SetStatus($pid:ID! ,$recommendID:ID!, $result:Boolean!){
+    recommendationResponse(recommendationResponseInput:{
+        pid:$pid,
+        recommendID:$recommendID,
+        result:$result,
+    }){
+        result{
+            id
+            image
+            gender
+        }
+    }
+}
+

@@ -10,40 +10,106 @@ import SwiftUI
 struct UserEventView: View {
     let card: Card
     @State private var isShowingAnswer = false
+    @State private var isShowingDetailView = false
+    @State var timeRemaining: String = ""
+    
+    func updateTimeRemaining(){
+        let futureDate = dateFormatter.date(from: card.when)
+        
+        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate!)
+        let hour = remaining.hour ?? 0
+        let minute = remaining.minute ?? 0
+        let second = remaining.second ?? 0
+        if hour > 0 {
+            timeRemaining = "\(hour)h \(minute)m \(second)s"
+        }
+        else{
+            timeRemaining = "\(minute)m \(second)s"
+        }
+    }
 
+    var content : Event =
+        Event(username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
+
+    let onActivate: () -> ()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
-        ZStack {
-            
-            Image("request2join")
+        let pic = Image(card.pic)
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea()
                 .cornerRadius(20)
                 .frame(width: 330.0, height: 120.0)
-                .shadow(color: Color.blue, radius: 10.0, x: 10, y: 1)
+                .shadow(color: Color.green,  radius: 5.0, x: 10, y: -10)
+        let back = RoundedRectangle(cornerRadius: 20, style: .circular)
+            .shadow(color: Color.black, radius: 5.0 )
+            .foregroundColor(.black.opacity(0.4))
+            .frame(width: 330.0, height: 150.0)
+        ZStack {
+            pic
             
-            VStack (alignment: .leading) {
+            if isShowingAnswer {
+                back
+                HStack(alignment: .center) {
 
-                Text("Start time: " + card.when)
-                    .font(.title)
-                    .foregroundColor(.black)
-                Text("Participants: " + card.who)
-                    .font(.title)
-                    .foregroundColor(.orange)
-                Text("Launched: " + card.launched)
-                    .font(.title)
-                    .foregroundColor(.red)
+                    
+                    VStack (alignment: .leading) {
+                        if isShowingAnswer {
+                            
+                        Text("Count down: " + timeRemaining)
+                                .font(.body)
+                            .foregroundColor(.white)
+                            .onReceive(timer, perform: {_ in
+                                updateTimeRemaining()
+                            })
+                            
+                        Text("Participants: " + card.who)
+                            .font(.body)
+                            .foregroundColor(.white)
+                            //Text("Scheduled at: " + dateFormatter.string(from: launchedDate))
+                        Text("Launched at: " + card.launched.prefix(10))
+                            .font(.body)
+                            .foregroundColor(.white)
+                            
+                        }
+                    }
+                    .padding(20)
+                    .multilineTextAlignment(.center)
+                    
+                    NavigationLink(destination: SingleEventView(content: content), isActive: $isShowingDetailView) {EmptyView()}
+                    
+                    Button(action: {
+                                print("check event")
+                                isShowingDetailView = true
+                                self.onActivate()
+                            
+                        }
+                                , label: {
+                                Circle()
+                                    .fill(Color.yellow)
+                                    .frame(width: 75, height: 75)
+                                    .shadow(radius: 10)
+                                    .overlay(
+                                        Image(systemName: "eyes")
+                                            .font(.largeTitle)
+                                            .foregroundColor(Color.black)
+                                    )
+                                
+                                
+                            }
+                    )
+                
+                }
+                
             }
-            .padding(20)
-            .multilineTextAlignment(.center)
+            
         }
         .frame(width: 330.0, height: 120.0)
-    
+        .onTapGesture {
+        self.isShowingAnswer.toggle()
     }
+}
 }
 
-struct UserEventView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserEventView(card: Card.uevent)
-    }
-}
+
+

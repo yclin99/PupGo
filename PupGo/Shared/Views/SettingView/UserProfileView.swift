@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    var content : UserProfile
+    @ObservedObject var content : UserProfile
 
 //    var content = UserProfile(userid: 1, username: "Thisowner")
     
@@ -63,7 +63,7 @@ struct UserProfileView: View {
                 .font(.callout)
                 .environment(\.defaultMinListRowHeight, 70)
                 edit
-                Spacer(minLength: 30)
+                Spacer(minLength: 80)
             }
         }
     }

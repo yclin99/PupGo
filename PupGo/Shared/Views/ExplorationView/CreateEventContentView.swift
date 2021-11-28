@@ -46,7 +46,7 @@ struct CreateEventContentView: View {
     var submit: some View {
         Button(action: {showingAlert = true}, label: {
             Text("Submit").font(.system(size: 18)).bold().foregroundColor(.white)
-                .background(RoundedRectangle(cornerRadius: 12).fill(Color.yellow).frame(width: 80, height: 40))
+                .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
         }).alert(isPresented:$showingAlert) {
             Alert(
                 title: Text("Successfully Created")
@@ -67,7 +67,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("Enter username...", text: $username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "clock").font(.largeTitle)
@@ -75,7 +75,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("DD/MM/YYYY HH:mm", text: $starttime)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "clock.fill").font(.largeTitle)
@@ -83,7 +83,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("DD/MM/YYYY HH:mm", text: $endtime)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "location").font(.largeTitle)
@@ -91,7 +91,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("Walking dog at ...", text: $location)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         }
         HStack {
@@ -99,6 +99,7 @@ struct CreateEventContentView: View {
             submit
             Spacer()
         }
+        Spacer(minLength: 80)
     }
         }
         .navigationTitle("image")
