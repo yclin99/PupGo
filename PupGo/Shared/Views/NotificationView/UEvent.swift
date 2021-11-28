@@ -13,7 +13,11 @@ struct UEvent: View {
     @State var uevents = Card.uevent
 
     var content : Event =
+<<<<<<< HEAD
         Event(username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
+=======
+        Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
+>>>>>>> origin/Nov-25-21
     
     var body: some View{
         if uevents.count > 0 {

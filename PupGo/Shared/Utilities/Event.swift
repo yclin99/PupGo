@@ -21,7 +21,11 @@ class Event: Hashable, ObservableObject {
     }
     
     
+<<<<<<< HEAD
     var userid: Int?
+=======
+    var userid: Int
+>>>>>>> origin/Nov-25-21
     var username: String
     var location: String
     var starttime: String

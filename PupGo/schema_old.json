@@ -45,18 +45,18 @@
             "deprecationReason": null
           },
           {
-            "name": "notificationsGet",
+            "name": "notifiactionsGet",
             "description": "",
             "args": [
               {
-                "name": "notificationsGetInput",
+                "name": "notifiactionsGetInput",
                 "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "NotificationsGetInput",
+                    "name": "NotifiactionsGetInput",
                     "ofType": null
                   }
                 },
@@ -68,7 +68,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "NotificationsGetPayload",
+                "name": "NotifiactionsGetPayload",
                 "ofType": null
               }
             },
@@ -224,37 +224,6 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "ProfileListGetPayload",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "petsListGet",
-            "description": "",
-            "args": [
-              {
-                "name": "petsListGetInput",
-                "description": "",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "PetsListGetInput",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null
-              }
-            ],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "PetsListGetPayload",
                 "ofType": null
               }
             },
@@ -432,7 +401,7 @@
           },
           {
             "kind": "OBJECT",
-            "name": "NotificationsGetPayload",
+            "name": "NotifiactionsGetPayload",
             "ofType": null
           },
           {
@@ -462,22 +431,12 @@
           },
           {
             "kind": "OBJECT",
-            "name": "PetsListGetPayload",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
             "name": "UserCreateByIDPayload",
             "ofType": null
           },
           {
             "kind": "OBJECT",
             "name": "EventsCreatePayload",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "EventsUpdatePayload",
             "ofType": null
           },
           {
@@ -768,18 +727,6 @@
         "fields": [
           {
             "name": "country",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "state",
             "description": "",
             "args": [],
             "type": {
@@ -1321,12 +1268,12 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "NotificationsGetInput",
+        "name": "NotifiactionsGetInput",
         "description": "",
         "fields": null,
         "inputFields": [
           {
-            "name": "uid",
+            "name": "pid",
             "description": "",
             "type": {
               "kind": "NON_NULL",
@@ -1346,7 +1293,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "NotificationsGetPayload",
+        "name": "NotifiactionsGetPayload",
         "description": "",
         "fields": [
           {
@@ -1427,7 +1374,7 @@
         "description": "",
         "fields": [
           {
-            "name": "notification_id",
+            "name": "id",
             "description": "",
             "args": [],
             "type": {
@@ -1443,31 +1390,31 @@
             "deprecationReason": null
           },
           {
-            "name": "notification_type",
+            "name": "title",
             "description": "",
             "args": [],
             "type": {
               "kind": "SCALAR",
-              "name": "Int",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "userId",
+            "name": "description",
             "description": "",
             "args": [],
             "type": {
               "kind": "SCALAR",
-              "name": "ID",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "created_at",
+            "name": "time",
             "description": "",
             "args": [],
             "type": {
@@ -1479,7 +1426,7 @@
             "deprecationReason": null
           },
           {
-            "name": "eventId",
+            "name": "eventid",
             "description": "",
             "args": [],
             "type": {
@@ -1491,7 +1438,7 @@
             "deprecationReason": null
           },
           {
-            "name": "petId",
+            "name": "userid",
             "description": "",
             "args": [],
             "type": {
@@ -1503,12 +1450,12 @@
             "deprecationReason": null
           },
           {
-            "name": "has_read",
+            "name": "type",
             "description": "",
             "args": [],
             "type": {
               "kind": "SCALAR",
-              "name": "Boolean",
+              "name": "Numbers",
               "ofType": null
             },
             "isDeprecated": false,
@@ -2564,108 +2511,6 @@
         "possibleTypes": null
       },
       {
-        "kind": "INPUT_OBJECT",
-        "name": "PetsListGetInput",
-        "description": "",
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "uid",
-            "description": "",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "PetsListGetPayload",
-        "description": "",
-        "fields": [
-          {
-            "name": "error",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "INTERFACE",
-                    "name": "Error",
-                    "ofType": null
-                  }
-                }
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "timestamp",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Timestamp",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "result",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "OBJECT",
-                    "name": "PetProfile",
-                    "ofType": null
-                  }
-                }
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [
-          {
-            "kind": "INTERFACE",
-            "name": "Payload",
-            "ofType": null
-          }
-        ],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
         "kind": "OBJECT",
         "name": "Mutation",
         "description": "",
@@ -2726,37 +2571,6 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "EventsCreatePayload",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "eventsUpdate",
-            "description": "",
-            "args": [
-              {
-                "name": "eventsUpdateInput",
-                "description": "",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "EventsUpdateInput",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null
-              }
-            ],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "EventsUpdatePayload",
                 "ofType": null
               }
             },
@@ -3258,16 +3072,6 @@
             "defaultValue": null
           },
           {
-            "name": "State",
-            "description": "",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "Coordinate",
             "description": "",
             "type": {
@@ -3456,172 +3260,6 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "EventsUpdateInput",
-        "description": "",
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "eid",
-            "description": "",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "pid",
-            "description": "",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "location",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "LocationInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "timeRange",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "TimeRangeInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "limit",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "EventsLimitsInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "image",
-            "description": "",
-            "type": {
-              "kind": "SCALAR",
-              "name": "URL",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "description",
-            "description": "",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              }
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "EventsUpdatePayload",
-        "description": "",
-        "fields": [
-          {
-            "name": "error",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "INTERFACE",
-                    "name": "Error",
-                    "ofType": null
-                  }
-                }
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "timestamp",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Timestamp",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "result",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [
-          {
-            "kind": "INTERFACE",
-            "name": "Payload",
-            "ofType": null
-          }
-        ],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
         "name": "EventsJoinInput",
         "description": "",
         "fields": null,
@@ -3672,124 +3310,6 @@
       {
         "kind": "OBJECT",
         "name": "EventsJoinPayload",
-        "description": "",
-        "fields": [
-          {
-            "name": "error",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "INTERFACE",
-                    "name": "Error",
-                    "ofType": null
-                  }
-                }
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "timestamp",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Timestamp",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "result",
-            "description": "",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [
-          {
-            "kind": "INTERFACE",
-            "name": "Payload",
-            "ofType": null
-          }
-        ],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "EventsAcceptInput",
-        "description": "",
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "pid",
-            "description": "",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "eventID",
-            "description": "",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "accept",
-            "description": "",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "EventsAcceptPayload",
         "description": "",
         "fields": [
           {
@@ -3928,6 +3448,124 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "EventsAcceptInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "pid",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "eventID",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "accept",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "EventsAcceptPayload",
+        "description": "",
+        "fields": [
+          {
+            "name": "error",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INTERFACE",
+                    "name": "Error",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "timestamp",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Timestamp",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "result",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "EventRequest",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "Payload",
+            "ofType": null
+          }
+        ],
         "enumValues": null,
         "possibleTypes": null
       },

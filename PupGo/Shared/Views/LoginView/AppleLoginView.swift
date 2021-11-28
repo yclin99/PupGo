@@ -26,12 +26,17 @@ struct AppleLoginView: View {
                     return
                 }
                 loginData.authenticate(credential: credential )
+                withAnimation {
+                    log_Status = true
+                    print("Token String: ")
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-
-        AppleButtonView()
+        .signInWithAppleButtonStyle(.white)
+        .frame(width: 45, height: 45)
+        .opacity(0.02)
     }
 }
 
@@ -39,6 +44,7 @@ struct AppleButtonView: View {
     var body: some View {
         Image("apple")
             .resizable()
-            .frame(width: 45, height: 45)
+            .frame(width: 40, height: 40)
     }
 }
+

@@ -6,9 +6,38 @@
 //
 
 import Foundation
+//class UserViewModel {
+//    
+//    var userid = ""
+//    @Published var username = ""
+//    @Published var userbirth = ""
+//    
+//    init() {
+//           Network.shared.apollo.fetch(query: Testing1Query()) { [self] result in
+//            self.userid = try!(result.get().data!.userProfileListGet.result.first?.id)! as String
+//               print(1234)
+//               print(self.userid)
+//            self.username = try!(result.get().data!.userProfileListGet.result.first?.name)!as String
+//            self.userbirth = try!(result.get().data!.userProfileListGet.result.first?.birthday)! as String
+//        }
+//    }
+//    
+//    func setParameters() {
+//        Network.shared.apollo.fetch(query: Testing1Query()) { [self] result in
+//         self.userid = try!(result.get().data!.userProfileListGet.result.first?.id)! as String
+//            print(12346987)
+//            print(self.userid)
+//         self.username = try!(result.get().data!.userProfileListGet.result.first?.name)!as String
+//         self.userbirth = try!(result.get().data!.userProfileListGet.result.first?.birthday)! as String
+//     }
+//    }
+//    
+//}
+
 
 class UserProfile: Hashable, ObservableObject {
 
+    
     static func == (lhs: UserProfile, rhs: UserProfile) -> Bool {
         return lhs.userid == rhs.userid
     }
