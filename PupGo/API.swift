@@ -457,7 +457,7 @@ public final class Testing3Mutation: GraphQLMutation {
       eventsCreate(eventsCreateInput: $input) {
         __typename
         result {
-          __typename
+          __typename    
           id
         }
       }
