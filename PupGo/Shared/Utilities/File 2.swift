@@ -6,10 +6,8 @@
 //
 
 import SwiftUI
-import CoreLocation
 
-
-class Event: Hashable, ObservableObject {
+class Event: Hashable {
     
     static func == (lhs: Event, rhs: Event) -> Bool {
         return lhs.userid == rhs.userid
@@ -20,8 +18,7 @@ class Event: Hashable, ObservableObject {
         
     }
     
-    
-    var userid: Int?
+    var userid: Int
     var username: String
     var location: String
     var starttime: String
@@ -29,25 +26,14 @@ class Event: Hashable, ObservableObject {
     var image: Image
     var participants: [String] = []
     var humans: [String] = []
-    var clocation: CLLocation?
   
-    init(username: String, location: String, starttime: String, endtime: String, image: Image) {
+    init(userid: Int, username: String, location: String, starttime: String, endtime: String, image: Image) {
+        self.userid = userid
         self.username = username
         self.location = location
         self.starttime = starttime
         self.endtime = endtime
         self.image = image
-        var geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(location) {
-            placemarks, error in
-            let placemark = placemarks?.first
-            let lat = placemark?.location?.coordinate.latitude
-            let lon = placemark?.location?.coordinate.longitude
-            if (lat != nil && lon != nil) {
-                self.clocation = CLLocation(latitude: lat!, longitude: lon!)
-            }
-        }
-        
   }
     
     func addParticipant(newParticipant: String) {

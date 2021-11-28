@@ -1,15 +1,12 @@
 query Testing1 {
-    recommendationGet(recommendationGetInput:{pid:"caefd1f0-a4fc-4ba3-81d8-1d0b0fbec730"}){
+    recommendationGet(recommendationGetInput:{pid:"0eb440de-cf57-404b-ada3-bebc21ee19c4"}){
         result  {
             pet {
-                id
                 name
                 image
                 gender
                 breed
-                isCastration
                 birthday
-                
             }
         }
     }
@@ -33,23 +30,6 @@ query Testing1 {
             birthday
         }
     }
-<<<<<<< HEAD
-=======
-}
-
-mutation SetStatus($pid:ID! ,$recommendID:ID!, $result:Boolean!){
-    recommendationResponse(recommendationResponseInput:{
-        pid:$pid,
-        recommendID:$recommendID,
-        result:$result,
-    }){
-        result{
-            id
-            image
-            gender
-        }
-    }
->>>>>>> origin/Nov-25-21
 }
 
 
