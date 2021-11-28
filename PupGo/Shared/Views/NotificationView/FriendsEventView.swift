@@ -13,7 +13,7 @@ struct FriendsEventView: View {
     @State private var isShowingAnswer = false
     let onActivate: () -> ()
     var content : Event =
-        Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
+        Event(username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
     @State private var isShowingDetailView = false
     
     var body: some View {

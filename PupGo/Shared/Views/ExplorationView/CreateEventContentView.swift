@@ -67,7 +67,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("Enter username...", text: $username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "clock").font(.largeTitle)
@@ -75,7 +75,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("DD/MM/YYYY HH:mm", text: $starttime)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "clock.fill").font(.largeTitle)
@@ -83,7 +83,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("DD/MM/YYYY HH:mm", text: $endtime)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         HStack(alignment: .center) {
             Image(systemName: "location").font(.largeTitle)
@@ -91,7 +91,7 @@ struct CreateEventContentView: View {
                 .font(.callout)
                 .bold()
             TextField("Walking dog at ...", text: $location)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.white)
         }.padding()
         }
         HStack {
