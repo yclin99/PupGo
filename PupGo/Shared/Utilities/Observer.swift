@@ -16,6 +16,7 @@ class observer: ObservableObject {
     init() {
         //let apolloNetwork = Network.shared.apollo
         //DispatchQueue.main.async {
+        
         Network.shared.apollo.fetch(query: Testing1Query()) { result in
             guard let data = try? result.get().data else {
                 print("Error: Fetching Data Error")

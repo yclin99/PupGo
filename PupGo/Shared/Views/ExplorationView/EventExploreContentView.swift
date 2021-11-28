@@ -74,11 +74,11 @@ struct EventView: View {
                 .frame(width: 120, height: 120)}
         VStack (alignment: .leading, spacing: 10) {
             HStack(alignment: .center) {
-                Image(systemName: "pawprint.circle").font(.largeTitle)
-                Text(content.username).font(.callout).foregroundColor(.black).bold()}
+                Image(systemName: "pawprint.circle").font(.largeTitle).foregroundColor(brownColor)
+                Text(content.username).font(.callout).foregroundColor(deepBrownColor).bold()}
             HStack(alignment: .center) {
-                Image(systemName: "location").font(.largeTitle)
-                Text(content.location).foregroundColor(.black)}
+                Image(systemName: "location").font(.largeTitle).foregroundColor(brownColor)
+                Text(content.location).foregroundColor(deepBrownColor)}
             }.padding()
         }
     }

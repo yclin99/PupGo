@@ -48,12 +48,12 @@ struct LoginTextView: View {
         HStack {
             VStack(spacing: 10) {
                 Text("Login")
-                    .foregroundColor(self.index == 0 ? .white : .brown)
+                    .foregroundColor(self.index == 0 ? .white : lightBrownColor)
                     .font(.title2)
                     .fontWeight(.bold)
                 
                 Capsule()
-                    .fill(self.index == 0 ? .blue : Color.clear)
+                    .fill(self.index == 0 ? deepBrownColor : Color.clear)
                     .frame(width: 100, height: 5)
             }
             
@@ -70,7 +70,7 @@ struct EmailTextView: View {
         VStack {
             HStack(spacing: 15) {
                 Image(systemName: "envelope.fill")
-                    .foregroundColor(.yellow)
+                    .foregroundColor(brownColor)
                 TextField("Email Address", text: self.$email)
                     .onChange(of: email) { newValue in
                         switch email.count {
@@ -112,7 +112,7 @@ struct PasswordTextView: View {
                         isSecured.toggle()
                     }) {
                         Image(systemName: self.isSecured ? "eye.slash.fill" : "eye.fill")
-                            .foregroundColor(.yellow)
+                            .foregroundColor(brownColor)
                     }
                     if isSecured {
                         SecureField("Password", text: self.$pass)
@@ -151,13 +151,15 @@ struct LoginButtonView: View {
     @Binding var index: Int
     var body: some View {
         // Button
-        Button(action: {}) {
+        Button(action: {
+            
+        }) {
             Text("LOGIN")
                 .foregroundColor(.white)
                 .fontWeight(.bold)
                 .padding(.vertical)
                 .padding(.horizontal, 50)
-                .background(.black)
+                .background(orangeColor)
                 .clipShape(Capsule())
             // shadow
                 .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: 5)

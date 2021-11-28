@@ -24,6 +24,10 @@
 		0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005327362A6900D7FFCD /* MatchingView.swift */; };
 		0E05005827362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
 		0E05005927362D5600D7FFCD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05005727362D5600D7FFCD /* LoginView.swift */; };
+		0E45A57D27538DA700CA79BC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A57C27538DA700CA79BC /* Color.swift */; };
+		0E45A57E27538DA700CA79BC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A57C27538DA700CA79BC /* Color.swift */; };
+		0E45A580275396CC00CA79BC /* MyNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A57F275396CC00CA79BC /* MyNotificationView.swift */; };
+		0E45A581275396CC00CA79BC /* MyNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A57F275396CC00CA79BC /* MyNotificationView.swift */; };
 		0E5233F2274B25FB008B1CB0 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0E5233F1274B25FB008B1CB0 /* Queries.graphql */; };
 		0E5233F4274B260C008B1CB0 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5233F3274B260C008B1CB0 /* Apollo.swift */; };
 		0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E558457273B47A400BCFFB0 /* SwipeCard.swift */; };
@@ -73,9 +77,12 @@
 		0EBD8A1F2743851D008EBBDC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A1D2743851D008EBBDC /* SignInView.swift */; };
 		0EBD8A21274393CA008EBBDC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A20274393CA008EBBDC /* SignUpView.swift */; };
 		0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A20274393CA008EBBDC /* SignUpView.swift */; };
+		0EC04DC927539F3900D44A7A /* MyNotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DC827539F3900D44A7A /* MyNotificationCard.swift */; };
+		0EC04DCA27539F3900D44A7A /* MyNotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DC827539F3900D44A7A /* MyNotificationCard.swift */; };
+		0EC04DCF2753A8C400D44A7A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DCE2753A8C400D44A7A /* API.swift */; };
+		0EC04DD02753A8C400D44A7A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DCE2753A8C400D44A7A /* API.swift */; };
 		0EC444A8275319B100A3356B /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC444A7275319B100A3356B /* schema.json */; };
 		0EC444AA275321AC00A3356B /* DogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC444A9275321AC00A3356B /* DogInfoView.swift */; };
-		0EC444AC275326B800A3356B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC444AB275326B800A3356B /* API.swift */; };
 		0EDC6C69274985B100E74119 /* ManageDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */; };
 		0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */; };
 		0EDC6C6C2749860600E74119 /* AddDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */; };
@@ -133,6 +140,8 @@
 		0E05004F27362A2E00D7FFCD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		0E05005327362A6900D7FFCD /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		0E05005727362D5600D7FFCD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0E45A57C27538DA700CA79BC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		0E45A57F275396CC00CA79BC /* MyNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationView.swift; sourceTree = "<group>"; };
 		0E5233F1274B25FB008B1CB0 /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		0E5233F3274B260C008B1CB0 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		0E558457273B47A400BCFFB0 /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
@@ -159,9 +168,10 @@
 		0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginView.swift; sourceTree = "<group>"; };
 		0EBD8A1D2743851D008EBBDC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		0EBD8A20274393CA008EBBDC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		0EC04DC827539F3900D44A7A /* MyNotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationCard.swift; sourceTree = "<group>"; };
+		0EC04DCE2753A8C400D44A7A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
 		0EC444A7275319B100A3356B /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		0EC444A9275321AC00A3356B /* DogInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInfoView.swift; sourceTree = "<group>"; };
-		0EC444AB275326B800A3356B /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDogProfileView.swift; sourceTree = "<group>"; };
 		0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDogProfileView.swift; sourceTree = "<group>"; };
 		0EFC29BD27473D7C000D6D17 /* DogProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfile.swift; sourceTree = "<group>"; };
@@ -297,6 +307,7 @@
 				DD196420274C7C2900A0B56C /* Join.swift */,
 				DD196423274C7C8900A0B56C /* UEvent.swift */,
 				DD196426274C7CA800A0B56C /* FEvent.swift */,
+				0E45A57F275396CC00CA79BC /* MyNotificationView.swift */,
 			);
 			path = NotificationView;
 			sourceTree = "<group>";
@@ -329,7 +340,7 @@
 		0E5233F0274B25CF008B1CB0 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				0EC444AB275326B800A3356B /* API.swift */,
+				0EC04DCE2753A8C400D44A7A /* API.swift */,
 				0E5233F1274B25FB008B1CB0 /* Queries.graphql */,
 				0E5233F3274B260C008B1CB0 /* Apollo.swift */,
 				0E804028274B7C8C0086DA03 /* ApolloView.swift */,
@@ -348,6 +359,8 @@
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
 				0E5AB08A274F6F7300AE65BA /* Observer.swift */,
 				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
+				0E45A57C27538DA700CA79BC /* Color.swift */,
+				0EC04DC827539F3900D44A7A /* MyNotificationCard.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -514,7 +527,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh client:codegen --target=swift --includes=./Shared/GraphQL/*.graphql --endpoint=\"http://54.241.242.221:8080/query\" API.swift\n";
 		};
 		6510B40BC95E98A368FB5DE2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -572,6 +585,7 @@
 				DD196427274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EFC29C727473DC8000D6D17 /* EditUserProfileView.swift in Sources */,
 				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
+				0E45A57D27538DA700CA79BC /* Color.swift in Sources */,
 				0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */,
 				0E8A2E2E2741F8A100081719 /* Card.swift in Sources */,
 				0E05004C27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
@@ -601,14 +615,16 @@
 				0E050047273629CF00D7FFCD /* SettingView.swift in Sources */,
 				0EB96C352738BD5D00C9A656 /* GoogleLoginView.swift in Sources */,
 				0E0500392735F73500D7FFCD /* MainView.swift in Sources */,
-				0EC444AC275326B800A3356B /* API.swift in Sources */,
 				0EFC29C127473D92000D6D17 /* DogProfileView.swift in Sources */,
 				0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */,
 				0EFC29CD27473E04000D6D17 /* UserProfileView.swift in Sources */,
 				0EFC29C427473DB2000D6D17 /* EditDogProfileView.swift in Sources */,
 				0E5AB08E2751F23600AE65BA /* ImageLoader.swift in Sources */,
 				0E8A2E342741FA4800081719 /* FriendsEventView.swift in Sources */,
+				0EC04DC927539F3900D44A7A /* MyNotificationCard.swift in Sources */,
+				0E45A580275396CC00CA79BC /* MyNotificationView.swift in Sources */,
 				0EFC2A1B274765CE000D6D17 /* AnimationTestView.swift in Sources */,
+				0EC04DCF2753A8C400D44A7A /* API.swift in Sources */,
 				0E05005027362A2E00D7FFCD /* NotificationView.swift in Sources */,
 				DDBEFF73275201E100EEC6B7 /* dateFormatter.swift in Sources */,
 				0E8A2E282741F24C00081719 /* EventExploreContentView.swift in Sources */,
@@ -628,11 +644,13 @@
 				0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */,
 				0E8A2E2F2741F8A100081719 /* Card.swift in Sources */,
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0E45A581275396CC00CA79BC /* MyNotificationView.swift in Sources */,
 				0E5AB08F2751F23600AE65BA /* ImageLoader.swift in Sources */,
 				DD196428274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */,
 				0E5AB0922751F49100AE65BA /* ImageLoaderView.swift in Sources */,
 				0EFC29BF27473D7C000D6D17 /* DogProfile.swift in Sources */,
+				0EC04DCA27539F3900D44A7A /* MyNotificationCard.swift in Sources */,
 				0E8A2E262741F20400081719 /* CreateEventContentView.swift in Sources */,
 				0EFC29CB27473DEF000D6D17 /* UserProfile.swift in Sources */,
 				0EBD8A1F2743851D008EBBDC /* SignInView.swift in Sources */,
@@ -641,6 +659,8 @@
 				0E7D2F4F2738FA120056DE92 /* FBLoginView.swift in Sources */,
 				0E05005527362A6900D7FFCD /* MatchingView.swift in Sources */,
 				0E8A2E1D2741F18500081719 /* Event.swift in Sources */,
+				0EC04DD02753A8C400D44A7A /* API.swift in Sources */,
+				0E45A57E27538DA700CA79BC /* Color.swift in Sources */,
 				DD196425274C7C8900A0B56C /* UEvent.swift in Sources */,
 				0E558459273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				0E8A2E2C2741F26E00081719 /* SingleEventView.swift in Sources */,
@@ -787,7 +807,7 @@
 				CODE_SIGN_ENTITLEMENTS = "PupGo (iOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = N3J44JZ9JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -823,7 +843,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "PupGo (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = N3J44JZ9JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

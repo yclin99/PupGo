@@ -21,7 +21,10 @@ struct MatchView: View {
                 Loader()
                 VStack {
                     ZStack (alignment: .topLeading) {
-                        if obser.users.count == 1 {
+                        if obser.users.isEmpty {
+                            ProgressView()
+                        }
+                        else if obser.users.count == 1 {
                             ProgressView()
                                 .onAppear {
                                     self.obser.getNewUsers()
@@ -77,10 +80,10 @@ struct DecisionButtons: View {
                     self.obser.users.removeLast()
                 }
             }) {
-                Image(systemName: "x.circle.fill")
+                Image(systemName: "x.circle")
                     .resizable()
-                    .foregroundColor(.brown)
-                    .frame(width: 40, height: 40)
+                    .foregroundColor(deepPinkColor)
+                    .frame(width: 45, height: 45)
             }
             Spacer()
             Button(action: {
@@ -89,7 +92,7 @@ struct DecisionButtons: View {
                 Image(systemName: "info.circle.fill")
                     .resizable()
                     .foregroundColor(.brown)
-                    .frame(width: 40, height: 40)
+                    .frame(width: 45, height: 45)
             }
             .buttonStyle(PlainButtonStyle())
             
@@ -100,13 +103,14 @@ struct DecisionButtons: View {
                     self.obser.users.removeLast()
                 }
             }) {
-                Image(systemName: "pawprint.fill")
+                Image(systemName: "checkmark.circle")
                     .resizable()
-                    .foregroundColor(.brown)
-                    .frame(width: 40, height: 40)
+                    .foregroundColor(greenColor)
+                    .frame(width: 45, height: 45)
             }
             Spacer()
         }
+        .padding(.top, 40)
     }
 }
 

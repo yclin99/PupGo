@@ -54,11 +54,11 @@ struct SignUpTextView: View {
             Spacer(minLength: 0)
             VStack (spacing: 10) {
                 Text("Sign Up")
-                    .foregroundColor(self.index == 1 ? .white : .gray)
+                    .foregroundColor(self.index == 1 ? .white : lightBrownColor)
                     .font(.title2)
                     .fontWeight(.bold)
                 Capsule()
-                    .fill(self.index == 1 ? .blue : Color.clear)
+                    .fill(self.index == 1 ? deepBrownColor : Color.clear)
                     .frame(width: 100, height: 5)
             }
             
@@ -84,7 +84,7 @@ struct ReEnterPasswordVieW: View {
         VStack {
             HStack(spacing: 15) {
                 Image(systemName: "eye.slash.fill")
-                    .foregroundColor(.yellow)
+                    .foregroundColor(brownColor)
                 SecureField("Password", text: self.$repass)
             }
             Divider().background(.white.opacity(0.5))
@@ -104,7 +104,7 @@ struct SignUpButtonView: View {
                 .fontWeight(.bold)
                 .padding(.vertical)
                 .padding(.horizontal, 50)
-                .background(.black)
+                .background(orangeColor)
                 .clipShape(Capsule())
             // shadow
                 .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: 5)

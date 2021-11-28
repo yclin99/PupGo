@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-public var lightYellowColor = Color(#colorLiteral(red: 1, green: 1, blue: 0.88, alpha: 255))
+//public var lightYellowColor = Color(#colorLiteral(red: 0.9682219625, green: 0.918304801, blue: 0.7459361553, alpha: 1))
+
 
 struct LoginView: View {
     
-    @State var email: String = "Evelynyu"
-    @State var password: String = "GreenField2@4"
+    @State var email: String = "evelynyu@ucla.edu"
+    @State var password: String = "pupGoGo!"
     @State var repass: String = ""
     @State var index: Int = 0
     @State var animationIndex: Int = 0

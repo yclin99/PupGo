@@ -69,7 +69,7 @@ struct DogInfoView: View {
                 Rectangle()
                     .frame(height: curHeight / 2)
             }
-            .foregroundColor(.white)
+            .foregroundColor(yellowColor)
         )
         .animation(isDragging ? nil: .easeInOut(duration: 0.45))
         .onDisappear { curHeight = minHeight }
