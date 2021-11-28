@@ -77,10 +77,12 @@
 		0EBD8A1F2743851D008EBBDC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A1D2743851D008EBBDC /* SignInView.swift */; };
 		0EBD8A21274393CA008EBBDC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A20274393CA008EBBDC /* SignUpView.swift */; };
 		0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD8A20274393CA008EBBDC /* SignUpView.swift */; };
-		0EC04DC927539F3900D44A7A /* MyNotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DC827539F3900D44A7A /* MyNotificationCard.swift */; };
-		0EC04DCA27539F3900D44A7A /* MyNotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DC827539F3900D44A7A /* MyNotificationCard.swift */; };
 		0EC04DCF2753A8C400D44A7A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DCE2753A8C400D44A7A /* API.swift */; };
 		0EC04DD02753A8C400D44A7A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DCE2753A8C400D44A7A /* API.swift */; };
+		0EC04DD227540C7200D44A7A /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DD127540C7200D44A7A /* NotificationObserver.swift */; };
+		0EC04DD327540C7200D44A7A /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DD127540C7200D44A7A /* NotificationObserver.swift */; };
+		0EC04DD527540DB400D44A7A /* NotificationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DD427540DB400D44A7A /* NotificationCardView.swift */; };
+		0EC04DD627540DB400D44A7A /* NotificationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DD427540DB400D44A7A /* NotificationCardView.swift */; };
 		0EC444A8275319B100A3356B /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC444A7275319B100A3356B /* schema.json */; };
 		0EC444AA275321AC00A3356B /* DogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC444A9275321AC00A3356B /* DogInfoView.swift */; };
 		0EDC6C69274985B100E74119 /* ManageDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */; };
@@ -168,8 +170,9 @@
 		0EB96C342738BD5D00C9A656 /* GoogleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginView.swift; sourceTree = "<group>"; };
 		0EBD8A1D2743851D008EBBDC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		0EBD8A20274393CA008EBBDC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		0EC04DC827539F3900D44A7A /* MyNotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationCard.swift; sourceTree = "<group>"; };
 		0EC04DCE2753A8C400D44A7A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		0EC04DD127540C7200D44A7A /* NotificationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationObserver.swift; sourceTree = "<group>"; };
+		0EC04DD427540DB400D44A7A /* NotificationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCardView.swift; sourceTree = "<group>"; };
 		0EC444A7275319B100A3356B /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		0EC444A9275321AC00A3356B /* DogInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInfoView.swift; sourceTree = "<group>"; };
 		0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDogProfileView.swift; sourceTree = "<group>"; };
@@ -308,6 +311,7 @@
 				DD196423274C7C8900A0B56C /* UEvent.swift */,
 				DD196426274C7CA800A0B56C /* FEvent.swift */,
 				0E45A57F275396CC00CA79BC /* MyNotificationView.swift */,
+				0EC04DD427540DB400D44A7A /* NotificationCardView.swift */,
 			);
 			path = NotificationView;
 			sourceTree = "<group>";
@@ -360,7 +364,7 @@
 				0E5AB08A274F6F7300AE65BA /* Observer.swift */,
 				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
 				0E45A57C27538DA700CA79BC /* Color.swift */,
-				0EC04DC827539F3900D44A7A /* MyNotificationCard.swift */,
+				0EC04DD127540C7200D44A7A /* NotificationObserver.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -597,9 +601,11 @@
 				0EFC29CA27473DEF000D6D17 /* UserProfile.swift in Sources */,
 				0EBD8A1E2743851D008EBBDC /* SignInView.swift in Sources */,
 				0E5AB0942752491700AE65BA /* DogCardView.swift in Sources */,
+				0EC04DD527540DB400D44A7A /* NotificationCardView.swift in Sources */,
 				0E05005827362D5600D7FFCD /* LoginView.swift in Sources */,
 				0E8A2E372741FA6200081719 /* JoinRequestView.swift in Sources */,
 				0E7D2F4E2738FA120056DE92 /* FBLoginView.swift in Sources */,
+				0EC04DD227540C7200D44A7A /* NotificationObserver.swift in Sources */,
 				0EFC2A212748D275000D6D17 /* TabEffect.swift in Sources */,
 				DD196424274C7C8900A0B56C /* UEvent.swift in Sources */,
 				0E05005427362A6900D7FFCD /* MatchingView.swift in Sources */,
@@ -621,7 +627,6 @@
 				0EFC29C427473DB2000D6D17 /* EditDogProfileView.swift in Sources */,
 				0E5AB08E2751F23600AE65BA /* ImageLoader.swift in Sources */,
 				0E8A2E342741FA4800081719 /* FriendsEventView.swift in Sources */,
-				0EC04DC927539F3900D44A7A /* MyNotificationCard.swift in Sources */,
 				0E45A580275396CC00CA79BC /* MyNotificationView.swift in Sources */,
 				0EFC2A1B274765CE000D6D17 /* AnimationTestView.swift in Sources */,
 				0EC04DCF2753A8C400D44A7A /* API.swift in Sources */,
@@ -648,9 +653,9 @@
 				0E5AB08F2751F23600AE65BA /* ImageLoader.swift in Sources */,
 				DD196428274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */,
+				0EC04DD627540DB400D44A7A /* NotificationCardView.swift in Sources */,
 				0E5AB0922751F49100AE65BA /* ImageLoaderView.swift in Sources */,
 				0EFC29BF27473D7C000D6D17 /* DogProfile.swift in Sources */,
-				0EC04DCA27539F3900D44A7A /* MyNotificationCard.swift in Sources */,
 				0E8A2E262741F20400081719 /* CreateEventContentView.swift in Sources */,
 				0EFC29CB27473DEF000D6D17 /* UserProfile.swift in Sources */,
 				0EBD8A1F2743851D008EBBDC /* SignInView.swift in Sources */,
@@ -681,6 +686,7 @@
 				0E05005127362A2E00D7FFCD /* NotificationView.swift in Sources */,
 				0E5D1577274B40E500983ACC /* AppleLogin.swift in Sources */,
 				0E8A2E292741F24C00081719 /* EventExploreContentView.swift in Sources */,
+				0EC04DD327540C7200D44A7A /* NotificationObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,36 +12,35 @@ struct MyNotificationView: View {
     @State var offset: CGPoint = .zero
     
     @StateObject var notificationObserver = NotificationObserver()
+    
     var body: some View {
         NavigationView {
             CustomScrollView(offset: $offset, showIndicators: true, axis: .vertical, content: {
                 VStack(spacing: 15) {
                     
-                    ForEach(self.notificationObserver.notifications) {i in
-                        Group {
-                            HStack(spacing: 15) {
-                                
-                                Circle()
-                                    .fill(Color.gray.opacity(0.6))
-                                    .frame(width: 70, height: 70)
-                                    .onAppear {
-                                        print(i.notificationType)
-                                    }
-                                /*
-                                VStack(alignment: .leading, spacing: 15, content: {
-                                    Rectangle()
-                                        .fill(Color.gray.opacity(0.6))
-                                        .frame(height: 15)
-                                })
-                                 */
+                    if notificationObserver.notifications.isEmpty {
+                        ProgressView()
+                    }
+                    else if notificationObserver.notifications.count == 1 {
+                        ProgressView()
+                            .onAppear {
+                                print("Waiting for new notifications")
+                                //self.obser.getNewUsers()
                             }
-                            .padding(.horizontal)
+                    } else {
+
+                        ForEach(self.notificationObserver.notifications) {i in
+                            Group {
+                                NotificationCardView(id: i.id, image: i.image)
+                                    .environmentObject(notificationObserver)
+                            }
                         }
                     }
                 }
                 .padding(.top)
             })
         }
+        .background(lightYellowColor).ignoresSafeArea()
     }
 }
 

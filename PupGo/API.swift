@@ -143,6 +143,22 @@ public final class Testing1Query: GraphQLQuery {
           birthday
         }
       }
+      notificationsGet(
+        notificationsGetInput: {UID: "982a33ee-2792-4ede-b307-f38d187a2015"}
+      ) {
+        __typename
+        result {
+          __typename
+          notification_id
+          notification_type
+          userId
+          created_at
+          eventId
+          petId
+          has_read
+        }
+        timestamp
+      }
     }
     """
 
@@ -159,6 +175,7 @@ public final class Testing1Query: GraphQLQuery {
         GraphQLField("recommendationGet", arguments: ["recommendationGetInput": ["pid": "caefd1f0-a4fc-4ba3-81d8-1d0b0fbec730"]], type: .nonNull(.object(RecommendationGet.selections))),
         GraphQLField("userProfileListGet", arguments: ["userProfileListGetInput": ["uid": ["982a33ee-2792-4ede-b307-f38d187a2015"]]], type: .nonNull(.object(UserProfileListGet.selections))),
         GraphQLField("petProfileListGet", arguments: ["petProfileListGetInput": ["pid": ["149464c2-f8ee-4e6f-a551-260b6467fa95", "5d76c3ad-d286-4c82-9ff0-6e043389f00d"]]], type: .nonNull(.object(PetProfileListGet.selections))),
+        GraphQLField("notificationsGet", arguments: ["notificationsGetInput": ["UID": "982a33ee-2792-4ede-b307-f38d187a2015"]], type: .nonNull(.object(NotificationsGet.selections))),
       ]
     }
 
@@ -168,8 +185,8 @@ public final class Testing1Query: GraphQLQuery {
       self.resultMap = unsafeResultMap
     }
 
-    public init(recommendationGet: RecommendationGet, userProfileListGet: UserProfileListGet, petProfileListGet: PetProfileListGet) {
-      self.init(unsafeResultMap: ["__typename": "Query", "recommendationGet": recommendationGet.resultMap, "userProfileListGet": userProfileListGet.resultMap, "petProfileListGet": petProfileListGet.resultMap])
+    public init(recommendationGet: RecommendationGet, userProfileListGet: UserProfileListGet, petProfileListGet: PetProfileListGet, notificationsGet: NotificationsGet) {
+      self.init(unsafeResultMap: ["__typename": "Query", "recommendationGet": recommendationGet.resultMap, "userProfileListGet": userProfileListGet.resultMap, "petProfileListGet": petProfileListGet.resultMap, "notificationsGet": notificationsGet.resultMap])
     }
 
     public var recommendationGet: RecommendationGet {
@@ -196,6 +213,15 @@ public final class Testing1Query: GraphQLQuery {
       }
       set {
         resultMap.updateValue(newValue.resultMap, forKey: "petProfileListGet")
+      }
+    }
+
+    public var notificationsGet: NotificationsGet {
+      get {
+        return NotificationsGet(unsafeResultMap: resultMap["notificationsGet"]! as! ResultMap)
+      }
+      set {
+        resultMap.updateValue(newValue.resultMap, forKey: "notificationsGet")
       }
     }
 
@@ -638,65 +664,6 @@ public final class Testing1Query: GraphQLQuery {
         }
       }
     }
-  }
-}
-
-public final class Testing2Query: GraphQLQuery {
-  /// The raw GraphQL definition of this operation.
-  public let operationDefinition: String =
-    """
-    query Testing2 {
-      notificationsGet(
-        notificationsGetInput: {UID: "982a33ee-2792-4ede-b307-f38d187a2015"}
-      ) {
-        __typename
-        result {
-          __typename
-          notification_id
-          notification_type
-          userId
-          created_at
-          eventId
-          petId
-          has_read
-        }
-        timestamp
-      }
-    }
-    """
-
-  public let operationName: String = "Testing2"
-
-  public init() {
-  }
-
-  public struct Data: GraphQLSelectionSet {
-    public static let possibleTypes: [String] = ["Query"]
-
-    public static var selections: [GraphQLSelection] {
-      return [
-        GraphQLField("notificationsGet", arguments: ["notificationsGetInput": ["UID": "982a33ee-2792-4ede-b307-f38d187a2015"]], type: .nonNull(.object(NotificationsGet.selections))),
-      ]
-    }
-
-    public private(set) var resultMap: ResultMap
-
-    public init(unsafeResultMap: ResultMap) {
-      self.resultMap = unsafeResultMap
-    }
-
-    public init(notificationsGet: NotificationsGet) {
-      self.init(unsafeResultMap: ["__typename": "Query", "notificationsGet": notificationsGet.resultMap])
-    }
-
-    public var notificationsGet: NotificationsGet {
-      get {
-        return NotificationsGet(unsafeResultMap: resultMap["notificationsGet"]! as! ResultMap)
-      }
-      set {
-        resultMap.updateValue(newValue.resultMap, forKey: "notificationsGet")
-      }
-    }
 
     public struct NotificationsGet: GraphQLSelectionSet {
       public static let possibleTypes: [String] = ["NotificationsGetPayload"]
@@ -841,6 +808,210 @@ public final class Testing2Query: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "has_read")
+          }
+        }
+      }
+    }
+  }
+}
+
+public final class Testing2Query: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query Testing2($pid: [ID!]) {
+      petProfileListGet(petProfileListGetInput: {pid: $pid}) {
+        __typename
+        result {
+          __typename
+          id
+          name
+          image
+          gender
+          breed
+          isCastration
+          birthday
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "Testing2"
+
+  public var pid: [GraphQLID]?
+
+  public init(pid: [GraphQLID]?) {
+    self.pid = pid
+  }
+
+  public var variables: GraphQLMap? {
+    return ["pid": pid]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Query"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("petProfileListGet", arguments: ["petProfileListGetInput": ["pid": GraphQLVariable("pid")]], type: .nonNull(.object(PetProfileListGet.selections))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(petProfileListGet: PetProfileListGet) {
+      self.init(unsafeResultMap: ["__typename": "Query", "petProfileListGet": petProfileListGet.resultMap])
+    }
+
+    public var petProfileListGet: PetProfileListGet {
+      get {
+        return PetProfileListGet(unsafeResultMap: resultMap["petProfileListGet"]! as! ResultMap)
+      }
+      set {
+        resultMap.updateValue(newValue.resultMap, forKey: "petProfileListGet")
+      }
+    }
+
+    public struct PetProfileListGet: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["PetProfileListGetPayload"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("result", type: .nonNull(.list(.nonNull(.object(Result.selections))))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(result: [Result]) {
+        self.init(unsafeResultMap: ["__typename": "PetProfileListGetPayload", "result": result.map { (value: Result) -> ResultMap in value.resultMap }])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var result: [Result] {
+        get {
+          return (resultMap["result"] as! [ResultMap]).map { (value: ResultMap) -> Result in Result(unsafeResultMap: value) }
+        }
+        set {
+          resultMap.updateValue(newValue.map { (value: Result) -> ResultMap in value.resultMap }, forKey: "result")
+        }
+      }
+
+      public struct Result: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["PetProfile"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .scalar(GraphQLID.self)),
+            GraphQLField("name", type: .scalar(String.self)),
+            GraphQLField("image", type: .scalar(String.self)),
+            GraphQLField("gender", type: .scalar(PetGender.self)),
+            GraphQLField("breed", type: .scalar(String.self)),
+            GraphQLField("isCastration", type: .nonNull(.scalar(Bool.self))),
+            GraphQLField("birthday", type: .scalar(String.self)),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(id: GraphQLID? = nil, name: String? = nil, image: String? = nil, gender: PetGender? = nil, breed: String? = nil, isCastration: Bool, birthday: String? = nil) {
+          self.init(unsafeResultMap: ["__typename": "PetProfile", "id": id, "name": name, "image": image, "gender": gender, "breed": breed, "isCastration": isCastration, "birthday": birthday])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: GraphQLID? {
+          get {
+            return resultMap["id"] as? GraphQLID
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
+          }
+        }
+
+        public var name: String? {
+          get {
+            return resultMap["name"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "name")
+          }
+        }
+
+        public var image: String? {
+          get {
+            return resultMap["image"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "image")
+          }
+        }
+
+        /// only two
+        public var gender: PetGender? {
+          get {
+            return resultMap["gender"] as? PetGender
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "gender")
+          }
+        }
+
+        /// breed of dog, cat etc
+        public var breed: String? {
+          get {
+            return resultMap["breed"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "breed")
+          }
+        }
+
+        /// is castration or not: true for castration
+        public var isCastration: Bool {
+          get {
+            return resultMap["isCastration"]! as! Bool
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "isCastration")
+          }
+        }
+
+        public var birthday: String? {
+          get {
+            return resultMap["birthday"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "birthday")
           }
         }
       }
