@@ -145,9 +145,10 @@ public struct LocationInput: GraphQLMapConvertible {
   ///   - country
   ///   - city
   ///   - address
+  ///   - state
   ///   - coordinate
-  public init(country: Swift.Optional<String?> = nil, city: Swift.Optional<String?> = nil, address: Swift.Optional<String?> = nil, coordinate: Swift.Optional<CoordinateInput?> = nil) {
-    graphQLMap = ["country": country, "city": city, "address": address, "Coordinate": coordinate]
+  public init(country: Swift.Optional<String?> = nil, city: Swift.Optional<String?> = nil, address: Swift.Optional<String?> = nil, state: Swift.Optional<String?> = nil, coordinate: Swift.Optional<CoordinateInput?> = nil) {
+    graphQLMap = ["country": country, "city": city, "address": address, "State": state, "Coordinate": coordinate]
   }
 
   public var country: Swift.Optional<String?> {
@@ -174,6 +175,15 @@ public struct LocationInput: GraphQLMapConvertible {
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "address")
+    }
+  }
+
+  public var state: Swift.Optional<String?> {
+    get {
+      return graphQLMap["State"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "State")
     }
   }
 
@@ -224,53 +234,6 @@ public struct CoordinateInput: GraphQLMapConvertible {
     set {
       graphQLMap.updateValue(newValue, forKey: "longitude")
     }
-  }
-}
-
-/// only user 3 cases
-public enum UserGender: RawRepresentable, Equatable, Hashable, CaseIterable, Apollo.JSONDecodable, Apollo.JSONEncodable {
-  public typealias RawValue = String
-  case male
-  case female
-  /// put all other to this
-  case notToDeclared
-  /// Auto generated constant for unknown enum values
-  case __unknown(RawValue)
-
-  public init?(rawValue: RawValue) {
-    switch rawValue {
-      case "MALE": self = .male
-      case "FEMALE": self = .female
-      case "NOT_TO_DECLARED": self = .notToDeclared
-      default: self = .__unknown(rawValue)
-    }
-  }
-
-  public var rawValue: RawValue {
-    switch self {
-      case .male: return "MALE"
-      case .female: return "FEMALE"
-      case .notToDeclared: return "NOT_TO_DECLARED"
-      case .__unknown(let value): return value
-    }
-  }
-
-  public static func == (lhs: UserGender, rhs: UserGender) -> Bool {
-    switch (lhs, rhs) {
-      case (.male, .male): return true
-      case (.female, .female): return true
-      case (.notToDeclared, .notToDeclared): return true
-      case (.__unknown(let lhsValue), .__unknown(let rhsValue)): return lhsValue == rhsValue
-      default: return false
-    }
-  }
-
-  public static var allCases: [UserGender] {
-    return [
-      .male,
-      .female,
-      .notToDeclared,
-    ]
   }
 }
 
@@ -398,6 +361,53 @@ public struct EventsLimitsInput: GraphQLMapConvertible {
     set {
       graphQLMap.updateValue(newValue, forKey: "limitOfHuman")
     }
+  }
+}
+
+/// only user 3 cases
+public enum UserGender: RawRepresentable, Equatable, Hashable, CaseIterable, Apollo.JSONDecodable, Apollo.JSONEncodable {
+  public typealias RawValue = String
+  case male
+  case female
+  /// put all other to this
+  case notToDeclared
+  /// Auto generated constant for unknown enum values
+  case __unknown(RawValue)
+
+  public init?(rawValue: RawValue) {
+    switch rawValue {
+      case "MALE": self = .male
+      case "FEMALE": self = .female
+      case "NOT_TO_DECLARED": self = .notToDeclared
+      default: self = .__unknown(rawValue)
+    }
+  }
+
+  public var rawValue: RawValue {
+    switch self {
+      case .male: return "MALE"
+      case .female: return "FEMALE"
+      case .notToDeclared: return "NOT_TO_DECLARED"
+      case .__unknown(let value): return value
+    }
+  }
+
+  public static func == (lhs: UserGender, rhs: UserGender) -> Bool {
+    switch (lhs, rhs) {
+      case (.male, .male): return true
+      case (.female, .female): return true
+      case (.notToDeclared, .notToDeclared): return true
+      case (.__unknown(let lhsValue), .__unknown(let rhsValue)): return lhsValue == rhsValue
+      default: return false
+    }
+  }
+
+  public static var allCases: [UserGender] {
+    return [
+      .male,
+      .female,
+      .notToDeclared,
+    ]
   }
 }
 
@@ -728,6 +738,141 @@ public final class Testing2Mutation: GraphQLMutation {
           }
           set {
             resultMap.updateValue(newValue, forKey: "isCastration")
+          }
+        }
+      }
+    }
+  }
+}
+
+public final class AddeventTestMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation addeventTest($input: EventsCreateInput!) {
+      eventsCreate(eventsCreateInput: $input) {
+        __typename
+        result {
+          __typename
+          id
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "addeventTest"
+
+  public var input: EventsCreateInput
+
+  public init(input: EventsCreateInput) {
+    self.input = input
+  }
+
+  public var variables: GraphQLMap? {
+    return ["input": input]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("eventsCreate", arguments: ["eventsCreateInput": GraphQLVariable("input")], type: .nonNull(.object(EventsCreate.selections))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(eventsCreate: EventsCreate) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "eventsCreate": eventsCreate.resultMap])
+    }
+
+    public var eventsCreate: EventsCreate {
+      get {
+        return EventsCreate(unsafeResultMap: resultMap["eventsCreate"]! as! ResultMap)
+      }
+      set {
+        resultMap.updateValue(newValue.resultMap, forKey: "eventsCreate")
+      }
+    }
+
+    public struct EventsCreate: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["EventsCreatePayload"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("result", type: .object(Result.selections)),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(result: Result? = nil) {
+        self.init(unsafeResultMap: ["__typename": "EventsCreatePayload", "result": result.flatMap { (value: Result) -> ResultMap in value.resultMap }])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var result: Result? {
+        get {
+          return (resultMap["result"] as? ResultMap).flatMap { Result(unsafeResultMap: $0) }
+        }
+        set {
+          resultMap.updateValue(newValue?.resultMap, forKey: "result")
+        }
+      }
+
+      public struct Result: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["Event"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(id: GraphQLID) {
+          self.init(unsafeResultMap: ["__typename": "Event", "id": id])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: GraphQLID {
+          get {
+            return resultMap["id"]! as! GraphQLID
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
           }
         }
       }

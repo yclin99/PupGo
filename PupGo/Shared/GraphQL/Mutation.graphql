@@ -10,3 +10,10 @@ mutation Testing2 ($input: PetCreateInput!){
         }
     }
 }
+mutation addeventTest ($input: EventsCreateInput!){
+    eventsCreate(eventsCreateInput:$input){
+      result{
+          id
+        }
+    }
+}
