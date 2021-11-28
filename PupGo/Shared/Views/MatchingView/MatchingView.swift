@@ -12,6 +12,8 @@ import zlib
 struct MatchView: View {
     @StateObject var obser = observer()
     @State var index: String = ""
+    
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -85,6 +87,8 @@ struct DecisionButtons: View {
                     .foregroundColor(.brown)
                     .frame(width: 40, height: 40)
             }
+            .buttonStyle(PlainButtonStyle())
+            
             Spacer()
             Button(action: {
                 self.obser.updateDB(recommendID: obser.users.first!.id, result: true)

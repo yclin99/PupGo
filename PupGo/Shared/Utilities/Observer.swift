@@ -120,6 +120,9 @@ class observer: ObservableObject {
         } else {
             print("Disliked QQQQ!")
         }
+        print(recommendID)
+        print(result)
+        print(myPID)
         Network.shared.apollo.perform(mutation: SetStatusMutation(pid: myPID, recommendID: recommendID, result: result))
     }
     
