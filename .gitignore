@@ -88,4 +88,5 @@ iOSInjectionProject/
 # End of https://www.toptal.com/developers/gitignore/api/swiftg
 
 PupGo/PupGo.xcworkspace/xcuserdata
+PupGo/PupGo.xcodeproj/xcuserdata
 *.DS_Store

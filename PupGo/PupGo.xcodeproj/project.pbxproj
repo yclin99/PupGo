@@ -277,9 +277,9 @@
 			isa = PBXGroup;
 			children = (
 				0E05004F27362A2E00D7FFCD /* NotificationView.swift */,
-				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
 				0E8A2E362741FA6200081719 /* JoinRequestView.swift */,
 				0E8A2E3C2741FA8E00081719 /* UserEventView.swift */,
+				0E8A2E332741FA4800081719 /* FriendsEventView.swift */,
 				DD196420274C7C2900A0B56C /* Join.swift */,
 				DD196423274C7C8900A0B56C /* UEvent.swift */,
 				DD196426274C7CA800A0B56C /* FEvent.swift */,
@@ -325,12 +325,14 @@
 			isa = PBXGroup;
 			children = (
 				0EFC29BD27473D7C000D6D17 /* DogProfile.swift */,
+				0E5AB08D2751F23600AE65BA /* ImageLoader.swift */,
 				0E8A2E1B2741F18500081719 /* Event.swift */,
 				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 				0E8A2E2D2741F8A100081719 /* Card.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
 				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
+				0E5AB08A274F6F7300AE65BA /* Observer.swift */,
 				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
 			);
 			path = Utilities;
@@ -484,6 +486,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		0E5233F7274B2908008B1CB0 /* Generate Apollo GraphQL API */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 12;
 			files = (
 			);
@@ -498,7 +501,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh client:codegen --target=swift --includes=./**/*.graphql --endpoint=\"http://140.114.71.70:17081/query\" API.swift\n\n\n";
 		};
 		6510B40BC95E98A368FB5DE2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -552,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */,
+				0E5AB08B274F6F7300AE65BA /* Observer.swift in Sources */,
 				DD196427274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EFC29C727473DC8000D6D17 /* EditUserProfileView.swift in Sources */,
 				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
@@ -607,6 +611,7 @@
 				0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */,
 				0E8A2E2F2741F8A100081719 /* Card.swift in Sources */,
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
+				0E5AB08F2751F23600AE65BA /* ImageLoader.swift in Sources */,
 				DD196428274C7CA800A0B56C /* FEvent.swift in Sources */,
 				0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */,
 				0EFC29BF27473D7C000D6D17 /* DogProfile.swift in Sources */,
@@ -762,7 +767,7 @@
 				CODE_SIGN_ENTITLEMENTS = "PupGo (iOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = N3J44JZ9JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -798,7 +803,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "PupGo (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = N3J44JZ9JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
