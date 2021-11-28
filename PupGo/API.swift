@@ -145,9 +145,10 @@ public struct LocationInput: GraphQLMapConvertible {
   ///   - country
   ///   - city
   ///   - address
+  ///   - state
   ///   - coordinate
-  public init(country: Swift.Optional<String?> = nil, city: Swift.Optional<String?> = nil, address: Swift.Optional<String?> = nil, coordinate: Swift.Optional<CoordinateInput?> = nil) {
-    graphQLMap = ["country": country, "city": city, "address": address, "Coordinate": coordinate]
+  public init(country: Swift.Optional<String?> = nil, city: Swift.Optional<String?> = nil, address: Swift.Optional<String?> = nil, state: Swift.Optional<String?> = nil, coordinate: Swift.Optional<CoordinateInput?> = nil) {
+    graphQLMap = ["country": country, "city": city, "address": address, "State": state, "Coordinate": coordinate]
   }
 
   public var country: Swift.Optional<String?> {
@@ -174,6 +175,15 @@ public struct LocationInput: GraphQLMapConvertible {
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "address")
+    }
+  }
+
+  public var state: Swift.Optional<String?> {
+    get {
+      return graphQLMap["State"] as? Swift.Optional<String?> ?? Swift.Optional<String?>.none
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "State")
     }
   }
 
