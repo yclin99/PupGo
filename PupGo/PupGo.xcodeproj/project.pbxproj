@@ -337,20 +337,14 @@
 		0E68D17A2741E6D40030AE76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				0E5AB08D2751F23600AE65BA /* ImageLoader.swift */,
-=======
 				0E8A2E1B2741F18500081719 /* Event.swift */,
->>>>>>> Frontend_MainPage
 				0E558457273B47A400BCFFB0 /* SwipeCard.swift */,
 				0E8A2E2D2741F8A100081719 /* Card.swift */,
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
-<<<<<<< HEAD
 				0E5AB08A274F6F7300AE65BA /* Observer.swift */,
-=======
 				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
->>>>>>> Frontend_MainPage
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -570,11 +564,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */,
-<<<<<<< HEAD
 				0E5AB08B274F6F7300AE65BA /* Observer.swift in Sources */,
-=======
 				DD196427274C7CA800A0B56C /* FEvent.swift in Sources */,
->>>>>>> Frontend_MainPage
 				0EFC29C727473DC8000D6D17 /* EditUserProfileView.swift in Sources */,
 				0E8A2E3D2741FA8E00081719 /* UserEventView.swift in Sources */,
 				0EFC2A1F2748CEEA000D6D17 /* CurvedTabView.swift in Sources */,
@@ -632,11 +623,8 @@
 				0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */,
 				0E8A2E2F2741F8A100081719 /* Card.swift in Sources */,
 				0E05004D27362A0E00D7FFCD /* ExplorationView.swift in Sources */,
-<<<<<<< HEAD
 				0E5AB08F2751F23600AE65BA /* ImageLoader.swift in Sources */,
-=======
 				DD196428274C7CA800A0B56C /* FEvent.swift in Sources */,
->>>>>>> Frontend_MainPage
 				0EBD8A22274393CA008EBBDC /* SignUpView.swift in Sources */,
 				0E5AB0922751F49100AE65BA /* ImageLoaderView.swift in Sources */,
 				0EFC29BF27473D7C000D6D17 /* DogProfile.swift in Sources */,
