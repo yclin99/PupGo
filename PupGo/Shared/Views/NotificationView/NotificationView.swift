@@ -23,7 +23,7 @@ struct NotificationView: View {
                 }
 
                 .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height - 200)
-                .padding(.bottom,100)
+                .padding(.bottom,200)
             }
             
             

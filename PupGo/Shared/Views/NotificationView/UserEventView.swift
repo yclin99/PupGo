@@ -37,8 +37,11 @@ struct UserEventView: View {
         let pic = card.pic
                 .resizable()
 //                .scaledToFill()
-                .frame(width: 330.0, height: 150.0)
-                .clipped()
+        
+                .frame(width: 170, height: 180)
+                .aspectRatio(3/4, contentMode: .fill)
+                //.frame(width: 330.0, height: 150.0)
+                //.clipped()
                 .cornerRadius(20)
                 .shadow(color: Color.green, radius: 5.0,
                         x: -5,
@@ -47,7 +50,7 @@ struct UserEventView: View {
         let back = RoundedRectangle(cornerRadius: 20, style: .circular)
             .shadow(color: Color.black, radius: 5.0 )
             .foregroundColor(.black.opacity(0.4))
-            .frame(width: 330.0, height: 150.0)
+            .frame(width: 170.0, height: 180.0)
         ZStack {
             pic
             
@@ -55,28 +58,34 @@ struct UserEventView: View {
                 back
                 HStack(alignment: .center) {
 
+                    Text("  ")
                     
-                    VStack (alignment: .leading) {
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                    
+                    Spacer(minLength: 100)
+                    VStack (alignment: .center) {
                         if isShowingAnswer {
                             
-                        Text("Next Event Coming Up")
+                        Text("Next Event")
                                 .font(.system(size: 20))
                                 .fontWeight(.bold)
                                 .foregroundColor(.green)
                             
                         
-                        Text("Count down: " + timeRemaining)
+                        Text("Rest: "+timeRemaining)
                                 .font(.body)
                             .foregroundColor(.white)
                             .onReceive(timer, perform: {_ in
                                 updateTimeRemaining()
                             })
                             
-                        Text("Participants: " + card.who)
+                        Text("Owner: " + card.who)
                             .font(.body)
                             .foregroundColor(.white)
                             //Text("Scheduled at: " + dateFormatter.string(from: launchedDate))
-                        Text("Launched at: " + card.launched.prefix(10))
+                        Text("Scheduled: " + card.launched.prefix(10))
                             .font(.body)
                             .foregroundColor(.white)
                             
@@ -84,8 +93,9 @@ struct UserEventView: View {
                     }
                     .padding(20)
                     .multilineTextAlignment(.center)
-                    
+                    Spacer(minLength: 5)
                     NavigationLink(destination: SingleEventView(content: content), isActive: $isShowingDetailView) {EmptyView()}
+                    
                     
                     Button(action: {
                                 print("check event")

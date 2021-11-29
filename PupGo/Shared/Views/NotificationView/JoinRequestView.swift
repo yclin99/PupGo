@@ -18,21 +18,23 @@ struct JoinRequestView: View {
                 //.frame(width: 210, height: 250)
                 //.aspectRatio(3/4, contentMode: .fill)
                 //.scaledToFill()
-                .frame(width: 330.0, height: 150.0,alignment: .center)
-                .clipped()
+                .frame(width: 170, height: 180)
+                .aspectRatio(3/4, contentMode: .fill)
+                //.frame(width: 330.0, height: 150.0,alignment: .center)
+                //.clipped()
                 .cornerRadius(20)
                 .shadow(color: Color.red,  radius: 5.0, x: 10, y: -10)
         let back = RoundedRectangle(cornerRadius: 20, style: .circular)
             .shadow(color: Color.black, radius: 5.0 )            .foregroundColor(.black.opacity(0.2))
-            .frame(width: 330.0, height: 150.0)
+            .frame(width: 170, height: 180.0)
         
         ZStack {
             pic
             
             if isShowingAnswer {
                 back
-                VStack(alignment: .leading){
-                    Text(card.who + " request to join")
+                VStack(alignment: .center){
+                    Text(card.who + " Joins")
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .foregroundColor(.red)
@@ -58,6 +60,8 @@ struct JoinRequestView: View {
                             
                         })
                         
+                        Spacer()
+                        
                         Button(action: {
                             print("checkWho")
                             
@@ -75,6 +79,8 @@ struct JoinRequestView: View {
                             
                             
                         })
+                        
+                        Spacer()
                         
                         Button(action: {
                             print("deny")
