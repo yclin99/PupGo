@@ -25,9 +25,11 @@ class PupGoUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-        func testGameStyleSwitch() throws {
-            
-            
+    func testPageSwitch() throws{
+        let app = XCUIApplication()
+        app.buttons["Love"].tap()
+        app.buttons["Search"].tap()
+        app.buttons["Message"].tap()
     }
 
 }

@@ -15,7 +15,7 @@ struct UEvent: View {
     var content : Event =
     Event(userid: "", username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"), type: 0)
 
-    
+
     var body: some View{
             VStack{
                 
