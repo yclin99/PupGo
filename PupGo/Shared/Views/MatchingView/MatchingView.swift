@@ -41,7 +41,7 @@ struct MatchView: View {
                     }
                     DecisionButtons(index: self.$index, infoModal: self.$showModal).environmentObject(obser)
                 }
-                DogInfoView(isShowing: $showModal)
+                DogInfoView(isShowing: $showModal).environmentObject(obser)
             }
             .edgesIgnoringSafeArea(.top)
         }

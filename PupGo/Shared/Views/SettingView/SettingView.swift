@@ -28,9 +28,9 @@ struct SettingView: View {
     var userView : some View {
         NavigationLink(destination: UserProfileView(content: userprofile)) {
             ZStack(){
-                Rectangle()
+                RoundedRectangle(cornerRadius: 25)
                     .fill(.linearGradient(
-                        Gradient(colors: [Self.OrangeColor, Self.gradientStart]),
+                        Gradient(colors: [lightBrownColor, orangeColor]),
                         startPoint: UnitPoint(x: 0.5, y: 0),
                         endPoint: UnitPoint(x: 0.0, y: 1.0)
                     ))
@@ -48,9 +48,9 @@ struct SettingView: View {
     var dogView : some View {
         NavigationLink(destination: ManageDogProfileView(content: userprofile)) {
             ZStack(){
-                Rectangle()
+                RoundedRectangle(cornerRadius: 25)
                     .fill(.linearGradient(
-                        Gradient(colors: [Self.OrangeColor, Self.gradientStart]),
+                        Gradient(colors: [lightBrownColor, orangeColor]),
                         startPoint: UnitPoint(x: 0.5, y: 0),
                         endPoint: UnitPoint(x: 0.0, y: 1.0)
                     ))
@@ -80,15 +80,15 @@ struct SettingView: View {
             ZStack {
                 lightYellowColor
                 VStack(alignment: .center, spacing: 50) {
-                Text("Settings")
-                    .font(.system(size: 35))
-                    .bold().foregroundColor(.black)
-                VStack (alignment: .leading, spacing: 80) {
-                    userView
-                    dogView
+                    Text("Settings")
+                        .font(.system(size: 35))
+                        .bold().foregroundColor(.black)
+                    VStack (alignment: .leading, spacing: 65) {
+                        userView
+                        dogView
+                    }
                     GoogleLogOutButton()
                 }
-            }
             }
             .edgesIgnoringSafeArea(.top)
         }

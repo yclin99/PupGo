@@ -1312,6 +1312,8 @@ public final class Testing1Query: GraphQLQuery {
             gender
             breed
             isCastration
+            description
+            hobby
             birthday
           }
         }
@@ -1488,6 +1490,8 @@ public final class Testing1Query: GraphQLQuery {
               GraphQLField("gender", type: .scalar(PetGender.self)),
               GraphQLField("breed", type: .scalar(String.self)),
               GraphQLField("isCastration", type: .nonNull(.scalar(Bool.self))),
+              GraphQLField("description", type: .scalar(String.self)),
+              GraphQLField("hobby", type: .nonNull(.list(.scalar(String.self)))),
               GraphQLField("birthday", type: .scalar(String.self)),
             ]
           }
@@ -1498,8 +1502,8 @@ public final class Testing1Query: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: GraphQLID? = nil, name: String? = nil, image: String? = nil, gender: PetGender? = nil, breed: String? = nil, isCastration: Bool, birthday: String? = nil) {
-            self.init(unsafeResultMap: ["__typename": "PetProfile", "id": id, "name": name, "image": image, "gender": gender, "breed": breed, "isCastration": isCastration, "birthday": birthday])
+          public init(id: GraphQLID? = nil, name: String? = nil, image: String? = nil, gender: PetGender? = nil, breed: String? = nil, isCastration: Bool, description: String? = nil, hobby: [String?], birthday: String? = nil) {
+            self.init(unsafeResultMap: ["__typename": "PetProfile", "id": id, "name": name, "image": image, "gender": gender, "breed": breed, "isCastration": isCastration, "description": description, "hobby": hobby, "birthday": birthday])
           }
 
           public var __typename: String {
@@ -1565,6 +1569,24 @@ public final class Testing1Query: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue, forKey: "isCastration")
+            }
+          }
+
+          public var description: String? {
+            get {
+              return resultMap["description"] as? String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "description")
+            }
+          }
+
+          public var hobby: [String?] {
+            get {
+              return resultMap["hobby"]! as! [String?]
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "hobby")
             }
           }
 

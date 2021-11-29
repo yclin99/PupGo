@@ -8,6 +8,8 @@ query Testing1 {
                 gender
                 breed
                 isCastration
+                description
+                hobby
                 birthday
                 
             }

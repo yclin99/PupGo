@@ -11,6 +11,7 @@ struct DogInfoView: View {
     @Binding var isShowing: Bool
     @State private var curHeight: CGFloat = 400
     @State private var isDragging = false
+    @EnvironmentObject var obser: observer
     let minHeight: CGFloat = 400
     let maxHeight: CGFloat = 650
     let startOpacity: Double = 0.4
@@ -37,7 +38,7 @@ struct DogInfoView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .ignoresSafeArea()
-        .animation(.easeInOut)
+        .animation(.spring(), value: 0.4)
     }
     
     var mainView: some View {
@@ -45,18 +46,44 @@ struct DogInfoView: View {
             ZStack {
                 Capsule()
                     .frame(width: 40, height: 6)
-                    .foregroundColor(.brown)
+                    .foregroundColor(brownColor)
             }
             .frame(height: 40)
             .frame(maxWidth: .infinity)
             .background(.white.opacity(0.00001))
             .gesture(dragGesture)
             
-            ZStack {
+            ZStack (alignment: .topLeading) {
                 VStack {
-                    Text("Printing something")
+                    HStack {
+                        Image(self.obser.users.last?.gender ==  "1" ? "male" : "female")
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                        VStack (alignment: .leading, spacing: 20){
+                            HStack  {
+                                Text("Name: ")
+                                Text(self.obser.users.last?.name ?? "").font(.title2)
+                            }.foregroundColor(deepBrownColor)
+                            HStack {
+                                Text("Birthday: ")
+                                Text(self.obser.users.last?.birthday ?? "").font(.title)
+                            }.foregroundColor(deepBrownColor)
+                            
+                            HStack {
+                                Text("Breed: ")
+                                Text(self.obser.users.last?.breed ?? "").font(.title)
+                            }.foregroundColor(deepBrownColor)
+                            HStack {
+                                //Text("Gender: ").font(.title)
+                                Text(self.obser.users.last?.description ?? "")
+                            }.foregroundColor(deepBrownColor)
+                        }
+                        
+                    }
+                    Spacer()
                 }
-                .padding(.horizontal, 30)
+                
+                //.padding(.horizontal, 30)
             }
             .frame(maxHeight: .infinity)
             .padding(.bottom, 35)
@@ -69,7 +96,7 @@ struct DogInfoView: View {
                 Rectangle()
                     .frame(height: curHeight / 2)
             }
-            .foregroundColor(yellowColor)
+            .foregroundColor(lightBrownColor)
         )
         .animation(isDragging ? nil: .easeInOut(duration: 0.45))
         .onDisappear { curHeight = minHeight }
