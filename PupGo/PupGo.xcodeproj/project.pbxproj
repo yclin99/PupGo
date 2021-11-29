@@ -10,6 +10,8 @@
 		0431B49C27542ADA0004B8CD /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B49B27542ADA0004B8CD /* Events.swift */; };
 		0431B49E275450550004B8CD /* test4.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0431B49D275450550004B8CD /* test4.graphql */; };
 		04BC2FCE27545D2B00E4D692 /* getUserProfille.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 04BC2FCD27545D2B00E4D692 /* getUserProfille.graphql */; };
+		04BC2FD027545F5E00E4D692 /* petProfileListGet.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 04BC2FCF27545F5E00E4D692 /* petProfileListGet.graphql */; };
+		04BC2FD2275460E700E4D692 /* recommendEventsListGet.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 04BC2FD1275460E700E4D692 /* recommendEventsListGet.graphql */; };
 		04F03BCF2753061300339EE7 /* Mutation.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 04F03BCE2753061300339EE7 /* Mutation.graphql */; };
 		0E04F2E72738EB6E00C29649 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E04F2E62738EB6E00C29649 /* FirebaseAuth */; };
 		0E0500372735F73500D7FFCD /* PupGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0500272735F72E00D7FFCD /* PupGoApp.swift */; };
@@ -120,6 +122,8 @@
 		0431B49B27542ADA0004B8CD /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		0431B49D275450550004B8CD /* test4.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = test4.graphql; sourceTree = "<group>"; };
 		04BC2FCD27545D2B00E4D692 /* getUserProfille.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getUserProfille.graphql; sourceTree = "<group>"; };
+		04BC2FCF27545F5E00E4D692 /* petProfileListGet.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = petProfileListGet.graphql; sourceTree = "<group>"; };
+		04BC2FD1275460E700E4D692 /* recommendEventsListGet.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = recommendEventsListGet.graphql; sourceTree = "<group>"; };
 		04F03BCE2753061300339EE7 /* Mutation.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mutation.graphql; sourceTree = "<group>"; };
 		0E04F2E82738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E04F2E92738EC7900C29649 /* PupGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -321,6 +325,8 @@
 				0E804024274B69E60086DA03 /* API.swift */,
 				0431B49D275450550004B8CD /* test4.graphql */,
 				0E5233F1274B25FB008B1CB0 /* Queries.graphql */,
+				04BC2FD1275460E700E4D692 /* recommendEventsListGet.graphql */,
+				04BC2FCF27545F5E00E4D692 /* petProfileListGet.graphql */,
 				04BC2FCD27545D2B00E4D692 /* getUserProfille.graphql */,
 				04F03BCE2753061300339EE7 /* Mutation.graphql */,
 				0E5233F3274B260C008B1CB0 /* Apollo.swift */,
@@ -475,9 +481,11 @@
 				04BC2FCE27545D2B00E4D692 /* getUserProfille.graphql in Resources */,
 				0E804023274B676A0086DA03 /* schema.json in Resources */,
 				04F03BCF2753061300339EE7 /* Mutation.graphql in Resources */,
+				04BC2FD027545F5E00E4D692 /* petProfileListGet.graphql in Resources */,
 				0E5233F2274B25FB008B1CB0 /* Queries.graphql in Resources */,
 				0E05003B2735F73500D7FFCD /* Assets.xcassets in Resources */,
 				0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */,
+				04BC2FD2275460E700E4D692 /* recommendEventsListGet.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ class Events: ObservableObject {
     @Published var image = ""
     
     init() {
-        Network.shared.apollo.fetch(query: Testing1Query()) { result in
+        Network.shared.apollo.fetch(query:RecommendEventsListGetQuery()) { result in
             guard let data = try? result.get().data else {
                 print("Not fetching ")
                 return
@@ -33,7 +33,7 @@ class Events: ObservableObject {
                 let image = Image(uiImage: thisuiimage!).renderingMode(.original)
                 let type = eve.type
                 
-                self.events.append(Event(userid: id ?? "", username: username ?? "", location: location ?? "", starttime: startTime ?? "", endtime: endTime ?? "", image: image, type: type ?? 0))
+                self.events.append(Event(userid: id, username: username ?? "", location: location ?? "", starttime: startTime ?? "", endtime: endTime ?? "", image: image, type: type ?? 0))
             }
         }
     }

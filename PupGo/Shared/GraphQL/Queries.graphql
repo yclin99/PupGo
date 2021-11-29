@@ -30,6 +30,7 @@ query Testing1 {
             birthday
         }
     }
+
     recommendEventsListGet(eventsListGetInput:{uid: "bf448152-bf2c-421e-af4c-ae458737da0e"}){
         result{
             id

@@ -38,28 +38,15 @@ class UserProfile: Hashable, ObservableObject {
   }
     
     func setParameters() {
-        Network.shared.apollo.fetch(query: Testing1Query()) { result in
+        Network.shared.apollo.fetch(query: UserProfileListGetQuery()) { result in
             guard let data = try? result.get().data else {
                 print("Fecthing error")
                 return
             }
             self.userid = data.userProfileListGet.result.first?.id ?? ""
-            
-//         self.userid = try!(result.get().data!.userProfileListGet.result.first?.id)! as String
-//         self.username = try!(result.get().data!.userProfileListGet.result.first?.name)!as String
-//         self.birthday = try!(result.get().data!.userProfileListGet.result.first?.birthday)! as String
-     }
-//        self.userid = self.viewModel.userid
-//        self.username = self.viewModel.username
-//        self.birthday = self.viewModel.userbirth
-//        self.mydogs = nil
-//        self.gender = nil
-//        self.location = nil
-//        self.petOwner = false
-//        print(1234123123123123)
-//        print(self.userid)
-        
-    }
+            self.username = data.userProfileListGet.result.first?.name ?? ""
+            self.birthday = data.userProfileListGet.result.first?.birthday ?? ""
+     }}
     
     func createPet (newdog: DogProfile) {
         self.petOwner = true
