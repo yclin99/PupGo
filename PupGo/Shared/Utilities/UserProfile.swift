@@ -46,6 +46,7 @@ class UserProfile: Hashable, ObservableObject {
             self.userid = data.userProfileListGet.result.first?.id ?? ""
             self.username = data.userProfileListGet.result.first?.name ?? ""
             self.birthday = data.userProfileListGet.result.first?.birthday ?? ""
+            self.location = data.userProfileListGet.result.first?.location?.address ?? ""
      }}
     
     func createPet (newdog: DogProfile) {

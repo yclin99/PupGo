@@ -6,6 +6,9 @@ query userProfileListGet {
             gender
             birthday
             email
+            location {
+                address
+            }
         }
     }
 }
