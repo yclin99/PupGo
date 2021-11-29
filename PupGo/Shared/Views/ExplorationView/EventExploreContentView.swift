@@ -73,7 +73,7 @@ struct EventView: View {
 //            HStack(alignment: .center) {
 //                Image(systemName: "pawprint.circle").font(.largeTitle)
 //                Text(content.username).font(.callout).foregroundColor(.black).bold()}
-            TypeEventView(type: 1, content: content)
+            TypeEventView(type: content.type, content: content)
             HStack(alignment: .center) {
                 Image(systemName: "location").font(.largeTitle)
                 Text(content.location).foregroundColor(.black)}
@@ -103,10 +103,7 @@ struct TypeEventView: View {
 
 struct EventExploreContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        var events = [Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "xx", endtime: "xx", image: Image("Dog1"))]
-        EventExploreContentView()
-.previewInterfaceOrientation(.portrait)
-//        SingleEventView(content: events[0])
+        EventExploreContentView().previewInterfaceOrientation(.portrait)
     }
 }
 

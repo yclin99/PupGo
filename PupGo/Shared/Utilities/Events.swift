@@ -32,7 +32,6 @@ class Events: ObservableObject {
                 let thisuiimage = UIImage(data: data!)
                 let image = Image(uiImage: thisuiimage!).renderingMode(.original)
                 let type = eve.type
-                
                 self.events.append(Event(userid: id, username: username ?? "", location: location ?? "", starttime: startTime ?? "", endtime: endTime ?? "", image: image, type: type ?? 0))
             }
         }
