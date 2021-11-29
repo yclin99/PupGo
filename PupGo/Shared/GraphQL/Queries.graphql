@@ -19,7 +19,7 @@ query Testing1 {
             email
         }
     }
-    petProfileListGet(petProfileListGetInput:{pid: ["149464c2-f8ee-4e6f-a551-260b6467fa95", "5d76c3ad-d286-4c82-9ff0-6e043389f00d"]}){
+    petProfileListGet(petProfileListGetInput:{pid: ["5d76c3ad-d286-4c82-9ff0-6e043389f00d", "ca035fdd-bc77-4d76-879a-1588c394cd74"]}){
         result  {
             id
             name
@@ -30,9 +30,32 @@ query Testing1 {
             birthday
         }
     }
-    
-    
-    
+    recommendEventsListGet(eventsListGetInput:{uid: "bf448152-bf2c-421e-af4c-ae458737da0e"}){
+        result{
+            id
+            type
+            location{
+                country
+                city
+                address
+                latitude
+                longitude
+              }
+              image
+              timeRange{
+                startTime
+                endTime
+              }
+              limit{
+                limitOfPet
+                limitOfUser
+              }
+              holder{
+                id
+                name
+              }
+            }
+    }
 }
 
 

@@ -1,0 +1,13 @@
+query Testing1 {
+    userProfileListGet(userProfileListGetInput:{uid: ["982a33ee-2792-4ede-b307-f38d187a2015"]}){
+        result  {
+            id
+            name
+            gender
+            birthday
+            email
+        }
+    }
+}
+
+

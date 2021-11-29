@@ -46,11 +46,11 @@ struct CreateEventContentView: View {
     
     var submit: some View {
         Button(action: {showingAlert = true
-            @ObservedObject var newevent = Event(username: username, location: location, starttime: starttime, endtime: starttime, image: image!)
+//            @ObservedObject var newevent = Event(username: username, location: location, starttime: starttime, endtime: starttime, image: image!)
             var str1: String?
             var str2: String?
             var geocoder = CLGeocoder()
-            geocoder.geocodeAddressString(newevent.location) {
+            geocoder.geocodeAddressString(location) {
                 placemarks, error in
                 let placemark = placemarks?.first
                 let lat = placemark?.location?.coordinate.latitude

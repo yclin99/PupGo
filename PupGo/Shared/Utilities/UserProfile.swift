@@ -38,10 +38,16 @@ class UserProfile: Hashable, ObservableObject {
   }
     
     func setParameters() {
-        Network.shared.apollo.fetch(query: Testing1Query()) { [self] result in
-         self.userid = try!(result.get().data!.userProfileListGet.result.first?.id)! as String
-         self.username = try!(result.get().data!.userProfileListGet.result.first?.name)!as String
-         self.birthday = try!(result.get().data!.userProfileListGet.result.first?.birthday)! as String
+        Network.shared.apollo.fetch(query: Testing1Query()) { result in
+            guard let data = try? result.get().data else {
+                print("Fecthing error")
+                return
+            }
+            self.userid = data.userProfileListGet.result.first?.id ?? ""
+            
+//         self.userid = try!(result.get().data!.userProfileListGet.result.first?.id)! as String
+//         self.username = try!(result.get().data!.userProfileListGet.result.first?.name)!as String
+//         self.birthday = try!(result.get().data!.userProfileListGet.result.first?.birthday)! as String
      }
 //        self.userid = self.viewModel.userid
 //        self.username = self.viewModel.username
