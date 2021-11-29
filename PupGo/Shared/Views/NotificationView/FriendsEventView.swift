@@ -13,7 +13,7 @@ struct FriendsEventView: View {
     @State private var isShowingAnswer = false
     let onActivate: () -> ()
     var content : Event =
-    Event(userid:"", username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"), type: 0)
+    Event(userid:"", username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.12.4 21:01 pm", endtime: "2021.12.4 21:30 pm", image: Image("Dog1"), type: 0)
     @State private var isShowingDetailView = false
 
     var body: some View {
@@ -52,7 +52,7 @@ struct FriendsEventView: View {
                             Circle()
                                 .fill(Color.white)
                                 .frame(width: 75, height: 75)
-                                .shadow(radius: 10)
+                                .shadow(radius: 20)
                                 .overlay(
                                     Image(systemName: "figure.walk")
                                         .font(.largeTitle)
@@ -71,7 +71,7 @@ struct FriendsEventView: View {
                             Circle()
                                 .fill(Color.blue)
                                 .frame(width: 75, height: 75)
-                                .shadow(radius: 10)
+                                .shadow(radius: 20)
                                 .overlay(
                                     Image(systemName: "eye")
                                         .font(.largeTitle)
@@ -89,7 +89,7 @@ struct FriendsEventView: View {
                             Circle()
                                 .fill(Color.black)
                                 .frame(width: 75, height: 75)
-                                .shadow(radius: 10)
+                                .shadow(radius: 20)
                                 .overlay(
                                     Image(systemName: "figure.wave")
                                         .font(.largeTitle)

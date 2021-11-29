@@ -27,7 +27,7 @@ struct UserEventView: View {
         }
     }
     var content : Event =
-        Event(userid: "", username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"), type: 0)
+        Event(userid: "", username: "Bob", location: "UCLA GreenLand", starttime: "2021.12.4 21:01 pm", endtime: "2021.12.4 21:30 pm", image: Image("Maru"), type: 0)
 
     let onActivate: () -> ()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -57,13 +57,27 @@ struct UserEventView: View {
                 back
                 HStack(alignment: .center) {
 
-                    Text("  ")
+                    Button(action: {
+                                print("shuffle")
+                                self.onActivate()
+                            
+                        }
+                                , label: {
+                                Circle()
+                                    .fill(Color.white)
+                                    .frame(width: 75, height: 75)
+                                    .shadow(radius: 10)
+                                    .overlay(
+                                        Image(systemName: "shuffle")
+                                            .font(.largeTitle)
+                                            .foregroundColor(Color.purple)
+                                    )
+                                
+                                
+                            }
+                    )
                     
-                            .font(.system(size: 20))
-                            .fontWeight(.bold)
-                            .foregroundColor(.green)
-                    
-                    Spacer(minLength: 100)
+                    Spacer()
                     VStack (alignment: .center) {
                         if isShowingAnswer {
                             
@@ -73,7 +87,7 @@ struct UserEventView: View {
                                 .foregroundColor(.green)
                             
                         
-                        Text("Rest: "+timeRemaining)
+                        Text("Rest:"+timeRemaining)
                                 .font(.body)
                             .foregroundColor(.white)
                             .onReceive(timer, perform: {_ in
@@ -92,25 +106,24 @@ struct UserEventView: View {
                     }
                     .padding(20)
                     .multilineTextAlignment(.center)
-                    Spacer(minLength: 5)
+                    Spacer()
                     NavigationLink(destination: SingleEventView(content: content), isActive: $isShowingDetailView) {EmptyView()}
                     
                     
                     Button(action: {
                                 print("check event")
                                 isShowingDetailView = true
-                                self.onActivate()
                             
                         }
                                 , label: {
                                 Circle()
-                                    .fill(Color.yellow)
+                                    .fill(Color.black)
                                     .frame(width: 75, height: 75)
                                     .shadow(radius: 10)
                                     .overlay(
                                         Image(systemName: "eyes")
                                             .font(.largeTitle)
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color.yellow)
                                     )
                                 
                                 

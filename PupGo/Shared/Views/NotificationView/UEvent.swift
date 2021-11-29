@@ -37,7 +37,8 @@ struct UEvent: View {
     }
     func getApi() {
         print("getApi called")
-        
+        let tmp: Card? = self.uevents.popLast()
+        self.uevents.insert(tmp!, at: 0)
         //if self.uevents.count > 0 {
           //  uevents.removeFirst(1)
         }

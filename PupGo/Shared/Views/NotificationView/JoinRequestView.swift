@@ -60,6 +60,7 @@ struct JoinRequestView: View {
                             
                         })
                         
+                        /*
                         Spacer()
                         
                         Button(action: {
@@ -79,6 +80,7 @@ struct JoinRequestView: View {
                             
                             
                         })
+                        */
                         
                         Spacer()
                         
