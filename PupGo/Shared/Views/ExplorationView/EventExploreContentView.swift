@@ -70,16 +70,11 @@ struct EventView: View {
             .scaledToFit()
                 .frame(width: 120, height: 120)}
         VStack (alignment: .leading, spacing: 10) {
-<<<<<<< HEAD
-            HStack(alignment: .center) {
-                Image(systemName: "pawprint.circle").font(.largeTitle).foregroundColor(brownColor)
-                Text(content.username).font(.callout).foregroundColor(deepBrownColor).bold()}
-=======
+
 //            HStack(alignment: .center) {
 //                Image(systemName: "pawprint.circle").font(.largeTitle)
 //                Text(content.username).font(.callout).foregroundColor(.black).bold()}
             TypeEventView(type: content.type, content: content)
->>>>>>> Wenye-Nov-28
             HStack(alignment: .center) {
                 Image(systemName: "location").font(.largeTitle).foregroundColor(brownColor)
                 Text(content.location).foregroundColor(deepBrownColor)}

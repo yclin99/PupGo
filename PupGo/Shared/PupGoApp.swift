@@ -11,6 +11,7 @@ import GoogleSignIn
 import FBSDKCoreKit
 import FirebaseMessaging
 
+public var myPID = "caefd1f0-a4fc-4ba3-81d8-1d0b0fbec730"
 
 @main
 struct PupGoApp: App {

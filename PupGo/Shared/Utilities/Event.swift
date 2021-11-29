@@ -55,7 +55,7 @@ class Event: Hashable, ObservableObject, Identifiable {
     
     
 
-    
+    /*
     func setParameters(i: Int) {
         print(i)
         Network.shared.apollo.fetch(query: Testing1Query()) { result in
@@ -69,7 +69,7 @@ class Event: Hashable, ObservableObject, Identifiable {
             let thisuiimage = UIImage(data: data!)
             self.image = Image(uiImage: thisuiimage!).renderingMode(.original)
         }
-    }
+    }*/
     
     
     func addParticipant(newParticipant: String) {

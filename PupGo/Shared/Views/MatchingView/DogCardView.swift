@@ -50,7 +50,7 @@ struct DogCardView: View {
                         .opacity(Double(self.obser.getX(id: self.id)/10 - 1))
                         .padding(.horizontal, 20)
                     
-                    Image("Poop-2")
+                    Image("Poop")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 150)
@@ -58,7 +58,7 @@ struct DogCardView: View {
                         
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 30)
+                .padding(.top, 20)
                 
             }
             .frame(width: 360, height: 480)
