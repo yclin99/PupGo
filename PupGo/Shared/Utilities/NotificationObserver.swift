@@ -19,7 +19,7 @@ class NotificationObserver: ObservableObject {
                 return
             }
             
-            
+            /*
             data.notificationsGet.result.forEach { networkUser in
                 let id = networkUser.notificationId
                 let type = networkUser.notificationType
@@ -36,13 +36,12 @@ class NotificationObserver: ObservableObject {
                 
                 self.getInfo(pid: petList)
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     print(self.url)
-                
                 
                     self.notifications.append(notification(id: id, notificationType: type ?? 1, userID: userID ?? "", createTime: time ?? "", eventID: eventID ?? "", petID: petID ?? "",petName: self.name, image: self.url))
                 }
-            }
+            }*/
             //self.notifications.removeLast()
             //print("Users-temp", self.users)
         }

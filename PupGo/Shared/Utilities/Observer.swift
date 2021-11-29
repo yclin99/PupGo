@@ -36,7 +36,8 @@ class observer: ObservableObject {
                 self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age ?? "", isCastration: isCastration ?? true))
             //}
             }
-            self.users.removeLast()
+            
+            // self.users.removeLast()
             //print("Users-temp", self.users)
         }
     }

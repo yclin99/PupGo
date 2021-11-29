@@ -36,20 +36,7 @@ query Testing1 {
         }
     }
     
-    notificationsGet(notificationsGetInput:{
-      UID:"982a33ee-2792-4ede-b307-f38d187a2015"
-    }){
-          result{
-        notification_id
-        notification_type
-        userId
-        created_at
-        eventId
-        petId
-        has_read
-      }
-        timestamp
-    }
+    
 }
 
 query Testing2 ($pid: [ID!]) {

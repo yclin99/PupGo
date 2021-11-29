@@ -8,13 +8,14 @@
 import SwiftUI
 
 //public var lightYellowColor = Color(#colorLiteral(red: 0.9682219625, green: 0.918304801, blue: 0.7459361553, alpha: 1))
-
+public var testEmail = "hsinweiyu@ucla.edu"
+public var testPassword = "pupGoGo!"
 
 struct LoginView: View {
     
-    @State var email: String = "evelynyu@ucla.edu"
-    @State var password: String = "pupGoGo!"
-    @State var repass: String = ""
+    //@State var email: String = "hsinweiyu@ucla.edu"
+    //@State var password: String = "pupGoGo!"
+    //@State var repass: String = ""
     @State var index: Int = 0
     @State var animationIndex: Int = 0
     

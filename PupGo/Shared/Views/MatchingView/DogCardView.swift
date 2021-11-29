@@ -33,7 +33,8 @@ struct DogCardView: View {
                     VStack(alignment: .leading) {
                         HStack {
                             Text(self.name).font(.largeTitle).fontWeight(.bold)
-                            Text(String(self.age)).font(.title)
+                            Text("1Y 2M").font(.title)
+                            //Text(String(self.age)).font(.title)
                         }
                         // Text(dogCard.bio)
                     }

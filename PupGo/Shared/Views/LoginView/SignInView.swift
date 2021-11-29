@@ -37,7 +37,7 @@ struct SignInView: View {
             .cornerRadius(35)
             .padding(.horizontal, 20)
             
-            LoginButtonView(index: self.$index)
+            LoginButtonView(index: self.$index, email: $email, pass: $pass)
         }
     }
 }
@@ -149,10 +149,17 @@ struct CShape: Shape {
 
 struct LoginButtonView: View {
     @Binding var index: Int
+    @Binding var email: String
+    @Binding var pass: String
+    @AppStorage("log_Status") var log_Status = false
     var body: some View {
         // Button
         Button(action: {
-            
+            if self.email == testEmail && self.pass == testPassword {
+                withAnimation {
+                    log_Status = true
+                }
+            }
         }) {
             Text("LOGIN")
                 .foregroundColor(.white)

@@ -50,7 +50,7 @@ class DogProfile: Hashable, ObservableObject {
         self.isCastration = false
   }
     
-    
+    /*
     func setParameters(i: Int) {
         Network.shared.apollo.fetch(query: Testing1Query()) { [self] result in
          self.petid = try!(result.get().data!.petProfileListGet.result[i].id)! as String
@@ -64,6 +64,7 @@ class DogProfile: Hashable, ObservableObject {
          self.image = Image(uiImage: thisuiimage!).renderingMode(.original)
         }
     }
+     */
     
     func Castrated () {
         self.isCastration = true
