@@ -1,0 +1,62 @@
+query Testing1 {
+    recommendationGet(recommendationGetInput:{pid:"0eb440de-cf57-404b-ada3-bebc21ee19c4"}){
+        result  {
+            pet {
+                name
+                image
+                gender
+                breed
+                birthday
+            }
+        }
+    }
+    userProfileListGet(userProfileListGetInput:{uid: ["982a33ee-2792-4ede-b307-f38d187a2015"]}){
+        result  {
+            id
+            name
+            gender
+            birthday
+            email
+        }
+    }
+    petProfileListGet(petProfileListGetInput:{pid: ["5d76c3ad-d286-4c82-9ff0-6e043389f00d", "ca035fdd-bc77-4d76-879a-1588c394cd74"]}){
+        result  {
+            id
+            name
+            image
+            gender
+            breed
+            isCastration
+            birthday
+        }
+    }
+
+    recommendEventsListGet(eventsListGetInput:{uid: "bf448152-bf2c-421e-af4c-ae458737da0e"}){
+        result{
+            id
+            type
+            location{
+                country
+                city
+                address
+                latitude
+                longitude
+              }
+              image
+              timeRange{
+                startTime
+                endTime
+              }
+              limit{
+                limitOfPet
+                limitOfUser
+              }
+              holder{
+                id
+                name
+              }
+            }
+    }
+}
+
+

@@ -1,0 +1,19 @@
+mutation Testing2 ($input: PetCreateInput!){
+    petCreate(petCreateInput:$input){
+      result{
+          id
+          image
+          gender
+          breed
+          birthday
+          isCastration
+        }
+    }
+}
+mutation addeventTest ($input: EventsCreateInput!){
+    eventsCreate(eventsCreateInput:$input){
+      result{
+          id
+        }
+    }
+}
