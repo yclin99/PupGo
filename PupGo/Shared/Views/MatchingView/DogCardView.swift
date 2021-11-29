@@ -12,7 +12,7 @@ struct DogCardView: View {
     @State var id: String
     @State var name: String
     @State var image: String
-    @State var age: String
+    @State var age: Int
     @EnvironmentObject var obser: observer
     let cardGradient = Gradient(colors: [Color.black.opacity(0), Color.black.opacity(0.5)])
     
@@ -31,13 +31,14 @@ struct DogCardView: View {
                 VStack {
                     Spacer()
                     VStack(alignment: .leading) {
+                        Text(self.name).font(.largeTitle).fontWeight(.bold)
                         HStack {
-                            Text(self.name).font(.largeTitle).fontWeight(.bold)
-                            Text("1Y 2M").font(.title)
-                            //Text(String(self.age)).font(.title)
+                            Text(String(self.age)).font(.title)
+                            Text("yrs").font(.title)
                         }
                         // Text(dogCard.bio)
                     }
+                    .padding(.horizontal, 20)
                 }
                 .padding()
                 .foregroundColor(.white)

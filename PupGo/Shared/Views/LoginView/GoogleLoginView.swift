@@ -113,14 +113,26 @@ struct GoogleLogOutButton: View {
     @AppStorage("log_Status") var log_Status = false
     var body: some View {
         VStack {
-            Button("Logout") {
+            Button {
                 GIDSignIn.sharedInstance.signOut()
                 try? Auth.auth().signOut()
-                
                 withAnimation {
                     log_Status = false
                 }
+            } label: {
+                Text("LOGOUT")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+                    .padding(.horizontal, 50)
+                    .background(orangeColor)
+                    .clipShape(Capsule())
+                // shadow
+                    .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: 5)
             }
+            
+            
+
         }
     }
 }

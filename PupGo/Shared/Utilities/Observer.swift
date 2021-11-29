@@ -29,11 +29,19 @@ class observer: ObservableObject {
                 let name = networkUser.pet?.name
                 let breed = networkUser.pet?.breed
                 let image = networkUser.pet?.image
-                let age = networkUser.pet?.birthday
+                let birthday = networkUser.pet?.birthday?.prefix(10)
+                let pre = birthday?.prefix(4) ?? ""
+                let age = 2022 - Int(pre)!
                 let gender = networkUser.pet?.gender?.rawValue
                 let isCastration = networkUser.pet?.isCastration
+                let description = networkUser.pet?.description
                 
-                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age ?? "", isCastration: isCastration ?? true))
+                print(age)
+                //let hobby1 = networkUser.pet?.hobby[0]
+                //let hobby2 = networkUser.pet?.hobby[1]
+                //let hobby3 = networkUser.pet?.hobby[2]
+                
+                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age , birthday: String(birthday ?? ""), isCastration: isCastration ?? true, description: description ?? ""))//, hobby: hobby1 ?? ""))
             //}
             }
             
@@ -145,11 +153,17 @@ class observer: ObservableObject {
                 let name = networkUser.pet?.name
                 let breed = networkUser.pet?.breed
                 let image = networkUser.pet?.image
-                let age = networkUser.pet?.birthday
+                let birthday = networkUser.pet?.birthday?.prefix(10)
+                let pre = birthday?.prefix(4) ?? ""
+                let age = 2022 - Int(pre)!
                 let gender = networkUser.pet?.gender?.rawValue
                 let isCastration = networkUser.pet?.isCastration
+                let description = networkUser.pet?.description
+                //let hobby1 = networkUser.pet?.hobby[0]
+                //let hobby2 = networkUser.pet?.hobby[1]
+                //let hobby3 = networkUser.pet?.hobby[2]
                 
-                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age ?? "", isCastration: isCastration ?? true))
+                self.users.append(datatype(id: id ?? "", name: name ?? "", image: image ?? "", gender: gender ?? "", breed: breed ?? "", age: age , birthday: String(birthday ?? ""), isCastration: isCastration ?? true, description: description ?? ""))
     
             }
         }
@@ -162,8 +176,11 @@ struct datatype: Identifiable {
     var image: String
     var gender: String
     var breed: String
-    var age: String
+    var age: Int
+    var birthday: String
     var isCastration: Bool
+    var description: String
+    //var hobby: String
     var x: CGFloat = 0.0
     var y: CGFloat = 0.0
     var degree: Double = 0.0
