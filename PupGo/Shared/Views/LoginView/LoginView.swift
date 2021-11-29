@@ -22,6 +22,7 @@ struct LoginView: View {
             lightYellowColor.ignoresSafeArea()
             
             VStack {
+                //EmailLoginView(username: $username, password: $password)
                 Spacer()
                 Image("PupGo_Logo")
                     .resizable()
@@ -46,23 +47,15 @@ struct LoginView: View {
                         .frame(height: 1)
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 55)
-                .padding(.bottom, 30)
+                .padding(.top, 35)
                 
                 HStack(spacing: 25) {
                     GoogleLoginView()
                         .frame(width: 50, height: 50)
                     FBLoginView()
                         .frame(width: 50, height: 50)
-                    ZStack {
-                        
-                        AppleButtonView()
-                        AppleLoginView()
-                    }
-                    .frame(width: 50, height: 50)
-                    
+                    AppleLoginView()
                 }
-                Spacer()
             }
             .padding()
         }

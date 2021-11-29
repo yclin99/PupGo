@@ -37,10 +37,8 @@ struct GoogleLoginView: View {
             }
 
             guard
-                let authentication = user?.authentication,
-                //let TingPO = authentication.accessTokenExpirationDate,
-                //let Tingpo_2 = authentication.clientID,
-                let idToken = authentication.idToken
+              let authentication = user?.authentication,
+              let idToken = authentication.idToken
             else {
                 isLoading = false
               return
@@ -63,7 +61,6 @@ struct GoogleLoginView: View {
                 
                 withAnimation {
                     log_Status = true
-                    //print ("idToken: ", idToken)
                 }
             }
         }

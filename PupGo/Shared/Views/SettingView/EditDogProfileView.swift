@@ -66,7 +66,7 @@ struct EditDogProfileView: View {
                 HStack(alignment: .center) {
                     Text("Pet Gender is: ")
                         .bold()
-                    TextField("Edit Gender...", text: $content.gender.bound)}
+                    TextField("MALE/FEMALE", text: $content.gender.bound)}
                 HStack(alignment: .center) {
                     Text("Pet Birthday is: ")
                         .bold()

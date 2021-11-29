@@ -44,7 +44,9 @@ struct CreateEventContentView: View {
     @State private var showingAlert = false
     
     var submit: some View {
-        Button(action: {showingAlert = true}, label: {
+        Button(action: {showingAlert = true
+            @ObservedObject var newevent = Event(username: username, location: location, starttime: starttime, endtime: starttime, image: image!)
+        }, label: {
             Text("Submit").font(.system(size: 18)).bold().foregroundColor(.white)
                 .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
         }).alert(isPresented:$showingAlert) {
