@@ -48,7 +48,7 @@ class NotificationObserver: ObservableObject {
     }
     
     func getInfo(pid: [String]) {
-        Network.shared.apollo.fetch(query: Testing2Query(pid: pid)) { result in
+        Network.shared.apollo.fetch(query: PetProfilesGetQuery(pid: pid)) { result in
             guard let data = try? result.get().data else {
                 print("Error: Fetching Data Error")
                 return

@@ -19,8 +19,8 @@ struct SettingView: View {
     
     init(){
         userprofile.setParameters()
-        //dog1.setParameters(i: 0)
-        //dog2.setParameters(i: 1)
+        dog1.setParameters(i: 0)
+        dog2.setParameters(i: 1)
         userprofile.createPet(newdog: dog1)
         userprofile.createPet(newdog: dog2)
     }

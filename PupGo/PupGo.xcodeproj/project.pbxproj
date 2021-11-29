@@ -85,6 +85,14 @@
 		0EC04DD627540DB400D44A7A /* NotificationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04DD427540DB400D44A7A /* NotificationCardView.swift */; };
 		0EC444A8275319B100A3356B /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC444A7275319B100A3356B /* schema.json */; };
 		0EC444AA275321AC00A3356B /* DogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC444A9275321AC00A3356B /* DogInfoView.swift */; };
+		0EC446902754D8D700451CE8 /* getUserProfille.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0EC446892754D8D600451CE8 /* getUserProfille.graphql */; };
+		0EC446912754D8D700451CE8 /* test4.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4468A2754D8D700451CE8 /* test4.graphql */; };
+		0EC446922754D8D700451CE8 /* eventcreate.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4468B2754D8D700451CE8 /* eventcreate.graphql */; };
+		0EC446932754D8D700451CE8 /* Mutation.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4468C2754D8D700451CE8 /* Mutation.graphql */; };
+		0EC446942754D8D700451CE8 /* test3.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4468D2754D8D700451CE8 /* test3.graphql */; };
+		0EC446952754D8D700451CE8 /* petProfileListGet.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4468E2754D8D700451CE8 /* petProfileListGet.graphql */; };
+		0EC446962754D8D700451CE8 /* recommendEventsListGet.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4468F2754D8D700451CE8 /* recommendEventsListGet.graphql */; };
+		0EC446982754D94F00451CE8 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC446972754D94F00451CE8 /* Events.swift */; };
 		0EDC6C69274985B100E74119 /* ManageDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */; };
 		0EDC6C6A274985B100E74119 /* ManageDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */; };
 		0EDC6C6C2749860600E74119 /* AddDogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */; };
@@ -175,6 +183,14 @@
 		0EC04DD427540DB400D44A7A /* NotificationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCardView.swift; sourceTree = "<group>"; };
 		0EC444A7275319B100A3356B /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		0EC444A9275321AC00A3356B /* DogInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInfoView.swift; sourceTree = "<group>"; };
+		0EC446892754D8D600451CE8 /* getUserProfille.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = getUserProfille.graphql; sourceTree = "<group>"; };
+		0EC4468A2754D8D700451CE8 /* test4.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test4.graphql; sourceTree = "<group>"; };
+		0EC4468B2754D8D700451CE8 /* eventcreate.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eventcreate.graphql; sourceTree = "<group>"; };
+		0EC4468C2754D8D700451CE8 /* Mutation.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mutation.graphql; sourceTree = "<group>"; };
+		0EC4468D2754D8D700451CE8 /* test3.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test3.graphql; sourceTree = "<group>"; };
+		0EC4468E2754D8D700451CE8 /* petProfileListGet.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = petProfileListGet.graphql; sourceTree = "<group>"; };
+		0EC4468F2754D8D700451CE8 /* recommendEventsListGet.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = recommendEventsListGet.graphql; sourceTree = "<group>"; };
+		0EC446972754D94F00451CE8 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDogProfileView.swift; sourceTree = "<group>"; };
 		0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDogProfileView.swift; sourceTree = "<group>"; };
 		0EFC29BD27473D7C000D6D17 /* DogProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfile.swift; sourceTree = "<group>"; };
@@ -277,11 +293,9 @@
 			isa = PBXGroup;
 			children = (
 				0E050046273629CF00D7FFCD /* SettingView.swift */,
-				0EFC29BD27473D7C000D6D17 /* DogProfile.swift */,
 				0EFC29C027473D92000D6D17 /* DogProfileView.swift */,
 				0EFC29C327473DB2000D6D17 /* EditDogProfileView.swift */,
 				0EFC29C627473DC8000D6D17 /* EditUserProfileView.swift */,
-				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				0EFC29CC27473E04000D6D17 /* UserProfileView.swift */,
 				0EDC6C68274985B100E74119 /* ManageDogProfileView.swift */,
 				0EDC6C6B2749860600E74119 /* AddDogProfileView.swift */,
@@ -345,6 +359,13 @@
 			isa = PBXGroup;
 			children = (
 				0EC04DCE2753A8C400D44A7A /* API.swift */,
+				0EC4468B2754D8D700451CE8 /* eventcreate.graphql */,
+				0EC446892754D8D600451CE8 /* getUserProfille.graphql */,
+				0EC4468C2754D8D700451CE8 /* Mutation.graphql */,
+				0EC4468E2754D8D700451CE8 /* petProfileListGet.graphql */,
+				0EC4468F2754D8D700451CE8 /* recommendEventsListGet.graphql */,
+				0EC4468D2754D8D700451CE8 /* test3.graphql */,
+				0EC4468A2754D8D700451CE8 /* test4.graphql */,
 				0E5233F1274B25FB008B1CB0 /* Queries.graphql */,
 				0E5233F3274B260C008B1CB0 /* Apollo.swift */,
 				0E804028274B7C8C0086DA03 /* ApolloView.swift */,
@@ -362,9 +383,12 @@
 				0E8A2E1E2741F1A800081719 /* ImagePicker.swift */,
 				0E5D1575274B40E500983ACC /* AppleLogin.swift */,
 				0E5AB08A274F6F7300AE65BA /* Observer.swift */,
+				0EFC29C927473DEF000D6D17 /* UserProfile.swift */,
 				DDBEFF72275201E100EEC6B7 /* dateFormatter.swift */,
+				0EFC29BD27473D7C000D6D17 /* DogProfile.swift */,
 				0E45A57C27538DA700CA79BC /* Color.swift */,
 				0EC04DD127540C7200D44A7A /* NotificationObserver.swift */,
+				0EC446972754D94F00451CE8 /* Events.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -496,9 +520,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC446912754D8D700451CE8 /* test4.graphql in Resources */,
 				0EC444A8275319B100A3356B /* schema.json in Resources */,
+				0EC446962754D8D700451CE8 /* recommendEventsListGet.graphql in Resources */,
+				0EC446952754D8D700451CE8 /* petProfileListGet.graphql in Resources */,
+				0EC446922754D8D700451CE8 /* eventcreate.graphql in Resources */,
 				0E5233F2274B25FB008B1CB0 /* Queries.graphql in Resources */,
 				0E05003B2735F73500D7FFCD /* Assets.xcassets in Resources */,
+				0EC446942754D8D700451CE8 /* test3.graphql in Resources */,
+				0EC446902754D8D700451CE8 /* getUserProfille.graphql in Resources */,
+				0EC446932754D8D700451CE8 /* Mutation.graphql in Resources */,
 				0EB96C2E2738AD7200C9A656 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC446982754D94F00451CE8 /* Events.swift in Sources */,
 				0E8A2E1F2741F1A800081719 /* ImagePicker.swift in Sources */,
 				0E5AB08B274F6F7300AE65BA /* Observer.swift in Sources */,
 				DD196427274C7CA800A0B56C /* FEvent.swift in Sources */,

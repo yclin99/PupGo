@@ -39,7 +39,7 @@ query Testing1 {
     
 }
 
-query Testing2 ($pid: [ID!]) {
+query petProfilesGet ($pid: [ID!]) {
         petProfileListGet(petProfileListGetInput:{pid: $pid}){
         result  {
             id

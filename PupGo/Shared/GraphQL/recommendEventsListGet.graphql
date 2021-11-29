@@ -1,0 +1,28 @@
+query recommendEventsListGet {
+    recommendEventsListGet(eventsListGetInput:{uid: "982a33ee-2792-4ede-b307-f38d187a2015"}){
+        result{
+            id
+            type
+            location{
+                country
+                city
+                address
+                latitude
+                longitude
+              }
+              image
+              timeRange{
+                startTime
+                endTime
+              }
+              limit{
+                limitOfPet
+                limitOfUser
+              }
+              holder{
+                id
+                name
+              }
+        }
+    }
+}

@@ -17,7 +17,7 @@ struct SingleEventView: View {
             Rectangle()
                 .fill(Color.secondary)
             .frame(width: 200, height: 200)
-            content.image.resizable().scaledToFit()
+            content.image!.resizable().scaledToFit()
             }
         }
     }
@@ -27,7 +27,11 @@ struct SingleEventView: View {
 
     
     var join: some View {
-        Button(action: {showingAlert = true}, label: {
+        Button(action: {
+            showingAlert = true
+            let newJoinInput = EventsJoinInput(pid: "5d76c3ad-d286-4c82-9ff0-6e043389f00d", eventId: content.userid, description: nil)
+            Network.shared.apollo.perform(mutation: EventJoinMutation(input: newJoinInput))
+        }, label: {
             Text("Join").font(.system(size: 20)).bold().foregroundColor(.white)
                 .background(RoundedRectangle(cornerRadius: 1).fill(Color.yellow).frame(width: 160, height: 50))
         }).alert(isPresented:$showingAlert) {
@@ -69,6 +73,20 @@ struct SingleEventView: View {
                 .font(.callout)
                 .bold().foregroundColor(.black)
             Text(content.location).font(.callout).foregroundColor(.black).bold()}
+        .padding()
+        HStack(alignment: .center) {
+            Image(systemName: "location").font(.largeTitle).foregroundColor(.black)
+            Text("Coordinates:   ")
+                .font(.callout)
+                .bold().foregroundColor(.black)
+            if (content.clocation == nil) {
+                Text("<no_name>").font(.callout).foregroundColor(.black).bold()
+            } else {
+                let str1 = String(content.clocation!.coordinate.latitude)
+                let str2 = String(content.clocation!.coordinate.longitude)
+                let str = "\(str1), \(str2)"
+                Text(str).font(.callout).foregroundColor(.black).bold()
+            }}
         .padding()
 //        Spacer()
         HStack {
