@@ -2,36 +2,32 @@
 //  PupGoUITests.swift
 //  PupGoUITests
 //
-//  Created by Hsin-Wei Yu on 11/11/21.
+//  Created by ace_ye on 11/28/21.
+//
 
 import XCTest
 
 class PupGoUITests: XCTestCase {
+
     var app: XCUIApplication!
     override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        // In UI tests it is usually best to stop immediately when a failure occurs.
         try super.setUpWithError()
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
+        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    func testLoginTabSwitch() {
-        let tabBar = XCUIApplication().tabBars["Tab Bar"]
-        let exploreTab = tabBar.segmentedControls.buttons["Explore"]
-        let settingTab = tabBar.segmentedControls.buttons["Setting"]
-        let loginButton = app.buttons["Login"]
-        let logoutButton = app.buttons["Logout"]
-        
-        if loginButton.isSelected {
-            XCTAssertTrue(loginButton.exists)
-            XCTAssertFalse(exploreTab.exists)
-            
-            settingTab.tap()
-            XCTAssertFalse(loginButton.exists)
-            if logoutButton.isSelected {
-                XCTAssertTrue(logoutButton.exists)
-                XCTAssertFalse(loginButton.exists)
-            }
-        } 
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+
+        func testGameStyleSwitch() throws {
+            
+            
+    }
+
 }

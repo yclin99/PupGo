@@ -13,15 +13,16 @@ struct FriendsEventView: View {
     @State private var isShowingAnswer = false
     let onActivate: () -> ()
     var content : Event =
-        Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
+    Event(userid:"", username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"), type: 0)
     @State private var isShowingDetailView = false
     
     var body: some View {
-        let pic = Image(card.pic)
+        let pic = card.pic
                 .resizable()
-                .scaledToFill()
+ //               .scaledToFill()
+                .frame(width: 330.0, height: 150.0)
+                .clipped()
                 .cornerRadius(20)
-                .frame(width: 330.0, height: 120.0)
                 .shadow(color: Color.blue,  radius: 10.0, x: -10, y: 10)
         let back = RoundedRectangle(cornerRadius: 20, style: .circular)
             .shadow(color: Color.black, radius: 10.0 )
@@ -35,8 +36,9 @@ struct FriendsEventView: View {
                 back
                 VStack (alignment: .leading) {
                     Text(card.who + " invited you!")
-                        .font(.body)
-                        .foregroundColor(.white)
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                            .foregroundColor(.blue)
                     
                     NavigationLink(destination: SingleEventView(content: content), isActive: $isShowingDetailView) {EmptyView()}
                     
@@ -51,9 +53,9 @@ struct FriendsEventView: View {
                                 .frame(width: 75, height: 75)
                                 .shadow(radius: 10)
                                 .overlay(
-                                    Image(systemName: "heart")
+                                    Image(systemName: "figure.walk")
                                         .font(.largeTitle)
-                                        .foregroundColor(Color.red)
+                                        .foregroundColor(Color.green)
                                 )
                             
                             
@@ -65,13 +67,13 @@ struct FriendsEventView: View {
                         }
                             , label: {
                             Circle()
-                                .fill(Color.white)
+                                .fill(Color.blue)
                                 .frame(width: 75, height: 75)
                                 .shadow(radius: 10)
                                 .overlay(
                                     Image(systemName: "eye")
                                         .font(.largeTitle)
-                                        .foregroundColor(Color.blue)
+                                        .foregroundColor(Color.black)
                                 )
                             
                             
@@ -87,9 +89,9 @@ struct FriendsEventView: View {
                                 .frame(width: 75, height: 75)
                                 .shadow(radius: 10)
                                 .overlay(
-                                    Image(systemName: "hand.thumbsdown")
+                                    Image(systemName: "figure.wave")
                                         .font(.largeTitle)
-                                        .foregroundColor(Color.green)
+                                        .foregroundColor(Color.red)
                                 )
                             
                             
@@ -103,7 +105,7 @@ struct FriendsEventView: View {
             }
                 
         }
-        .frame(width: 330.0, height: 120.0)
+        .frame(width: 350.0, height: 180.0)
         .onTapGesture {
             self.isShowingAnswer.toggle()
 }

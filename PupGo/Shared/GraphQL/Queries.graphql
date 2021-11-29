@@ -1,15 +1,12 @@
 query Testing1 {
-    recommendationGet(recommendationGetInput:{pid:"caefd1f0-a4fc-4ba3-81d8-1d0b0fbec730"}){
+    recommendationGet(recommendationGetInput:{pid:"0eb440de-cf57-404b-ada3-bebc21ee19c4"}){
         result  {
             pet {
-                id
                 name
                 image
                 gender
                 breed
-                isCastration
                 birthday
-                
             }
         }
     }
@@ -23,8 +20,12 @@ query Testing1 {
             email
         }
     }
+<<<<<<< HEAD
     
     petProfileListGet(petProfileListGetInput:{pid: ["149464c2-f8ee-4e6f-a551-260b6467fa95", "5d76c3ad-d286-4c82-9ff0-6e043389f00d"]}){
+=======
+    petProfileListGet(petProfileListGetInput:{pid: ["5d76c3ad-d286-4c82-9ff0-6e043389f00d", "ca035fdd-bc77-4d76-879a-1588c394cd74"]}){
+>>>>>>> Wenye-Nov-28
         result  {
             id
             name
@@ -35,6 +36,7 @@ query Testing1 {
             birthday
         }
     }
+<<<<<<< HEAD
     
     
 }
@@ -60,11 +62,38 @@ mutation SetStatus($pid:ID! ,$recommendID:ID!, $result:Boolean!){
         recommendID:$recommendID,
         result:$result,
     }){
+=======
+
+    recommendEventsListGet(eventsListGetInput:{uid: "bf448152-bf2c-421e-af4c-ae458737da0e"}){
+>>>>>>> Wenye-Nov-28
         result{
             id
-            image
-            gender
-        }
+            type
+            location{
+                country
+                city
+                address
+                latitude
+                longitude
+              }
+              image
+              timeRange{
+                startTime
+                endTime
+              }
+              limit{
+                limitOfPet
+                limitOfUser
+              }
+              holder{
+                id
+                name
+              }
+            }
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Wenye-Nov-28
