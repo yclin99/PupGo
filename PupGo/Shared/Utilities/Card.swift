@@ -22,10 +22,10 @@ query Notify{
 import Foundation
 import SwiftUI
 
-var  JoinRequest: [[String]] = [["2021-11-21T14:02:59+0800","C","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"],["2021-11-01T11:02:33-0800","B","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"],["2021-11-1T04:12:12-0600","A","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"]]
-var  UpcomingEvents: [[String]] = [["2021-12-27T21:01:03-0800", "C", "2021-11-21T14:02:59+0800","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"], ["2021-12-3T21:01:03-0800", "B", "2021-11-1T04:12:12-0600","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"],["2021-11-28T23:55:00-0800", "A", "2021-11-01T11:02:33+0000","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"]]
+var  JoinRequest: [[String]] = [["2021-11-21T14:02:59+0800","C","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"],["2021-11-01T11:02:33-0800","B","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"],["2021-11-1T04:12:12-0600","A","https://i.ibb.co/xJrjQHz/IMG-3229.jpg"]]
+var  UpcomingEvents: [[String]] = [["2021-12-27T21:01:03-0800", "C", "2021-11-21T14:02:59+0800","https://i.ibb.co/nc2dsPb/IMG-3234.jpg"], ["2021-12-3T21:01:03-0800", "B", "2021-11-1T04:12:12-0600","https://i.ibb.co/MNwM89M/IMG-3233.jpg"],["2021-11-28T23:55:00-0800", "A", "2021-11-01T11:02:33+0000","https://i.ibb.co/y6HbW1h/IMG-3232.jpg"]]
 
-var  FriendsInvite: [[String]] = [["2021-12-4T21:01:03-0800", "C","2021-11-21T14:02:59+0800", "https://i.ibb.co/nc2dsPb/IMG-3234.jpg"],["2021-12-02T21:01:03-0800", "B","2021-11-01T11:02:33-0800", "https://i.ibb.co/nc2dsPb/IMG-3234.jpg"],["2021-12-01T21:01:03-0800", "A","2021-11-01T04:12:12-0600", "https://i.ibb.co/nc2dsPb/IMG-3234.jpg"]]
+var  FriendsInvite: [[String]] = [["2021-12-4T21:01:03-0800", "C","2021-11-21T14:02:59+0800", "https://i.ibb.co/M7dzvTJ/IMG-3225.jpg"],["2021-12-02T21:01:03-0800", "B","2021-11-01T11:02:33-0800", "https://i.ibb.co/MNwM89M/IMG-3233.jpg"],["2021-12-01T21:01:03-0800", "A","2021-11-01T04:12:12-0600", "https://cdn.pixabay.com/photo/2017/09/25/13/12/cocker-spaniel-2785074_1280.jpg"]]
 
 enum TYPE {
     case newFriend
