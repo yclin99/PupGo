@@ -173,19 +173,56 @@ struct LoginButtonView: View {
         }
         .offset(y: 25)
         .opacity(self.index == 0 ? 1 : 0)
+        
     }
 }
 
 struct ForgetPasswordButton: View {
+    @State private var myEmail: String = ""
     var body: some View {
         HStack {
             Spacer(minLength: 0)
-            Button(action: {}) {
+            Button(action: {
+                alertView()
+            }) {
                 Text("Forget Password?")
                     .foregroundColor(.white.opacity(0.6))
             }
         }
         .padding(.horizontal)
         .padding(.top, 30)
+    }
+    
+    func alertView() {
+        let alert = UIAlertController(title: "Password Reset", message: "Enter your email", preferredStyle: .alert)
+        alert.addTextField { email in
+            email.placeholder = "Email"
+        }
+        let enter = UIAlertAction(title: "OK", style: .default) { _ in
+            myEmail = alert.textFields?.first?.text ?? ""
+            okView()
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive) { _ in
+            //
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(enter)
+        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {
+            
+        })
+    
+    }
+    
+    func okView() {
+        let confirm = UIAlertController(title: "Email sent to", message: myEmail, preferredStyle: .alert)
+        confirm.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            //
+        }))
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(confirm, animated: true, completion: {
+            
+        })
     }
 }

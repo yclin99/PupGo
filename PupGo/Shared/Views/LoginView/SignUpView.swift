@@ -41,7 +41,7 @@ struct SignUpView: View {
                 .cornerRadius(35)
                 .padding(.horizontal, 20)
                 
-                SignUpButtonView(index: $index)
+                SignUpButtonView(index: $index, email: $email)
             }
         }
     }
@@ -96,9 +96,13 @@ struct ReEnterPasswordVieW: View {
 
 struct SignUpButtonView: View {
     @Binding var index: Int
+    @Binding var email: String
+    @State private var isShowingAlert = false
     var body: some View {
         // Button
-        Button(action: {}) {
+        Button(action: {
+            isShowingAlert = true
+        }) {
             Text("SIGNUP")
                 .foregroundColor(.white)
                 .fontWeight(.bold)
@@ -112,6 +116,11 @@ struct SignUpButtonView: View {
         .offset(y: 25)
         // hiding view when its in background
         .opacity(self.index == 1 ? 1 : 0)
+        .alert("Verification email has sent to \(email) ", isPresented: $isShowingAlert) {
+            Button("OK", role: .destructive) {
+                print("email sent")
+            }
+        }
     }
 }
 

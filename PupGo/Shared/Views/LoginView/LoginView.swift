@@ -18,6 +18,7 @@ struct LoginView: View {
     //@State var repass: String = ""
     @State var index: Int = 0
     @State var animationIndex: Int = 0
+    @State var isPopup = false
     
     var body: some View {
         ZStack {
