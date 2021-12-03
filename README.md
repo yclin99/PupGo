@@ -88,23 +88,23 @@ You may find what you need from the above instructions.
 
 <h3 align="center">Explore View</h3>
 <p float="left">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationMain.png" alt="Matchmain" width="32%">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationDetail.png" alt="Matchlike" width="32%">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationNew.png" alt="Matchdislike" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationMain.png" alt="Ex1" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationDetail.png" alt="EX2" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationNew.png" alt="EX3" width="32%">
 </p>
 
 <h3 align="center">Notification View</h3>
 <p float="left">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/Notification1.png" alt="Matchmain" width="32%">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/notifications2.PNG" alt="Matchlike" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/Notification1.png" alt="Not1" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/notification2.PNG" alt="Not2" width="32%">
 </p>
 
 <h3 align="center">Setting View</h3>
 <p float="left">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingMain.png" alt="Matchmain" width="24%">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingManage.png" alt="Matchlike" width="24%">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingDog.png" alt="Matchlike" width="24%">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingUser.png" alt="Matchlike" width="24%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingMain.png" alt="Set1" width="24%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingManage.png" alt="Set1" width="24%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingDog.png" alt="Set3" width="24%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingUser.png" alt="Set4" width="24%">
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
