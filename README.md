@@ -79,9 +79,33 @@ The files for model are under folder <b>Utilities</b>.
 The code for query and mutation (that is to post and get data from mySQL) is in folder <b>GraphQL</b>.
 
 You may find what you need from the above instructions.
+<h3 align="center">Macth View</h3>
+<p float="left">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/MatchingMain.png" alt="Matchmain" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/Matchingliked.png" alt="Matchlike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/MatchingDislike.png" alt="Matchdislike" width="180" height="390">
+</p>
 
-<img src="https://github.com/yclin99/PupGo/blob/main/Images/MatchingMain.png" alt="Matchmain" width="300" height="400">
+<h3 align="center">Explore View</h3>
+<p float="left">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationMain.png" alt="Matchmain" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationDetail.png" alt="Matchlike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationNew.png" alt="Matchdislike" width="180" height="390">
+</p>
 
+<h3 align="center">Notification View</h3>
+<p float="left">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/Notification1.png" alt="Matchmain" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/notifications2.png" alt="Matchlike" width="180" height="390">
+</p>
+
+<h3 align="center">Setting View</h3>
+<p float="left">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingMain.png" alt="Matchmain" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingManage.png" alt="Matchlike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingDog.png" alt="Matchlike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingUser.png" alt="Matchlike" width="180" height="390">
+</p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
