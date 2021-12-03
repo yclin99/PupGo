@@ -28,7 +28,7 @@
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/yclin/PupGo/Images/demo">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=n6eFIJJhaWs&feature=youtu.be">View Demo</a>
     ·
     <a href="https://github.com/yclin/PupGo/issues">Report Bug</a>
     ·
@@ -88,23 +88,23 @@ You may find what you need from the above instructions.
 
 <h3 align="center">Explore View</h3>
 <p float="left">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationMain.png" alt="Matchmain" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationDetail.png" alt="Matchlike" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationNew.png" alt="Matchdislike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationMain.png" alt="Matchmain" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationDetail.png" alt="Matchlike" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/ExplorationNew.png" alt="Matchdislike" width="32%">
 </p>
 
 <h3 align="center">Notification View</h3>
 <p float="left">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/Notification1.png" alt="Matchmain" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/notifications2.PNG" alt="Matchlike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/Notification1.png" alt="Matchmain" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/notifications2.PNG" alt="Matchlike" width="32%">
 </p>
 
 <h3 align="center">Setting View</h3>
 <p float="left">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingMain.png" alt="Matchmain" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingManage.png" alt="Matchlike" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingDog.png" alt="Matchlike" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingUser.png" alt="Matchlike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingMain.png" alt="Matchmain" width="24%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingManage.png" alt="Matchlike" width="24%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingDog.png" alt="Matchlike" width="24%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/SettingUser.png" alt="Matchlike" width="24%">
 </p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
