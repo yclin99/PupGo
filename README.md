@@ -81,9 +81,9 @@ The code for query and mutation (that is to post and get data from mySQL) is in 
 You may find what you need from the above instructions.
 <h3 align="center">Macth View</h3>
 <p float="left">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/MatchingMain.png" alt="Matchmain" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/Matchingliked.png" alt="Matchlike" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/MatchingDislike.png" alt="Matchdislike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/MatchingMain.png" alt="Matchmain" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/Matchingliked.PNG" alt="Matchlike" width="32%">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/MatchingDislike.PNG" alt="Matchdislike" width="32%">
 </p>
 
 <h3 align="center">Explore View</h3>
@@ -96,7 +96,7 @@ You may find what you need from the above instructions.
 <h3 align="center">Notification View</h3>
 <p float="left">
   <img src="https://github.com/yclin99/PupGo/blob/main/Images/Notification1.png" alt="Matchmain" width="180" height="390">
-  <img src="https://github.com/yclin99/PupGo/blob/main/Images/notifications2.png" alt="Matchlike" width="180" height="390">
+  <img src="https://github.com/yclin99/PupGo/blob/main/Images/notifications2.PNG" alt="Matchlike" width="180" height="390">
 </p>
 
 <h3 align="center">Setting View</h3>
