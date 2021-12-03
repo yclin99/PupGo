@@ -646,6 +646,7 @@
 				0E558458273B47A400BCFFB0 /* SwipeCard.swift in Sources */,
 				DD196421274C7C2900A0B56C /* Join.swift in Sources */,
 				0EC444AA275321AC00A3356B /* DogInfoView.swift in Sources */,
+				0E804025274B69E60086DA03 /* API.swift in Sources */,
 				0E8A2E2B2741F26E00081719 /* SingleEventView.swift in Sources */,
 				0EDC6C6C2749860600E74119 /* AddDogProfileView.swift in Sources */,
 				0E804029274B7C8C0086DA03 /* ApolloView.swift in Sources */,
