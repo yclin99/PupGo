@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/yclin/PupGo/">
-    <img src="blob/main/Images/PupGo_Logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/yclin99/PupGo/blob/main/Images/PupGo_Logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">PupGo</h3>
@@ -71,6 +71,14 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 You can discover dogs around you and follow them for future notifications. Also create a walking event that you are going to hold. Then, you can decide to walk with the other dogs, or not ;-)
+
+This projects includes four main UI (Match, Explore, Notification and Setting, and we have arranged them with their supportings into four subfolders under <b>View<b>.
+
+The files for model are under folder <b>Utilities<b>.
+
+The code for query and mutation (that is to post and get data from mySQL) is in folder <b>GraphQL<b>.
+
+You may find what you need from the above instructions.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
