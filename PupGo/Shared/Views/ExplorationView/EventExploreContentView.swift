@@ -9,16 +9,10 @@ import SwiftUI
 
 struct EventExploreContentView: View {
     
-    var events = [
-        Event(username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1")),
-        Event(username: "Pluto", location: "DisneyLand Park", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Pluto")),
-        Event(username: "Goofy", location: "Mickey's home",starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog3")),
-        Event(username: "Jiff", location: "Santa Monica", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Jiff")),
-        Event(username: "Boo", location: "Big Sur", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Boo")),
-        Event(username: "Doug", location: "Los Angles", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm",  image: Image("Doug")),
-        Event(username: "Maru the Shiba", location: "Department store in Japan", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Maru"))]
-
-    var eventsCount: Int = 7
+    @StateObject var eventsFamily = Events()
+    /*init() {
+        eventsFamily.setParameter()
+    }*/
     
     var AddEventView: some View {
         HStack (alignment: .center){
@@ -36,8 +30,11 @@ struct EventExploreContentView: View {
                     ScrollView {
                         LazyVStack (alignment: .leading, spacing: 30) {
                             Spacer()
-                            ForEach(0..<eventsCount) { index in
-                                EventView(content: events[index])
+                            ForEach(eventsFamily.events) { index in
+                                Group {
+                                    EventView(content: index)
+                                }
+                                // EventView(content: eventsFamily.events[index])
                             }
                         }
                         .padding(.bottom, 60)
@@ -69,13 +66,14 @@ struct EventView: View {
     
     var body: some View {
         HStack (alignment: .center) {
-            NavigationLink(destination: SingleEventView(content: content)) { content.image.resizable()
+            NavigationLink(destination: SingleEventView(content: content)) { content.image!.resizable()
             .scaledToFit()
                 .frame(width: 120, height: 120)}
         VStack (alignment: .leading, spacing: 10) {
-            HStack(alignment: .center) {
-                Image(systemName: "pawprint.circle").font(.largeTitle)
-                Text(content.username).font(.callout).foregroundColor(.black).bold()}
+//            HStack(alignment: .center) {
+//                Image(systemName: "pawprint.circle").font(.largeTitle)
+//                Text(content.username).font(.callout).foregroundColor(.black).bold()}
+            TypeEventView(type: content.type, content: content)
             HStack(alignment: .center) {
                 Image(systemName: "location").font(.largeTitle)
                 Text(content.location).foregroundColor(.black)}
@@ -85,12 +83,27 @@ struct EventView: View {
 }
 
 
+struct TypeEventView: View {
+    var type : Int
+    var content : Event
+    var body: some View {
+        HStack(alignment: .center) {
+            if (type == 0) {
+                Image(systemName: "pawprint.circle").font(.largeTitle)
+            } else if (type == 1) {
+                Image(systemName: "gift.circle").font(.largeTitle)
+            } else if (type == 2) {
+                Image(systemName: "r.joystick.tilt.up.fill").font(.largeTitle)
+            } else {
+                Image(systemName: "heart.text.square").font(.largeTitle)
+            }
+            Text(content.username).font(.callout).foregroundColor(.black).bold()}
+    }
+}
+
 struct EventExploreContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        var events = [Event(userid: 1, username: "UglyDog", location: "UCLA GreenLand", starttime: "xx", endtime: "xx", image: Image("Dog1"))]
-        EventExploreContentView()
-.previewInterfaceOrientation(.portrait)
-//        SingleEventView(content: events[0])
+        EventExploreContentView().previewInterfaceOrientation(.portrait)
     }
 }
 

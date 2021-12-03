@@ -37,7 +37,7 @@ struct SignInView: View {
             .cornerRadius(35)
             .padding(.horizontal, 20)
             
-            LoginButtonView(index: self.$index)
+            LoginButtonView(index: self.$index, email: $email, pass: $pass)
         }
     }
 }
@@ -48,12 +48,12 @@ struct LoginTextView: View {
         HStack {
             VStack(spacing: 10) {
                 Text("Login")
-                    .foregroundColor(self.index == 0 ? .white : .brown)
+                    .foregroundColor(self.index == 0 ? .white : lightBrownColor)
                     .font(.title2)
                     .fontWeight(.bold)
                 
                 Capsule()
-                    .fill(self.index == 0 ? .blue : Color.clear)
+                    .fill(self.index == 0 ? deepBrownColor : Color.clear)
                     .frame(width: 100, height: 5)
             }
             
@@ -70,7 +70,7 @@ struct EmailTextView: View {
         VStack {
             HStack(spacing: 15) {
                 Image(systemName: "envelope.fill")
-                    .foregroundColor(.yellow)
+                    .foregroundColor(brownColor)
                 TextField("Email Address", text: self.$email)
                     .onChange(of: email) { newValue in
                         switch email.count {
@@ -112,7 +112,7 @@ struct PasswordTextView: View {
                         isSecured.toggle()
                     }) {
                         Image(systemName: self.isSecured ? "eye.slash.fill" : "eye.fill")
-                            .foregroundColor(.yellow)
+                            .foregroundColor(brownColor)
                     }
                     if isSecured {
                         SecureField("Password", text: self.$pass)
@@ -149,34 +149,80 @@ struct CShape: Shape {
 
 struct LoginButtonView: View {
     @Binding var index: Int
+    @Binding var email: String
+    @Binding var pass: String
+    @AppStorage("log_Status") var log_Status = false
     var body: some View {
         // Button
-        Button(action: {}) {
+        Button(action: {
+            if self.email == testEmail && self.pass == testPassword {
+                withAnimation {
+                    log_Status = true
+                }
+            }
+        }) {
             Text("LOGIN")
                 .foregroundColor(.white)
                 .fontWeight(.bold)
                 .padding(.vertical)
                 .padding(.horizontal, 50)
-                .background(.black)
+                .background(orangeColor)
                 .clipShape(Capsule())
             // shadow
                 .shadow(color: .white.opacity(0.1), radius: 5, x: 0, y: 5)
         }
         .offset(y: 25)
         .opacity(self.index == 0 ? 1 : 0)
+        
     }
 }
 
 struct ForgetPasswordButton: View {
+    @State private var myEmail: String = ""
     var body: some View {
         HStack {
             Spacer(minLength: 0)
-            Button(action: {}) {
+            Button(action: {
+                alertView()
+            }) {
                 Text("Forget Password?")
                     .foregroundColor(.white.opacity(0.6))
             }
         }
         .padding(.horizontal)
         .padding(.top, 30)
+    }
+    
+    func alertView() {
+        let alert = UIAlertController(title: "Password Reset", message: "Enter your email", preferredStyle: .alert)
+        alert.addTextField { email in
+            email.placeholder = "Email"
+        }
+        let enter = UIAlertAction(title: "OK", style: .default) { _ in
+            myEmail = alert.textFields?.first?.text ?? ""
+            okView()
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive) { _ in
+            //
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(enter)
+        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {
+            
+        })
+    
+    }
+    
+    func okView() {
+        let confirm = UIAlertController(title: "Email sent to", message: myEmail, preferredStyle: .alert)
+        confirm.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            //
+        }))
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(confirm, animated: true, completion: {
+            
+        })
     }
 }

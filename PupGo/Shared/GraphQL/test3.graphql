@@ -1,0 +1,7 @@
+mutation Testing3 ($input: EventsCreateInput!){
+    eventsCreate(eventsCreateInput:$input){
+      result{
+          id
+        }
+    }
+}
