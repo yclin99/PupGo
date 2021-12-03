@@ -25,14 +25,12 @@
     PupGo is an app designed for <b> dogs </b> to make friends, a dating app for your doggy friends! 
       This is the final project of UCLA 2021 Fall CS130 Software engineering. 
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/yclin99/PupGo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://www.youtube.com/watch?v=n6eFIJJhaWs&feature=youtu.be">View Demo</a>
     ·
-    <a href="https://github.com/yclin/PupGo/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/yclin/PupGo/issues">Request Feature</a>
+    <a href="https://github.com/yclin99/PupGo/blob/main/Images/CS130_Features">Request Feature</a>
   </p>
 </div>
 
@@ -69,16 +67,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 You can discover dogs around you and follow them for future notifications. Also create a walking event that you are going to hold. Then, you can decide to walk with the other dogs, or not ;-)
 
-This projects includes four main UI (Match, Explore, Notification and Setting, and we have arranged them with their supportings into four subfolders under <b>View</b>.
+This projects includes four main UI (Match, Explore, Notification and Setting, and we have arranged them with their supportings into four subfolders under floder <b>View</b>.
 
 The files for model are under folder <b>Utilities</b>.
 
-The code for query and mutation (that is to post and get data from mySQL) is in folder <b>GraphQL</b>.
+The code for query and mutation (that is to post and get data from mySQL) is under folder <b>GraphQL</b>.
 
-You may find what you need from the above instructions.
+You may find what you need per above instructions.
 <h3 align="center">Macth View</h3>
 <p float="left">
   <img src="https://github.com/yclin99/PupGo/blob/main/Images/MatchingMain.png" alt="Matchmain" width="32%">
