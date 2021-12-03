@@ -30,7 +30,7 @@
     <br />
     <a href="https://www.youtube.com/watch?v=n6eFIJJhaWs&feature=youtu.be">View Demo</a>
     ·
-    <a href="https://github.com/yclin99/PupGo/blob/main/Images/CS130_Features.txt">Request Feature</a>
+    <a href="https://github.com/yclin99/PupGo/blob/main/Images/CS130_Features">Request Feature</a>
   </p>
 </div>
 
