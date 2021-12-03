@@ -15,8 +15,7 @@ struct UserEventView: View {
     
     func updateTimeRemaining(){
         let futureDate = dateFormatter.date(from: card.when)
-        
-        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: futureDate!)
+        let remaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date() , to: futureDate!)
         let hour = remaining.hour ?? 0
         let minute = remaining.minute ?? 0
         let second = remaining.second ?? 0
@@ -27,24 +26,30 @@ struct UserEventView: View {
             timeRemaining = "\(minute)m \(second)s"
         }
     }
-
     var content : Event =
-        Event(username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
+        Event(userid: "", username: "Bob", location: "UCLA GreenLand", starttime: "2021.12.4 21:01 pm", endtime: "2021.12.4 21:30 pm", image: Image("Maru"), type: 0)
 
     let onActivate: () -> ()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        let pic = Image(card.pic)
+        let pic = card.pic
                 .resizable()
-                .scaledToFill()
+//                .scaledToFill()
+        
+                .frame(width: 170, height: 180)
+                .aspectRatio(3/4, contentMode: .fill)
+                //.frame(width: 330.0, height: 150.0)
+                //.clipped()
                 .cornerRadius(20)
-                .frame(width: 330.0, height: 120.0)
-                .shadow(color: Color.green,  radius: 5.0, x: 10, y: -10)
+                .shadow(color: Color.green, radius: 5.0,
+                        x: -5,
+                        y: 0)
+
         let back = RoundedRectangle(cornerRadius: 20, style: .circular)
             .shadow(color: Color.black, radius: 5.0 )
             .foregroundColor(.black.opacity(0.4))
-            .frame(width: 330.0, height: 150.0)
+            .frame(width: 170.0, height: 180.0)
         ZStack {
             pic
             
@@ -52,22 +57,48 @@ struct UserEventView: View {
                 back
                 HStack(alignment: .center) {
 
+                    Button(action: {
+                                print("shuffle")
+                                self.onActivate()
+                            
+                        }
+                                , label: {
+                                Circle()
+                                    .fill(Color.white)
+                                    .frame(width: 75, height: 75)
+                                    .shadow(radius: 10)
+                                    .overlay(
+                                        Image(systemName: "shuffle")
+                                            .font(.largeTitle)
+                                            .foregroundColor(Color.purple)
+                                    )
+                                
+                                
+                            }
+                    )
                     
-                    VStack (alignment: .leading) {
+                    Spacer()
+                    VStack (alignment: .center) {
                         if isShowingAnswer {
                             
-                        Text("Count down: " + timeRemaining)
+                        Text("Next Event")
+                                .font(.system(size: 20))
+                                .fontWeight(.bold)
+                                .foregroundColor(.green)
+                            
+                        
+                        Text("Rest:"+timeRemaining)
                                 .font(.body)
                             .foregroundColor(.white)
                             .onReceive(timer, perform: {_ in
                                 updateTimeRemaining()
                             })
                             
-                        Text("Participants: " + card.who)
+                        Text("Owner: " + card.who)
                             .font(.body)
                             .foregroundColor(.white)
                             //Text("Scheduled at: " + dateFormatter.string(from: launchedDate))
-                        Text("Launched at: " + card.launched.prefix(10))
+                        Text("Scheduled: " + card.launched.prefix(10))
                             .font(.body)
                             .foregroundColor(.white)
                             
@@ -75,24 +106,24 @@ struct UserEventView: View {
                     }
                     .padding(20)
                     .multilineTextAlignment(.center)
-                    
+                    Spacer()
                     NavigationLink(destination: SingleEventView(content: content), isActive: $isShowingDetailView) {EmptyView()}
+                    
                     
                     Button(action: {
                                 print("check event")
                                 isShowingDetailView = true
-                                self.onActivate()
                             
                         }
                                 , label: {
                                 Circle()
-                                    .fill(Color.yellow)
+                                    .fill(Color.black)
                                     .frame(width: 75, height: 75)
                                     .shadow(radius: 10)
                                     .overlay(
                                         Image(systemName: "eyes")
                                             .font(.largeTitle)
-                                            .foregroundColor(Color.black)
+                                            .foregroundColor(Color.yellow)
                                     )
                                 
                                 
@@ -104,10 +135,9 @@ struct UserEventView: View {
             }
             
         }
-        .frame(width: 330.0, height: 120.0)
+        .frame(width: 350.0, height: 180.0)
         .onTapGesture {
-        self.isShowingAnswer.toggle()
-    }
+                self.isShowingAnswer.toggle()}
 }
 }
 

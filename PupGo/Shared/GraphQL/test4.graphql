@@ -1,0 +1,5 @@
+mutation eventJoin ($input: EventsJoinInput!){
+    eventsJoin(eventsJoinInput:$input){
+      result
+    }
+}

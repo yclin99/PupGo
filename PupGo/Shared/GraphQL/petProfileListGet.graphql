@@ -1,0 +1,13 @@
+query petProfileListGet {
+    petProfileListGet(petProfileListGetInput:{pid: ["5d76c3ad-d286-4c82-9ff0-6e043389f00d", "ca035fdd-bc77-4d76-879a-1588c394cd74"]}){
+        result  {
+            id
+            name
+            image
+            gender
+            breed
+            isCastration
+            birthday
+        }
+    }
+}

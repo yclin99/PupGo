@@ -13,22 +13,13 @@ struct UEvent: View {
     @State var uevents = Card.uevent
 
     var content : Event =
-        Event(username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"))
-    
+    Event(userid: "", username: "UglyDog", location: "UCLA GreenLand", starttime: "2021.11.8 3:00 pm", endtime: "2021.11.8 5:00 pm", image: Image("Dog1"), type: 0)
+
+
     var body: some View{
-        if uevents.count > 0 {
             VStack{
                 
-                
-            HStack( alignment: .top, spacing: 12) {
-            
-                    Text("Next Event Coming Up")
-                        .font(.system(size: 30))
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                    
-                }
-            
+            if uevents.count > 0 {
                 ZStack {
                     VStack {
                         ZStack {
@@ -40,15 +31,14 @@ struct UEvent: View {
                     }
                     
                 }
-                
-            Spacer(minLength: 5)
-        }
-        }
-        
+            }
+            Spacer()
+    }
     }
     func getApi() {
         print("getApi called")
-        
+        let tmp: Card? = self.uevents.popLast()
+        self.uevents.insert(tmp!, at: 0)
         //if self.uevents.count > 0 {
           //  uevents.removeFirst(1)
         }

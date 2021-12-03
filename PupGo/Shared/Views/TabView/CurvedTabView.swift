@@ -27,6 +27,7 @@ struct CurvedTabView: View {
             EventExploreContentView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .tag(Tab.Exploration)
+            //qMyNotificationView()
             NotificationView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .tag(Tab.Notification)
